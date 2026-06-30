@@ -18,6 +18,20 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://leboulluec.com/" },
   openGraph: {
     url: "https://leboulluec.com/",
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Atelier Le Boulluec",
+    title: "Atelier Le Boulluec — Menuiserie & serrurerie d'art depuis 1964",
+    description:
+      "Soixante ans de menuiserie, serrurerie, vitrerie et escaliers sur mesure à Massy, pour Paris et l'Île-de-France.",
+    images: [
+      {
+        url: "https://ucarecdn.com/ac23114b-a402-4794-898e-02def630f916/-/format/auto/-/quality/smart/-/resize/1200x630/",
+        width: 1200,
+        height: 630,
+        alt: "Porte cochère restaurée par l'Atelier Le Boulluec",
+      },
+    ],
   },
 };
 
