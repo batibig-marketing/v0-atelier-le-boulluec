@@ -1,0 +1,909 @@
+{
+  "project": "Atelier Le Boulluec",
+  "uploadcare_public_key": "48e5603d513a719b73dc",
+  "cdn_url_pattern": "https://ucarecdn.com/<uuid>/-/format/auto/-/quality/smart/-/resize/1600x/",
+  "count": 150,
+  "failed": [],
+  "mappings": [
+    {
+      "local_filename": "2012-04-capotage-poubelles-tole-laquee-epoxy-rue-de-la-tour-paris-16.jpg",
+      "uploadcare_uuid": "09344f81-a186-47f2-96a2-1e23caf1981c",
+      "cdn_url": "https://ucarecdn.com/09344f81-a186-47f2-96a2-1e23caf1981c/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "capotage"
+    },
+    {
+      "local_filename": "2013-02-porte-sur-rue-corbeillier-3-tiercee-chene-avec-grilles.jpg",
+      "uploadcare_uuid": "7c31c7ac-d431-47ef-8c64-7b24dc447126",
+      "cdn_url": "https://ucarecdn.com/7c31c7ac-d431-47ef-8c64-7b24dc447126/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2015-01-porte-chene-grille-ancienne-109-rue-du-dessous-des-berges-atelier.jpg",
+      "uploadcare_uuid": "ecb02151-4c11-41af-8689-ad3a312b86a9",
+      "cdn_url": "https://ucarecdn.com/ecb02151-4c11-41af-8689-ad3a312b86a9/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2016-09-porte-sas-chene-2-rue-des-huissiers-neuilly-vue-ensemble.jpg",
+      "uploadcare_uuid": "224d9032-f2cb-47ae-8a47-72330cb831ce",
+      "cdn_url": "https://ucarecdn.com/224d9032-f2cb-47ae-8a47-72330cb831ce/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-sas"
+    },
+    {
+      "local_filename": "2017-08-facade-entree-immeuble-acier-boites-aux-lettres-rue-pasteur-courbevoie.jpg",
+      "uploadcare_uuid": "7f5412dc-9579-4929-b63a-9cf5120ed349",
+      "cdn_url": "https://ucarecdn.com/7f5412dc-9579-4929-b63a-9cf5120ed349/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "agencement"
+    },
+    {
+      "local_filename": "2017-10-porte-batarde-24-rue-des-dames-paris-17-apres-restauration-detail.jpg",
+      "uploadcare_uuid": "e9e762d6-db79-4c36-bfcf-07b71f31c5f4",
+      "cdn_url": "https://ucarecdn.com/e9e762d6-db79-4c36-bfcf-07b71f31c5f4/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2017-10-porte-batarde-24-rue-des-dames-paris-17-apres-restauration.jpg",
+      "uploadcare_uuid": "4308bf14-d393-4806-ba72-701bedf8c08e",
+      "cdn_url": "https://ucarecdn.com/4308bf14-d393-4806-ba72-701bedf8c08e/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2017-11-porte-cochere-19-rue-des-feuillantines-detail-seuil-acier.jpg",
+      "uploadcare_uuid": "c76033a2-07c4-419d-b8f5-752ca7936775",
+      "cdn_url": "https://ucarecdn.com/c76033a2-07c4-419d-b8f5-752ca7936775/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2018-05-agencement-en-medium-epais-atelier-1.jpg",
+      "uploadcare_uuid": "40e2cd05-e893-45b2-a4fe-0743c5e2e887",
+      "cdn_url": "https://ucarecdn.com/40e2cd05-e893-45b2-a4fe-0743c5e2e887/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "agencement"
+    },
+    {
+      "local_filename": "2018-05-agencement-en-medium-epais-atelier-2.jpg",
+      "uploadcare_uuid": "0464ad66-ed1d-443f-a525-2eabc7f91057",
+      "cdn_url": "https://ucarecdn.com/0464ad66-ed1d-443f-a525-2eabc7f91057/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "agencement"
+    },
+    {
+      "local_filename": "2018-06-porte-acier-2-rue-de-colombes-courbevoie-avant-peinture-detail.jpg",
+      "uploadcare_uuid": "2b5c49df-8328-4145-a79c-effc50e8e243",
+      "cdn_url": "https://ucarecdn.com/2b5c49df-8328-4145-a79c-effc50e8e243/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2018-06-porte-acier-2-rue-de-colombes-courbevoie-avant-peinture.jpg",
+      "uploadcare_uuid": "3cb15103-bd98-4579-b156-42b601572aca",
+      "cdn_url": "https://ucarecdn.com/3cb15103-bd98-4579-b156-42b601572aca/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2018-06-porte-acier-2-rue-de-colombes-courbevoie-vue-ensemble.jpg",
+      "uploadcare_uuid": "232ef6ac-cfff-43c1-b37f-e802e0b0eeb2",
+      "cdn_url": "https://ucarecdn.com/232ef6ac-cfff-43c1-b37f-e802e0b0eeb2/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-apres.jpg",
+      "uploadcare_uuid": "26525e22-2374-4191-b30c-b805af59fc7e",
+      "cdn_url": "https://ucarecdn.com/26525e22-2374-4191-b30c-b805af59fc7e/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-avant.jpg",
+      "uploadcare_uuid": "3157cafd-c835-4ccd-97f0-48b4b816d888",
+      "cdn_url": "https://ucarecdn.com/3157cafd-c835-4ccd-97f0-48b4b816d888/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-detail-1.jpg",
+      "uploadcare_uuid": "9318537e-7772-488c-a6dd-b77390278ff5",
+      "cdn_url": "https://ucarecdn.com/9318537e-7772-488c-a6dd-b77390278ff5/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-travaux-cours-1.jpg",
+      "uploadcare_uuid": "e42772db-5370-47b4-88e0-6334e9ddb567",
+      "cdn_url": "https://ucarecdn.com/e42772db-5370-47b4-88e0-6334e9ddb567/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-travaux-cours-2.jpg",
+      "uploadcare_uuid": "fa40d77e-b65b-4e30-a6b9-b17f5625a88e",
+      "cdn_url": "https://ucarecdn.com/fa40d77e-b65b-4e30-a6b9-b17f5625a88e/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2018-11-porte-cochere-4-rue-marechal-joffre-versailles-avant.jpg",
+      "uploadcare_uuid": "7182e65f-b47a-4c16-9cfb-4515647d604d",
+      "cdn_url": "https://ucarecdn.com/7182e65f-b47a-4c16-9cfb-4515647d604d/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2019-08-porte-sur-rue-140-bd-richard-lenoir-paris-11-vue-exterieure.jpg",
+      "uploadcare_uuid": "48df402c-463d-4976-ab88-587674cb0c5f",
+      "cdn_url": "https://ucarecdn.com/48df402c-463d-4976-ab88-587674cb0c5f/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2019-08-porte-sur-rue-140-bd-richard-lenoir-paris-11-vue-interieure.jpg",
+      "uploadcare_uuid": "796120d2-6757-4db7-9824-71fd93317119",
+      "cdn_url": "https://ucarecdn.com/796120d2-6757-4db7-9824-71fd93317119/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2019-09-grille-sas-54-rue-de-verneuil-paris-7-detail-fers-de-lances.jpg",
+      "uploadcare_uuid": "18d39978-909a-44a3-ac61-5d57472c04c4",
+      "cdn_url": "https://ucarecdn.com/18d39978-909a-44a3-ac61-5d57472c04c4/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "grille"
+    },
+    {
+      "local_filename": "2019-09-grille-sas-54-rue-de-verneuil-paris-7-detail-poignees.jpg",
+      "uploadcare_uuid": "07460d35-f5cc-4787-bc4c-667252b0df32",
+      "cdn_url": "https://ucarecdn.com/07460d35-f5cc-4787-bc4c-667252b0df32/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "grille"
+    },
+    {
+      "local_filename": "2019-09-grille-sas-54-rue-de-verneuil-paris-7-vue-ensemble.jpg",
+      "uploadcare_uuid": "2ea887a0-7113-4e97-973c-7478c48e6ebe",
+      "cdn_url": "https://ucarecdn.com/2ea887a0-7113-4e97-973c-7478c48e6ebe/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "grille"
+    },
+    {
+      "local_filename": "2019-10-batiment-lescoeur-rue-dailly-saint-cloud-vue-exterieure.jpg",
+      "uploadcare_uuid": "773415f8-2541-44d0-afb8-b11dbf23d145",
+      "cdn_url": "https://ucarecdn.com/773415f8-2541-44d0-afb8-b11dbf23d145/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "batiment-patrimoine"
+    },
+    {
+      "local_filename": "2019-10-batiment-lescoeur-rue-dailly-saint-cloud-vue-interieure.jpg",
+      "uploadcare_uuid": "51915d49-6b69-4cd7-a8f6-ffd9651ac30a",
+      "cdn_url": "https://ucarecdn.com/51915d49-6b69-4cd7-a8f6-ffd9651ac30a/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "batiment-patrimoine"
+    },
+    {
+      "local_filename": "2019-11-porte-cochere-15-rue-seguier-paris-5-detail-seuil-portillon.jpg",
+      "uploadcare_uuid": "be36af69-728a-4914-9541-640fa3a3d4df",
+      "cdn_url": "https://ucarecdn.com/be36af69-728a-4914-9541-640fa3a3d4df/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2019-12-porte-cochere-42-rue-du-cardinal-lemoine-paris-5-detail-laiton.jpg",
+      "uploadcare_uuid": "769d5a88-105e-483f-a86a-73d3778faa81",
+      "cdn_url": "https://ucarecdn.com/769d5a88-105e-483f-a86a-73d3778faa81/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2019-12-porte-cochere-42-rue-du-cardinal-lemoine-paris-5-detail-panneau-bas.jpg",
+      "uploadcare_uuid": "fa5ea154-fdf5-42b3-bad6-7700ebaaa153",
+      "cdn_url": "https://ucarecdn.com/fa5ea154-fdf5-42b3-bad6-7700ebaaa153/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2019-12-porte-cochere-42-rue-du-cardinal-lemoine-paris-5-detail-seuil.jpg",
+      "uploadcare_uuid": "60a23ef1-279a-4e78-a5e0-d14632c0c5a7",
+      "cdn_url": "https://ucarecdn.com/60a23ef1-279a-4e78-a5e0-d14632c0c5a7/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2019-12-porte-cochere-42-rue-du-cardinal-lemoine-paris-5-vue-ensemble.jpg",
+      "uploadcare_uuid": "ac23114b-a402-4794-898e-02def630f916",
+      "cdn_url": "https://ucarecdn.com/ac23114b-a402-4794-898e-02def630f916/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2019-12-porte-cochere-42-rue-du-cardinal-lemoine-paris-5-vue-interieure.jpg",
+      "uploadcare_uuid": "03a41866-cc54-4b10-b164-e28c4ef1ea99",
+      "cdn_url": "https://ucarecdn.com/03a41866-cc54-4b10-b164-e28c4ef1ea99/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2020-01-porte-cochere-4-rue-chauveau-lagarde-paris-8-seuil-portillon.jpg",
+      "uploadcare_uuid": "cbc035d6-44c0-4090-9d79-c7dbc0374574",
+      "cdn_url": "https://ucarecdn.com/cbc035d6-44c0-4090-9d79-c7dbc0374574/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2020-01-porte-cochere-4-rue-chauveau-lagarde-paris-8-vue-ext-avant.jpg",
+      "uploadcare_uuid": "d69f25c5-f75d-4321-9ba6-920eca885a40",
+      "cdn_url": "https://ucarecdn.com/d69f25c5-f75d-4321-9ba6-920eca885a40/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2020-01-porte-cochere-4-rue-chauveau-lagarde-paris-8-vue-ext-detail.jpg",
+      "uploadcare_uuid": "bed060e0-126f-4a06-8aaa-9cdacc0acbf0",
+      "cdn_url": "https://ucarecdn.com/bed060e0-126f-4a06-8aaa-9cdacc0acbf0/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2020-01-porte-rue-75-rue-saint-honore-paris-1-grille-remployee.jpg",
+      "uploadcare_uuid": "de219d4c-cf06-4613-a53e-2018e2928b6c",
+      "cdn_url": "https://ucarecdn.com/de219d4c-cf06-4613-a53e-2018e2928b6c/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2020-03-facade-acier-arc-surbaisse-41-rue-boulard-paris-14-detail-ouvrant-voute.jpg",
+      "uploadcare_uuid": "eacb3faa-8493-423d-a2c6-5f4308fb6780",
+      "cdn_url": "https://ucarecdn.com/eacb3faa-8493-423d-a2c6-5f4308fb6780/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2020-03-facade-acier-arc-surbaisse-41-rue-boulard-paris-14.jpg",
+      "uploadcare_uuid": "fb69b224-e145-450c-b5fe-e27e6ebc662b",
+      "cdn_url": "https://ucarecdn.com/fb69b224-e145-450c-b5fe-e27e6ebc662b/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2020-04-porte-cochere-25-avenue-trudaine-paris-9-apres-lasure.jpg",
+      "uploadcare_uuid": "073df495-8587-4e78-9966-3fa7ea89da93",
+      "cdn_url": "https://ucarecdn.com/073df495-8587-4e78-9966-3fa7ea89da93/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2020-05-grille-sas-10-rue-saint-paul-paris-4-atelier.jpg",
+      "uploadcare_uuid": "bec0dfc7-e507-4cb0-8f80-13865e06ac34",
+      "cdn_url": "https://ucarecdn.com/bec0dfc7-e507-4cb0-8f80-13865e06ac34/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "grille"
+    },
+    {
+      "local_filename": "2020-05-grille-sas-10-rue-saint-paul-paris-4-detail-ferme-porte.jpg",
+      "uploadcare_uuid": "234b1204-3bb8-4ac8-a7a1-830c4e88d7d4",
+      "cdn_url": "https://ucarecdn.com/234b1204-3bb8-4ac8-a7a1-830c4e88d7d4/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "grille"
+    },
+    {
+      "local_filename": "2020-05-grille-sas-10-rue-saint-paul-paris-4-detail-interphone-intratone.jpg",
+      "uploadcare_uuid": "87eadd01-b6ff-409d-be42-75324a7165ec",
+      "cdn_url": "https://ucarecdn.com/87eadd01-b6ff-409d-be42-75324a7165ec/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "grille"
+    },
+    {
+      "local_filename": "2020-06-porte-cochere-9-rue-des-dechargeurs-paris-1-detail-motorisation.jpg",
+      "uploadcare_uuid": "49ed2b6c-ebdb-4441-ac8d-d7bc60aa40d7",
+      "cdn_url": "https://ucarecdn.com/49ed2b6c-ebdb-4441-ac8d-d7bc60aa40d7/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2020-07-marquise-rue-st-honore-en-atelier.jpg",
+      "uploadcare_uuid": "b8cd362a-18cc-4d44-abd3-e9d8a30f9ca9",
+      "cdn_url": "https://ucarecdn.com/b8cd362a-18cc-4d44-abd3-e9d8a30f9ca9/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "marquise"
+    },
+    {
+      "local_filename": "2020-07-porte-deux-vantaux-motorises-detail-moteurs-geze.jpg",
+      "uploadcare_uuid": "ebfe2194-9156-4885-bfe5-d2201dd176ab",
+      "cdn_url": "https://ucarecdn.com/ebfe2194-9156-4885-bfe5-d2201dd176ab/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2020-07-porte-deux-vantaux-motorises-detail-panneau-diamant-atelier.jpg",
+      "uploadcare_uuid": "2d5a98ed-d187-4e73-8b77-cc23accbd04e",
+      "cdn_url": "https://ucarecdn.com/2d5a98ed-d187-4e73-8b77-cc23accbd04e/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2020-09-porte-72-bd-des-batignoles-avant-restauration-detail.jpg",
+      "uploadcare_uuid": "0326c207-f589-434a-b223-f18255216b0e",
+      "cdn_url": "https://ucarecdn.com/0326c207-f589-434a-b223-f18255216b0e/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2021-01-porte-cochere-40-rue-des-abbesses-apres-restauration-int.jpg",
+      "uploadcare_uuid": "d4211931-ca95-40b9-8d49-2d8802a2644a",
+      "cdn_url": "https://ucarecdn.com/d4211931-ca95-40b9-8d49-2d8802a2644a/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2021-01-porte-cochere-40-rue-des-abbesses-avant-restauration-int.jpg",
+      "uploadcare_uuid": "a05646a8-c989-447b-8bd4-6a3c6654b923",
+      "cdn_url": "https://ucarecdn.com/a05646a8-c989-447b-8bd4-6a3c6654b923/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2021-02-verriere-atelier.jpg",
+      "uploadcare_uuid": "869f3df8-834f-4132-a008-c3e2c7ca8a37",
+      "cdn_url": "https://ucarecdn.com/869f3df8-834f-4132-a008-c3e2c7ca8a37/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "verriere"
+    },
+    {
+      "local_filename": "2021-05-porte-sas-en-acier-10-rue-de-saintonge-paris-3-detail-atelier-imposte.jpg",
+      "uploadcare_uuid": "b5d971ae-8001-4b6e-8bd6-3835c1f9f937",
+      "cdn_url": "https://ucarecdn.com/b5d971ae-8001-4b6e-8bd6-3835c1f9f937/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-sas"
+    },
+    {
+      "local_filename": "2021-06-porte-5-rue-dugommier-p1-atelier-paris-12.jpg",
+      "uploadcare_uuid": "e2d188dc-dd9e-4069-8d61-f4febcc1d113",
+      "cdn_url": "https://ucarecdn.com/e2d188dc-dd9e-4069-8d61-f4febcc1d113/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2021-08-marquise-14-rue-moutin-duvernet-en-atelier.jpg",
+      "uploadcare_uuid": "b5ab320c-3b76-4ffb-ab18-a998e56ea209",
+      "cdn_url": "https://ucarecdn.com/b5ab320c-3b76-4ffb-ab18-a998e56ea209/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "marquise"
+    },
+    {
+      "local_filename": "2021-09-motorisation-porte-acier-forge-1-rue-de-pontoise-vue-ensemble-1.jpg",
+      "uploadcare_uuid": "9b48e0b5-816c-4031-9b24-28db567b57fb",
+      "cdn_url": "https://ucarecdn.com/9b48e0b5-816c-4031-9b24-28db567b57fb/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "motorisation"
+    },
+    {
+      "local_filename": "2021-09-motorisation-porte-acier-forge-1-rue-de-pontoise-vue-ensemble-2.jpg",
+      "uploadcare_uuid": "505e9404-c0f4-4069-999e-fafbb25734bb",
+      "cdn_url": "https://ucarecdn.com/505e9404-c0f4-4069-999e-fafbb25734bb/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "motorisation"
+    },
+    {
+      "local_filename": "2021-09-motorisation-porte-acier-forge-1-rue-de-pontoise-vue-ensemble-3.jpg",
+      "uploadcare_uuid": "ede91941-3f39-4860-b825-b730fa624bca",
+      "cdn_url": "https://ucarecdn.com/ede91941-3f39-4860-b825-b730fa624bca/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "motorisation"
+    },
+    {
+      "local_filename": "2021-12-porte-cochere-39-rue-de-la-bretonnerie-apres-restauration-seuil.jpg",
+      "uploadcare_uuid": "1b934ac6-cd91-46f2-a37f-e33ac82e3cff",
+      "cdn_url": "https://ucarecdn.com/1b934ac6-cd91-46f2-a37f-e33ac82e3cff/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2021-12-porte-cochere-39-rue-de-la-bretonnerie-avant-restauration-detail.jpg",
+      "uploadcare_uuid": "fc38cca2-2950-471a-bd7e-69cf4326af66",
+      "cdn_url": "https://ucarecdn.com/fc38cca2-2950-471a-bd7e-69cf4326af66/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2021-12-porte-grille-en-acier-20-rue-du-midi-vincennes-detail.jpg",
+      "uploadcare_uuid": "7b5b2630-1d4e-4f24-81b5-e769636d2012",
+      "cdn_url": "https://ucarecdn.com/7b5b2630-1d4e-4f24-81b5-e769636d2012/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "grille"
+    },
+    {
+      "local_filename": "2021-12-restauration-escalier-rue-vaucouleur-avant-travaux.jpg",
+      "uploadcare_uuid": "04ea82ed-693e-492a-8b6d-dd9173762ceb",
+      "cdn_url": "https://ucarecdn.com/04ea82ed-693e-492a-8b6d-dd9173762ceb/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "2021-12-restauration-escalier-rue-vaucouleur-en-cours.jpg",
+      "uploadcare_uuid": "9a984630-5c9d-46b3-a00c-e857a7ab3c48",
+      "cdn_url": "https://ucarecdn.com/9a984630-5c9d-46b3-a00c-e857a7ab3c48/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "2021-12-restauration-escalier-rue-vaucouleur-terminee.jpg",
+      "uploadcare_uuid": "029f59c0-f79a-44d7-9773-de7a099813f4",
+      "cdn_url": "https://ucarecdn.com/029f59c0-f79a-44d7-9773-de7a099813f4/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "2022-03-porte-cochere-7-rue-neuve-notre-dame-vue-ext-detail-avant.jpg",
+      "uploadcare_uuid": "a70b4bd4-6194-4463-9593-08c21d78b9ac",
+      "cdn_url": "https://ucarecdn.com/a70b4bd4-6194-4463-9593-08c21d78b9ac/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2022-03-porte-cochere-7-rue-neuve-notre-dame-vue-int-detail-avant.jpg",
+      "uploadcare_uuid": "34f655f3-00f1-41c7-980d-782b4977abf6",
+      "cdn_url": "https://ucarecdn.com/34f655f3-00f1-41c7-980d-782b4977abf6/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2022-04-2-rue-richer-en-cours-de-repose-apres-faconnage.jpg",
+      "uploadcare_uuid": "0f4e294e-6a6f-4566-b019-7fb61d617e42",
+      "cdn_url": "https://ucarecdn.com/0f4e294e-6a6f-4566-b019-7fb61d617e42/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "faconnage"
+    },
+    {
+      "local_filename": "2022-08-porte-34-rue-francois-bonvin-faconnage-atelier-2.jpg",
+      "uploadcare_uuid": "009651b5-6e13-4816-bd54-283cad9859a4",
+      "cdn_url": "https://ucarecdn.com/009651b5-6e13-4816-bd54-283cad9859a4/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "faconnage"
+    },
+    {
+      "local_filename": "2022-08-porte-34-rue-francois-bonvin-faconnage-atelier-3.jpg",
+      "uploadcare_uuid": "25579c08-5235-4687-b284-0dc1793fec6d",
+      "cdn_url": "https://ucarecdn.com/25579c08-5235-4687-b284-0dc1793fec6d/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "faconnage"
+    },
+    {
+      "local_filename": "2022-08-porte-34-rue-francois-bonvin-faconnage-atelier.jpg",
+      "uploadcare_uuid": "34fc4d56-5bff-4d50-bebd-1406b689c4ca",
+      "cdn_url": "https://ucarecdn.com/34fc4d56-5bff-4d50-bebd-1406b689c4ca/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "faconnage"
+    },
+    {
+      "local_filename": "2022-09-porte-cochere-3-rue-de-la-perle-apres-faconnage-vue-ext-detail.jpg",
+      "uploadcare_uuid": "36b37bd1-a97c-410c-862f-d7e0ec8bcedb",
+      "cdn_url": "https://ucarecdn.com/36b37bd1-a97c-410c-862f-d7e0ec8bcedb/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2022-09-porte-cochere-3-rue-de-la-perle-apres-faconnage-vue-ext.jpg",
+      "uploadcare_uuid": "eba2d965-ad25-47fc-8099-a6f1e127b7cf",
+      "cdn_url": "https://ucarecdn.com/eba2d965-ad25-47fc-8099-a6f1e127b7cf/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2022-09-porte-cochere-3-rue-de-la-perle-avant-remplacement-int-detail.jpg",
+      "uploadcare_uuid": "b4d7873e-2457-45d5-9c4e-ee7ad5dbfb14",
+      "cdn_url": "https://ucarecdn.com/b4d7873e-2457-45d5-9c4e-ee7ad5dbfb14/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "2022-12-porte-sas-sur-cour-10-rue-de-louvois-avant-remplacement.jpg",
+      "uploadcare_uuid": "43bede60-35be-4a45-9c15-5347d5488a23",
+      "cdn_url": "https://ucarecdn.com/43bede60-35be-4a45-9c15-5347d5488a23/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-sas"
+    },
+    {
+      "local_filename": "2022-12-porte-sas-sur-cour-10-rue-de-louvois-vue-int-avant-remplacement.jpg",
+      "uploadcare_uuid": "b35633b3-13ca-42d5-af0d-1dbe1a4ffdcb",
+      "cdn_url": "https://ucarecdn.com/b35633b3-13ca-42d5-af0d-1dbe1a4ffdcb/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-sas"
+    },
+    {
+      "local_filename": "2023-03-porte-13-rue-las-cases-detail-atelier-2.jpg",
+      "uploadcare_uuid": "7752b0ad-e220-401b-88ce-c40b2d8113f7",
+      "cdn_url": "https://ucarecdn.com/7752b0ad-e220-401b-88ce-c40b2d8113f7/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2023-04-escalier-dannemois-avant-remplacement.jpg",
+      "uploadcare_uuid": "c5d4e118-d592-4e46-8eac-1dc43eb3b0d1",
+      "cdn_url": "https://ucarecdn.com/c5d4e118-d592-4e46-8eac-1dc43eb3b0d1/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "2023-07-porte-acier-institut-des-jeunes-aveugles-paris-7-apres-restauration-ext.jpg",
+      "uploadcare_uuid": "57f2f35e-6458-417e-a948-545f3c46eb09",
+      "cdn_url": "https://ucarecdn.com/57f2f35e-6458-417e-a948-545f3c46eb09/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2023-07-porte-acier-institut-des-jeunes-aveugles-paris-7-apres-restauration-int.jpg",
+      "uploadcare_uuid": "7f390e54-1f4b-4286-9d77-491091b5425f",
+      "cdn_url": "https://ucarecdn.com/7f390e54-1f4b-4286-9d77-491091b5425f/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2023-07-porte-acier-institut-des-jeunes-aveugles-paris-7-avant-restauration.jpg",
+      "uploadcare_uuid": "0148e61c-4d60-41d1-9f77-03107520b5c0",
+      "cdn_url": "https://ucarecdn.com/0148e61c-4d60-41d1-9f77-03107520b5c0/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2023-10-escalier-paray-vieille-poste-apres-travaux-2.jpg",
+      "uploadcare_uuid": "d38dc5b1-31aa-4f4d-82e9-554144bcbcea",
+      "cdn_url": "https://ucarecdn.com/d38dc5b1-31aa-4f4d-82e9-554144bcbcea/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "2023-10-escalier-paray-vieille-poste-apres-travaux-3.jpg",
+      "uploadcare_uuid": "3333aca2-2998-4843-a4e4-9b2c04e016bb",
+      "cdn_url": "https://ucarecdn.com/3333aca2-2998-4843-a4e4-9b2c04e016bb/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "2023-10-escalier-paray-vieille-poste-avant-travaux.jpg",
+      "uploadcare_uuid": "3718ed06-e33a-4a76-af62-075e442aa718",
+      "cdn_url": "https://ucarecdn.com/3718ed06-e33a-4a76-af62-075e442aa718/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "2023-10-escalier-paray-vieille-poste-pendant-travaux.jpg",
+      "uploadcare_uuid": "0091d8d5-e33a-4113-8e47-5ae53cb7c13f",
+      "cdn_url": "https://ucarecdn.com/0091d8d5-e33a-4113-8e47-5ae53cb7c13f/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "2023-12-escalier-saclay-apres-remplacement-2.jpg",
+      "uploadcare_uuid": "f5640d0d-346f-4f90-bd20-90fa3f22407a",
+      "cdn_url": "https://ucarecdn.com/f5640d0d-346f-4f90-bd20-90fa3f22407a/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "2023-12-escalier-saclay-apres-remplacement-3.jpg",
+      "uploadcare_uuid": "cb02020a-8ab6-4200-944b-107132cc76a8",
+      "cdn_url": "https://ucarecdn.com/cb02020a-8ab6-4200-944b-107132cc76a8/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "2023-12-escalier-saclay-avant-remplacement.jpg",
+      "uploadcare_uuid": "aa0e4633-8dd5-4097-a55e-023768b4bc37",
+      "cdn_url": "https://ucarecdn.com/aa0e4633-8dd5-4097-a55e-023768b4bc37/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "2024-01-grille-de-defense-32-rue-de-washington-detail.jpg",
+      "uploadcare_uuid": "6859ffec-cf6e-4d55-8aa9-ab5cf029a7c2",
+      "cdn_url": "https://ucarecdn.com/6859ffec-cf6e-4d55-8aa9-ab5cf029a7c2/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "grille"
+    },
+    {
+      "local_filename": "2024-01-grille-de-defense-32-rue-de-washington-ensemble.jpg",
+      "uploadcare_uuid": "350333e4-86a2-412d-8daf-c3bbbd963736",
+      "cdn_url": "https://ucarecdn.com/350333e4-86a2-412d-8daf-c3bbbd963736/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "grille"
+    },
+    {
+      "local_filename": "2025-01-porte-sas-9-avenue-de-la-motte-piquet-dessin-modele.jpg",
+      "uploadcare_uuid": "a01896f2-17b2-4700-b2b0-9c19b197f4ca",
+      "cdn_url": "https://ucarecdn.com/a01896f2-17b2-4700-b2b0-9c19b197f4ca/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-sas"
+    },
+    {
+      "local_filename": "2025-01-porte-sas-9-avenue-de-la-motte-piquet-faconnage-atelier.jpg",
+      "uploadcare_uuid": "09ca2782-c81e-44da-839f-016f284e67ce",
+      "cdn_url": "https://ucarecdn.com/09ca2782-c81e-44da-839f-016f284e67ce/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-sas"
+    },
+    {
+      "local_filename": "2025-01-porte-sas-9-avenue-de-la-motte-piquet-vue-ensemble-avant.jpg",
+      "uploadcare_uuid": "a2fae5f6-f9cc-4791-8363-a958228a6ed6",
+      "cdn_url": "https://ucarecdn.com/a2fae5f6-f9cc-4791-8363-a958228a6ed6/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-sas"
+    },
+    {
+      "local_filename": "2025-01-porte-sas-9-avenue-de-la-motte-piquet-vue-ensemble.jpg",
+      "uploadcare_uuid": "b2e9986b-492b-454d-b827-e38c07470446",
+      "cdn_url": "https://ucarecdn.com/b2e9986b-492b-454d-b827-e38c07470446/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-sas"
+    },
+    {
+      "local_filename": "2025-02-porte-sas-faux-bois-137-grenelle-detail-faux-bois.jpg",
+      "uploadcare_uuid": "69144708-a5ab-4be3-aa71-8f2244ce0c4b",
+      "cdn_url": "https://ucarecdn.com/69144708-a5ab-4be3-aa71-8f2244ce0c4b/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-sas"
+    },
+    {
+      "local_filename": "2025-02-porte-sas-faux-bois-137-grenelle-detail-ventouse-int.jpg",
+      "uploadcare_uuid": "cac4c205-16f1-4c5c-a68d-95e72cee4be4",
+      "cdn_url": "https://ucarecdn.com/cac4c205-16f1-4c5c-a68d-95e72cee4be4/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-sas"
+    },
+    {
+      "local_filename": "2025-04-porte-sas-petits-bois-imposte-anse-de-panier-vue-ext.jpg",
+      "uploadcare_uuid": "30a72896-a561-41b5-8f00-fbdb13c4ed7d",
+      "cdn_url": "https://ucarecdn.com/30a72896-a561-41b5-8f00-fbdb13c4ed7d/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-sas"
+    },
+    {
+      "local_filename": "2025-05-16-rue-de-conde-apres-restauration-avant-peinture-1.jpg",
+      "uploadcare_uuid": "f1392cd3-7310-45a1-8105-254ef0b4b322",
+      "cdn_url": "https://ucarecdn.com/f1392cd3-7310-45a1-8105-254ef0b4b322/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2025-05-16-rue-de-conde-apres-restauration-avant-peinture-2.jpg",
+      "uploadcare_uuid": "04a9368b-0be3-4c7e-8b79-229b72f26607",
+      "cdn_url": "https://ucarecdn.com/04a9368b-0be3-4c7e-8b79-229b72f26607/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2025-05-16-rue-de-conde-apres-restauration-avant-peinture-3.jpg",
+      "uploadcare_uuid": "3a4b8437-036b-49cf-9ee6-d55bc54a8487",
+      "cdn_url": "https://ucarecdn.com/3a4b8437-036b-49cf-9ee6-d55bc54a8487/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2025-05-16-rue-de-conde-avant-restauration-sur-place-1.jpg",
+      "uploadcare_uuid": "3b69313c-a5d4-45cb-80d6-5807cebbbb22",
+      "cdn_url": "https://ucarecdn.com/3b69313c-a5d4-45cb-80d6-5807cebbbb22/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2025-05-16-rue-de-conde-avant-restauration-sur-place-2.jpg",
+      "uploadcare_uuid": "4857a890-81df-4e0a-8d16-b79cc0323d1b",
+      "cdn_url": "https://ucarecdn.com/4857a890-81df-4e0a-8d16-b79cc0323d1b/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2025-05-16-rue-de-conde-avant-restauration-sur-place-3.jpg",
+      "uploadcare_uuid": "e0d3fb41-0b89-4d5e-962f-f7dfb0f84df8",
+      "cdn_url": "https://ucarecdn.com/e0d3fb41-0b89-4d5e-962f-f7dfb0f84df8/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2025-05-16-rue-de-conde-avant-restauration-sur-place-4.jpg",
+      "uploadcare_uuid": "51e9d644-3f69-414c-8ff8-7bf9221541ec",
+      "cdn_url": "https://ucarecdn.com/51e9d644-3f69-414c-8ff8-7bf9221541ec/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2025-05-16-rue-de-conde-avant-restauration-sur-place-5.jpg",
+      "uploadcare_uuid": "769a46ab-2754-45f8-beff-0c3f3e762323",
+      "cdn_url": "https://ucarecdn.com/769a46ab-2754-45f8-beff-0c3f3e762323/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2025-05-16-rue-de-conde-avant-restauration-sur-place-6.jpg",
+      "uploadcare_uuid": "65ff51c0-aeeb-4ce5-87c2-4a2baca69494",
+      "cdn_url": "https://ucarecdn.com/65ff51c0-aeeb-4ce5-87c2-4a2baca69494/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2025-07-4-place-andre-malraux-porte-provisoire-pendant-travaux.jpg",
+      "uploadcare_uuid": "62716d33-bc13-403f-87e3-083941c3c165",
+      "cdn_url": "https://ucarecdn.com/62716d33-bc13-403f-87e3-083941c3c165/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2025-09-26-rue-pierre-leroux-nouvelle-porte-faconnee-vantail.jpg",
+      "uploadcare_uuid": "6669a552-1b39-408e-9798-8c9279c25d21",
+      "cdn_url": "https://ucarecdn.com/6669a552-1b39-408e-9798-8c9279c25d21/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2025-10-porte-14-rue-du-grenier-saint-lazare-avant-travaux-detail.jpg",
+      "uploadcare_uuid": "c9062806-ba04-4d51-bea3-7ab93ba0cef1",
+      "cdn_url": "https://ucarecdn.com/c9062806-ba04-4d51-bea3-7ab93ba0cef1/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "2025-10-porte-14-rue-du-grenier-saint-lazare-avant-travaux.jpg",
+      "uploadcare_uuid": "d4a28dd4-cdb0-4866-936f-1711ab844967",
+      "cdn_url": "https://ucarecdn.com/d4a28dd4-cdb0-4866-936f-1711ab844967/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "agencement-salle-de-bain-vitrage.jpg",
+      "uploadcare_uuid": "e3f1f09f-392e-4f0e-903b-4ec466c4ada3",
+      "cdn_url": "https://ucarecdn.com/e3f1f09f-392e-4f0e-903b-4ec466c4ada3/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "vitrerie"
+    },
+    {
+      "local_filename": "agencement-sdb-vitrerie.jpg",
+      "uploadcare_uuid": "bab66b04-d2e9-4478-b372-5a0cfa91d759",
+      "cdn_url": "https://ucarecdn.com/bab66b04-d2e9-4478-b372-5a0cfa91d759/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "vitrerie"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-10.jpg",
+      "uploadcare_uuid": "efc61963-bba7-42f8-afa8-8912ba66bbe9",
+      "cdn_url": "https://ucarecdn.com/efc61963-bba7-42f8-afa8-8912ba66bbe9/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-11.jpg",
+      "uploadcare_uuid": "7b61bb92-155a-42ae-acd6-adf035f816ac",
+      "cdn_url": "https://ucarecdn.com/7b61bb92-155a-42ae-acd6-adf035f816ac/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-12.jpg",
+      "uploadcare_uuid": "a48a8797-7dc2-41cf-a0c8-a388d16ed1e6",
+      "cdn_url": "https://ucarecdn.com/a48a8797-7dc2-41cf-a0c8-a388d16ed1e6/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-13.jpg",
+      "uploadcare_uuid": "5211138a-6276-4e19-a90a-c9088557f141",
+      "cdn_url": "https://ucarecdn.com/5211138a-6276-4e19-a90a-c9088557f141/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-14.jpg",
+      "uploadcare_uuid": "d0f30696-d4f0-4fd2-bf7d-53d7ca47edb5",
+      "cdn_url": "https://ucarecdn.com/d0f30696-d4f0-4fd2-bf7d-53d7ca47edb5/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-15.jpg",
+      "uploadcare_uuid": "645d1ef2-1d8c-469b-a5f1-8e5981a9b8ba",
+      "cdn_url": "https://ucarecdn.com/645d1ef2-1d8c-469b-a5f1-8e5981a9b8ba/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-16.jpg",
+      "uploadcare_uuid": "3a8b3e37-d678-45b0-9d8f-cd46848aa624",
+      "cdn_url": "https://ucarecdn.com/3a8b3e37-d678-45b0-9d8f-cd46848aa624/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-17.jpg",
+      "uploadcare_uuid": "4e4acbc2-d8d0-49ca-9c4d-3e93737287ba",
+      "cdn_url": "https://ucarecdn.com/4e4acbc2-d8d0-49ca-9c4d-3e93737287ba/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-18.jpg",
+      "uploadcare_uuid": "f7437b84-f33c-4325-ba61-ac2f6e2c688c",
+      "cdn_url": "https://ucarecdn.com/f7437b84-f33c-4325-ba61-ac2f6e2c688c/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-19.jpg",
+      "uploadcare_uuid": "7db346bc-9459-4e49-a061-b28efb48edd4",
+      "cdn_url": "https://ucarecdn.com/7db346bc-9459-4e49-a061-b28efb48edd4/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-20.jpg",
+      "uploadcare_uuid": "b8ba7bd8-ba2d-4f57-b1de-feec61d68212",
+      "cdn_url": "https://ucarecdn.com/b8ba7bd8-ba2d-4f57-b1de-feec61d68212/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-21.jpg",
+      "uploadcare_uuid": "0f059d76-0d8c-4288-81f5-5a08a53d4ba5",
+      "cdn_url": "https://ucarecdn.com/0f059d76-0d8c-4288-81f5-5a08a53d4ba5/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-ferro-22.jpg",
+      "uploadcare_uuid": "29214b09-d035-4ffb-bf68-41653b739c77",
+      "cdn_url": "https://ucarecdn.com/29214b09-d035-4ffb-bf68-41653b739c77/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "escalier-limon-acier-loft-12.jpg",
+      "uploadcare_uuid": "a41a28d6-dd4c-47ff-807e-a3cb36433470",
+      "cdn_url": "https://ucarecdn.com/a41a28d6-dd4c-47ff-807e-a3cb36433470/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "escalier"
+    },
+    {
+      "local_filename": "facade-miroir-toute-hauteur.jpg",
+      "uploadcare_uuid": "547cf9c1-ab67-48a3-830c-345f41679eb3",
+      "cdn_url": "https://ucarecdn.com/547cf9c1-ab67-48a3-830c-345f41679eb3/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "agencement"
+    },
+    {
+      "local_filename": "facade-rangement-miroir.jpg",
+      "uploadcare_uuid": "f7122bf8-dbf3-4e4f-b808-31e326296df9",
+      "cdn_url": "https://ucarecdn.com/f7122bf8-dbf3-4e4f-b808-31e326296df9/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "agencement"
+    },
+    {
+      "local_filename": "grille.jpg",
+      "uploadcare_uuid": "61d8f6b2-b3d5-4fcc-ae4f-560fc8b85e63",
+      "cdn_url": "https://ucarecdn.com/61d8f6b2-b3d5-4fcc-ae4f-560fc8b85e63/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "grille"
+    },
+    {
+      "local_filename": "motorisation-linteau.jpg",
+      "uploadcare_uuid": "ca1fced0-1f33-4f77-8676-e7df8d6f8362",
+      "cdn_url": "https://ucarecdn.com/ca1fced0-1f33-4f77-8676-e7df8d6f8362/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "motorisation"
+    },
+    {
+      "local_filename": "motorisation-par-bras-compas.jpg",
+      "uploadcare_uuid": "481a9ffd-a172-4d44-86bf-46aea5ae35b2",
+      "cdn_url": "https://ucarecdn.com/481a9ffd-a172-4d44-86bf-46aea5ae35b2/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "motorisation"
+    },
+    {
+      "local_filename": "motorisation-par-verin-encastre.jpg",
+      "uploadcare_uuid": "685fab09-098d-4de0-9841-062bb84ea344",
+      "cdn_url": "https://ucarecdn.com/685fab09-098d-4de0-9841-062bb84ea344/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "motorisation"
+    },
+    {
+      "local_filename": "motorisation-par-verins.jpg",
+      "uploadcare_uuid": "d906d7eb-8536-4472-8411-da50ba35cdc0",
+      "cdn_url": "https://ucarecdn.com/d906d7eb-8536-4472-8411-da50ba35cdc0/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "motorisation"
+    },
+    {
+      "local_filename": "motorisation-porte-guichet.jpg",
+      "uploadcare_uuid": "71700092-acd0-409a-a5be-a15674c46a52",
+      "cdn_url": "https://ucarecdn.com/71700092-acd0-409a-a5be-a15674c46a52/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "motorisation"
+    },
+    {
+      "local_filename": "porte-acier-37-rue-gabriel-peri-pres-saint-gervais-vue-ensemble.jpg",
+      "uploadcare_uuid": "0e6bdbf7-7966-43fd-8510-7df5a90a0fbc",
+      "cdn_url": "https://ucarecdn.com/0e6bdbf7-7966-43fd-8510-7df5a90a0fbc/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "porte-cochere-111-rue-de-longchamp-reposee-mise-en-peinture.jpg",
+      "uploadcare_uuid": "049c6d27-d7e8-4f8e-a218-874015874608",
+      "cdn_url": "https://ucarecdn.com/049c6d27-d7e8-4f8e-a218-874015874608/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "porte-cochere-monumentale-68-rue-de-la-chaussee-d-antin-en-cours-de-repose.jpg",
+      "uploadcare_uuid": "f6bd5e19-1ff3-404f-bed1-d40878cf25a7",
+      "cdn_url": "https://ucarecdn.com/f6bd5e19-1ff3-404f-bed1-d40878cf25a7/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "porte-cochere-monumentale-68-rue-de-la-chaussee-d-antin-traverse-basse-detail.jpg",
+      "uploadcare_uuid": "ba7e1c17-56ad-4aaa-9702-accd0b286297",
+      "cdn_url": "https://ucarecdn.com/ba7e1c17-56ad-4aaa-9702-accd0b286297/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "porte-vitree-verres-biseautes.jpg",
+      "uploadcare_uuid": "23000910-4078-4c3f-b1ce-64c67edddfa1",
+      "cdn_url": "https://ucarecdn.com/23000910-4078-4c3f-b1ce-64c67edddfa1/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "vitrerie"
+    },
+    {
+      "local_filename": "vitrage-de-protection-sur-mesure.jpg",
+      "uploadcare_uuid": "fab063f5-27a1-482e-a43c-e76a995e8e02",
+      "cdn_url": "https://ucarecdn.com/fab063f5-27a1-482e-a43c-e76a995e8e02/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "vitrerie"
+    },
+    {
+      "local_filename": "vitrage-de-protection-sur-rue.jpg",
+      "uploadcare_uuid": "0c33af66-6f26-4685-be6e-7292715bf27b",
+      "cdn_url": "https://ucarecdn.com/0c33af66-6f26-4685-be6e-7292715bf27b/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "vitrerie"
+    },
+    {
+      "local_filename": "bibliotheque-leds-allumees.jpeg",
+      "uploadcare_uuid": "f779f749-0462-49db-8b96-18951fd428cb",
+      "cdn_url": "https://ucarecdn.com/f779f749-0462-49db-8b96-18951fd428cb/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "agencement"
+    },
+    {
+      "local_filename": "faconnage-grille-sur-mesure.jpeg",
+      "uploadcare_uuid": "64dcf235-6ae8-41ed-bc94-440ab19d2265",
+      "cdn_url": "https://ucarecdn.com/64dcf235-6ae8-41ed-bc94-440ab19d2265/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "grille"
+    },
+    {
+      "local_filename": "garde-corps-rehausse.jpeg",
+      "uploadcare_uuid": "773dba9a-cba2-4f49-88c2-ec8f41b082ff",
+      "cdn_url": "https://ucarecdn.com/773dba9a-cba2-4f49-88c2-ec8f41b082ff/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "garde-corps"
+    },
+    {
+      "local_filename": "meuble-tv-fini.jpeg",
+      "uploadcare_uuid": "dc3ae0ce-748d-46a5-8cc3-a02657950ea8",
+      "cdn_url": "https://ucarecdn.com/dc3ae0ce-748d-46a5-8cc3-a02657950ea8/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "agencement"
+    },
+    {
+      "local_filename": "porte-cochere-vue-ensemble-apres-travaux.jpeg",
+      "uploadcare_uuid": "5a83c1e5-8785-4cde-9f1d-25ba41a00a05",
+      "cdn_url": "https://ucarecdn.com/5a83c1e5-8785-4cde-9f1d-25ba41a00a05/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "porte-mouluree.jpeg",
+      "uploadcare_uuid": "54b7cf43-758c-4a61-be51-47716d182380",
+      "cdn_url": "https://ucarecdn.com/54b7cf43-758c-4a61-be51-47716d182380/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "porte-pavillon-mouluree-deux-vantaux.jpeg",
+      "uploadcare_uuid": "4893eb83-0f15-4b54-b08b-e1bd0610f988",
+      "cdn_url": "https://ucarecdn.com/4893eb83-0f15-4b54-b08b-e1bd0610f988/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "porte-quatre-vantaux-haussmannienne.jpeg",
+      "uploadcare_uuid": "8ee1618b-2bb1-4d73-8fad-61df8074ae06",
+      "cdn_url": "https://ucarecdn.com/8ee1618b-2bb1-4d73-8fad-61df8074ae06/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte"
+    },
+    {
+      "local_filename": "vitrerie.jpeg",
+      "uploadcare_uuid": "f428b023-f076-4e97-8df8-9a56954eb8af",
+      "cdn_url": "https://ucarecdn.com/f428b023-f076-4e97-8df8-9a56954eb8af/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "vitrerie"
+    },
+    {
+      "local_filename": "bibliotheque-sur-mesure-bois.png",
+      "uploadcare_uuid": "bd9d55df-7307-43c7-ad4c-2def8cab1eea",
+      "cdn_url": "https://ucarecdn.com/bd9d55df-7307-43c7-ad4c-2def8cab1eea/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "agencement"
+    },
+    {
+      "local_filename": "porte-cochere-refaite-vue-exterieure.png",
+      "uploadcare_uuid": "f5dfb801-e487-4e9e-90e1-caf0d743f8ce",
+      "cdn_url": "https://ucarecdn.com/f5dfb801-e487-4e9e-90e1-caf0d743f8ce/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "porte-cochere"
+    },
+    {
+      "local_filename": "renovation-vitrification-ancien-parquet.png",
+      "uploadcare_uuid": "612d8dfd-e499-4659-8d03-223924e1df59",
+      "cdn_url": "https://ucarecdn.com/612d8dfd-e499-4659-8d03-223924e1df59/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "category": "renovation"
+    }
+  ]
+}
