@@ -1,20 +1,48 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import Container from "@/components/Container";
 import PhotoGrid from "@/components/PhotoGrid";
 import CTASection from "@/components/CTASection";
 import JsonLd from "@/components/JsonLd";
+import FaqSection from "@/components/FaqSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedPages from "@/components/RelatedPages";
 import { photosByCategories } from "@/lib/photos";
-import { serviceSchema } from "@/lib/schema";
+import { serviceSchema, faqPageSchema } from "@/lib/schema";
+
+const ESCALIERS_FAQ = [
+  {
+    q: "Quel est le délai pour un escalier sur mesure ?",
+    a: "Un escalier sur mesure demande 3 à 4 mois entre le premier rendez-vous et la livraison : relevé sur site, dessin, étude de structure, façonnage à l'atelier de Massy et pose. Les escaliers suspendus, qui nécessitent une étude structurelle plus poussée, peuvent demander 4 à 5 mois.",
+  },
+  {
+    q: "Quels types d'escaliers fabriquez-vous ?",
+    a: "Quatre familles : escaliers à limon acier (droits, courbés, débillardés), escaliers suspendus (fixation murale ou câble inox), escaliers en colimaçon (hélicoïdaux pour combles et mezzanines) et escaliers autoportants (sans appui mural intermédiaire). Tous fabriqués à l'atelier de Massy.",
+  },
+  {
+    q: "Vos escaliers sont-ils conformes à la norme NF P01-012 ?",
+    a: "Oui. Tous nos escaliers et garde-corps respectent la norme NF P01-012 (hauteur de marche, garde-corps, échappée). Nous prenons en charge la vérification réglementaire dès la phase d'étude de structure, avant fabrication.",
+  },
+  {
+    q: "Travaillez-vous avec des architectes et des bureaux d'études ?",
+    a: "Oui. Nous travaillons régulièrement à partir de plans d'architecte et nous nous insérons dans des équipes de maîtrise d'œuvre. Notre bureau d'études interne peut produire les plans d'exécution à partir d'une intention esquissée, ou exécuter au trait juste un plan déjà figé.",
+  },
+  {
+    q: "Quels matériaux utilisez-vous pour les marches et les garde-corps ?",
+    a: "Marches : bois massif (chêne huilé, hêtre, frêne), pierre reconstituée, métal laqué ou brut verni. Garde-corps : acier forgé, acier serrurier, câble inox tendu, verre feuilleté trempé, ou bois — selon le dessin choisi et la compatibilité visuelle avec l'escalier qui l'accompagne.",
+  },
+];
 
 export const metadata: Metadata = {
   title: "Escaliers sur mesure bois & acier",
   description:
     "Escaliers suspendus, en colimaçon, autoportants ou à limon acier. Conception, fabrication atelier et pose. Atelier Le Boulluec — Massy, Île-de-France.",
-  alternates: { canonical: "/escaliers" },
+  alternates: { canonical: "https://leboulluec.com/escaliers" },
   openGraph: {
     title: "Escaliers sur mesure bois & acier — Atelier Le Boulluec",
     description: "Escaliers suspendus, colimaçon, autoportants ou à limon acier — fabrication atelier.",
+    url: "https://leboulluec.com/escaliers",
     images: ["https://ucarecdn.com/029f59c0-f79a-44d7-9773-de7a099813f4/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
@@ -24,24 +52,43 @@ export default function EscaliersPage() {
   return (
     <>
       <JsonLd data={serviceSchema("Escaliers sur mesure", metadata.description as string, "Escaliers")} />
+      <JsonLd data={faqPageSchema(ESCALIERS_FAQ)} />
+      <Breadcrumb items={[{ label: "Escaliers", href: "/escaliers" }]} />
       <PageHeader
         photoUuid="029f59c0-f79a-44d7-9773-de7a099813f4"
         eyebrow="Escaliers"
         title="Escaliers sur mesure — bois, acier, mixtes."
         subtitle="L'escalier est l'un des rares ouvrages où la justesse millimétrique se voit immédiatement. C'est pourquoi nous le traitons comme un objet à part entière."
+        imageAlt="Escalier sur mesure bois et acier fabriqué par l'Atelier Le Boulluec à Massy."
       />
 
       <article className="py-20 md:py-24 bg-[#F5EFE3]">
         <Container size="narrow" className="prose-marine">
           <p className="text-lg leading-relaxed text-[#1A1A1A]/85">
-            Une marche qui flotte d&apos;un demi-millimètre, un limon qui dévie, une rampe trop haute : l&apos;œil de l&apos;usager perçoit l&apos;écart même sans le formuler. Chaque escalier est étudié, dessiné, façonné, posé sous la responsabilité d&apos;un seul atelier.
+            <strong>Un escalier sur mesure est un ouvrage conçu, dessiné, façonné et posé spécifiquement pour un site donné, par opposition à un escalier de série livré en kit.</strong> L&apos;Atelier Le Boulluec fabrique des escaliers sur mesure depuis 1964, dans son atelier de Massy : escaliers à limon acier, suspendus, en colimaçon ou autoportants, en bois, acier ou mixtes. Délai standard : 3 à 4 mois entre le premier rendez-vous et la pose.
           </p>
+
+          <h2>Quels sont nos escaliers sur mesure phares ?</h2>
+          <ul>
+            <li><strong>Escaliers à limon acier</strong> : limon central ou latéraux, marches bois massif ou métal, signature des lofts contemporains.</li>
+            <li><strong>Escaliers suspendus</strong> : marches retenues par fixation murale dissimulée ou câble inox tendu.</li>
+            <li><strong>Escaliers en colimaçon</strong> : solution hélicoïdale pour combles, mezzanines et duplex à surface réduite.</li>
+            <li><strong>Escaliers autoportants</strong> : sans appui mural intermédiaire, pour espaces ouverts contemporains.</li>
+            <li><strong>Garde-corps acier, verre, bois ou câble inox</strong> conformes à la norme NF P01-012.</li>
+          </ul>
+
+          <h2>Pourquoi nous choisir pour votre escalier sur mesure ?</h2>
+          <ol>
+            <li><strong>Atelier intégré bois + acier + verre</strong> : pas de coordination entre sous-traitants, l&apos;escalier sort juste.</li>
+            <li><strong>Bureau d&apos;études interne</strong> capable de produire les plans d&apos;exécution ou d&apos;exécuter un plan d&apos;architecte au trait juste.</li>
+            <li><strong>Étude de structure systématique</strong> en lien avec un bureau partenaire pour les escaliers suspendus et autoportants.</li>
+          </ol>
 
           <h2>Quatre familles d&apos;escaliers</h2>
 
           <h3>Escaliers à limon acier</h3>
           <p>
-            Un limon central ou deux limons latéraux en acier — droit, courbé, débillardé — reçoivent des marches en bois massif, en pierre reconstituée ou en métal. C&apos;est l&apos;une de nos signatures : la pureté du dessin métallique mariée à la chaleur d&apos;une marche en chêne huilé. Adapté aux lofts, aux duplex contemporains et aux réhabilitations industrielles.
+            Un limon central ou deux limons latéraux en acier — droit, courbé, débillardé — reçoivent des marches en bois massif, en pierre reconstituée ou en métal. C&apos;est l&apos;une de nos signatures : la pureté du dessin métallique mariée à la chaleur d&apos;une marche en chêne huilé. Les pièces acier sont dessinées et soudées par notre <Link href="/serrurerie" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">département serrurerie-ferronnerie</Link>. Adapté aux lofts, aux duplex contemporains et aux réhabilitations industrielles.
           </p>
 
           <h3>Escaliers suspendus</h3>
@@ -70,7 +117,7 @@ export default function EscaliersPage() {
 
           <h2>Garde-corps et rampes</h2>
           <p>
-            Tout escalier vient avec son garde-corps, qui doit conjuguer sécurité (norme NF P01-012), esthétique et compatibilité visuelle avec l&apos;escalier qu&apos;il accompagne. Acier forgé, acier serrurier, câble inox tendu, verre feuilleté trempé, ou bois — selon le dessin choisi.
+            Tout escalier vient avec son garde-corps, qui doit conjuguer sécurité (norme NF P01-012), esthétique et compatibilité visuelle avec l&apos;escalier qu&apos;il accompagne. Acier forgé, acier serrurier, câble inox tendu, <Link href="/vitrerie" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">verre feuilleté trempé</Link>, ou bois — selon le dessin choisi. Pour les escaliers anciens d&apos;immeubles patrimoniaux (limons bois, balustres, rampes en ferronnerie), voir notre activité de <Link href="/restauration-patrimoniale" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">restauration patrimoniale</Link>.
           </p>
 
           <h2>Pour les architectes et maîtres d&apos;œuvre</h2>
@@ -89,6 +136,39 @@ export default function EscaliersPage() {
           <PhotoGrid photos={photos} columns={3} />
         </Container>
       </section>
+
+      <FaqSection items={ESCALIERS_FAQ} />
+
+      <RelatedPages
+        eyebrow="Métiers liés"
+        heading="L'atelier intégré"
+        items={[
+          {
+            title: "Serrurerie & ferronnerie",
+            href: "/serrurerie",
+            blurb:
+              "Limons acier, garde-corps en fer forgé ou acier serrurier, soudures et finitions exécutés au même atelier que la partie bois.",
+          },
+          {
+            title: "Menuiserie sur mesure",
+            href: "/menuiserie",
+            blurb:
+              "Marches bois massif (chêne, hêtre, frêne), main-courantes et habillages bois façonnés en parallèle de l'ossature acier.",
+          },
+          {
+            title: "Vitrerie sur mesure",
+            href: "/vitrerie",
+            blurb:
+              "Garde-corps en verre feuilleté trempé et marches en verre — fournis et posés par notre département vitrerie.",
+          },
+          {
+            title: "Restauration patrimoniale",
+            href: "/restauration-patrimoniale",
+            blurb:
+              "Restauration des escaliers anciens : limons bois, marches, balustres, rampes en ferronnerie d'époque.",
+          },
+        ]}
+      />
 
       <CTASection
         eyebrow="Projet d'escalier"

@@ -4,28 +4,39 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
-import { localBusinessSchema, organizationSchema } from "@/lib/schema";
+import {
+  localBusinessSchema,
+  organizationSchema,
+  websiteSchema,
+} from "@/lib/schema";
 import { NAP } from "@/lib/nap";
 
+// Serif display — only the weights actually used (regular + italic for body emphasis, semibold for headings).
 const display = Crimson_Pro({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"],
+  style: ["normal", "italic"],
   display: "swap",
+  preload: true,
 });
 
+// UI sans — limited to weights used on screen.
 const sans = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
   display: "swap",
+  preload: true,
 });
 
+// Mono — small captions only, do not preload.
 const mono = DM_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
-  weight: ["400", "500"],
+  weight: ["400"],
   display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -42,6 +53,16 @@ export const metadata: Metadata = {
   publisher: NAP.brand,
   formatDetection: { telephone: true, address: true, email: true },
   alternates: { canonical: "/" },
+  manifest: "/manifest.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -52,9 +73,9 @@ export const metadata: Metadata = {
       "Soixante ans de menuiserie, serrurerie, vitrerie et escaliers sur mesure à Massy, pour Paris et l'Île-de-France.",
     images: [
       {
-        url: "https://ucarecdn.com/ac23114b-a402-4794-898e-02def630f916/-/format/auto/-/quality/smart/-/resize/1600x/",
-        width: 1600,
-        height: 1067,
+        url: "https://ucarecdn.com/ac23114b-a402-4794-898e-02def630f916/-/format/auto/-/quality/smart/-/resize/1200x630/",
+        width: 1200,
+        height: 630,
         alt: "Porte cochère restaurée par l'Atelier Le Boulluec",
       },
     ],
@@ -65,7 +86,7 @@ export const metadata: Metadata = {
     description:
       "Soixante ans de menuiserie, serrurerie, vitrerie et escaliers sur mesure à Massy.",
     images: [
-      "https://ucarecdn.com/ac23114b-a402-4794-898e-02def630f916/-/format/auto/-/quality/smart/-/resize/1600x/",
+      "https://ucarecdn.com/ac23114b-a402-4794-898e-02def630f916/-/format/auto/-/quality/smart/-/resize/1200x630/",
     ],
   },
   robots: { index: true, follow: true },
@@ -76,14 +97,27 @@ export const viewport: Viewport = {
   themeColor: "#1F3A6B",
   width: "device-width",
   initialScale: 1,
+  colorScheme: "light",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
+      <head>
+        {/* Speed up Uploadcare image fetches (hero LCP). */}
+        <link rel="preconnect" href="https://ucarecdn.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://ucarecdn.com" />
+      </head>
       <body className="min-h-screen flex flex-col bg-[#F5EFE3] text-[#1A1A1A] antialiased">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-[#1F3A6B] focus:text-[#F5EFE3] focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:outline-2 focus:outline-[#C46B2E]"
+        >
+          Aller au contenu principal
+        </a>
         <JsonLd data={organizationSchema()} />
         <JsonLd data={localBusinessSchema()} />
+        <JsonLd data={websiteSchema()} />
         <Header />
         <main id="main" className="flex-1">{children}</main>
         <Footer />

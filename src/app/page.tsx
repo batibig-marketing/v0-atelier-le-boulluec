@@ -6,12 +6,19 @@ import ServiceCard from "@/components/ServiceCard";
 import Stats from "@/components/Stats";
 import References from "@/components/References";
 import CTASection from "@/components/CTASection";
+import FaqSection from "@/components/FaqSection";
+import JsonLd from "@/components/JsonLd";
+import { faqPageSchema, SCHEMA_IDS } from "@/lib/schema";
+import { NAP } from "@/lib/nap";
 
 export const metadata: Metadata = {
   title: "Atelier Le Boulluec — Menuiserie & serrurerie d'art depuis 1964",
   description:
     "Atelier de menuiserie, serrurerie, vitrerie et escaliers sur mesure à Massy. 60 ans de façonnage bois et acier pour syndics, architectes et grands comptes en Île-de-France.",
-  alternates: { canonical: "/" },
+  alternates: { canonical: "https://leboulluec.com/" },
+  openGraph: {
+    url: "https://leboulluec.com/",
+  },
 };
 
 const SERVICES = [
@@ -59,15 +66,87 @@ const SERVICES = [
   },
 ];
 
+const HOME_FAQ = [
+  {
+    q: "Qu'est-ce que l'Atelier Le Boulluec ?",
+    a: "L'Atelier Le Boulluec est une entreprise artisanale de menuiserie, serrurerie, vitrerie, escaliers sur mesure et restauration patrimoniale, fondée en 1964 et installée à Massy (91300) depuis 2020. L'atelier emploie 17 menuisiers et intervient en Île-de-France pour les syndics, architectes et grands comptes.",
+  },
+  {
+    q: "Où se trouve l'atelier et quelle est sa zone d'intervention ?",
+    a: "L'atelier est situé au 6 Rue de l'Aulnaye Dracourt, 91300 Massy, dans l'Essonne. Nous intervenons dans tout Paris et l'Île-de-France : Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne, Yvelines, Val-d'Oise et Seine-et-Marne.",
+  },
+  {
+    q: "Depuis quand l'Atelier Le Boulluec existe-t-il ?",
+    a: "L'entreprise a été fondée en 1964 à Fontenay-aux-Roses, soit plus de 60 ans d'activité ininterrompue. Trois adresses se sont succédé : Fontenay-aux-Roses (1964-2015), Châtenay-Malabry (2015-2020) puis Massy depuis septembre 2020.",
+  },
+  {
+    q: "Quels métiers regroupe l'atelier ?",
+    a: "Cinq métiers sous un même toit : menuiserie bois, serrurerie et ferronnerie, vitrerie, escaliers sur mesure (bois, acier, mixtes) et restauration patrimoniale (portes cochères, fenêtres anciennes, ouvrages classés). Aucun de ces métiers n'est sous-traité — tout est façonné à Massy.",
+  },
+  {
+    q: "L'atelier est-il certifié ou labellisé ?",
+    a: "Oui. Nous sommes membres du réseau Bricard Serruriers Confiance, label réservé par le fabricant à un cercle restreint d'artisans formés sur toute sa gamme de haute sûreté. Tous nos ouvrages neufs et restaurés sont couverts par la garantie décennale.",
+  },
+  {
+    q: "Quelles sont vos principales références ?",
+    a: "Nous travaillons pour les Maisons Cartier et Van Cleef & Arpels, le groupe Dassault, Yves Rocher, les Bateaux Parisiens et Schlumberger, ainsi que pour de nombreux syndics de copropriété d'Île-de-France et architectes du patrimoine en lien avec les Bâtiments de France.",
+  },
+];
+
+const servicesItemListSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Métiers de l'Atelier Le Boulluec",
+  description:
+    "Cinq métiers du second œuvre réunis sous un même atelier à Massy : menuiserie, escaliers, serrurerie, vitrerie, restauration patrimoniale.",
+  numberOfItems: SERVICES.length,
+  itemListOrder: "https://schema.org/ItemListOrderAscending",
+  itemListElement: SERVICES.map((s, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: s.title,
+    url: `${NAP.website}${s.href}`,
+    item: {
+      "@type": "Service",
+      name: s.title,
+      description: s.description,
+      url: `${NAP.website}${s.href}`,
+      provider: { "@id": SCHEMA_IDS.BUSINESS_ID },
+    },
+  })),
+};
+
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${NAP.website}/#webpage`,
+  url: NAP.website,
+  name: "Atelier Le Boulluec — Menuiserie & serrurerie d'art depuis 1964",
+  description:
+    "Atelier de menuiserie, serrurerie, vitrerie et escaliers sur mesure à Massy. Soixante ans de pratique pour les syndics, architectes et grands comptes d'Île-de-France.",
+  inLanguage: "fr-FR",
+  isPartOf: { "@id": SCHEMA_IDS.WEBSITE_ID },
+  about: { "@id": SCHEMA_IDS.BUSINESS_ID },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://ucarecdn.com/ac23114b-a402-4794-898e-02def630f916/-/format/auto/-/quality/smart/-/resize/1600x/",
+  },
+  mainEntity: { "@id": SCHEMA_IDS.BUSINESS_ID },
+};
+
 export default function HomePage() {
   return (
     <>
+      <JsonLd data={webPageSchema} />
+      <JsonLd data={servicesItemListSchema} />
+      <JsonLd data={faqPageSchema(HOME_FAQ)} />
       <Hero
         photoUuid="ac23114b-a402-4794-898e-02def630f916"
         eyebrow="Massy · Île-de-France · depuis 1964"
         title="Bois et acier, façonnés depuis 1964."
-        subtitle="Atelier de menuiserie, serrurerie, vitrerie et escaliers sur mesure à Massy. Soixante ans de pratique pour les syndics, architectes et maîtres d'ouvrage d'Île-de-France qui exigent un ouvrage juste."
+        subtitle="L'Atelier Le Boulluec est une entreprise artisanale fondée en 1964, spécialisée en menuiserie, serrurerie, vitrerie, escaliers sur mesure et restauration patrimoniale. 17 menuisiers à Massy, au service des syndics, architectes et grands comptes d'Île-de-France."
         cta={{ label: "Demander un chiffrage", href: "/contact" }}
+        imageAlt="Porte cochère parisienne restaurée par l'Atelier Le Boulluec, menuiserie d'art depuis 1964 à Massy."
       />
 
       {/* Intro */}
@@ -124,6 +203,8 @@ export default function HomePage() {
       <Stats />
 
       <References />
+
+      <FaqSection items={HOME_FAQ} />
 
       <CTASection
         eyebrow="Visite d'atelier"

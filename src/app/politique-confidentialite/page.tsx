@@ -6,7 +6,10 @@ export const metadata: Metadata = {
   title: "Politique de confidentialité",
   description:
     "Politique de confidentialité du site leboulluec.com — traitement des données personnelles, finalités, durées de conservation, droits RGPD.",
-  alternates: { canonical: "/politique-confidentialite" },
+  alternates: { canonical: "https://leboulluec.com/politique-confidentialite" },
+  openGraph: {
+    url: "https://leboulluec.com/politique-confidentialite",
+  },
   robots: { index: true, follow: true },
 };
 

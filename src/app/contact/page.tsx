@@ -3,6 +3,7 @@ import PageHeader from "@/components/PageHeader";
 import Container from "@/components/Container";
 import ContactForm from "@/components/ContactForm";
 import JsonLd from "@/components/JsonLd";
+import Breadcrumb from "@/components/Breadcrumb";
 import { contactPageSchema } from "@/lib/schema";
 import { NAP } from "@/lib/nap";
 
@@ -10,10 +11,11 @@ export const metadata: Metadata = {
   title: "Contact — Massy, Île-de-France",
   description:
     "Atelier de menuiserie et serrurerie à Massy. 01 60 12 06 49 — contact@leboulluec.fr. Visite d'atelier sur rendez-vous, devis sur étude.",
-  alternates: { canonical: "/contact" },
+  alternates: { canonical: "https://leboulluec.com/contact" },
   openGraph: {
     title: "Contact — Atelier Le Boulluec, Massy",
     description: "01 60 12 06 49 — contact@leboulluec.fr. Visite d'atelier sur rendez-vous.",
+    url: "https://leboulluec.com/contact",
     images: ["https://ucarecdn.com/869f3df8-834f-4132-a008-c3e2c7ca8a37/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
@@ -24,11 +26,13 @@ export default function ContactPage() {
   return (
     <>
       <JsonLd data={contactPageSchema()} />
+      <Breadcrumb items={[{ label: "Contact", href: "/contact" }]} />
       <PageHeader
         photoUuid="869f3df8-834f-4132-a008-c3e2c7ca8a37"
         eyebrow="Nous écrire"
         title="Nous contacter."
         subtitle="Atelier ouvert du lundi au vendredi, 8h–12h · 13h30–17h30. Visite d'atelier sur rendez-vous."
+        imageAlt="Atelier Le Boulluec à Massy (91300) — visites sur rendez-vous, devis menuiserie et serrurerie en Île-de-France."
       />
 
       <section className="py-20 md:py-24 bg-[#F5EFE3]">

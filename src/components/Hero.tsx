@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { uploadcareUrl } from "@/lib/uploadcare";
+import { uploadcareHero } from "@/lib/uploadcare";
 
 type HeroProps = {
   photoUuid: string;
@@ -9,6 +9,8 @@ type HeroProps = {
   subtitle?: string;
   cta?: { label: string; href: string };
   variant?: "default" | "patrimonial";
+  /** Descriptive alt for the hero image — important for image SEO and AT users. */
+  imageAlt?: string;
 };
 
 export default function Hero({
@@ -18,21 +20,32 @@ export default function Hero({
   subtitle,
   cta,
   variant = "default",
+  imageAlt,
 }: HeroProps) {
-  const heightClass = variant === "patrimonial" ? "min-h-[52vh] md:min-h-[58vh]" : "min-h-[68vh] md:min-h-[78vh]";
+  const heightClass =
+    variant === "patrimonial"
+      ? "min-h-[52vh] md:min-h-[58vh]"
+      : "min-h-[68vh] md:min-h-[78vh]";
 
   return (
-    <section className={`relative ${heightClass} flex items-end overflow-hidden bg-[#15294E]`}>
+    <section
+      className={`relative ${heightClass} flex items-end overflow-hidden bg-[#15294E]`}
+    >
       <Image
-        src={uploadcareUrl(photoUuid, 2000)}
-        alt=""
+        src={uploadcareHero(photoUuid, 1600)}
+        alt={imageAlt ?? ""}
+        role={imageAlt ? undefined : "presentation"}
         fill
         priority
+        fetchPriority="high"
         sizes="100vw"
+        quality={80}
         className="object-cover object-center"
-        unoptimized
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#15294E]/90 via-[#15294E]/50 to-[#15294E]/15" aria-hidden="true" />
+      <div
+        className="absolute inset-0 bg-gradient-to-t from-[#15294E]/90 via-[#15294E]/50 to-[#15294E]/15"
+        aria-hidden="true"
+      />
       <div className="relative max-w-[1280px] mx-auto px-5 lg:px-8 pb-14 md:pb-20 w-full">
         <div className="max-w-3xl">
           {eyebrow && (
@@ -62,7 +75,10 @@ export default function Hero({
         </div>
       </div>
       {/* fine orange filet bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-[#C46B2E]" aria-hidden="true" />
+      <div
+        className="absolute bottom-0 left-0 right-0 h-px bg-[#C46B2E]"
+        aria-hidden="true"
+      />
     </section>
   );
 }

@@ -1,15 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
-import { uploadcareUrl } from "@/lib/uploadcare";
+import { uploadcareThumb } from "@/lib/uploadcare";
 
 type ServiceCardProps = {
   title: string;
   description: string;
   href: string;
   photoUuid?: string;
+  /** Optional descriptive alt; fallback uses the title (image is decorative for keyboard users since the card is fully linked). */
+  imageAlt?: string;
 };
 
-export default function ServiceCard({ title, description, href, photoUuid }: ServiceCardProps) {
+export default function ServiceCard({ title, description, href, photoUuid, imageAlt }: ServiceCardProps) {
+  // The card is a single linked block, so its accessible name comes from the H3 + description.
+  // The image's alt is empty by default to avoid duplicate announcements, but we still provide
+  // a descriptive value via `imageAlt` when the card is used outside a link context.
   return (
     <Link
       href={href}
@@ -18,12 +23,14 @@ export default function ServiceCard({ title, description, href, photoUuid }: Ser
       {photoUuid && (
         <div className="relative aspect-[4/3] overflow-hidden bg-[#1F3A6B]/5">
           <Image
-            src={uploadcareUrl(photoUuid, 800)}
-            alt=""
+            src={uploadcareThumb(photoUuid, 800)}
+            alt={imageAlt ?? ""}
+            role={imageAlt ? undefined : "presentation"}
             fill
-            sizes="(max-width:768px) 100vw, 33vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
-            unoptimized
+            loading="lazy"
+            quality={78}
           />
         </div>
       )}

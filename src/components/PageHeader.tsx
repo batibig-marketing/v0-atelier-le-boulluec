@@ -6,8 +6,18 @@ type Props = {
   eyebrow?: string;
   title: string;
   subtitle?: string;
+  imageAlt?: string;
 };
 
-export default function PageHeader({ photoUuid, eyebrow, title, subtitle }: Props) {
-  return <Hero photoUuid={photoUuid} eyebrow={eyebrow} title={title} subtitle={subtitle} variant="patrimonial" />;
+export default function PageHeader({ photoUuid, eyebrow, title, subtitle, imageAlt }: Props) {
+  return (
+    <Hero
+      photoUuid={photoUuid}
+      eyebrow={eyebrow}
+      title={title}
+      subtitle={subtitle}
+      variant="patrimonial"
+      imageAlt={imageAlt}
+    />
+  );
 }

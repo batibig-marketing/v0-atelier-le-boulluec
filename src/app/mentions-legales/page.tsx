@@ -6,7 +6,10 @@ export const metadata: Metadata = {
   title: "Mentions légales",
   description:
     "Mentions légales du site leboulluec.com — éditeur, hébergeur, propriété intellectuelle et coordonnées.",
-  alternates: { canonical: "/mentions-legales" },
+  alternates: { canonical: "https://leboulluec.com/mentions-legales" },
+  openGraph: {
+    url: "https://leboulluec.com/mentions-legales",
+  },
   robots: { index: true, follow: true },
 };
 
