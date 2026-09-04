@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Container from "@/components/Container";
 import { NAP } from "@/lib/nap";
 
@@ -29,7 +30,7 @@ export default function PolitiqueConfidentialitePage() {
         <p>
           <strong>{NAP.legalName}</strong><br />
           {NAP.street}, {NAP.postalCode} {NAP.city}<br />
-          <a href={`tel:${NAP.phoneE164}`}>{NAP.phone}</a> — <a href={`mailto:${NAP.email}`}>{NAP.email}</a>
+          <a href={`tel:${NAP.phoneE164}`}>{NAP.phone}</a> — <Link href="/contact/">formulaire de contact</Link>
         </p>
 
         <h2>Données collectées</h2>
@@ -83,7 +84,7 @@ export default function PolitiqueConfidentialitePage() {
           <li>Droit d&apos;introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">cnil.fr</a>).</li>
         </ul>
         <p>
-          Ces droits s&apos;exercent par courriel à <a href={`mailto:${NAP.email}`}>{NAP.email}</a> ou par voie postale à l&apos;adresse du siège social. Une réponse est apportée dans un délai d&apos;un mois.
+          Ces droits s&apos;exercent via notre <Link href="/contact/">formulaire de contact</Link> ou par voie postale à l&apos;adresse du siège social. Une réponse est apportée dans un délai d&apos;un mois.
         </p>
 
         <h2>Cookies</h2>
@@ -105,7 +106,7 @@ export default function PolitiqueConfidentialitePage() {
 
         <h2>Contact</h2>
         <p>
-          Pour toute question relative au traitement de vos données personnelles, vous pouvez écrire à <a href={`mailto:${NAP.email}`}>{NAP.email}</a> ou par courrier postal à l&apos;adresse du siège social.
+          Pour toute question relative au traitement de vos données personnelles, vous pouvez nous contacter via notre <Link href="/contact/">formulaire de contact</Link> ou par courrier postal à l&apos;adresse du siège social.
         </p>
       </Container>
     </article>

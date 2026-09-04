@@ -10,11 +10,11 @@ import { NAP } from "@/lib/nap";
 export const metadata: Metadata = {
   title: "Contact — Massy, Île-de-France",
   description:
-    "Atelier de menuiserie et serrurerie à Massy. 01 60 12 06 49 — contact@leboulluec.fr. Visite d'atelier sur rendez-vous, devis sur étude.",
+    "Atelier de menuiserie et serrurerie à Massy. 01 60 12 06 49. Visite d'atelier sur rendez-vous, devis sur étude.",
   alternates: { canonical: "https://leboulluec.com/contact" },
   openGraph: {
     title: "Contact — Atelier Le Boulluec, Massy",
-    description: "01 60 12 06 49 — contact@leboulluec.fr. Visite d'atelier sur rendez-vous.",
+    description: "01 60 12 06 49. Visite d'atelier sur rendez-vous.",
     url: "https://leboulluec.com/contact",
     images: ["https://ucarecdn.com/869f3df8-834f-4132-a008-c3e2c7ca8a37/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
@@ -48,9 +48,7 @@ export default function ContactPage() {
                   {NAP.postalCode} {NAP.city}<br />
                   <br />
                   <strong className="text-[#15294E]">Téléphone</strong> :{" "}
-                  <a href={`tel:${NAP.phoneE164}`} className="text-[#C46B2E] hover:underline">{NAP.phone}</a><br />
-                  <strong className="text-[#15294E]">Courriel</strong> :{" "}
-                  <a href={`mailto:${NAP.email}`} className="text-[#C46B2E] hover:underline">{NAP.email}</a>
+                  <a href={`tel:${NAP.phoneE164}`} className="text-[#C46B2E] hover:underline">{NAP.phone}</a>
                 </address>
                 <p className="mt-5 text-sm text-[#1A1A1A]/70">{NAP.hoursReadable}</p>
               </div>
@@ -58,7 +56,7 @@ export default function ContactPage() {
               <div>
                 <p className="text-[#C46B2E] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Visite d&apos;atelier</p>
                 <p className="text-[#1A1A1A]/85 leading-relaxed">
-                  Les syndics, architectes et directions immobilières qui nous découvrent passent presque tous par notre atelier de Massy avant un premier ouvrage. La visite dure une vingtaine de minutes et se prend par téléphone ou par courriel.
+                  Les syndics, architectes et directions immobilières qui nous découvrent passent presque tous par notre atelier de Massy avant un premier ouvrage. La visite dure une vingtaine de minutes et se prend par téléphone ou via le formulaire ci-contre.
                 </p>
               </div>
 

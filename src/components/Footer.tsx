@@ -19,11 +19,6 @@ export default function Footer() {
                   {NAP.phone}
                 </a>
               </div>
-              <div>
-                <a href={`mailto:${NAP.email}`} className="hover:text-[#C46B2E] transition-colors">
-                  {NAP.email}
-                </a>
-              </div>
               <div className="pt-3 text-xs text-[#F5EFE3]/70">{NAP.hoursReadable}</div>
               <div className="pt-2">
                 <a

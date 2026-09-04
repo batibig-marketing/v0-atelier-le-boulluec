@@ -34,7 +34,7 @@ const ABOUT_FAQ = [
   },
   {
     q: "Comment obtenir un devis ou un rendez-vous ?",
-    a: "Par téléphone au 01 60 12 06 49, par courriel à contact@leboulluec.fr, ou via le formulaire de la page Contact. Nous reviendrons vers vous sous 48 heures ouvrées. Une visite d'atelier de vingt minutes est généralement le meilleur point de départ pour les syndics et architectes qui nous découvrent.",
+    a: "Par téléphone au 01 60 12 06 49 ou via le formulaire de la page Contact. Nous reviendrons vers vous sous 48 heures ouvrées. Une visite d'atelier de vingt minutes est généralement le meilleur point de départ pour les syndics et architectes qui nous découvrent.",
   },
 ];
 

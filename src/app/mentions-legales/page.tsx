@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Container from "@/components/Container";
 import { NAP } from "@/lib/nap";
 
@@ -34,7 +35,7 @@ export default function MentionsLegalesPage() {
         </p>
         <p>
           <strong>Téléphone</strong> : <a href={`tel:${NAP.phoneE164}`}>{NAP.phone}</a><br />
-          <strong>Courriel</strong> : <a href={`mailto:${NAP.email}`}>{NAP.email}</a>
+          <strong>Contact</strong> : <Link href="/contact/">formulaire de contact</Link>
         </p>
         <p>
           <strong>Directeur de la publication</strong> : à fournir par la direction.
