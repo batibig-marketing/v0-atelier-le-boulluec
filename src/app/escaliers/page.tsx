@@ -69,6 +69,17 @@ export default function EscaliersPage() {
             <strong className="text-[#EDE6DA]">En bref —</strong> <strong>Un escalier sur mesure est un ouvrage conçu, dessiné, façonné et posé spécifiquement pour un site donné, par opposition à un escalier de série livré en kit.</strong> L&apos;Atelier Le Boulluec fabrique des escaliers sur mesure depuis 1964, dans son atelier de Massy : escaliers à limon acier, suspendus, en colimaçon ou autoportants, en bois, acier ou mixtes. Délai standard : 3 à 4 mois entre le premier rendez-vous et la pose.
           </p>
 
+          {/* Sommaire — les quatre rubriques du menu « Escaliers » du site
+              historique, adressees par ancre dans cette meme page. */}
+          <nav aria-label="Les familles d'escaliers">
+            <ul className="sommaire">
+              <li><a href="#Escalierssuspendus">Escaliers suspendus</a></li>
+              <li><a href="#Escaliersencolimacon">Escaliers en colimaçon</a></li>
+              <li><a href="#Escaliersautoporteurs">Escaliers autoporteurs</a></li>
+              <li><a href="#Escaliersenlimonacier">Escaliers à limon acier</a></li>
+            </ul>
+          </nav>
+
           <h2>Quels sont nos escaliers sur mesure phares ?</h2>
           <ul>
             <li><strong>Escaliers à limon acier</strong> : limon central ou latéraux, marches bois massif ou métal, signature des lofts contemporains.</li>
@@ -86,25 +97,43 @@ export default function EscaliersPage() {
           </ol>
 
           <h2>Quatre familles d&apos;escaliers</h2>
-
-          <h3>Escaliers à limon acier</h3>
           <p>
-            Un limon central ou deux limons latéraux en acier — droit, courbé, débillardé — reçoivent des marches en bois massif, en pierre reconstituée ou en métal. C&apos;est l&apos;une de nos signatures : la pureté du dessin métallique mariée à la chaleur d&apos;une marche en chêne huilé. Les pièces acier sont dessinées et soudées par notre <Link href="/serrurerie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">département serrurerie-ferronnerie</Link>. Adapté aux lofts, aux duplex contemporains et aux réhabilitations industrielles.
+            L&apos;Atelier Le Boulluec façonne dans ses ateliers des escaliers suspendus, des escaliers en colimaçon, des escaliers autoporteurs et des escaliers à limon acier, droits ou hélicoïdaux. Ces escaliers, conçus avec le groupement de créateurs d&apos;escaliers <strong>Treppenmeister</strong> et fabriqués dans nos ateliers, vous permettent de créer l&apos;escalier à votre image tout en respectant un cahier des charges précis en matière de sécurité, de qualité et de respect des normes en vigueur.
+          </p>
+          <p>
+            Treppenmeister est le plus grand groupement de fabricants d&apos;escaliers d&apos;Europe. Inventeur de l&apos;escalier suspendu en bois, il est leader sur ce marché et dispose depuis 2005 d&apos;un agrément technique européen pour ses escaliers suspendus. Notre entreprise fait partie de ce réseau, qui compte plus de cinquante entreprises françaises réparties sur tout le territoire. Notre gamme d&apos;escaliers contemporains et design, adaptée à tous les budgets, est réalisée à partir de matériaux nobles.
           </p>
 
-          <h3>Escaliers suspendus</h3>
+          <h3 id="Escalierssuspendus" className="ancre">Escaliers suspendus</h3>
           <p>
             Les marches semblent flotter, retenues par une fixation murale dissimulée ou par un câble inox tendu. L&apos;effet visuel est saisissant, mais la mise en œuvre exige une étude structurelle préalable que nous menons systématiquement avec un bureau d&apos;études partenaire.
           </p>
+          <p>
+            C&apos;est la famille sur laquelle le groupement Treppenmeister, inventeur de l&apos;escalier suspendu en bois, dispose d&apos;un agrément technique européen : le limon disparaît, chaque marche est ancrée individuellement, et le calcul d&apos;ancrage dans le mur porteur devient l&apos;essentiel du travail d&apos;étude. Nous vérifions la nature du support avant tout engagement — béton, pierre de taille, pan de bois ou refend brique n&apos;offrent pas la même reprise d&apos;effort.
+          </p>
 
-          <h3>Escaliers en colimaçon</h3>
+          <h3 id="Escaliersencolimacon" className="ancre">Escaliers en colimaçon</h3>
           <p>
             Pour les contraintes de surface réduite — accès à des combles, à une mezzanine, à un duplex — l&apos;escalier hélicoïdal demeure la solution la plus efficiente. Nous en façonnons en acier laqué, en acier brut verni, ou en mixte acier-bois.
           </p>
+          <p>
+            Le dessin se joue sur trois cotes : le diamètre de la trémie, le pas d&apos;hélice et l&apos;échappée sous plafond. Nous relevons les trois sur site avant de dessiner, parce qu&apos;un colimaçon qui tient sur le papier peut cogner la panne d&apos;un comble à la sixième marche. Marches bois massif ou tôle pliée, fût central tourné ou noyau ouvert, garde-corps à barreaudage ou à câbles : le dessin suit l&apos;usage de la pièce desservie.
+          </p>
 
-          <h3>Escaliers autoportants</h3>
+          <h3 id="Escaliersautoporteurs" className="ancre">Escaliers autoporteurs</h3>
           <p>
             Sans appui mural intermédiaire, l&apos;escalier autoportant repose uniquement sur ses départs et ses arrivées. Solution élégante pour des espaces ouverts, mais exigeante en calcul de section et en fixation.
+          </p>
+          <p>
+            L&apos;autoporteur est l&apos;escalier des volumes qu&apos;on ne veut pas cloisonner : rien ne le relie aux murs, il traverse la pièce comme un meuble. Cette liberté se paie en épaisseur de limon et en qualité de scellement aux deux extrémités. Nous en avons remplacé plusieurs en Essonne — à Saclay, à Paray-Vieille-Poste — dans des maisons où l&apos;escalier de série d&apos;origine avait pris du jeu.
+          </p>
+
+          <h3 id="Escaliersenlimonacier" className="ancre">Escaliers à limon acier</h3>
+          <p>
+            Un limon central ou deux limons latéraux en acier — droit, courbé, débillardé — reçoivent des marches en bois massif, en pierre reconstituée ou en métal. C&apos;est l&apos;une de nos signatures : la pureté du dessin métallique mariée à la chaleur d&apos;une marche en chêne huilé. Les pièces acier sont dessinées et soudées par notre <Link href="/serrurerie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">département serrurerie-ferronnerie</Link>. Adapté aux lofts, aux duplex contemporains et aux réhabilitations industrielles.
+          </p>
+          <p>
+            Le limon acier est aussi la solution la plus tolérante quand la trémie existante est irrégulière : la tôle se découpe au trait juste, là où un limon bois imposerait de reprendre la maçonnerie. Nous les livrons en acier laqué au four, en acier brut verni ou en acier thermolaqué, selon l&apos;ambiance recherchée et l&apos;exposition de l&apos;ouvrage.
           </p>
 
           <h2>La méthode atelier</h2>

@@ -1,10 +1,24 @@
 import Link from "next/link";
 import { NAP } from "@/lib/nap";
+import { MENUISERIE_SOUS, ESCALIERS_SOUS } from "@/lib/navigation";
 import Logo from "./Logo";
 
-const METIERS = [
-  { href: "/menuiserie", label: "Menuiserie" },
-  { href: "/escaliers", label: "Escaliers sur mesure" },
+/**
+ * Le pied de page reprend l'arborescence complete du site historique, ancres
+ * de sous-rubriques comprises : c'est le plan du site que les moteurs lisent
+ * sur chaque page.
+ */
+const METIERS: { href: string; label: string; sous?: { href: string; label: string }[] }[] = [
+  {
+    href: "/menuiserie",
+    label: "Menuiserie",
+    sous: MENUISERIE_SOUS,
+  },
+  {
+    href: "/escaliers",
+    label: "Escaliers sur mesure",
+    sous: ESCALIERS_SOUS,
+  },
   { href: "/serrurerie", label: "Serrurerie & ferronnerie" },
   { href: "/vitrerie", label: "Vitrerie" },
   { href: "/restauration-patrimoniale", label: "Restauration patrimoniale" },
@@ -66,6 +80,17 @@ export default function Footer() {
                   <Link href={m.href} className="hover:text-[#C9AB78] transition-colors">
                     {m.label}
                   </Link>
+                  {m.sous && (
+                    <ul className="mt-1.5 mb-2 ml-3 pl-3 border-l border-[#3A322C] space-y-1 text-[0.8125rem] text-[#EDE6DA]/78">
+                      {m.sous.map((s) => (
+                        <li key={s.href}>
+                          <Link href={s.href} className="hover:text-[#C9AB78] transition-colors">
+                            {s.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>

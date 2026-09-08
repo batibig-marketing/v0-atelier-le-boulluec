@@ -372,6 +372,66 @@ h1 {
   }
 }
 
+/*
+  Ancres de rubrique. Le site historique adressait ses sous-rubriques par des
+  ancres dans la page parente (/menuiserie#Portescocheres...). Sans marge de
+  defilement, le navigateur cale le titre exactement en haut de la fenetre :
+  le titre se retrouve alors colle au bord, sous le bandeau du fil d'Ariane
+  quand celui-ci est encore a l'ecran. On reserve donc une avance devant chaque
+  cible, pour que le titre arrive AU-DESSOUS de l'en-tete et non dessous.
+*/
+.ancre {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (min-width: 768px) {
+  .ancre {
+    scroll-margin-top: 7rem;
+  }
+}
+
+/*
+  Sommaire de page : la liste des rubriques posee en tete de l'article. Elle
+  rend visibles, dans le corps du texte, les memes ancres que la barre de
+  navigation — un maillage interne, pas une decoration.
+*/
+.sommaire {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  border-top: 1px solid var(--filet);
+  border-bottom: 1px solid var(--filet);
+  padding-block: 0.9rem;
+}
+
+.sommaire > li {
+  margin: 0;
+  padding: 0;
+}
+
+.sommaire > li::before {
+  content: none;
+}
+
+.sommaire a {
+  display: inline-block;
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--laiton-clair);
+  text-decoration: none;
+  border-bottom: 1px solid var(--laiton);
+  padding-bottom: 1px;
+}
+
+.sommaire a:hover {
+  color: var(--texte);
+  border-bottom-color: var(--texte);
+}
+
 ::selection {
   background: var(--laiton);
   color: var(--encre);
