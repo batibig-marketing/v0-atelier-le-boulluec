@@ -77,7 +77,7 @@ export default function Hero({
               </Link>
               <Link
                 href="/photos"
-                className="inline-flex items-center border border-[#3A322C] hover:border-[#9DB2C2] hover:text-[#9DB2C2] text-[#EDE6DA] px-6 py-3 cartouche transition-colors"
+                className="inline-flex items-center border border-[#7E96A8] hover:border-[#EDE6DA] hover:text-[#9DB2C2] text-[#EDE6DA] px-6 py-3 cartouche transition-colors"
               >
                 Voir l&apos;archive des ouvrages
               </Link>

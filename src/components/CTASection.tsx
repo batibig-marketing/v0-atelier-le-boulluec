@@ -23,7 +23,7 @@ export default function CTASection({
       <div className="max-w-[1320px] mx-auto px-5 lg:px-8 py-16 md:py-20 grid lg:grid-cols-12 gap-8 lg:gap-12">
         <div className="lg:col-span-7">
           {eyebrow && (
-            <p className="cartouche text-[#B9C9D6] pb-3 border-b border-[#EDE6DA]/25 mb-5">
+            <p className="cartouche text-[#B9C9D6] pb-3 border-b border-[#EDE6DA]/55 mb-5">
               {eyebrow}
             </p>
           )}
@@ -42,14 +42,14 @@ export default function CTASection({
             </Link>
             <a
               href={`tel:${NAP.phoneE164}`}
-              className="inline-flex items-center border border-[#EDE6DA]/40 hover:border-[#EDE6DA] px-6 py-3 cartouche transition-colors"
+              className="inline-flex items-center border border-[#EDE6DA]/55 hover:border-[#EDE6DA] px-6 py-3 cartouche transition-colors"
             >
               {NAP.phone}
             </a>
           </div>
         </div>
 
-        <address className="lg:col-span-5 not-italic border-t lg:border-t-0 lg:border-l border-[#EDE6DA]/25 pt-6 lg:pt-0 lg:pl-10">
+        <address className="lg:col-span-5 not-italic border-t lg:border-t-0 lg:border-l border-[#EDE6DA]/55 pt-6 lg:pt-0 lg:pl-10">
           <p className="cartouche text-[#B9C9D6]">L&apos;atelier</p>
           <p className="mt-3 text-[#EDE6DA]/90 leading-relaxed">
             {NAP.street}

@@ -49,7 +49,7 @@ export default function ContactForm() {
     );
   }
 
-  const inputBase = "w-full bg-[#241E1A] bois border border-[#7E96A8]/20 px-4 py-2.5 text-[#EDE6DA] focus:border-[#7E96A8] focus:outline-none transition-colors text-sm";
+  const inputBase = "w-full bg-[#241E1A] bois border border-[#7E96A8]/70 px-4 py-2.5 text-[#EDE6DA] focus:border-[#9DB2C2] focus:outline-none transition-colors text-sm";
   const labelBase = "block text-xs font-medium text-[#EDE6DA] mb-1.5 uppercase tracking-wider";
 
   return (
@@ -106,7 +106,7 @@ export default function ContactForm() {
       </div>
 
       {status === "error" && (
-        <p className="text-sm text-red-700 bg-red-50 border border-red-200 px-4 py-3">
+        <p className="text-sm text-[#EDE6DA] bg-[#2E2620] bois border-l-4 border-[#9DB2C2] px-4 py-3">
           {errorMsg || "Une erreur est survenue. Merci de réessayer ou de nous appeler."}
         </p>
       )}
