@@ -379,3 +379,95 @@ export function articleSchema(input: ArticleSchemaInput) {
 export function jsonLdScript(obj: object) {
   return { __html: JSON.stringify(obj) };
 }
+
+/**
+ * Déclaration d'entités du domaine métier — Bible SEO §15.7.
+ * On donne au moteur la carte sémantique du métier au lieu de le laisser la
+ * deviner : normes, ouvrages, gestes, organismes de référence. Les acronymes
+ * portent leur `alternateName` pour que les moteurs génératifs relient le sigle
+ * à la notion.
+ */
+export function mentionsMetier() {
+  return [
+    {
+      "@type": "Thing",
+      name: "Porte cochère",
+      description:
+        "Grande porte à deux vantaux ouvrant sur le porche d'un immeuble, dimensionnée à l'origine pour le passage d'une voiture attelée.",
+    },
+    {
+      "@type": "Thing",
+      name: "Porte bâtarde",
+      description:
+        "Porte d'immeuble à deux vantaux, intermédiaire entre la porte piétonne et la porte cochère, sans passage véhicule.",
+    },
+    {
+      "@type": "Thing",
+      name: "Enture",
+      alternateName: "Greffe de bois",
+      description:
+        "Découpe de la partie altérée d'une pièce de bois et rapport d'une pièce neuve ajustée au même profil, en remplacement d'un changement complet.",
+    },
+    {
+      "@type": "Thing",
+      name: "Traverse basse",
+      description:
+        "Pièce horizontale en pied de vantail, première atteinte par les remontées d'eau sur une porte extérieure.",
+    },
+    {
+      "@type": "Thing",
+      name: "Assemblage à tenon et mortaise",
+      description:
+        "Assemblage traditionnel de menuiserie, souvent chevillé, employé sur les portes d'immeuble en chêne massif.",
+    },
+    {
+      "@type": "Thing",
+      name: "Ferronnerie d'art",
+      description:
+        "Travail du fer forgé et de l'acier serrurier : pentures, grilles de défense, fers de lance, impostes ajourées.",
+    },
+    {
+      "@type": "Thing",
+      name: "Norme NF P01-012",
+      description:
+        "Norme française relative aux dimensions des garde-corps et aux règles de sécurité des escaliers.",
+    },
+    {
+      "@type": "Thing",
+      name: "Garantie décennale",
+      description:
+        "Responsabilité décennale du constructeur prévue par le Code civil, couvrant les ouvrages pendant dix ans à compter de la réception.",
+    },
+    {
+      "@type": "Thing",
+      name: "Établissement Recevant du Public",
+      alternateName: "ERP",
+    },
+    {
+      "@type": "Thing",
+      name: "Architecte des Bâtiments de France",
+      alternateName: "ABF",
+      description:
+        "Architecte de l'État chargé d'émettre un avis sur les travaux réalisés aux abords des monuments historiques et en site patrimonial remarquable.",
+    },
+    {
+      "@type": "Organization",
+      name: "Bricard",
+      description: "Fabricant français de serrures ; animateur du réseau « Serruriers Confiance ».",
+      url: "https://www.bricard.fr",
+    },
+    {
+      "@type": "Organization",
+      name: "AFNOR",
+      description: "Association française de normalisation, éditrice des normes NF.",
+      url: "https://www.afnor.org",
+    },
+    {
+      "@type": "Organization",
+      name: "Ministère de la Culture",
+      description:
+        "Autorité dont relèvent les Architectes des Bâtiments de France et la protection du patrimoine bâti.",
+      url: "https://www.culture.gouv.fr",
+    },
+  ];
+}

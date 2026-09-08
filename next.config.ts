@@ -33,8 +33,16 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      { source: "/news", destination: "/belles-portes-de-paris", permanent: true },
-      { source: "/projets", destination: "/belles-portes-de-paris", permanent: true },
+      // Anciennes URL du site historique -> equivalent exact (Bible SEO 9.2 :
+      // chaque ancienne URL pointe vers son equivalent, jamais vers l'accueil,
+      // et jamais de chaine A->B->C).
+      { source: "/mentionslegales", destination: "/mentions-legales", permanent: true },
+      { source: "/vieprivee", destination: "/politique-confidentialite", permanent: true },
+      // Le slug historique indexe est /belle-portes-rue-sur-paris-et-ailleurs.
+      // Le slug court, jamais crawle en production, lui est redirige.
+      { source: "/belles-portes-de-paris", destination: "/belle-portes-rue-sur-paris-et-ailleurs", permanent: true },
+      { source: "/news", destination: "/actualite", permanent: true },
+      { source: "/projets", destination: "/photos", permanent: true },
     ];
   },
   async headers() {

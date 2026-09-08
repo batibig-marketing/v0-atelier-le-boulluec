@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SectionTitre from "@/components/SectionTitre";
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import Container from "@/components/Container";
@@ -38,11 +39,11 @@ export const metadata: Metadata = {
   title: "Escaliers sur mesure bois & acier",
   description:
     "Escaliers suspendus, en colimaçon, autoportants ou à limon acier. Conception, fabrication atelier et pose. Atelier Le Boulluec — Massy, Île-de-France.",
-  alternates: { canonical: "https://leboulluec.com/escaliers" },
+  alternates: { canonical: "https://www.leboulluec.com/escaliers" },
   openGraph: {
     title: "Escaliers sur mesure bois & acier — Atelier Le Boulluec",
     description: "Escaliers suspendus, colimaçon, autoportants ou à limon acier — fabrication atelier.",
-    url: "https://leboulluec.com/escaliers",
+    url: "https://www.leboulluec.com/escaliers",
     images: ["https://ucarecdn.com/029f59c0-f79a-44d7-9773-de7a099813f4/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
@@ -62,10 +63,10 @@ export default function EscaliersPage() {
         imageAlt="Escalier sur mesure bois et acier fabriqué par l'Atelier Le Boulluec à Massy."
       />
 
-      <article className="py-20 md:py-24 bg-[#F5EFE3]">
-        <Container size="narrow" className="prose-marine">
-          <p className="text-lg leading-relaxed text-[#1A1A1A]/85">
-            <strong>Un escalier sur mesure est un ouvrage conçu, dessiné, façonné et posé spécifiquement pour un site donné, par opposition à un escalier de série livré en kit.</strong> L&apos;Atelier Le Boulluec fabrique des escaliers sur mesure depuis 1964, dans son atelier de Massy : escaliers à limon acier, suspendus, en colimaçon ou autoportants, en bois, acier ou mixtes. Délai standard : 3 à 4 mois entre le premier rendez-vous et la pose.
+      <article className="py-20 md:py-24 bg-[#E7E2D8]">
+        <Container size="narrow" className="prose-atelier">
+          <p className="text-lg leading-relaxed text-[#171512]/85">
+            <strong className="text-[#0A3559]">En bref —</strong> <strong>Un escalier sur mesure est un ouvrage conçu, dessiné, façonné et posé spécifiquement pour un site donné, par opposition à un escalier de série livré en kit.</strong> L&apos;Atelier Le Boulluec fabrique des escaliers sur mesure depuis 1964, dans son atelier de Massy : escaliers à limon acier, suspendus, en colimaçon ou autoportants, en bois, acier ou mixtes. Délai standard : 3 à 4 mois entre le premier rendez-vous et la pose.
           </p>
 
           <h2>Quels sont nos escaliers sur mesure phares ?</h2>
@@ -88,7 +89,7 @@ export default function EscaliersPage() {
 
           <h3>Escaliers à limon acier</h3>
           <p>
-            Un limon central ou deux limons latéraux en acier — droit, courbé, débillardé — reçoivent des marches en bois massif, en pierre reconstituée ou en métal. C&apos;est l&apos;une de nos signatures : la pureté du dessin métallique mariée à la chaleur d&apos;une marche en chêne huilé. Les pièces acier sont dessinées et soudées par notre <Link href="/serrurerie" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">département serrurerie-ferronnerie</Link>. Adapté aux lofts, aux duplex contemporains et aux réhabilitations industrielles.
+            Un limon central ou deux limons latéraux en acier — droit, courbé, débillardé — reçoivent des marches en bois massif, en pierre reconstituée ou en métal. C&apos;est l&apos;une de nos signatures : la pureté du dessin métallique mariée à la chaleur d&apos;une marche en chêne huilé. Les pièces acier sont dessinées et soudées par notre <Link href="/serrurerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">département serrurerie-ferronnerie</Link>. Adapté aux lofts, aux duplex contemporains et aux réhabilitations industrielles.
           </p>
 
           <h3>Escaliers suspendus</h3>
@@ -117,7 +118,7 @@ export default function EscaliersPage() {
 
           <h2>Garde-corps et rampes</h2>
           <p>
-            Tout escalier vient avec son garde-corps, qui doit conjuguer sécurité (norme NF P01-012), esthétique et compatibilité visuelle avec l&apos;escalier qu&apos;il accompagne. Acier forgé, acier serrurier, câble inox tendu, <Link href="/vitrerie" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">verre feuilleté trempé</Link>, ou bois — selon le dessin choisi. Pour les escaliers anciens d&apos;immeubles patrimoniaux (limons bois, balustres, rampes en ferronnerie), voir notre activité de <Link href="/restauration-patrimoniale" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">restauration patrimoniale</Link>.
+            Tout escalier vient avec son garde-corps, qui doit conjuguer sécurité (norme NF P01-012), esthétique et compatibilité visuelle avec l&apos;escalier qu&apos;il accompagne. Acier forgé, acier serrurier, câble inox tendu, <Link href="/vitrerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">verre feuilleté trempé</Link>, ou bois — selon le dessin choisi. Pour les escaliers anciens d&apos;immeubles patrimoniaux (limons bois, balustres, rampes en ferronnerie), voir notre activité de <Link href="/restauration-patrimoniale" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">restauration patrimoniale</Link>.
           </p>
 
           <h2>Pour les architectes et maîtres d&apos;œuvre</h2>
@@ -127,12 +128,9 @@ export default function EscaliersPage() {
         </Container>
       </article>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-[#F6F4EF]">
         <Container size="wide">
-          <p className="text-[#C46B2E] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Réalisations</p>
-          <h2 className="font-serif text-2xl md:text-3xl text-[#15294E] mb-10">
-            Quelques escaliers façonnés à Massy
-          </h2>
+          <SectionTitre index="01" rubrique="Réalisations" titre="Quelques escaliers façonnés à Massy" action={<Link href="/photos" className="cartouche text-[#0D4A7B] hover:text-[#8F4703] transition-colors">Archive des ouvrages →</Link>} />
           <PhotoGrid photos={photos} columns={3} />
         </Container>
       </section>

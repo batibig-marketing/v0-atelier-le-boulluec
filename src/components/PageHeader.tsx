@@ -1,4 +1,3 @@
-// A lighter hero variant for service / about pages
 import Hero from "./Hero";
 
 type Props = {
@@ -7,9 +6,19 @@ type Props = {
   title: string;
   subtitle?: string;
   imageAlt?: string;
+  /** Cartouche posé sous la photographie : ouvrage, adresse, année. */
+  legende?: string;
 };
 
-export default function PageHeader({ photoUuid, eyebrow, title, subtitle, imageAlt }: Props) {
+/** En-tête de page intérieure — même planche que l'accueil, format réduit. */
+export default function PageHeader({
+  photoUuid,
+  eyebrow,
+  title,
+  subtitle,
+  imageAlt,
+  legende,
+}: Props) {
   return (
     <Hero
       photoUuid={photoUuid}
@@ -18,6 +27,7 @@ export default function PageHeader({ photoUuid, eyebrow, title, subtitle, imageA
       subtitle={subtitle}
       variant="patrimonial"
       imageAlt={imageAlt}
+      legende={legende}
     />
   );
 }

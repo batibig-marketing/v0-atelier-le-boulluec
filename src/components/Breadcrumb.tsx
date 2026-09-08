@@ -53,14 +53,14 @@ export default function Breadcrumb({ items, noSchema = false }: BreadcrumbProps)
       {!noSchema && <JsonLd data={breadcrumbSchema(schemaItems)} />}
       <nav
         aria-label="Fil d'Ariane"
-        className="bg-[#F5EFE3] border-b border-[#1F3A6B]/10"
+        className="bg-[#0A3559] text-[#E7E2D8]"
       >
-        <Container size="wide" className="py-3">
-          <ol className="flex flex-wrap items-center gap-x-1 gap-y-1 text-[11px] md:text-xs font-medium uppercase tracking-[0.18em] text-[#1F3A6B]">
+        <Container size="wide" className="py-2.5">
+          <ol className="cartouche flex flex-wrap items-center gap-x-1 gap-y-1 text-[#E7E2D8]/80">
             <li className="flex items-center">
               <Link
                 href="/"
-                className="hover:text-[#C46B2E] transition-colors"
+                className="hover:text-[#E29A43] transition-colors"
               >
                 Accueil
               </Link>
@@ -69,18 +69,18 @@ export default function Breadcrumb({ items, noSchema = false }: BreadcrumbProps)
               const isLast = index === items.length - 1;
               return (
                 <li key={`${item.label}-${index}`} className="flex items-center">
-                  <span aria-hidden="true" className="text-[#C46B2E] mx-2">·</span>
+                  <span aria-hidden="true" className="text-[#E29A43] mx-2">·</span>
                   {item.href && !isLast ? (
                     <Link
                       href={item.href}
-                      className="hover:text-[#C46B2E] transition-colors"
+                      className="hover:text-[#E29A43] transition-colors"
                     >
                       {item.label}
                     </Link>
                   ) : (
                     <span
                       aria-current={isLast ? "page" : undefined}
-                      className="text-[#1F3A6B]/70"
+                      className="text-[#F6F4EF]"
                     >
                       {item.label}
                     </span>

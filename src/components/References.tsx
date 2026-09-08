@@ -1,3 +1,5 @@
+import SectionTitre from "./SectionTitre";
+
 const PRESTIGE = [
   "Cartier",
   "Van Cleef & Arpels",
@@ -11,31 +13,41 @@ const SYNDICS = ["Cogesco", "Lamennais", "Gallard", "CIME", "Immo de France", "G
 
 export default function References() {
   return (
-    <section className="py-20 bg-[#F5EFE3]">
-      <div className="max-w-[1080px] mx-auto px-5 lg:px-8">
-        <p className="text-[#C46B2E] text-xs font-semibold tracking-[0.2em] uppercase mb-5">
-          Confiance
-        </p>
-        <h2 className="font-serif text-3xl md:text-4xl text-[#15294E] mb-12 max-w-2xl">
-          Ils nous ont confié leurs ouvrages
-        </h2>
+    <section className="py-16 md:py-20 bg-[#E7E2D8]">
+      <div className="max-w-[1320px] mx-auto px-5 lg:px-8">
+        <SectionTitre
+          index="05"
+          rubrique="Donneurs d'ordre"
+          titre="Ils nous ont confié leurs ouvrages."
+          chapo="Maisons de prestige, groupes industriels et syndics de copropriété d'Île-de-France : la liste tient lieu de garantie, pas de vitrine."
+        />
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16">
           <div>
-            <h3 className="text-sm text-[#1A1A1A]/60 uppercase tracking-wider mb-5">Grands comptes & maisons</h3>
-            <ul className="flex flex-wrap gap-x-6 gap-y-3 text-[#15294E]">
+            <h3 className="cartouche text-[#171512]/60 pb-2 border-b border-[#C9C1B2]">
+              Maisons &amp; grands comptes
+            </h3>
+            <ul className="mt-5 space-y-2.5">
               {PRESTIGE.map((name) => (
-                <li key={name} className="font-serif text-lg md:text-xl border-b border-[#C46B2E]/40 pb-1">
+                <li
+                  key={name}
+                  className="font-display text-lg md:text-xl text-[#0A3559] border-b border-[#C9C1B2] pb-2"
+                >
                   {name}
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <h3 className="text-sm text-[#1A1A1A]/60 uppercase tracking-wider mb-5">Syndics d&apos;Île-de-France</h3>
-            <ul className="flex flex-wrap gap-x-6 gap-y-3 text-[#15294E]">
+            <h3 className="cartouche text-[#171512]/60 pb-2 border-b border-[#C9C1B2]">
+              Syndics d&apos;Île-de-France
+            </h3>
+            <ul className="mt-5 space-y-2.5">
               {SYNDICS.map((name) => (
-                <li key={name} className="font-serif text-lg md:text-xl border-b border-[#C46B2E]/40 pb-1">
+                <li
+                  key={name}
+                  className="font-display text-lg md:text-xl text-[#0A3559] border-b border-[#C9C1B2] pb-2"
+                >
                   {name}
                 </li>
               ))}

@@ -2,84 +2,131 @@ import Link from "next/link";
 import { NAP } from "@/lib/nap";
 import Logo from "./Logo";
 
+const METIERS = [
+  { href: "/menuiserie", label: "Menuiserie" },
+  { href: "/escaliers", label: "Escaliers sur mesure" },
+  { href: "/serrurerie", label: "Serrurerie & ferronnerie" },
+  { href: "/vitrerie", label: "Vitrerie" },
+  { href: "/restauration-patrimoniale", label: "Restauration patrimoniale" },
+];
+
+const ARCHIVE = [
+  { href: "/photos", label: "L'archive des ouvrages" },
+  { href: "/belle-portes-rue-sur-paris-et-ailleurs", label: "Belles portes de Paris" },
+  { href: "/actualite", label: "Chantiers récents" },
+  { href: "/page-avis", label: "Avis des clients" },
+  { href: "/a-propos", label: "L'atelier depuis 1964" },
+  { href: "/contact", label: "Contact & chiffrage" },
+];
+
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-[#1F3A6B] text-[#F5EFE3] mt-24">
-      <div className="max-w-[1280px] mx-auto px-5 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14">
-          {/* Col 1 — Atelier NAP */}
-          <div>
-            <Logo variant="light" className="h-12 w-auto mb-5" />
-            <address className="not-italic text-sm leading-relaxed text-[#F5EFE3]/85 space-y-1">
-              <div>{NAP.street}</div>
-              <div>{NAP.postalCode} {NAP.city}</div>
-              <div className="pt-3">
-                <a href={`tel:${NAP.phoneE164}`} className="hover:text-[#C46B2E] transition-colors">
-                  {NAP.phone}
-                </a>
-              </div>
-              <div className="pt-3 text-xs text-[#F5EFE3]/70">{NAP.hoursReadable}</div>
-              <div className="pt-2">
-                <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${NAP.street}, ${NAP.postalCode} ${NAP.city}`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-xs text-[#C46B2E] hover:underline"
-                >
-                  Itinéraire Google Maps →
-                </a>
-              </div>
+    <footer className="bg-[#171512] text-[#E7E2D8]">
+      <div className="max-w-[1320px] mx-auto px-5 lg:px-8 py-14 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
+          {/* NAP */}
+          <div className="lg:col-span-4">
+            <Logo variant="clair" tagline className="h-16 w-auto mb-6" title="Atelier Le Boulluec" />
+            <address className="not-italic text-sm leading-relaxed text-[#E7E2D8]/85">
+              <span className="block">{NAP.street}</span>
+              <span className="block">
+                {NAP.postalCode} {NAP.city}
+              </span>
+              <a
+                href={`tel:${NAP.phoneE164}`}
+                className="mt-3 inline-block text-[#E29A43] hover:text-[#F6F4EF] transition-colors"
+              >
+                {NAP.phone}
+              </a>
+              <span className="block mt-3 cartouche text-[#E7E2D8]/60">
+                {NAP.hoursReadable}
+              </span>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                  `${NAP.street}, ${NAP.postalCode} ${NAP.city}`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-block cartouche text-[#E7E2D8]/70 hover:text-[#E29A43] transition-colors"
+              >
+                Itinéraire →
+              </a>
             </address>
           </div>
 
-          {/* Col 2 — Métiers */}
-          <div>
-            <h2 className="font-serif text-base mb-4 text-[#F5EFE3]">Nos métiers</h2>
-            <ul className="space-y-2 text-sm text-[#F5EFE3]/85">
-              <li><Link href="/menuiserie" className="hover:text-[#C46B2E] transition-colors">Menuiserie</Link></li>
-              <li><Link href="/escaliers" className="hover:text-[#C46B2E] transition-colors">Escaliers</Link></li>
-              <li><Link href="/serrurerie" className="hover:text-[#C46B2E] transition-colors">Serrurerie</Link></li>
-              <li><Link href="/vitrerie" className="hover:text-[#C46B2E] transition-colors">Vitrerie</Link></li>
-              <li><Link href="/restauration-patrimoniale" className="hover:text-[#C46B2E] transition-colors">Restauration patrimoniale</Link></li>
+          {/* Métiers */}
+          <nav className="lg:col-span-3" aria-label="Nos métiers">
+            <h2 className="cartouche text-[#E7E2D8]/60 pb-2 border-b border-[#3A3630]">
+              Les cinq métiers
+            </h2>
+            <ul className="mt-4 space-y-2 text-sm text-[#E7E2D8]/85">
+              {METIERS.map((m) => (
+                <li key={m.href}>
+                  <Link href={m.href} className="hover:text-[#E29A43] transition-colors">
+                    {m.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Col 3 — Atelier */}
-          <div>
-            <h2 className="font-serif text-base mb-4 text-[#F5EFE3]">Atelier</h2>
-            <ul className="space-y-2 text-sm text-[#F5EFE3]/85">
-              <li><Link href="/a-propos" className="hover:text-[#C46B2E] transition-colors">L&apos;atelier</Link></li>
-              <li><Link href="/belles-portes-de-paris" className="hover:text-[#C46B2E] transition-colors">Belles portes de Paris</Link></li>
-              <li><Link href="/contact" className="hover:text-[#C46B2E] transition-colors">Contact</Link></li>
+          {/* Archive */}
+          <nav className="lg:col-span-3" aria-label="L'atelier">
+            <h2 className="cartouche text-[#E7E2D8]/60 pb-2 border-b border-[#3A3630]">
+              L&apos;atelier
+            </h2>
+            <ul className="mt-4 space-y-2 text-sm text-[#E7E2D8]/85">
+              {ARCHIVE.map((m) => (
+                <li key={m.href}>
+                  <Link href={m.href} className="hover:text-[#E29A43] transition-colors">
+                    {m.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Col 4 — Mentions */}
-          <div>
-            <h2 className="font-serif text-base mb-4 text-[#F5EFE3]">Mentions</h2>
-            <ul className="space-y-2 text-sm text-[#F5EFE3]/85">
-              <li><Link href="/mentions-legales" className="hover:text-[#C46B2E] transition-colors">Mentions légales</Link></li>
-              <li><Link href="/politique-confidentialite" className="hover:text-[#C46B2E] transition-colors">Politique de confidentialité</Link></li>
+          {/* Mentions */}
+          <div className="lg:col-span-2">
+            <h2 className="cartouche text-[#E7E2D8]/60 pb-2 border-b border-[#3A3630]">
+              Mentions
+            </h2>
+            <ul className="mt-4 space-y-2 text-sm text-[#E7E2D8]/85">
+              <li>
+                <Link href="/mentions-legales" className="hover:text-[#E29A43] transition-colors">
+                  Mentions légales
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/politique-confidentialite"
+                  className="hover:text-[#E29A43] transition-colors"
+                >
+                  Confidentialité
+                </Link>
+              </li>
             </ul>
-            <div className="mt-6 space-y-3 text-xs text-[#F5EFE3]/70">
-              <div className="border border-[#F5EFE3]/20 px-3 py-2">
-                Membre du <strong className="text-[#F5EFE3]">{NAP.group}</strong>
-              </div>
-              <div className="border border-[#F5EFE3]/20 px-3 py-2">
-                Réseau <strong className="text-[#F5EFE3]">Bricard Serruriers Confiance</strong>
-              </div>
-            </div>
+            <p className="mt-6 cartouche text-[#E7E2D8]/60 border-t border-[#3A3630] pt-3">
+              Réseau Bricard
+              <br />
+              Serruriers Confiance
+            </p>
+            <p className="mt-3 cartouche text-[#E7E2D8]/60">
+              Membre du
+              <br />
+              {NAP.group}
+            </p>
           </div>
         </div>
 
-        <div className="mt-14 pt-6 border-t border-[#F5EFE3]/15 text-xs text-[#F5EFE3]/60 flex flex-col md:flex-row gap-3 justify-between">
-          <div>
+        <div className="mt-12 pt-5 border-t border-[#3A3630] cartouche text-[#E7E2D8]/55 flex flex-col md:flex-row gap-2 md:gap-6 justify-between">
+          <span>
             © {year} {NAP.legalName} — {NAP.legalForm} au capital de {NAP.capital}
-          </div>
-          <div>
+          </span>
+          <span>
             SIRET {NAP.siret} · RCS {NAP.rcs} · TVA {NAP.tva}
-          </div>
+          </span>
         </div>
       </div>
     </footer>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import SectionTitre from "@/components/SectionTitre";
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import Container from "@/components/Container";
@@ -38,11 +39,11 @@ export const metadata: Metadata = {
   title: "Vitrerie sur mesure Paris & Île-de-France",
   description:
     "Vitrages isolants, verre feuilleté et trempé, vitrage de protection, miroirs sur mesure et dépannage. Atelier de vitrerie à Massy, intervention en Île-de-France.",
-  alternates: { canonical: "https://leboulluec.com/vitrerie" },
+  alternates: { canonical: "https://www.leboulluec.com/vitrerie" },
   openGraph: {
     title: "Vitrerie sur mesure — double vitrage, verres techniques, miroirs",
     description: "Vitrages isolants, verre feuilleté & trempé, miroirs sur mesure, dépannage 24-48h.",
-    url: "https://leboulluec.com/vitrerie",
+    url: "https://www.leboulluec.com/vitrerie",
     images: ["https://ucarecdn.com/f428b023-f076-4e97-8df8-9a56954eb8af/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
@@ -62,10 +63,10 @@ export default function VitreriePage() {
         imageAlt="Vitrerie sur mesure de l'Atelier Le Boulluec — double vitrage, verres feuilletés et miroirs en Île-de-France."
       />
 
-      <article className="py-20 md:py-24 bg-[#F5EFE3]">
-        <Container size="narrow" className="prose-marine">
-          <p className="text-lg leading-relaxed text-[#1A1A1A]/85">
-            <strong>La vitrerie désigne la fabrication, la pose et la réparation des ouvrages en verre : vitrages isolants, verres feuilletés ou trempés, miroirs, vitrages de protection.</strong> L&apos;Atelier Le Boulluec pratique la vitrerie depuis plusieurs décennies en Île-de-France, en intégration directe avec ses ateliers menuiserie et serrurerie. Cette intégration limite les interfaces et garantit l&apos;ajustement parfait entre le bois, l&apos;acier et le verre.
+      <article className="py-20 md:py-24 bg-[#E7E2D8]">
+        <Container size="narrow" className="prose-atelier">
+          <p className="text-lg leading-relaxed text-[#171512]/85">
+            <strong className="text-[#0A3559]">En bref —</strong> <strong>La vitrerie désigne la fabrication, la pose et la réparation des ouvrages en verre : vitrages isolants, verres feuilletés ou trempés, miroirs, vitrages de protection.</strong> L&apos;Atelier Le Boulluec pratique la vitrerie depuis plusieurs décennies en Île-de-France, en intégration directe avec ses ateliers menuiserie et serrurerie. Cette intégration limite les interfaces et garantit l&apos;ajustement parfait entre le bois, l&apos;acier et le verre.
           </p>
 
           <h2>Quels sont nos ouvrages de vitrerie phares ?</h2>
@@ -92,7 +93,7 @@ export default function VitreriePage() {
 
           <h2>Verre feuilleté et trempé</h2>
           <p>
-            Pour les garde-corps, cloisons, marches d&apos;escalier et vitrines de prestige, nous travaillons les verres feuilletés (assemblage de plusieurs plaques séparées par un film PVB) et trempés (traitement thermique qui multiplie par cinq la résistance mécanique). Le verre feuilleté trempé constitue le standard des garde-corps en immeuble collectif — souvent associé à un garde-corps acier dessiné par notre <Link href="/serrurerie" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">département serrurerie</Link>, ou intégré à un <Link href="/escaliers" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">escalier sur mesure</Link>.
+            Pour les garde-corps, cloisons, marches d&apos;escalier et vitrines de prestige, nous travaillons les verres feuilletés (assemblage de plusieurs plaques séparées par un film PVB) et trempés (traitement thermique qui multiplie par cinq la résistance mécanique). Le verre feuilleté trempé constitue le standard des garde-corps en immeuble collectif — souvent associé à un garde-corps acier dessiné par notre <Link href="/serrurerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">département serrurerie</Link>, ou intégré à un <Link href="/escaliers" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">escalier sur mesure</Link>.
           </p>
 
           <h2>Vitrage de protection</h2>
@@ -107,7 +108,7 @@ export default function VitreriePage() {
 
           <h2>Vitrages décoratifs et anciens</h2>
           <p>
-            Pour les bâtiments patrimoniaux, nous savons restituer les vitrages d&apos;époque — verres biseautés, vitraux, verres soufflés Saint-Just — en faisant appel à nos partenaires verriers traditionnels. Ces interventions s&apos;inscrivent généralement dans un programme de <Link href="/restauration-patrimoniale" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">restauration patrimoniale</Link> coordonné avec les Architectes des Bâtiments de France.
+            Pour les bâtiments patrimoniaux, nous savons restituer les vitrages d&apos;époque — verres biseautés, vitraux, verres soufflés Saint-Just — en faisant appel à nos partenaires verriers traditionnels. Ces interventions s&apos;inscrivent généralement dans un programme de <Link href="/restauration-patrimoniale" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">restauration patrimoniale</Link> coordonné avec les Architectes des Bâtiments de France.
           </p>
 
           <h2>Dépannage vitrerie</h2>
@@ -117,12 +118,9 @@ export default function VitreriePage() {
         </Container>
       </article>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-20 bg-[#F6F4EF]">
         <Container size="wide">
-          <p className="text-[#C46B2E] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Réalisations</p>
-          <h2 className="font-serif text-2xl md:text-3xl text-[#15294E] mb-10">
-            Vitrages et verrières
-          </h2>
+          <SectionTitre index="01" rubrique="Réalisations" titre="Vitrages et verrières" action={<Link href="/photos" className="cartouche text-[#0D4A7B] hover:text-[#8F4703] transition-colors">Archive des ouvrages →</Link>} />
           <PhotoGrid photos={photos} columns={3} />
         </Container>
       </section>

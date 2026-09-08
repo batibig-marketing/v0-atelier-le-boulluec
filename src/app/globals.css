@@ -1,19 +1,43 @@
 @import "tailwindcss";
 
+/*
+  ATELIER LE BOULLUEC — direction artistique « Le relevé d'atelier ».
+
+  Palette : 6 valeurs, toutes relevées sur des sources réelles.
+  - bleu / rouille : couleurs exactes du logo vectoriel (#0D4A7B, #BE5E03)
+  - encre          : le noir-brun de la porte du 12 rue du Cardinal-Mercier reposée
+  - pierre         : la pierre de taille parisienne des façades photographiées
+  - craie          : le fond des plaques d'archive
+  - chene          : le chêne mis à nu pendant le décapage
+  Aucun crème, aucun dégradé, aucun arrondi, aucune ombre portée.
+*/
+
 :root {
-  --color-marine: #1F3A6B;
-  --color-marine-deep: #15294E;
-  --color-orange: #C46B2E;
-  --color-ivoire: #F5EFE3;
-  --color-encre: #1A1A1A;
+  --bleu: #0d4a7b;
+  --bleu-nuit: #0a3559;
+  --rouille: #be5e03;
+  /* variante lisible du meme orange, pour le texte : 5,30:1 sur pierre, 6,22:1 sur craie */
+  --rouille-texte: #8f4703;
+  --encre: #171512;
+  --pierre: #e7e2d8;
+  --craie: #f6f4ef;
+  --chene: #8a6236;
+
+  /* filets */
+  --filet: #c9c1b2;
+  --filet-sombre: #3a3630;
 }
 
 @theme inline {
-  --color-marine: var(--color-marine);
-  --color-marine-deep: var(--color-marine-deep);
-  --color-orange: var(--color-orange);
-  --color-ivoire: var(--color-ivoire);
-  --color-encre: var(--color-encre);
+  --color-bleu: var(--bleu);
+  --color-bleu-nuit: var(--bleu-nuit);
+  --color-rouille: var(--rouille);
+  --color-rouille-texte: var(--rouille-texte);
+  --color-encre: var(--encre);
+  --color-pierre: var(--pierre);
+  --color-craie: var(--craie);
+  --color-chene: var(--chene);
+  --color-filet: var(--filet);
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
@@ -21,41 +45,225 @@
 
 html {
   scroll-behavior: smooth;
+  /* Bible SEO §4.2 / §10.1 — aucun débordement horizontal sur mobile. */
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
-  background: var(--color-ivoire);
-  color: var(--color-encre);
+  background: var(--pierre);
+  color: var(--encre);
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-feature-settings: "kern", "liga", "calt";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Aucun arrondi nulle part : le vocabulaire est celui de la pièce d'atelier. */
+*,
+*::before,
+*::after {
+  border-radius: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-display), Georgia, "Times New Roman", serif;
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
-.prose-marine h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.05; margin-bottom: 1.5rem; color: var(--color-marine-deep); }
-.prose-marine h2 { font-size: clamp(1.6rem, 3vw, 2.25rem); line-height: 1.15; margin-top: 3rem; margin-bottom: 1rem; color: var(--color-marine-deep); }
-.prose-marine h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); line-height: 1.2; margin-top: 2rem; margin-bottom: 0.5rem; color: var(--color-marine); }
-.prose-marine p { font-size: 1.0625rem; line-height: 1.75; margin-bottom: 1.25rem; color: var(--color-encre); }
-.prose-marine a { color: var(--color-orange); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; transition: color .15s ease; }
-.prose-marine a:hover { color: var(--color-marine); }
-.prose-marine ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
-.prose-marine ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
-.prose-marine li { margin-bottom: 0.5rem; line-height: 1.7; }
-.prose-marine blockquote { border-left: 3px solid var(--color-orange); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; color: #4a4a4a; }
-.prose-marine strong { color: var(--color-marine-deep); font-weight: 600; }
-.prose-marine em { font-style: italic; }
-.prose-marine hr { border: 0; border-top: 1px solid #d4cab7; margin: 3rem 0; }
-.prose-marine table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
-.prose-marine th, .prose-marine td { padding: 0.65rem 0.75rem; border-bottom: 1px solid #d4cab7; text-align: left; }
-.prose-marine th { font-weight: 600; color: var(--color-marine-deep); }
-.prose-marine sup { font-size: 0.75em; vertical-align: super; }
+/* ---------------------------------------------------------------------------
+   Le cartouche : ligne de métadonnées en mono. C'est la signature du site.
+   Date · ouvrage · adresse · matière. Toujours au-dessus ou au-dessous
+   de l'image, jamais dessus.
+--------------------------------------------------------------------------- */
+.cartouche {
+  font-family: var(--font-mono), ui-monospace, "SFMono-Regular", monospace;
+  font-size: 0.6875rem;
+  line-height: 1.5;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
 
-::selection { background: var(--color-orange); color: var(--color-ivoire); }
+@media (min-width: 768px) {
+  .cartouche {
+    font-size: 0.75rem;
+  }
+}
 
-*:focus-visible { outline: 2px solid var(--color-orange); outline-offset: 3px; border-radius: 2px; }
+.filet-haut {
+  border-top: 1px solid var(--filet);
+}
+
+.filet-rouille {
+  border-top: 2px solid var(--rouille);
+}
+
+/* ---------------------------------------------------------------------------
+   Corps de texte long des pages métier.
+--------------------------------------------------------------------------- */
+.prose-atelier h2 {
+  font-size: clamp(1.5rem, 3vw, 2.125rem);
+  line-height: 1.15;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  color: var(--bleu-nuit);
+}
+
+.prose-atelier h3 {
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
+  line-height: 1.25;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--bleu);
+}
+
+.prose-atelier p {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  color: var(--encre);
+}
+
+.prose-atelier a {
+  color: var(--bleu);
+  text-decoration: underline;
+  text-decoration-color: var(--rouille);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.prose-atelier a:hover {
+  color: var(--rouille-texte);
+}
+
+.prose-atelier ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.25rem;
+}
+
+.prose-atelier ul > li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.7;
+}
+
+.prose-atelier ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 0.75rem;
+  height: 1px;
+  background: var(--rouille);
+}
+
+.prose-atelier ol {
+  list-style: decimal;
+  padding-left: 1.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-atelier ol > li {
+  margin-bottom: 0.6rem;
+  line-height: 1.7;
+  padding-left: 0.25rem;
+}
+
+.prose-atelier ol > li::marker {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8em;
+  color: var(--rouille);
+}
+
+.prose-atelier blockquote {
+  border-left: 2px solid var(--rouille);
+  padding-left: 1.25rem;
+  margin: 2rem 0;
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--bleu-nuit);
+}
+
+.prose-atelier strong {
+  color: var(--bleu-nuit);
+  font-weight: 600;
+}
+
+.prose-atelier em {
+  font-style: italic;
+}
+
+.prose-atelier hr {
+  border: 0;
+  border-top: 1px solid var(--filet);
+  margin: 3rem 0;
+}
+
+.prose-atelier table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.prose-atelier th,
+.prose-atelier td {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--filet);
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose-atelier th {
+  font-weight: 600;
+  color: var(--bleu-nuit);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Tableaux larges : ils défilent dans leur propre boîte, jamais la page. */
+.table-scroll {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--rouille);
+  color: var(--craie);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--rouille);
+  outline-offset: 3px;
+}
+
+/*
+  Aucune animation d'entrée : rien n'est jamais rendu à opacity 0 au chargement.
+  Les seules transitions du site portent sur :hover, à partir d'un état visible.
+*/
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

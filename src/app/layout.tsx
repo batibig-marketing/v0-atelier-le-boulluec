@@ -40,7 +40,7 @@ const mono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://leboulluec.com"),
+  metadataBase: new URL("https://www.leboulluec.com"),
   title: {
     default: "Atelier Le Boulluec — Menuiserie & serrurerie d'art depuis 1964",
     template: "%s — Atelier Le Boulluec",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://leboulluec.com",
+    url: "https://www.leboulluec.com",
     siteName: NAP.brand,
     title: "Atelier Le Boulluec — Menuiserie & serrurerie d'art depuis 1964",
     description:
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1F3A6B",
+  themeColor: "#0D4A7B",
   width: "device-width",
   initialScale: 1,
   colorScheme: "light",
@@ -108,10 +108,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://ucarecdn.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://ucarecdn.com" />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#F5EFE3] text-[#1A1A1A] antialiased">
+      <body className="min-h-screen flex flex-col bg-[#E7E2D8] text-[#171512] antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-[#1F3A6B] focus:text-[#F5EFE3] focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:outline-2 focus:outline-[#C46B2E]"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-[#0D4A7B] focus:text-[#E7E2D8] focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:outline-2 focus:outline-[#BE5E03]"
         >
           Aller au contenu principal
         </a>

@@ -13,8 +13,18 @@ const data = manifest as {
   mappings: PhotoEntry[];
 };
 
+/**
+ * La série `escalier-limon-acier-ferro-*` / `-loft-*` de la médiathèque est un jeu
+ * d'images de catalogue — intérieurs neutres, escaliers inox et verre, mobilier de
+ * showroom. Ce ne sont pas des ouvrages de l'atelier : on les écarte de toutes les
+ * galeries pour ne montrer que du travail réellement exécuté.
+ */
+const SERIE_CATALOGUE = /^escalier-limon-acier-(ferro|loft)-/;
+
 export function photosByCategory(category: string): PhotoEntry[] {
-  return data.mappings.filter((p) => p.category === category);
+  return data.mappings.filter(
+    (p) => p.category === category && !SERIE_CATALOGUE.test(p.local_filename)
+  );
 }
 
 export function photosByCategories(categories: string[], limit?: number): PhotoEntry[] {

@@ -7,18 +7,27 @@ export const metadata: Metadata = {
   title: "Politique de confidentialité",
   description:
     "Politique de confidentialité du site leboulluec.com — traitement des données personnelles, finalités, durées de conservation, droits RGPD.",
-  alternates: { canonical: "https://leboulluec.com/politique-confidentialite" },
+  alternates: { canonical: "https://www.leboulluec.com/politique-confidentialite" },
   openGraph: {
-    url: "https://leboulluec.com/politique-confidentialite",
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Atelier Le Boulluec",
+    title: "Politique de confidentialité — Atelier Le Boulluec",
+    description:
+      "Traitement des données personnelles collectées par le site de l'Atelier Le Boulluec : finalités, durée de conservation et exercice de vos droits.",
+    url: "https://www.leboulluec.com/politique-confidentialite",
+    images: [
+      "https://ucarecdn.com/9318537e-7772-488c-a6dd-b77390278ff5/-/format/auto/-/quality/smart/-/resize/1200x630/",
+    ],
   },
   robots: { index: true, follow: true },
 };
 
 export default function PolitiqueConfidentialitePage() {
   return (
-    <article className="py-16 md:py-24 bg-[#F5EFE3]">
-      <Container size="narrow" className="prose-marine">
-        <p className="text-[#C46B2E] text-xs font-semibold tracking-[0.2em] uppercase mb-4">RGPD</p>
+    <article className="py-16 md:py-24 bg-[#E7E2D8]">
+      <Container size="narrow" className="prose-atelier">
+        <p className="cartouche text-[#8F4703] mb-3 pb-2 border-b border-[#C9C1B2]">RGPD</p>
         <h1>Politique de confidentialité</h1>
         <blockquote>Version en vigueur au 1<sup>er</sup> juillet 2026.</blockquote>
 

@@ -7,40 +7,59 @@ type ServiceCardProps = {
   description: string;
   href: string;
   photoUuid?: string;
-  /** Optional descriptive alt; fallback uses the title (image is decorative for keyboard users since the card is fully linked). */
+  /** Numéro de rubrique en mono, p. ex. « 01 ». */
+  index?: string;
+  /** Ligne de matières / gestes, en mono, sous le titre. */
+  matieres?: string;
   imageAlt?: string;
 };
 
-export default function ServiceCard({ title, description, href, photoUuid, imageAlt }: ServiceCardProps) {
-  // The card is a single linked block, so its accessible name comes from the H3 + description.
-  // The image's alt is empty by default to avoid duplicate announcements, but we still provide
-  // a descriptive value via `imageAlt` when the card is used outside a link context.
+/**
+ * Plaque de métier : photographie, filet, numéro, titre, matières.
+ * Ni carte arrondie, ni ombre portée, ni zoom au survol — seule la couleur
+ * du filet et du titre bouge.
+ */
+export default function ServiceCard({
+  title,
+  description,
+  href,
+  photoUuid,
+  index,
+  matieres,
+  imageAlt,
+}: ServiceCardProps) {
   return (
     <Link
       href={href}
-      className="group block bg-white border border-[#1F3A6B]/10 hover:border-[#C46B2E] transition-colors overflow-hidden"
+      className="group block border-t-2 border-[#171512] pt-4 hover:border-[#BE5E03] transition-colors"
     >
       {photoUuid && (
-        <div className="relative aspect-[4/3] overflow-hidden bg-[#1F3A6B]/5">
+        <div className="relative aspect-[4/3] overflow-hidden bg-[#0A3559]/10">
           <Image
             src={uploadcareThumb(photoUuid, 800)}
             alt={imageAlt ?? ""}
-            role={imageAlt ? undefined : "presentation"}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover group-hover:scale-[1.03] transition-transform duration-500"
+            className="object-cover"
             loading="lazy"
             quality={78}
           />
         </div>
       )}
-      <div className="p-6 lg:p-7">
-        <h3 className="font-serif text-xl text-[#15294E] mb-2.5 group-hover:text-[#C46B2E] transition-colors">{title}</h3>
-        <p className="text-sm text-[#1A1A1A]/75 leading-relaxed">{description}</p>
-        <div className="mt-5 text-sm text-[#C46B2E] font-medium inline-flex items-center gap-1.5">
-          Découvrir
-          <span aria-hidden="true" className="transition-transform group-hover:translate-x-0.5">→</span>
+      <div className="pt-4">
+        <div className="flex items-baseline gap-3">
+          {index && <span className="cartouche text-[#8F4703]">{index}</span>}
+          <h3 className="font-display text-xl text-[#0A3559] group-hover:text-[#8F4703] transition-colors">
+            {title}
+          </h3>
         </div>
+        {matieres && (
+          <p className="cartouche text-[#171512]/55 mt-2">{matieres}</p>
+        )}
+        <p className="mt-3 text-sm text-[#171512]/80 leading-relaxed">{description}</p>
+        <span className="mt-4 inline-block cartouche text-[#0D4A7B] group-hover:text-[#8F4703] transition-colors">
+          Ouvrir la page →
+        </span>
       </div>
     </Link>
   );

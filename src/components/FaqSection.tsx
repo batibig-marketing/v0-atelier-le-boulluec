@@ -5,35 +5,43 @@ export type FaqItem = { q: string; a: string };
 type Props = {
   eyebrow?: string;
   title?: string;
+  index?: string;
   items: FaqItem[];
 };
 
 /**
- * Encadré FAQ discret en bas de page.
- * Rendu visible + ancrage pour l'AEO (réponses factuelles, citables par ChatGPT, Perplexity, Gemini).
- * Le FAQPage JSON-LD est injecté séparément par chaque page via <JsonLd>.
+ * FAQ visible en bas de page — volet AEO de la Bible SEO :
+ * questions telles qu'elles sont posées, réponse directe et factuelle
+ * en 30 à 80 mots. Le FAQPage JSON-LD est injecté par la page, mot pour
+ * mot identique à ce qui est affiché ici.
+ *
+ * Rendu en <dl> visible : aucun accordéon replié, aucun contenu masqué.
  */
 export default function FaqSection({
-  eyebrow = "Questions fréquentes",
-  title = "Réponses aux questions les plus posées",
+  eyebrow = "Questions posées",
+  title = "Ce que l'on nous demande le plus souvent",
+  index = "06",
   items,
 }: Props) {
   return (
-    <section className="py-20 md:py-24 bg-[#F5EFE3] border-t border-[#1F3A6B]/10">
-      <Container size="narrow">
-        <p className="text-[#C46B2E] text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-          {eyebrow}
-        </p>
-        <h2 className="font-serif text-3xl md:text-4xl text-[#15294E] leading-tight mb-10">
+    <section className="py-16 md:py-20 bg-[#F6F4EF] border-t border-[#C9C1B2]">
+      <Container size="default">
+        <div className="flex items-baseline gap-4 pb-3 border-b border-[#C9C1B2]">
+          <span className="cartouche text-[#8F4703]">{index}</span>
+          <span className="cartouche text-[#171512]/60">{eyebrow}</span>
+        </div>
+        <h2 className="font-display text-[1.75rem] md:text-[2.25rem] leading-tight text-[#0A3559] mt-5 mb-10 max-w-2xl">
           {title}
         </h2>
-        <dl className="divide-y divide-[#1F3A6B]/15">
+        <dl className="grid md:grid-cols-2 gap-x-10 gap-y-8">
           {items.map((item) => (
-            <div key={item.q} className="py-6 first:pt-0 last:pb-0">
-              <dt className="font-serif text-xl text-[#15294E] mb-3">
+            <div key={item.q} className="border-t border-[#C9C1B2] pt-4">
+              <dt className="font-display text-lg md:text-xl text-[#0A3559] leading-snug">
                 {item.q}
               </dt>
-              <dd className="text-[#1A1A1A]/80 leading-relaxed">{item.a}</dd>
+              <dd className="mt-2.5 text-[#171512]/85 leading-relaxed text-[0.98rem]">
+                {item.a}
+              </dd>
             </div>
           ))}
         </dl>

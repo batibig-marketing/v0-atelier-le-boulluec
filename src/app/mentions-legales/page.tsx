@@ -6,19 +6,28 @@ import { NAP } from "@/lib/nap";
 export const metadata: Metadata = {
   title: "Mentions légales",
   description:
-    "Mentions légales du site leboulluec.com — éditeur, hébergeur, propriété intellectuelle et coordonnées.",
-  alternates: { canonical: "https://leboulluec.com/mentions-legales" },
+    "Mentions légales du site leboulluec.com : éditeur, hébergeur, propriété intellectuelle, coordonnées et informations légales de l'Atelier Le Boulluec (SAS, Massy).",
+  alternates: { canonical: "https://www.leboulluec.com/mentions-legales" },
   openGraph: {
-    url: "https://leboulluec.com/mentions-legales",
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Atelier Le Boulluec",
+    title: "Mentions légales — Atelier Le Boulluec",
+    description:
+      "Éditeur, hébergeur, propriété intellectuelle et coordonnées de l'Atelier Le Boulluec, atelier de menuiserie et de ferronnerie à Massy.",
+    url: "https://www.leboulluec.com/mentions-legales",
+    images: [
+      "https://ucarecdn.com/9318537e-7772-488c-a6dd-b77390278ff5/-/format/auto/-/quality/smart/-/resize/1200x630/",
+    ],
   },
   robots: { index: true, follow: true },
 };
 
 export default function MentionsLegalesPage() {
   return (
-    <article className="py-16 md:py-24 bg-[#F5EFE3]">
-      <Container size="narrow" className="prose-marine">
-        <p className="text-[#C46B2E] text-xs font-semibold tracking-[0.2em] uppercase mb-4">Informations légales</p>
+    <article className="py-16 md:py-24 bg-[#E7E2D8]">
+      <Container size="narrow" className="prose-atelier">
+        <p className="cartouche text-[#8F4703] mb-3 pb-2 border-b border-[#C9C1B2]">Informations légales</p>
         <h1>Mentions légales</h1>
 
         <h2>Éditeur du site</h2>

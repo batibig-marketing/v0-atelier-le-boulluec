@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Container from "./Container";
+import SectionTitre from "./SectionTitre";
 
 export type RelatedItem = {
   title: string;
@@ -11,47 +12,42 @@ type RelatedPagesProps = {
   items: RelatedItem[];
   eyebrow?: string;
   heading?: string;
+  index?: string;
 };
 
+/**
+ * Maillage interne — Bible SEO §3.4 : ancres descriptives, pages profondes
+ * reliées entre elles, jamais « cliquez ici ».
+ */
 export default function RelatedPages({
   items,
-  eyebrow = "Pour aller plus loin",
-  heading = "Pages connexes",
+  eyebrow = "Pages liées",
+  heading = "Pour aller plus loin",
+  index = "07",
 }: RelatedPagesProps) {
   if (!items || items.length === 0) return null;
 
   return (
     <section
-      aria-label="Pages connexes"
-      className="py-16 md:py-20 bg-[#F5EFE3] border-t border-[#1F3A6B]/10"
+      aria-label="Pages liées"
+      className="py-16 md:py-20 bg-[#E7E2D8] border-t border-[#C9C1B2]"
     >
       <Container size="wide">
-        <p className="text-[#C46B2E] text-xs font-semibold tracking-[0.2em] uppercase mb-4">
-          {eyebrow}
-        </p>
-        <h2 className="font-serif text-2xl md:text-3xl text-[#15294E] mb-10">
-          {heading}
-        </h2>
-
-        <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((item) => (
-            <li key={item.href}>
+        <SectionTitre index={index} rubrique={eyebrow} titre={heading} as="h2" />
+        <ul className="grid md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-8 list-none p-0 m-0">
+          {items.map((item, i) => (
+            <li key={item.href} className="m-0">
               <Link
                 href={item.href}
-                className="group block h-full bg-white border-l-4 border-[#C46B2E] p-6 md:p-7 transition-colors hover:bg-[#1F3A6B] hover:border-[#F5EFE3]"
+                className="group block h-full border-t-2 border-[#171512] pt-4 hover:border-[#BE5E03] transition-colors"
               >
-                <h3 className="font-serif text-lg md:text-xl text-[#15294E] group-hover:text-[#F5EFE3] mb-3 leading-snug">
+                <span className="cartouche text-[#8F4703]">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="font-display text-lg md:text-xl text-[#0A3559] group-hover:text-[#8F4703] transition-colors mt-1.5 mb-2.5 leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-sm text-[#1A1A1A]/75 group-hover:text-[#F5EFE3]/85 leading-relaxed mb-4">
-                  {item.blurb}
-                </p>
-                <span
-                  aria-hidden="true"
-                  className="text-xs font-semibold tracking-[0.18em] uppercase text-[#C46B2E] group-hover:text-[#F5EFE3]"
-                >
-                  Découvrir →
-                </span>
+                <p className="text-sm text-[#171512]/80 leading-relaxed">{item.blurb}</p>
               </Link>
             </li>
           ))}

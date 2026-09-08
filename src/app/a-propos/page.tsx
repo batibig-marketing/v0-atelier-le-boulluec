@@ -42,11 +42,11 @@ export const metadata: Metadata = {
   title: "L'atelier — histoire & équipe depuis 1964",
   description:
     "Soixante ans de menuiserie, serrurerie et restauration patrimoniale à Paris et en Île-de-France. Histoire, équipe et références de l'Atelier Le Boulluec.",
-  alternates: { canonical: "https://leboulluec.com/a-propos" },
+  alternates: { canonical: "https://www.leboulluec.com/a-propos" },
   openGraph: {
     title: "L'atelier — histoire & équipe de l'Atelier Le Boulluec depuis 1964",
     description: "Trois adresses, une méthode : un atelier intégré, plusieurs métiers réunis.",
-    url: "https://leboulluec.com/a-propos",
+    url: "https://www.leboulluec.com/a-propos",
     images: ["https://ucarecdn.com/40e2cd05-e893-45b2-a4fe-0743c5e2e887/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
@@ -65,10 +65,10 @@ export default function AProposPage() {
         imageAlt="Atelier de menuiserie Le Boulluec à Massy — 17 menuisiers, soixante ans de pratique en Île-de-France."
       />
 
-      <article className="py-20 md:py-24 bg-[#F5EFE3]">
-        <Container size="narrow" className="prose-marine">
-          <p className="text-lg leading-relaxed text-[#1A1A1A]/85">
-            <strong>L&apos;Atelier Le Boulluec est une entreprise familiale artisanale fondée en 1964, spécialisée en menuiserie, serrurerie, vitrerie, escaliers sur mesure et restauration patrimoniale.</strong> 17 menuisiers travaillent aujourd&apos;hui à l&apos;atelier de Massy (91300). L&apos;entreprise est membre du réseau Bricard Serruriers Confiance et du Groupe BATIBIG.
+      <article className="py-20 md:py-24 bg-[#E7E2D8]">
+        <Container size="narrow" className="prose-atelier">
+          <p className="text-lg leading-relaxed text-[#171512]/85">
+            <strong className="text-[#0A3559]">En bref —</strong> <strong>L&apos;Atelier Le Boulluec est une entreprise familiale artisanale fondée en 1964, spécialisée en menuiserie, serrurerie, vitrerie, escaliers sur mesure et restauration patrimoniale.</strong> 17 menuisiers travaillent aujourd&apos;hui à l&apos;atelier de Massy (91300). L&apos;entreprise est membre du réseau Bricard Serruriers Confiance et du Groupe BATIBIG.
           </p>
 
           <h2>Notre histoire en dates clés</h2>
@@ -117,11 +117,11 @@ export default function AProposPage() {
           <h2>Notre éthique de travail</h2>
           <h3>1. Un seul atelier, plusieurs métiers</h3>
           <p>
-            Nous ne sous-traitons pas la <Link href="/menuiserie" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">menuiserie</Link>. Nous ne sous-traitons pas la <Link href="/serrurerie" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">serrurerie</Link>. Nous ne sous-traitons pas la <Link href="/vitrerie" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">vitrerie</Link>. Tout passe par Massy, sous le même toit, sous la responsabilité du même chef d&apos;atelier.
+            Nous ne sous-traitons pas la <Link href="/menuiserie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">menuiserie</Link>. Nous ne sous-traitons pas la <Link href="/serrurerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">serrurerie</Link>. Nous ne sous-traitons pas la <Link href="/vitrerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">vitrerie</Link>. Tout passe par Massy, sous le même toit, sous la responsabilité du même chef d&apos;atelier.
           </p>
           <h3>2. Restaurer plutôt que remplacer</h3>
           <p>
-            Quand l&apos;ouvrage le permet. Nous orientons systématiquement vers la solution la plus respectueuse de l&apos;existant, même quand elle est moins rentable pour nous à court terme. Sur dix ans, c&apos;est la seule façon de garder des clients. C&apos;est l&apos;esprit de notre activité de <Link href="/restauration-patrimoniale" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">restauration patrimoniale</Link>, et c&apos;est ce que documentent les archives des <Link href="/belles-portes-de-paris" className="text-[#C46B2E] hover:text-[#1F3A6B] underline underline-offset-4 decoration-1">belles portes de Paris</Link>.
+            Quand l&apos;ouvrage le permet. Nous orientons systématiquement vers la solution la plus respectueuse de l&apos;existant, même quand elle est moins rentable pour nous à court terme. Sur dix ans, c&apos;est la seule façon de garder des clients. C&apos;est l&apos;esprit de notre activité de <Link href="/restauration-patrimoniale" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">restauration patrimoniale</Link>, et c&apos;est ce que documentent les archives des <Link href="/belle-portes-rue-sur-paris-et-ailleurs" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">belles portes de Paris</Link>.
           </p>
           <h3>3. Une garantie réelle</h3>
           <p>
@@ -185,7 +185,7 @@ export default function AProposPage() {
           },
           {
             title: "Belles portes de Paris",
-            href: "/belles-portes-de-paris",
+            href: "/belle-portes-rue-sur-paris-et-ailleurs",
             blurb:
               "Notre petit musée en ligne des portes d'immeuble parisiennes restaurées ou refabriquées depuis 2012.",
           },

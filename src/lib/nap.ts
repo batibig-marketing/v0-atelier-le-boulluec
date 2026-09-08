@@ -10,7 +10,7 @@ export const NAP = {
   phone: "01 60 12 06 49",
   phoneE164: "+33160120649",
   email: "contact@leboulluec.fr",
-  website: "https://leboulluec.com",
+  website: "https://www.leboulluec.com",
   legalForm: "SAS",
   capital: "40 000 €",
   siren: "534 274 352",
