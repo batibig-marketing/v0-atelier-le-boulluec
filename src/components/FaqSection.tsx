@@ -27,10 +27,10 @@ export default function FaqSection({
     <section className="py-16 md:py-20 bg-[#241E1A] bois border-t border-[#3A322C]">
       <Container size="default">
         <div className="flex items-baseline gap-4 pb-3 border-b border-[#3A322C]">
-          <span className="cartouche text-[#7E96A8]">{index}</span>
+          <span className="rubrique-num text-[#B08D57]">{index}</span>
           <span className="cartouche text-[#EDE6DA]/78">{eyebrow}</span>
         </div>
-        <h2 className="font-display text-[1.75rem] md:text-[2.25rem] leading-tight text-[#EDE6DA] mt-5 mb-10 max-w-2xl">
+        <h2 className="font-affiche text-[1.85rem] md:text-[2.5rem] leading-[1.14] text-[#EDE6DA] mt-6 mb-10 max-w-2xl">
           {title}
         </h2>
         <dl className="grid md:grid-cols-2 gap-x-10 gap-y-8">

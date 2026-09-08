@@ -144,7 +144,7 @@ export default function ActualitePage() {
             séquences photographiques complètes se trouvent dans{" "}
             <Link
               href="/photos"
-              className="text-[#9DB2C2] underline underline-offset-4 decoration-[#7E96A8]"
+              className="text-[#C9AB78] underline underline-offset-4 decoration-[#B08D57]"
             >
               l&apos;archive des ouvrages
             </Link>
@@ -169,7 +169,7 @@ export default function ActualitePage() {
                 plus ancien
               </caption>
               <thead>
-                <tr className="border-b-2 border-[#574B41]">
+                <tr className="border-b border-[#B08D57]">
                   <th scope="col" className="cartouche text-[#EDE6DA]/78 py-3 pr-4 w-20">
                     Année
                   </th>
@@ -191,13 +191,13 @@ export default function ActualitePage() {
                 {JOURNAL.map((e, i) => (
                   <tr key={`${e.annee}-${e.ouvrage}-${i}`} className="border-b border-[#3A322C] align-top">
                     <td className="py-4 pr-4">
-                      <span className="cartouche text-[#7E96A8]">{e.annee}</span>
+                      <span className="cartouche text-[#B08D57]">{e.annee}</span>
                     </td>
                     <td className="py-4 pr-4">
                       {e.ancre ? (
                         <Link
                           href={`/photos#${e.ancre}`}
-                          className="font-display text-lg text-[#EDE6DA] hover:text-[#EDE6DA] underline underline-offset-4 decoration-[#7E96A8] transition-colors"
+                          className="font-display text-lg text-[#EDE6DA] hover:text-[#EDE6DA] underline underline-offset-4 decoration-[#B08D57] transition-colors"
                         >
                           {e.ouvrage}
                         </Link>
@@ -258,7 +258,7 @@ export default function ActualitePage() {
           <p className="mt-8 text-sm text-[#EDE6DA]/78 border-t border-[#3A322C] pt-5 max-w-3xl">
             L&apos;atelier se trouve à {NAP.city} ({NAP.postalCode}), dans l&apos;Essonne, et
             intervient dans toute l&apos;{NAP.areaServed}. Voir{" "}
-            <Link href="/contact" className="text-[#9DB2C2] underline underline-offset-4">
+            <Link href="/contact" className="text-[#C9AB78] underline underline-offset-4">
               les coordonnées et l&apos;itinéraire
             </Link>
             .

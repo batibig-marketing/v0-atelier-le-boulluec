@@ -49,6 +49,20 @@ export const metadata: Metadata = {
  * Les quatre premières portent un filigrane sur leur bord droit — d'où le
  * recadrage `uploadcareAtelier`, qui ne retire jamais de sujet.
  */
+/**
+ * L'ouvrage de tête. Une porte cochère reposée et remise en peinture : le
+ * dessin ancien conservé, le bois mouluré, les grilles forgées et les poignées
+ * de laiton — la matière même dont la page tire son accent. Photographie
+ * d'archive sans filigrane, rendue en pleine valeur, sans voile ni texte posé
+ * dessus.
+ */
+const OUVRAGE_VEDETTE = {
+  uuid: "049c6d27-d7e8-4f8e-a218-874015874608",
+  alt: "Porte cochère à deux vantaux du 111 rue de Longchamp, en bois mouluré sous arc plein cintre, grilles forgées et poignées de laiton, reposée et remise en peinture par l'Atelier Le Boulluec.",
+  legende:
+    "Porte cochère du 111 rue de Longchamp — reposée et remise en peinture · bois mouluré, grilles forgées, poignées de laiton",
+} as const;
+
 const ATELIER = {
   repose: {
     uuid: "0f4e294e-6a6f-4566-b019-7fb61d617e42",
@@ -221,15 +235,13 @@ export default function HomePage() {
       <JsonLd data={faqPageSchema(HOME_FAQ)} />
 
       <Hero
-        photoUuid={ATELIER.repose.uuid}
-        atelier
-        cadrage="50% 72%"
+        photoUuid={OUVRAGE_VEDETTE.uuid}
         eyebrow="Massy · Paris & Île-de-France · depuis 1964"
         title="Bois et acier, façonnés depuis 1964."
         subtitle="L'Atelier Le Boulluec est une entreprise artisanale fondée en 1964, spécialisée en menuiserie, serrurerie, vitrerie, escaliers sur mesure et restauration patrimoniale. 17 menuisiers à Massy, au service des syndics, architectes et grands comptes d'Île-de-France."
         cta={{ label: "Demander un chiffrage", href: "/contact" }}
-        imageAlt={ATELIER.repose.alt}
-        legende={ATELIER.repose.legende}
+        imageAlt={OUVRAGE_VEDETTE.alt}
+        legende={OUVRAGE_VEDETTE.legende}
       />
 
       {/* Réponse directe — bloc citable placé sous le H1 (Bible SEO §13.2) */}
@@ -261,14 +273,20 @@ export default function HomePage() {
             action={
               <Link
                 href="/a-propos"
-                className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors"
+                className="cartouche text-[#C9AB78] hover:text-[#EDE6DA] transition-colors"
               >
                 Visiter l&apos;atelier →
               </Link>
             }
           />
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-9 list-none p-0 m-0">
-            {[ATELIER.etabli, ATELIER.plongee, ATELIER.soudure, ATELIER.scellement].map(
+            {[
+              ATELIER.etabli,
+              ATELIER.plongee,
+              ATELIER.soudure,
+              ATELIER.scellement,
+              ATELIER.repose,
+            ].map(
               (vue, i) => (
                 <li
                   key={vue.uuid}
@@ -295,7 +313,7 @@ export default function HomePage() {
                       />
                     </div>
                     <figcaption className="mt-2 pt-2 border-t border-[#3A322C]">
-                      <span className="cartouche text-[#7E96A8]">
+                      <span className="cartouche text-[#B08D57]">
                         {String(i + 1).padStart(2, "0")} · Atelier
                       </span>
                       <span className="block mt-1 text-sm leading-snug text-[#EDE6DA]/85">
@@ -315,7 +333,7 @@ export default function HomePage() {
             l&apos;établi avant la façade :{" "}
             <Link
               href="/photos"
-              className="text-[#9DB2C2] underline underline-offset-4 decoration-[#7E96A8] hover:text-[#EDE6DA]"
+              className="text-[#C9AB78] underline underline-offset-4 decoration-[#B08D57] hover:text-[#EDE6DA]"
             >
               l&apos;archive des ouvrages
             </Link>{" "}
@@ -329,7 +347,7 @@ export default function HomePage() {
         <Container size="default">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="lg:col-span-5">
-              <p className="cartouche text-[#7E96A8] mb-3 pb-2 border-b border-[#3A322C]">
+              <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">
                 L&apos;atelier intégré
               </p>
               <h2 className="font-display text-[1.75rem] md:text-[2.25rem] text-[#EDE6DA] leading-tight">
@@ -370,7 +388,7 @@ export default function HomePage() {
             action={
               <Link
                 href="/photos"
-                className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors"
+                className="cartouche text-[#C9AB78] hover:text-[#EDE6DA] transition-colors"
               >
                 Toute l&apos;archive →
               </Link>
@@ -381,7 +399,7 @@ export default function HomePage() {
             Six autres chantiers sont documentés de la même façon —{" "}
             <Link
               href="/photos"
-              className="text-[#9DB2C2] underline underline-offset-4 decoration-[#7E96A8]"
+              className="text-[#C9AB78] underline underline-offset-4 decoration-[#B08D57]"
             >
               l&apos;archive des ouvrages
             </Link>{" "}
@@ -390,7 +408,7 @@ export default function HomePage() {
             Vaucouleurs et de Paray-Vieille-Poste. Le{" "}
             <Link
               href="/actualite"
-              className="text-[#9DB2C2] underline underline-offset-4 decoration-[#7E96A8]"
+              className="text-[#C9AB78] underline underline-offset-4 decoration-[#B08D57]"
             >
               journal des chantiers
             </Link>{" "}
@@ -410,7 +428,7 @@ export default function HomePage() {
             action={
               <Link
                 href="/a-propos"
-                className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors"
+                className="cartouche text-[#C9AB78] hover:text-[#EDE6DA] transition-colors"
               >
                 L&apos;atelier →
               </Link>

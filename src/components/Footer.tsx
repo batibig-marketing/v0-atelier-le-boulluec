@@ -35,7 +35,7 @@ export default function Footer() {
               </span>
               <a
                 href={`tel:${NAP.phoneE164}`}
-                className="mt-3 inline-block text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors"
+                className="mt-3 inline-block text-[#C9AB78] hover:text-[#EDE6DA] transition-colors"
               >
                 {NAP.phone}
               </a>
@@ -48,7 +48,7 @@ export default function Footer() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-block cartouche text-[#EDE6DA]/78 hover:text-[#9DB2C2] transition-colors"
+                className="mt-3 inline-block cartouche text-[#EDE6DA]/78 hover:text-[#C9AB78] transition-colors"
               >
                 Itinéraire →
               </a>
@@ -63,7 +63,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-[#EDE6DA]/85">
               {METIERS.map((m) => (
                 <li key={m.href}>
-                  <Link href={m.href} className="hover:text-[#9DB2C2] transition-colors">
+                  <Link href={m.href} className="hover:text-[#C9AB78] transition-colors">
                     {m.label}
                   </Link>
                 </li>
@@ -79,7 +79,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-[#EDE6DA]/85">
               {ARCHIVE.map((m) => (
                 <li key={m.href}>
-                  <Link href={m.href} className="hover:text-[#9DB2C2] transition-colors">
+                  <Link href={m.href} className="hover:text-[#C9AB78] transition-colors">
                     {m.label}
                   </Link>
                 </li>
@@ -94,14 +94,14 @@ export default function Footer() {
             </h2>
             <ul className="mt-4 space-y-2 text-sm text-[#EDE6DA]/85">
               <li>
-                <Link href="/mentions-legales" className="hover:text-[#9DB2C2] transition-colors">
+                <Link href="/mentions-legales" className="hover:text-[#C9AB78] transition-colors">
                   Mentions légales
                 </Link>
               </li>
               <li>
                 <Link
                   href="/politique-confidentialite"
-                  className="hover:text-[#9DB2C2] transition-colors"
+                  className="hover:text-[#C9AB78] transition-colors"
                 >
                   Confidentialité
                 </Link>

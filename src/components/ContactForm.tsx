@@ -39,7 +39,7 @@ export default function ContactForm() {
 
   if (status === "ok") {
     return (
-      <div className="bg-[#2E4250] text-[#EDE6DA] p-8 md:p-10 border-l-4 border-[#7E96A8]">
+      <div className="bg-[#2B2219] text-[#EDE6DA] p-8 md:p-10 border-l-4 border-[#B08D57]">
         <h3 className="font-display text-2xl mb-3">Message bien reçu</h3>
         <p className="text-[#EDE6DA]/85 leading-relaxed">
           Nous revenons vers vous sous 48 heures ouvrées. Pour les demandes urgentes,
@@ -49,14 +49,14 @@ export default function ContactForm() {
     );
   }
 
-  const inputBase = "w-full bg-[#241E1A] bois border border-[#7E96A8]/70 px-4 py-2.5 text-[#EDE6DA] focus:border-[#9DB2C2] focus:outline-none transition-colors text-sm";
+  const inputBase = "w-full bg-[#241E1A] bois border border-[#B08D57]/70 px-4 py-2.5 text-[#EDE6DA] focus:border-[#C9AB78] focus:outline-none transition-colors text-sm";
   const labelBase = "block text-xs font-medium text-[#EDE6DA] mb-1.5 uppercase tracking-wider";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid md:grid-cols-2 gap-5">
         <div>
-          <label htmlFor="nom" className={labelBase}>Nom <span className="text-[#7E96A8]">*</span></label>
+          <label htmlFor="nom" className={labelBase}>Nom <span className="text-[#B08D57]">*</span></label>
           <input required type="text" id="nom" name="nom" className={inputBase} autoComplete="name" />
         </div>
         <div>
@@ -67,7 +67,7 @@ export default function ContactForm() {
 
       <div className="grid md:grid-cols-2 gap-5">
         <div>
-          <label htmlFor="email" className={labelBase}>Email <span className="text-[#7E96A8]">*</span></label>
+          <label htmlFor="email" className={labelBase}>Email <span className="text-[#B08D57]">*</span></label>
           <input required type="email" id="email" name="email" className={inputBase} autoComplete="email" />
         </div>
         <div>
@@ -93,20 +93,20 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="message" className={labelBase}>Description du projet <span className="text-[#7E96A8]">*</span></label>
+        <label htmlFor="message" className={labelBase}>Description du projet <span className="text-[#B08D57]">*</span></label>
         <textarea required id="message" name="message" rows={6} className={inputBase} />
       </div>
 
       <div className="flex items-start gap-3">
-        <input required type="checkbox" id="rgpd" name="rgpd" className="mt-1 accent-[#7E96A8]" />
+        <input required type="checkbox" id="rgpd" name="rgpd" className="mt-1 accent-[#B08D57]" />
         <label htmlFor="rgpd" className="text-xs text-[#EDE6DA]/75 leading-relaxed">
           J&apos;accepte que mes données soient traitées pour répondre à ma demande, conformément à la{" "}
-          <a href="/politique-confidentialite" className="text-[#7E96A8] underline">politique de confidentialité</a>.
+          <a href="/politique-confidentialite" className="text-[#B08D57] underline">politique de confidentialité</a>.
         </label>
       </div>
 
       {status === "error" && (
-        <p className="text-sm text-[#EDE6DA] bg-[#2E2620] bois border-l-4 border-[#9DB2C2] px-4 py-3">
+        <p className="text-sm text-[#EDE6DA] bg-[#2E2620] bois border-l-4 border-[#C9AB78] px-4 py-3">
           {errorMsg || "Une erreur est survenue. Merci de réessayer ou de nous appeler."}
         </p>
       )}
@@ -114,7 +114,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="inline-flex items-center gap-2 bg-[#7E96A8] hover:bg-[#9DB2C2] disabled:opacity-60 text-[#161210] px-8 py-3.5 text-sm font-medium transition-colors"
+        className="inline-flex items-center gap-2 bg-[#B08D57] hover:bg-[#C9AB78] disabled:opacity-60 text-[#161210] px-8 py-3.5 text-sm font-medium transition-colors"
       >
         {status === "loading" ? "Envoi en cours…" : "Envoyer ma demande"}
         <span aria-hidden="true">→</span>

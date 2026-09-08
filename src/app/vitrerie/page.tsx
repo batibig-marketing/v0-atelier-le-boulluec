@@ -93,7 +93,7 @@ export default function VitreriePage() {
 
           <h2>Verre feuilleté et trempé</h2>
           <p>
-            Pour les garde-corps, cloisons, marches d&apos;escalier et vitrines de prestige, nous travaillons les verres feuilletés (assemblage de plusieurs plaques séparées par un film PVB) et trempés (traitement thermique qui multiplie par cinq la résistance mécanique). Le verre feuilleté trempé constitue le standard des garde-corps en immeuble collectif — souvent associé à un garde-corps acier dessiné par notre <Link href="/serrurerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">département serrurerie</Link>, ou intégré à un <Link href="/escaliers" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">escalier sur mesure</Link>.
+            Pour les garde-corps, cloisons, marches d&apos;escalier et vitrines de prestige, nous travaillons les verres feuilletés (assemblage de plusieurs plaques séparées par un film PVB) et trempés (traitement thermique qui multiplie par cinq la résistance mécanique). Le verre feuilleté trempé constitue le standard des garde-corps en immeuble collectif — souvent associé à un garde-corps acier dessiné par notre <Link href="/serrurerie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">département serrurerie</Link>, ou intégré à un <Link href="/escaliers" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">escalier sur mesure</Link>.
           </p>
 
           <h2>Vitrage de protection</h2>
@@ -108,7 +108,7 @@ export default function VitreriePage() {
 
           <h2>Vitrages décoratifs et anciens</h2>
           <p>
-            Pour les bâtiments patrimoniaux, nous savons restituer les vitrages d&apos;époque — verres biseautés, vitraux, verres soufflés Saint-Just — en faisant appel à nos partenaires verriers traditionnels. Ces interventions s&apos;inscrivent généralement dans un programme de <Link href="/restauration-patrimoniale" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">restauration patrimoniale</Link> coordonné avec les Architectes des Bâtiments de France.
+            Pour les bâtiments patrimoniaux, nous savons restituer les vitrages d&apos;époque — verres biseautés, vitraux, verres soufflés Saint-Just — en faisant appel à nos partenaires verriers traditionnels. Ces interventions s&apos;inscrivent généralement dans un programme de <Link href="/restauration-patrimoniale" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">restauration patrimoniale</Link> coordonné avec les Architectes des Bâtiments de France.
           </p>
 
           <h2>Dépannage vitrerie</h2>
@@ -120,7 +120,7 @@ export default function VitreriePage() {
 
       <section className="py-16 md:py-20 bg-[#241E1A] bois">
         <Container size="wide">
-          <SectionTitre index="01" rubrique="Réalisations" titre="Vitrages et verrières" action={<Link href="/photos" className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors">Archive des ouvrages →</Link>} />
+          <SectionTitre index="01" rubrique="Réalisations" titre="Vitrages et verrières" action={<Link href="/photos" className="cartouche text-[#C9AB78] hover:text-[#EDE6DA] transition-colors">Archive des ouvrages →</Link>} />
           <PhotoGrid photos={photos} columns={3} />
         </Container>
       </section>

@@ -1,22 +1,21 @@
 @import "tailwindcss";
 
 /*
-  ATELIER LE BOULLUEC — direction artistique « Bois et forge ».
+  ATELIER LE BOULLUEC — direction artistique « Le chene et le laiton ».
 
-  Registre : l'atelier en activité, pas la galerie. Fond de chene fume,
-  texte chaud, un seul accent — l'acier bleui — pose froid sur le fond chaud.
-  Les six valeurs arretees par la direction :
+  Registre demande par la direction : sobre, sombre, serif, photographique,
+  haut de gamme. Ni la grasse sans-serif ni l'accent froid des versions
+  precedentes.
 
-    FOND    #1C1714   brun-noir de chene fume
-    TEXTE   #EDE6DA
-    ACCENT  #7E96A8   acier bleui
-    TITRES  grasse et large, bas-de-casse
+    FOND    #1C1714   brun-noir de chene fume (conserve)
+    PAPIER  #EDE6DA
+    ACCENT  #B08D57   laiton eteint — le seul, employe peu
+    TITRES  Libre Caslon, serif ancien, graisse normale, jamais de grasse
+    CORPS   Mulish, sans-serif discrete qui ne concurrence pas les titres
     MATIERE grain de bois discret en fond
 
-  Les nuances intermediaires ci-dessous n'introduisent aucune couleur
-  supplementaire : ce sont des degres du meme brun et du meme acier.
-  Aucun creme, aucun beige, aucun serif, aucune rouille, aucun arrondi,
-  aucune ombre portee, aucun degrade.
+  Aucune couleur froide, aucun arrondi, aucune ombre portee, aucun degrade,
+  aucun aplat large d'accent, aucun bas-de-casse demesure.
 */
 
 :root {
@@ -25,16 +24,17 @@
   --fond-creux: #15100e; /* panneaux enfonces : bandeau, hero, pied de page */
   --fond-relief: #241e1a; /* surfaces posees : planches, encarts */
   --fond-fort: #2e2620; /* survol des surfaces */
+  --panneau: #2b2219; /* bronze profond : le seul panneau d'appel */
 
   /* --- textes --- */
   --texte: #ede6da;
   --texte-doux: #b9afa1; /* 7,6:1 sur --fond-relief */
-  --encre: #161210; /* seul usage : texte pose sur un aplat d'acier */
+  --encre: #161210; /* seul usage : texte pose sur un filet de laiton */
 
-  /* --- acier bleui : l'accent, et lui seul --- */
-  --acier: #7e96a8; /* 5,77:1 sur --fond */
-  --acier-clair: #9db2c2; /* 8,10:1 sur --fond — liens et survols */
-  --acier-fonce: #2e4250; /* aplat d'acier eteint, porte du texte clair */
+  /* --- laiton eteint : l'accent, et lui seul --- */
+  --laiton: #b08d57; /* 5,75:1 sur --fond */
+  --laiton-clair: #c9ab78; /* 8,10:1 sur --fond — liens et survols */
+  --laiton-pale: #d8c09a; /* 8,86:1 sur --panneau — micro-labels du panneau */
 
   /* --- filets --- */
   --filet: #3a322c;
@@ -46,16 +46,17 @@
   --color-fond-creux: var(--fond-creux);
   --color-fond-relief: var(--fond-relief);
   --color-fond-fort: var(--fond-fort);
+  --color-panneau: var(--panneau);
   --color-texte: var(--texte);
   --color-texte-doux: var(--texte-doux);
   --color-encre: var(--encre);
-  --color-acier: var(--acier);
-  --color-acier-clair: var(--acier-clair);
-  --color-acier-fonce: var(--acier-fonce);
+  --color-laiton: var(--laiton);
+  --color-laiton-clair: var(--laiton-clair);
+  --color-laiton-pale: var(--laiton-pale);
   --color-filet: var(--filet);
+  --font-affiche: var(--font-affiche);
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
 }
 
 /*
@@ -103,9 +104,15 @@ body {
 }
 
 /*
-  Titres : grasse et large, bas-de-casse. Archivo est une grotesque a axe de
-  chasse ; on l'ouvre a wdth 112 pour obtenir la largeur demandee sans etirer
-  artificiellement les tracés.
+  Titres. Deux tailles optiques d'une meme famille — Libre Caslon, taille dans
+  la lignee du Caslon anglais du XVIIIe siecle, contemporain des menuiseries
+  que l'atelier restaure.
+
+    - le cut « Display », a fort contraste, pour les titres qui portent (h1) ;
+    - le cut « Text », plus robuste, pour tous les autres niveaux.
+
+  Graisse normale partout : la grasse est proscrite, c'est ce que la direction
+  a rejete dans la version precedente.
 */
 h1,
 h2,
@@ -113,55 +120,68 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-display), "Helvetica Neue", Arial, sans-serif;
-  font-weight: 700;
-  font-variation-settings: "wdth" 112;
-  letter-spacing: -0.012em;
+  font-family: var(--font-display), "Iowan Old Style", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0;
   text-transform: none;
 }
 
 h1 {
-  font-weight: 800;
-  font-variation-settings: "wdth" 116;
-  letter-spacing: -0.022em;
+  font-family: var(--font-affiche), var(--font-display), Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.006em;
+  line-height: 1.08;
 }
 
-/*
-  Specificite nulle : un h1 garde sa graisse 800 meme quand il porte aussi la
-  classe .font-display, et les elements non titres heritent du 700.
-*/
+/* Specificite nulle : un h1 garde son cut d'affiche meme quand il porte la
+   classe .font-display, et les elements non titres heritent du cut « Text ». */
 :where(.font-display) {
-  font-family: var(--font-display), "Helvetica Neue", Arial, sans-serif;
-  font-weight: 700;
-  font-variation-settings: "wdth" 112;
-  letter-spacing: -0.012em;
+  font-family: var(--font-display), "Iowan Old Style", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Le cut d'affiche, disponible a la demande sur les grands titres de section. */
+.font-affiche {
+  font-family: var(--font-affiche), var(--font-display), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.004em;
 }
 
 /* ---------------------------------------------------------------------------
-   Le cartouche : ligne de metadonnees en mono. C'est la signature du site.
-   Date · ouvrage · adresse · matiere. Toujours au-dessus ou au-dessous
-   de l'image, jamais dessus.
+   Le cartouche : micro-label en capitales espacees. Date · ouvrage · adresse ·
+   matiere. Toujours au-dessus ou au-dessous de l'image, jamais dessus.
+   Il etait en mono ; la mono lisait « technique et moderne », on la retire.
 --------------------------------------------------------------------------- */
 .cartouche {
-  font-family: var(--font-mono), ui-monospace, "SFMono-Regular", monospace;
+  font-family: var(--font-sans), -apple-system, "Segoe UI", sans-serif;
   font-size: 0.6875rem;
-  line-height: 1.5;
-  letter-spacing: 0.09em;
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
   .cartouche {
-    font-size: 0.75rem;
+    font-size: 0.71rem;
   }
+}
+
+/* Un chiffre de rubrique se lit mieux en chiffres elzevirs sur un serif. */
+.rubrique-num {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  font-weight: 400;
 }
 
 .filet-haut {
   border-top: 1px solid var(--filet);
 }
 
-.filet-acier {
-  border-top: 2px solid var(--acier);
+.filet-laiton {
+  border-top: 1px solid var(--laiton);
 }
 
 /* ---------------------------------------------------------------------------
@@ -169,31 +189,31 @@ h1 {
 --------------------------------------------------------------------------- */
 .prose-atelier h2 {
   font-size: clamp(1.5rem, 3vw, 2.125rem);
-  line-height: 1.12;
+  line-height: 1.18;
   margin-top: 3rem;
   margin-bottom: 1rem;
   color: var(--texte);
 }
 
 .prose-atelier h3 {
-  font-size: clamp(1.15rem, 2vw, 1.4rem);
-  line-height: 1.22;
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  line-height: 1.28;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: var(--acier-clair);
+  color: var(--laiton-clair);
 }
 
 .prose-atelier p {
   font-size: 1.0625rem;
-  line-height: 1.75;
+  line-height: 1.78;
   margin-bottom: 1.25rem;
   color: var(--texte);
 }
 
 .prose-atelier a {
-  color: var(--acier-clair);
+  color: var(--laiton-clair);
   text-decoration: underline;
-  text-decoration-color: var(--acier);
+  text-decoration-color: var(--laiton);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   transition: color 0.15s ease;
@@ -224,7 +244,7 @@ h1 {
   top: 0.72em;
   width: 0.75rem;
   height: 1px;
-  background: var(--acier);
+  background: var(--laiton);
 }
 
 .prose-atelier ol {
@@ -240,20 +260,20 @@ h1 {
 }
 
 .prose-atelier ol > li::marker {
-  font-family: var(--font-mono), monospace;
-  font-size: 0.8em;
-  color: var(--acier);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 0.9em;
+  color: var(--laiton);
 }
 
 .prose-atelier blockquote {
-  border-left: 2px solid var(--acier);
+  border-left: 1px solid var(--laiton);
   padding-left: 1.25rem;
   margin: 2rem 0;
-  font-family: var(--font-display), "Helvetica Neue", Arial, sans-serif;
-  font-weight: 600;
-  font-variation-settings: "wdth" 108;
-  font-size: 1.2rem;
-  line-height: 1.45;
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.5;
   color: var(--texte);
 }
 
@@ -289,10 +309,10 @@ h1 {
 
 .prose-atelier th {
   font-weight: 600;
-  color: var(--acier-clair);
-  font-family: var(--font-mono), monospace;
+  color: var(--laiton-clair);
+  font-family: var(--font-sans), sans-serif;
   font-size: 0.7rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -302,13 +322,63 @@ h1 {
   max-width: 100%;
 }
 
+/* ---------------------------------------------------------------------------
+   L'archive. Elle doit tenir a trente ouvrages comme a dix : la suite d'etats
+   d'un ouvrage defile dans son propre rail horizontal, elle ne fait jamais
+   grandir la page en hauteur quand l'ouvrage compte huit vues plutot que deux.
+--------------------------------------------------------------------------- */
+.rail {
+  display: grid;
+  grid-auto-flow: column;
+  /*
+    Largeur de planche constante : une suite de deux etats et une suite de huit
+    occupent la meme hauteur et le meme format. C'est ce qui permet a l'archive
+    de passer de dix a trente ouvrages sans se deformer.
+  */
+  grid-auto-columns: minmax(11.5rem, 14rem);
+  justify-content: start;
+  gap: 1.25rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  padding-bottom: 0.5rem;
+  max-width: 100%;
+  /* Barre de defilement sobre, aux couleurs de la maison. */
+  scrollbar-width: thin;
+  scrollbar-color: var(--filet-fort) transparent;
+}
+
+.rail > * {
+  scroll-snap-align: start;
+  min-width: 0;
+}
+
+.rail::-webkit-scrollbar {
+  height: 6px;
+}
+
+.rail::-webkit-scrollbar-thumb {
+  background: var(--filet-fort);
+}
+
+.rail::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@media (min-width: 768px) {
+  .rail {
+    grid-auto-columns: minmax(13.5rem, 17rem);
+    gap: 1.5rem;
+  }
+}
+
 ::selection {
-  background: var(--acier);
+  background: var(--laiton);
   color: var(--encre);
 }
 
 *:focus-visible {
-  outline: 2px solid var(--acier-clair);
+  outline: 2px solid var(--laiton-clair);
   outline-offset: 3px;
 }
 

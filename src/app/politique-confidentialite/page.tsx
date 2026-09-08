@@ -27,7 +27,7 @@ export default function PolitiqueConfidentialitePage() {
   return (
     <article className="py-16 md:py-24 bg-[#1C1714]">
       <Container size="narrow" className="prose-atelier">
-        <p className="cartouche text-[#7E96A8] mb-3 pb-2 border-b border-[#3A322C]">RGPD</p>
+        <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">RGPD</p>
         <h1>Politique de confidentialité</h1>
         <blockquote>Version en vigueur au 1<sup>er</sup> juillet 2026.</blockquote>
 

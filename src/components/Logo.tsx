@@ -22,7 +22,7 @@ export default function Logo({
   title = "Atelier Le Boulluec",
 }: LogoProps) {
   const lettres = variant === "clair" ? "#EDE6DA" : "#161210";
-  const filet = variant === "clair" ? "#7E96A8" : "#161210";
+  const filet = variant === "clair" ? "#B08D57" : "#161210";
 
   return (
     <svg

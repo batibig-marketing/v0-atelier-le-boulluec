@@ -41,27 +41,27 @@ export default function ContactPage() {
             {/* Left: details */}
             <div className="lg:col-span-2 space-y-10">
               <div>
-                <p className="cartouche text-[#7E96A8] mb-3 pb-2 border-b border-[#3A322C]">Atelier &amp; siège</p>
+                <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">Atelier &amp; siège</p>
                 <h2 className="font-display text-2xl text-[#EDE6DA] mb-4">Atelier Le Boulluec</h2>
                 <address className="not-italic text-[#EDE6DA]/85 leading-relaxed">
                   {NAP.street}<br />
                   {NAP.postalCode} {NAP.city}<br />
                   <br />
                   <strong className="text-[#EDE6DA]">Téléphone</strong> :{" "}
-                  <a href={`tel:${NAP.phoneE164}`} className="text-[#7E96A8] hover:underline">{NAP.phone}</a>
+                  <a href={`tel:${NAP.phoneE164}`} className="text-[#B08D57] hover:underline">{NAP.phone}</a>
                 </address>
                 <p className="mt-5 text-sm text-[#EDE6DA]/78">{NAP.hoursReadable}</p>
               </div>
 
               <div>
-                <p className="cartouche text-[#7E96A8] mb-3 pb-2 border-b border-[#3A322C]">Visite d&apos;atelier</p>
+                <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">Visite d&apos;atelier</p>
                 <p className="text-[#EDE6DA]/85 leading-relaxed">
                   Les syndics, architectes et directions immobilières qui nous découvrent passent presque tous par notre atelier de Massy avant un premier ouvrage. La visite dure une vingtaine de minutes et se prend par téléphone ou via le formulaire ci-contre.
                 </p>
               </div>
 
               <div>
-                <p className="cartouche text-[#7E96A8] mb-3 pb-2 border-b border-[#3A322C]">Itinéraire</p>
+                <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">Itinéraire</p>
                 <p className="text-[#EDE6DA]/85 leading-relaxed mb-3">
                   Proximité immédiate de la gare RER B et C de Massy-Palaiseau, à dix minutes de l&apos;A10. Parking devant l&apos;atelier.
                 </p>
@@ -69,7 +69,7 @@ export default function ContactPage() {
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[#7E96A8] hover:underline font-medium"
+                  className="text-sm text-[#B08D57] hover:underline font-medium"
                 >
                   Ouvrir dans Google Maps →
                 </a>
@@ -87,8 +87,8 @@ export default function ContactPage() {
 
             {/* Right: form */}
             <div className="lg:col-span-3">
-              <div className="bg-[#241E1A] bois border-l-4 border-[#7E96A8] p-7 md:p-10">
-                <p className="cartouche text-[#7E96A8] mb-3 pb-2 border-b border-[#3A322C]">Demander un chiffrage</p>
+              <div className="bg-[#241E1A] bois border-l-4 border-[#B08D57] p-7 md:p-10">
+                <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">Demander un chiffrage</p>
                 <h2 className="font-display text-2xl text-[#EDE6DA] mb-2">Formulaire de contact</h2>
                 <p className="text-sm text-[#EDE6DA]/78 mb-8">
                   Décrivez votre projet en quelques lignes — nous reviendrons vers vous sous 48 heures ouvrées.
@@ -101,7 +101,7 @@ export default function ContactPage() {
       </section>
 
       {/* OpenStreetMap embed */}
-      <section className="bg-[#2E4250] py-1">
+      <section className="bg-[#2B2219] py-1">
         <div className="aspect-[16/6] w-full bg-[#241E1A] bois relative overflow-hidden">
           <iframe
             title="Plan de l'atelier — 6 Rue de l'Aulnaye Dracourt, 91300 Massy"

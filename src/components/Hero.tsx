@@ -21,8 +21,10 @@ type HeroProps = {
 
 /**
  * En-tête en planche : un panneau d'encre porte le texte, la photographie
- * occupe sa propre moitié. Pas de voile dégradé, pas de texte posé sur l'image.
- * Rien n'est animé : le contenu est visible dès le premier rendu.
+ * occupe sa propre moitié — jamais de texte posé sur l'image, donc jamais de
+ * voile qui l'éteindrait. La photographie est rendue en pleine valeur.
+ *
+ * Rien n'est animé : le contenu est visible dès le premier rendu, à opacité 1.
  */
 export default function Hero({
   photoUuid,
@@ -45,39 +47,39 @@ export default function Hero({
         {/* Panneau de texte */}
         <div
           className={`lg:col-span-5 px-5 lg:px-8 ${
-            grand ? "py-12 md:py-16 lg:py-20" : "py-10 md:py-14"
+            grand ? "py-14 md:py-20 lg:py-24" : "py-11 md:py-16"
           } flex flex-col justify-center order-2 lg:order-1`}
         >
           {eyebrow && (
-            <p className="cartouche text-[#9DB2C2] mb-5 pb-3 border-b border-[#3A322C]">
+            <p className="cartouche text-[#C9AB78] mb-6 pt-4 border-t border-[#B08D57]">
               {eyebrow}
             </p>
           )}
           <h1
-            className={`font-display text-[#EDE6DA] leading-[1.06] tracking-tight ${
+            className={`text-[#EDE6DA] ${
               grand
-                ? "text-[2.1rem] sm:text-[2.6rem] lg:text-[3.1rem]"
-                : "text-[1.9rem] sm:text-[2.3rem] lg:text-[2.6rem]"
+                ? "text-[2.35rem] sm:text-[3rem] lg:text-[3.5rem]"
+                : "text-[2rem] sm:text-[2.5rem] lg:text-[2.9rem]"
             }`}
           >
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-6 text-[#EDE6DA]/85 text-[1.0625rem] leading-relaxed max-w-prose">
+            <p className="mt-7 text-[#EDE6DA]/85 text-[1.0625rem] leading-[1.78] max-w-prose">
               {subtitle}
             </p>
           )}
           {cta && (
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-9 flex flex-wrap gap-3">
               <Link
                 href={cta.href}
-                className="inline-flex items-center bg-[#7E96A8] hover:bg-[#EDE6DA] hover:text-[#161210] text-[#161210] px-6 py-3 cartouche transition-colors"
+                className="inline-flex items-center bg-[#B08D57] hover:bg-[#EDE6DA] text-[#161210] px-6 py-3 cartouche transition-colors"
               >
                 {cta.label}
               </Link>
               <Link
                 href="/photos"
-                className="inline-flex items-center border border-[#7E96A8] hover:border-[#EDE6DA] hover:text-[#9DB2C2] text-[#EDE6DA] px-6 py-3 cartouche transition-colors"
+                className="inline-flex items-center border border-[#B08D57] hover:border-[#EDE6DA] text-[#EDE6DA] px-6 py-3 cartouche transition-colors"
               >
                 Voir l&apos;archive des ouvrages
               </Link>
@@ -85,13 +87,13 @@ export default function Hero({
           )}
         </div>
 
-        {/* Planche photographique */}
+        {/* Planche photographique — pleine valeur, aucun voile posé dessus. */}
         <figure className="lg:col-span-7 order-1 lg:order-2 m-0">
           <div
             className={`relative w-full bg-[#241E1A] bois ${
               grand
-                ? "aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[30rem]"
-                : "aspect-[16/9] lg:aspect-auto lg:h-full lg:min-h-[22rem]"
+                ? "aspect-[4/3] sm:aspect-[16/10] lg:aspect-auto lg:h-full lg:min-h-[34rem]"
+                : "aspect-[16/9] lg:aspect-auto lg:h-full lg:min-h-[24rem]"
             }`}
           >
             <Image
@@ -107,7 +109,7 @@ export default function Hero({
             />
           </div>
           {legende && (
-            <figcaption className="cartouche text-[#EDE6DA]/78 px-5 lg:px-8 py-3 border-t border-[#3A322C]">
+            <figcaption className="cartouche text-[#EDE6DA]/78 px-5 lg:px-8 py-3.5 border-t border-[#3A322C]">
               {legende}
             </figcaption>
           )}

@@ -31,7 +31,7 @@ export default function ServiceCard({
   return (
     <Link
       href={href}
-      className="group block border-t-2 border-[#574B41] pt-4 hover:border-[#7E96A8] transition-colors"
+      className="group block border-t border-[#B08D57] pt-4 hover:border-[#B08D57] transition-colors"
     >
       {photoUuid && (
         <div className="relative aspect-[4/3] overflow-hidden bg-[#2A2320]">
@@ -48,8 +48,8 @@ export default function ServiceCard({
       )}
       <div className="pt-4">
         <div className="flex items-baseline gap-3">
-          {index && <span className="cartouche text-[#7E96A8]">{index}</span>}
-          <h3 className="font-display text-xl text-[#EDE6DA] group-hover:text-[#EDE6DA] transition-colors">
+          {index && <span className="rubrique-num text-[#B08D57]">{index}</span>}
+          <h3 className="font-display text-[1.35rem] leading-snug text-[#EDE6DA] group-hover:text-[#C9AB78] transition-colors">
             {title}
           </h3>
         </div>
@@ -57,7 +57,7 @@ export default function ServiceCard({
           <p className="cartouche text-[#EDE6DA]/78 mt-2">{matieres}</p>
         )}
         <p className="mt-3 text-sm text-[#EDE6DA]/80 leading-relaxed">{description}</p>
-        <span className="mt-4 inline-block cartouche text-[#9DB2C2] group-hover:text-[#EDE6DA] transition-colors">
+        <span className="mt-4 inline-block cartouche text-[#C9AB78] group-hover:text-[#EDE6DA] transition-colors">
           Ouvrir la page →
         </span>
       </div>

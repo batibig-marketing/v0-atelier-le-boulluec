@@ -122,12 +122,12 @@ export default function RestaurationPage() {
 
           <h2>Champs d&apos;intervention</h2>
           <ul>
-            <li><strong>Portes cochères</strong> — chêne massif, ferrures laiton, motorisation discrète possible (voir aussi <Link href="/menuiserie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">menuiserie sur mesure</Link>)</li>
-            <li><strong>Portes bâtardes et portes sur rue</strong> — restauration ou refabrication à l&apos;identique, documentées dans notre <Link href="/belle-portes-rue-sur-paris-et-ailleurs" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">petit musée des belles portes de Paris</Link></li>
+            <li><strong>Portes cochères</strong> — chêne massif, ferrures laiton, motorisation discrète possible (voir aussi <Link href="/menuiserie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">menuiserie sur mesure</Link>)</li>
+            <li><strong>Portes bâtardes et portes sur rue</strong> — restauration ou refabrication à l&apos;identique, documentées dans notre <Link href="/belle-portes-rue-sur-paris-et-ailleurs" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">petit musée des belles portes de Paris</Link></li>
             <li><strong>Fenêtres anciennes</strong> — petits bois, châssis, dormants, vitrages compatibles ABF</li>
-            <li><strong>Escaliers anciens</strong> — limons bois, marches, balustres, rampes en ferronnerie ; voir nos <Link href="/escaliers" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">escaliers sur mesure</Link> pour les ouvrages neufs</li>
-            <li><strong>Marquises et auvents</strong> — <Link href="/vitrerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">verre cathédrale</Link>, ferronnerie ancienne, finitions cuivre</li>
-            <li><strong>Grilles et garde-corps</strong> — fer forgé, fonte d&apos;art, motifs historiques, en lien avec notre <Link href="/serrurerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">département serrurerie-ferronnerie</Link></li>
+            <li><strong>Escaliers anciens</strong> — limons bois, marches, balustres, rampes en ferronnerie ; voir nos <Link href="/escaliers" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">escaliers sur mesure</Link> pour les ouvrages neufs</li>
+            <li><strong>Marquises et auvents</strong> — <Link href="/vitrerie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">verre cathédrale</Link>, ferronnerie ancienne, finitions cuivre</li>
+            <li><strong>Grilles et garde-corps</strong> — fer forgé, fonte d&apos;art, motifs historiques, en lien avec notre <Link href="/serrurerie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">département serrurerie-ferronnerie</Link></li>
             <li><strong>Boiseries intérieures</strong> — lambris, soubassements, plinthes, parquets</li>
           </ul>
 
@@ -140,7 +140,7 @@ export default function RestaurationPage() {
 
       <section className="py-16 md:py-20 bg-[#241E1A] bois">
         <Container size="wide">
-          <SectionTitre index="01" rubrique="Chantiers de restauration" titre="Portes cochères et bâtiments restaurés" action={<Link href="/photos" className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors">Archive des ouvrages →</Link>} />
+          <SectionTitre index="01" rubrique="Chantiers de restauration" titre="Portes cochères et bâtiments restaurés" action={<Link href="/photos" className="cartouche text-[#C9AB78] hover:text-[#EDE6DA] transition-colors">Archive des ouvrages →</Link>} />
           <PhotoGrid photos={photos} columns={3} />
         </Container>
       </section>

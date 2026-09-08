@@ -89,7 +89,7 @@ export default function EscaliersPage() {
 
           <h3>Escaliers à limon acier</h3>
           <p>
-            Un limon central ou deux limons latéraux en acier — droit, courbé, débillardé — reçoivent des marches en bois massif, en pierre reconstituée ou en métal. C&apos;est l&apos;une de nos signatures : la pureté du dessin métallique mariée à la chaleur d&apos;une marche en chêne huilé. Les pièces acier sont dessinées et soudées par notre <Link href="/serrurerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">département serrurerie-ferronnerie</Link>. Adapté aux lofts, aux duplex contemporains et aux réhabilitations industrielles.
+            Un limon central ou deux limons latéraux en acier — droit, courbé, débillardé — reçoivent des marches en bois massif, en pierre reconstituée ou en métal. C&apos;est l&apos;une de nos signatures : la pureté du dessin métallique mariée à la chaleur d&apos;une marche en chêne huilé. Les pièces acier sont dessinées et soudées par notre <Link href="/serrurerie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">département serrurerie-ferronnerie</Link>. Adapté aux lofts, aux duplex contemporains et aux réhabilitations industrielles.
           </p>
 
           <h3>Escaliers suspendus</h3>
@@ -118,7 +118,7 @@ export default function EscaliersPage() {
 
           <h2>Garde-corps et rampes</h2>
           <p>
-            Tout escalier vient avec son garde-corps, qui doit conjuguer sécurité (norme NF P01-012), esthétique et compatibilité visuelle avec l&apos;escalier qu&apos;il accompagne. Acier forgé, acier serrurier, câble inox tendu, <Link href="/vitrerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">verre feuilleté trempé</Link>, ou bois — selon le dessin choisi. Pour les escaliers anciens d&apos;immeubles patrimoniaux (limons bois, balustres, rampes en ferronnerie), voir notre activité de <Link href="/restauration-patrimoniale" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">restauration patrimoniale</Link>.
+            Tout escalier vient avec son garde-corps, qui doit conjuguer sécurité (norme NF P01-012), esthétique et compatibilité visuelle avec l&apos;escalier qu&apos;il accompagne. Acier forgé, acier serrurier, câble inox tendu, <Link href="/vitrerie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">verre feuilleté trempé</Link>, ou bois — selon le dessin choisi. Pour les escaliers anciens d&apos;immeubles patrimoniaux (limons bois, balustres, rampes en ferronnerie), voir notre activité de <Link href="/restauration-patrimoniale" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">restauration patrimoniale</Link>.
           </p>
 
           <h2>Pour les architectes et maîtres d&apos;œuvre</h2>
@@ -130,7 +130,7 @@ export default function EscaliersPage() {
 
       <section className="py-16 md:py-20 bg-[#241E1A] bois">
         <Container size="wide">
-          <SectionTitre index="01" rubrique="Réalisations" titre="Quelques escaliers façonnés à Massy" action={<Link href="/photos" className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors">Archive des ouvrages →</Link>} />
+          <SectionTitre index="01" rubrique="Réalisations" titre="Quelques escaliers façonnés à Massy" action={<Link href="/photos" className="cartouche text-[#C9AB78] hover:text-[#EDE6DA] transition-colors">Archive des ouvrages →</Link>} />
           <PhotoGrid photos={photos} columns={3} />
         </Container>
       </section>

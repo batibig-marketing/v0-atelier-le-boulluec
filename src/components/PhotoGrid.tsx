@@ -79,7 +79,7 @@ export default function PhotoGrid({ photos, columns = 3, altContext }: Props) {
                 />
               </div>
               <figcaption className="mt-2 pt-2 border-t border-[#3A322C]">
-                {date && <span className="cartouche text-[#7E96A8]">{date}</span>}
+                {date && <span className="cartouche text-[#B08D57]">{date}</span>}
                 <span className="block mt-1 text-sm leading-snug text-[#EDE6DA]/80 first-letter:uppercase">
                   {sujet}
                 </span>

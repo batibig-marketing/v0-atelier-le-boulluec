@@ -123,19 +123,19 @@ export default function SerruleriePage() {
 
           <h2>Contrôle d&apos;accès et motorisation</h2>
           <p>
-            Vidéophonie, contrôle d&apos;accès par badge, motorisation de porte cochère. Nous installons les solutions <strong>Intratone</strong>, <strong>Comelit</strong>, <strong>Geze</strong>, <strong>Faac</strong> et <strong>Came</strong>, et savons les intégrer sur des ouvrages anciens sans dégrader leur cohérence visuelle. Quand la motorisation accompagne une porte cochère neuve ou restaurée, l&apos;ouvrage bois est produit par notre <Link href="/menuiserie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">département menuiserie</Link>, dans le même atelier de Massy.
+            Vidéophonie, contrôle d&apos;accès par badge, motorisation de porte cochère. Nous installons les solutions <strong>Intratone</strong>, <strong>Comelit</strong>, <strong>Geze</strong>, <strong>Faac</strong> et <strong>Came</strong>, et savons les intégrer sur des ouvrages anciens sans dégrader leur cohérence visuelle. Quand la motorisation accompagne une porte cochère neuve ou restaurée, l&apos;ouvrage bois est produit par notre <Link href="/menuiserie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">département menuiserie</Link>, dans le même atelier de Massy.
           </p>
 
           <h2>Ferronnerie sur mesure</h2>
           <p>
-            Le département produit également des <strong>grilles de défense de fenêtres, garde-corps, grilles de sas et marquises</strong> — autant d&apos;ouvrages d&apos;acier dessinés, façonnés, soudés et posés à l&apos;atelier. Les garde-corps intègrent souvent un remplissage en <Link href="/vitrerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">verre feuilleté trempé</Link>, ou accompagnent un <Link href="/escaliers" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">escalier sur mesure</Link> façonné au même atelier.
+            Le département produit également des <strong>grilles de défense de fenêtres, garde-corps, grilles de sas et marquises</strong> — autant d&apos;ouvrages d&apos;acier dessinés, façonnés, soudés et posés à l&apos;atelier. Les garde-corps intègrent souvent un remplissage en <Link href="/vitrerie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">verre feuilleté trempé</Link>, ou accompagnent un <Link href="/escaliers" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">escalier sur mesure</Link> façonné au même atelier.
           </p>
         </Container>
       </article>
 
       <section className="py-16 md:py-20 bg-[#241E1A] bois">
         <Container size="wide">
-          <SectionTitre index="01" rubrique="Réalisations" titre="Grilles, sas et motorisations" action={<Link href="/photos" className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors">Archive des ouvrages →</Link>} />
+          <SectionTitre index="01" rubrique="Réalisations" titre="Grilles, sas et motorisations" action={<Link href="/photos" className="cartouche text-[#C9AB78] hover:text-[#EDE6DA] transition-colors">Archive des ouvrages →</Link>} />
           <PhotoGrid photos={photos} columns={3} />
         </Container>
       </section>

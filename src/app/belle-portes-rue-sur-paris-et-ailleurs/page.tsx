@@ -103,7 +103,7 @@ export default function BellesPortesPage() {
 
           <h3>La porte cochère monumentale</h3>
           <p>
-            Hauteur 4 à 5 mètres, deux vantaux pleins en chêne, traverse basse pleine, traverses intermédiaires moulurées, panneaux à grands cadres, imposte vitrée à grille en fer forgé. C&apos;est la porte des immeubles haussmanniens des grands boulevards, des hôtels particuliers, des fonds de cour de la rive droite. Pour la fabrication ou la refabrication de ces ouvrages, voir notre <Link href="/menuiserie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">menuiserie sur mesure</Link>.
+            Hauteur 4 à 5 mètres, deux vantaux pleins en chêne, traverse basse pleine, traverses intermédiaires moulurées, panneaux à grands cadres, imposte vitrée à grille en fer forgé. C&apos;est la porte des immeubles haussmanniens des grands boulevards, des hôtels particuliers, des fonds de cour de la rive droite. Pour la fabrication ou la refabrication de ces ouvrages, voir notre <Link href="/menuiserie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">menuiserie sur mesure</Link>.
           </p>
 
           <h3>La porte bâtarde</h3>
@@ -118,7 +118,7 @@ export default function BellesPortesPage() {
 
           <h3>La porte de sas</h3>
           <p>
-            Apparue plus tardivement, souvent en acier serrurier et verre, elle constitue aujourd&apos;hui le standard de sécurisation des immeubles parisiens contemporains. Ces ouvrages relèvent à la fois de notre <Link href="/serrurerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">département serrurerie</Link> et de notre <Link href="/vitrerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">département vitrerie</Link>, intégrés au même atelier de Massy.
+            Apparue plus tardivement, souvent en acier serrurier et verre, elle constitue aujourd&apos;hui le standard de sécurisation des immeubles parisiens contemporains. Ces ouvrages relèvent à la fois de notre <Link href="/serrurerie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">département serrurerie</Link> et de notre <Link href="/vitrerie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">département vitrerie</Link>, intégrés au même atelier de Massy.
           </p>
         </Container>
       </article>

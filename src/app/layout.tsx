@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Libre_Caslon_Display, Libre_Caslon_Text, Mulish } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,34 +11,38 @@ import {
 } from "@/lib/schema";
 import { NAP } from "@/lib/nap";
 
-// Titres — grotesque a axe de chasse. On charge l'axe wdth pour obtenir la
-// grasse large demandee (wdth 112-116) sans etirement artificiel.
-const display = Archivo({
-  variable: "--font-display",
+// Titres d'affiche (h1) — le cut « Display » du Libre Caslon : contraste fort,
+// deliees fines, empattements nets. Caslon est le romain anglais du XVIIIe
+// siecle, contemporain des menuiseries que l'atelier restaure. Une seule
+// graisse : la grasse est proscrite.
+const affiche = Libre_Caslon_Display({
+  variable: "--font-affiche",
   subsets: ["latin"],
-  axes: ["wdth"],
+  weight: ["400"],
   display: "swap",
   preload: true,
 });
 
-// Corps de texte — grotesque mecanique dessinee pour la documentation
-// technique : elle tient le texte long et n'a rien de la neutralite d'Inter.
-const sans = IBM_Plex_Sans({
+// Titres courants (h2 a h6, cartels d'ouvrages) — le cut « Text » de la meme
+// famille : meme dessin, fut plus robuste, lisible a 1 rem sur fond sombre.
+const display = Libre_Caslon_Text({
+  variable: "--font-display",
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+  preload: true,
+});
+
+// Corps de texte et micro-labels — sans-serif discrete, contraste faible,
+// dessinee pour la lecture longue. Elle ne concurrence jamais les titres.
+const sans = Mulish({
   variable: "--font-sans",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   display: "swap",
   preload: true,
-});
-
-// Mono — cartouches uniquement, pas de preload.
-const mono = IBM_Plex_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  display: "swap",
-  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -104,7 +108,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${display.variable} ${sans.variable} ${mono.variable}`}>
+    <html lang="fr" className={`${affiche.variable} ${display.variable} ${sans.variable}`}>
       <head>
         {/* Speed up Uploadcare image fetches (hero LCP). */}
         <link rel="preconnect" href="https://ucarecdn.com" crossOrigin="" />
@@ -113,7 +117,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen flex flex-col bg-[#1C1714] text-[#EDE6DA] antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-[#7E96A8] focus:text-[#161210] focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:outline-2 focus:outline-[#EDE6DA]"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-[#B08D57] focus:text-[#161210] focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:outline-2 focus:outline-[#EDE6DA]"
         >
           Aller au contenu principal
         </a>

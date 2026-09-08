@@ -22,7 +22,7 @@ export default function Header() {
             Atelier de menuiserie &amp; ferronnerie · Massy · depuis 1964
           </p>
           <p className="cartouche text-[#EDE6DA]">
-            <a href={`tel:${NAP.phoneE164}`} className="hover:text-[#9DB2C2] transition-colors">
+            <a href={`tel:${NAP.phoneE164}`} className="hover:text-[#C9AB78] transition-colors">
               {NAP.phone}
             </a>
           </p>
@@ -43,7 +43,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="border-b border-transparent hover:border-[#7E96A8] hover:text-[#EDE6DA] transition-colors py-1"
+                className="border-b border-transparent hover:border-[#B08D57] hover:text-[#EDE6DA] transition-colors py-1"
               >
                 {item.label}
               </Link>
@@ -52,7 +52,7 @@ export default function Header() {
 
           <Link
             href="/contact"
-            className="hidden md:inline-flex items-center bg-[#7E96A8] hover:bg-[#9DB2C2] text-[#161210] cartouche px-5 py-2.5 transition-colors"
+            className="hidden md:inline-flex items-center bg-[#B08D57] hover:bg-[#C9AB78] text-[#161210] cartouche px-5 py-2.5 transition-colors"
           >
             Demander un chiffrage
           </Link>
@@ -70,7 +70,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block px-5 py-2.5 text-sm text-[#EDE6DA] hover:text-[#9DB2C2] hover:bg-[#2E4250]/40"
+                  className="block px-5 py-2.5 text-sm text-[#EDE6DA] hover:text-[#C9AB78] hover:bg-[#2B2219]/40"
                 >
                   {item.label}
                 </Link>
@@ -78,13 +78,13 @@ export default function Header() {
               <div className="border-t border-[#3A322C] my-1" />
               <Link
                 href="/contact"
-                className="block px-5 py-2.5 text-sm text-[#9DB2C2] font-medium hover:bg-[#2E4250]/40"
+                className="block px-5 py-2.5 text-sm text-[#C9AB78] font-medium hover:bg-[#2B2219]/40"
               >
                 Demander un chiffrage
               </Link>
               <a
                 href={`tel:${NAP.phoneE164}`}
-                className="block px-5 py-2.5 text-sm text-[#EDE6DA] hover:bg-[#2E4250]/40"
+                className="block px-5 py-2.5 text-sm text-[#EDE6DA] hover:bg-[#2B2219]/40"
               >
                 {NAP.phone}
               </a>

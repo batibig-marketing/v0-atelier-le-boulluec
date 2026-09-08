@@ -128,7 +128,7 @@ export default function PageAvis() {
           </p>
 
           <div className="mt-8 grid sm:grid-cols-3 gap-x-8 gap-y-6 border-t border-[#3A322C] pt-6">
-            <div className="border-l-2 border-[#7E96A8] pl-4">
+            <div className="border-l border-[#B08D57] pl-4">
               <p className="cartouche text-[#EDE6DA]/78">Note d&apos;établissement</p>
               <p className="font-display text-[2.4rem] leading-none text-[#EDE6DA] mt-1.5">
                 {NOTE.valeur}
@@ -136,12 +136,12 @@ export default function PageAvis() {
               </p>
               <p className="cartouche text-[#EDE6DA]/78 mt-2">Sur {NOTE.avis} avis publics</p>
             </div>
-            <div className="border-l-2 border-[#7E96A8] pl-4">
+            <div className="border-l border-[#B08D57] pl-4">
               <p className="cartouche text-[#EDE6DA]/78">Garantie</p>
               <p className="font-display text-[2.4rem] leading-none text-[#EDE6DA] mt-1.5">10 ans</p>
               <p className="cartouche text-[#EDE6DA]/78 mt-2">Décennale, neuf et restauré</p>
             </div>
-            <div className="border-l-2 border-[#7E96A8] pl-4">
+            <div className="border-l border-[#B08D57] pl-4">
               <p className="cartouche text-[#EDE6DA]/78">Label</p>
               <p className="font-display text-[1.6rem] leading-tight text-[#EDE6DA] mt-2">
                 Bricard
@@ -163,9 +163,9 @@ export default function PageAvis() {
           />
           <dl className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
             {ENGAGEMENTS.map(([titre, texte], i) => (
-              <div key={titre} className="border-t-2 border-[#574B41] pt-4">
+              <div key={titre} className="border-t border-[#B08D57] pt-4">
                 <dt>
-                  <span className="cartouche text-[#7E96A8]">
+                  <span className="cartouche text-[#B08D57]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="block font-display text-xl text-[#EDE6DA] mt-1.5 leading-snug">
@@ -192,7 +192,7 @@ export default function PageAvis() {
           <ul className="space-y-4 list-none p-0 m-0 text-[#EDE6DA]/85 leading-relaxed">
             <li className="border-t border-[#3A322C] pt-4">
               <strong className="text-[#EDE6DA]">Les chantiers eux-mêmes.</strong>{" "}
-              <Link href="/photos" className="text-[#9DB2C2] underline underline-offset-4">
+              <Link href="/photos" className="text-[#C9AB78] underline underline-offset-4">
                 L&apos;archive des ouvrages
               </Link>{" "}
               donne l&apos;adresse, l&apos;année et l&apos;état trouvé de chaque pièce reprise.
@@ -200,7 +200,7 @@ export default function PageAvis() {
             </li>
             <li className="border-t border-[#3A322C] pt-4">
               <strong className="text-[#EDE6DA]">Le journal daté.</strong>{" "}
-              <Link href="/actualite" className="text-[#9DB2C2] underline underline-offset-4">
+              <Link href="/actualite" className="text-[#C9AB78] underline underline-offset-4">
                 Les chantiers récents
               </Link>{" "}
               listent ce qui est sorti de l&apos;atelier, année par année, avec le geste réalisé.

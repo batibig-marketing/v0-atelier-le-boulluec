@@ -16,6 +16,39 @@ import { NAP } from "@/lib/nap";
 
 const URL_PAGE = "https://www.leboulluec.com/photos";
 
+/**
+ * Le fonds photographique s'agrandit chantier après chantier. Aucun compte
+ * n'est écrit en dur dans la page : les libellés se recalculent, de sorte que
+ * l'archive reste juste à dix ouvrages comme à trente.
+ */
+const NOMBRES = [
+  "zéro",
+  "un",
+  "deux",
+  "trois",
+  "quatre",
+  "cinq",
+  "six",
+  "sept",
+  "huit",
+  "neuf",
+  "dix",
+  "onze",
+  "douze",
+  "treize",
+  "quatorze",
+  "quinze",
+  "seize",
+];
+
+function enLettres(n: number): string {
+  return NOMBRES[n] ?? String(n);
+}
+
+function capitale(s: string): string {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
 const FAQ = [
   {
     q: "Que montre l'archive des ouvrages de l'Atelier Le Boulluec ?",
@@ -59,6 +92,12 @@ export const metadata: Metadata = {
 export default function PhotosPage() {
   const totalVues =
     OUVRAGES.reduce((n, o) => n + o.plaques.length, 0) + PIECES.length;
+  // Le registre et les planches suivent la chronologie de l'atelier : c'est le
+  // seul classement qui reste lisible quand le fonds passe de sept a trente
+  // chantiers. Les ouvrages sans annee ferment la marche.
+  const ouvragesDates = [...OUVRAGES].sort((a, b) =>
+    (a.annee ?? "9999").localeCompare(b.annee ?? "9999")
+  );
   const annees = OUVRAGES.concat()
     .map((o) => o.annee)
     .concat(PIECES.map((p) => p.annee))
@@ -165,32 +204,43 @@ export default function PhotosPage() {
         </Container>
       </section>
 
-      {/* Sommaire de l'archive — maillage interne et repérage */}
-      <section className="bg-[#1C1714] py-12 md:py-14">
+      {/*
+        Le registre. Une ligne par ouvrage — année, ouvrage, adresse, matières,
+        nombre de vues. C'est la pièce qui permet à l'archive de grossir : à dix
+        ouvrages elle tient sur un écran, à trente elle reste un registre
+        parcourable, là où une mosaïque de vignettes se serait effondrée.
+      */}
+      <section className="bg-[#1C1714] py-12 md:py-16">
         <Container size="wide">
           <SectionTitre
             index="01"
-            rubrique="Sommaire"
+            rubrique="Registre"
             titre="Les ouvrages suivis de bout en bout."
-            chapo="Sept chantiers dont nous possédons la suite complète des états. Chaque ligne mène à sa planche."
+            chapo={`${capitale(enLettres(OUVRAGES.length))} chantiers dont nous possédons la suite complète des états. Chaque ligne mène à sa planche.`}
           />
-          <ol className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 list-none p-0 m-0">
-            {OUVRAGES.map((o, i) => (
-              <li key={o.slug} className="m-0 border-t border-[#3A322C] pt-3">
+          <ol className="list-none p-0 m-0 lg:columns-2 lg:gap-x-14">
+            {ouvragesDates.map((o) => (
+              <li key={o.slug} className="m-0 border-t border-[#3A322C] break-inside-avoid">
                 <a
                   href={`#${o.slug}`}
-                  className="group flex items-baseline gap-3 hover:text-[#EDE6DA] transition-colors"
+                  className="group grid grid-cols-[3.5rem_1fr] sm:grid-cols-[4.5rem_1fr_auto] items-baseline gap-x-4 gap-y-1 py-4 hover:bg-[#241E1A] transition-colors"
                 >
-                  <span className="cartouche text-[#7E96A8]">
-                    {String(i + 1).padStart(2, "0")}
+                  <span className="rubrique-num text-[#B08D57] tabular-nums">
+                    {o.annee ?? "—"}
                   </span>
-                  <span>
-                    <span className="block font-display text-lg text-[#EDE6DA] group-hover:text-[#EDE6DA] transition-colors leading-snug">
+                  <span className="min-w-0">
+                    <span className="block font-display text-lg text-[#EDE6DA] group-hover:text-[#C9AB78] transition-colors leading-snug">
                       {o.ouvrage}
                     </span>
-                    <span className="block cartouche text-[#EDE6DA]/78 mt-1">
-                      {cartouche(o)}
+                    <span className="block text-sm text-[#EDE6DA]/80 mt-0.5">
+                      {o.adresse}, {o.lieu}
                     </span>
+                    <span className="block cartouche text-[#EDE6DA]/78 mt-1.5">
+                      {o.matieres.join(" · ")}
+                    </span>
+                  </span>
+                  <span className="cartouche text-[#EDE6DA]/78 col-start-2 sm:col-start-3 sm:text-right whitespace-nowrap">
+                    {o.plaques.length} vues
                   </span>
                 </a>
               </li>
@@ -205,11 +255,11 @@ export default function PhotosPage() {
           <SectionTitre
             index="02"
             rubrique="Avant · en cours · après"
-            titre="Sept ouvrages, dans l'ordre où ils ont été faits."
+            titre={`${capitale(enLettres(OUVRAGES.length))} ouvrages, dans l'ordre où ils ont été faits.`}
             chapo="L'état trouvé, le chantier ouvert, la pièce reposée. Les légendes disent ce que montre chaque planche, sans commentaire commercial."
           />
-          <div className="space-y-16 md:space-y-24">
-            {OUVRAGES.map((o, i) => (
+          <div className="space-y-14 md:space-y-20">
+            {ouvragesDates.map((o, i) => (
               <PlancheOuvrage key={o.slug} ouvrage={o} priorite={i === 0} />
             ))}
           </div>
@@ -300,20 +350,20 @@ export default function PhotosPage() {
             Les ouvrages présentés ici relèvent pour l&apos;essentiel de la{" "}
             <Link
               href="/restauration-patrimoniale"
-              className="text-[#9DB2C2] underline underline-offset-4"
+              className="text-[#C9AB78] underline underline-offset-4"
             >
               restauration patrimoniale
             </Link>{" "}
             et de la{" "}
-            <Link href="/menuiserie" className="text-[#9DB2C2] underline underline-offset-4">
+            <Link href="/menuiserie" className="text-[#C9AB78] underline underline-offset-4">
               menuiserie sur mesure
             </Link>
             . Les grilles, fers de lance et châssis acier sont façonnés par notre{" "}
-            <Link href="/serrurerie" className="text-[#9DB2C2] underline underline-offset-4">
+            <Link href="/serrurerie" className="text-[#C9AB78] underline underline-offset-4">
               département serrurerie et ferronnerie
             </Link>
             , les escaliers par l&apos;
-            <Link href="/escaliers" className="text-[#9DB2C2] underline underline-offset-4">
+            <Link href="/escaliers" className="text-[#C9AB78] underline underline-offset-4">
               atelier escaliers
             </Link>
             .

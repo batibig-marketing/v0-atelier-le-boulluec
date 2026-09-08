@@ -39,12 +39,12 @@ export default function RelatedPages({
             <li key={item.href} className="m-0">
               <Link
                 href={item.href}
-                className="group block h-full border-t-2 border-[#574B41] pt-4 hover:border-[#7E96A8] transition-colors"
+                className="group block h-full border-t border-[#B08D57] pt-4 hover:border-[#B08D57] transition-colors"
               >
-                <span className="cartouche text-[#7E96A8]">
+                <span className="rubrique-num text-[#B08D57]">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="font-display text-lg md:text-xl text-[#EDE6DA] group-hover:text-[#EDE6DA] transition-colors mt-1.5 mb-2.5 leading-snug">
+                <h3 className="font-display text-lg md:text-xl text-[#EDE6DA] group-hover:text-[#C9AB78] transition-colors mt-1.5 mb-2.5 leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-sm text-[#EDE6DA]/80 leading-relaxed">{item.blurb}</p>
