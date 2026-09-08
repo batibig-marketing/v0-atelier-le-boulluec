@@ -106,7 +106,7 @@ export default function MenuiseriePage() {
           </ol>
 
           <h2 id="Portescocheres" className="ancre">Portes cochères</h2>
-          <p className="text-[#C9AB78]">
+          <p>
             Création et rénovation de porte cochère — travaux de réfection et de conception.
           </p>
           <p>
@@ -126,7 +126,7 @@ export default function MenuiseriePage() {
           </p>
 
           <h2 id="Portesetfenetres" className="ancre">Portes et fenêtres</h2>
-          <p className="text-[#C9AB78]">
+          <p>
             Menuiserie intérieure et extérieure — bois, aluminium, acier et PVC.
           </p>
           <p>
@@ -143,7 +143,7 @@ export default function MenuiseriePage() {
           </p>
 
           <h2 id="Agencement" className="ancre">Agencement</h2>
-          <p className="text-[#C9AB78]">
+          <p>
             Agencement sur mesure de votre intérieur — espaces de rangement, dressings, portes intérieures moulurées.
           </p>
           <p>
@@ -157,7 +157,7 @@ export default function MenuiseriePage() {
           </p>
 
           <h2 id="Mobiliersinterieurs" className="ancre">Mobiliers intérieurs</h2>
-          <p className="text-[#C9AB78]">
+          <p>
             Création de mobiliers d&apos;intérieur — aménagez tous les mobiliers de vos envies.
           </p>
           <p>
@@ -171,7 +171,7 @@ export default function MenuiseriePage() {
           </p>
 
           <h2 id="Amenagementsexterieurs" className="ancre">Aménagements extérieurs</h2>
-          <p className="text-[#C9AB78]">
+          <p>
             Équipez vos espaces extérieurs de pièces de menuiserie sur mesure.
           </p>
           <p>
