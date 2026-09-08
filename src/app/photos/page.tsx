@@ -135,10 +135,10 @@ export default function PhotosPage() {
       />
 
       {/* Réponse directe — bloc citable (Bible SEO §13.2 / §15.5) */}
-      <section className="bg-[#F6F4EF] border-b border-[#C9C1B2]">
+      <section className="bg-[#241E1A] bois border-b border-[#3A322C]">
         <Container size="default" className="py-10 md:py-12">
-          <p className="text-[1.0625rem] md:text-lg leading-relaxed text-[#171512]">
-            <strong className="text-[#0A3559]">En bref —</strong> Cette page réunit les
+          <p className="text-[1.0625rem] md:text-lg leading-relaxed text-[#EDE6DA]">
+            <strong className="text-[#EDE6DA]">En bref —</strong> Cette page réunit les
             ouvrages de menuiserie et de ferronnerie exécutés par l&apos;Atelier Le Boulluec
             entre {annees[0]} et {annees[annees.length - 1]}, principalement des portes
             cochères et des portes d&apos;immeuble parisiennes. Chaque entrée indique
@@ -146,27 +146,27 @@ export default function PhotosPage() {
             forgé — et le geste réalisé : décapage, greffe de traverse basse, façonnage au
             dessin relevé, remise en teinte.
           </p>
-          <dl className="mt-8 grid sm:grid-cols-3 gap-x-8 gap-y-5 border-t border-[#C9C1B2] pt-6">
+          <dl className="mt-8 grid sm:grid-cols-3 gap-x-8 gap-y-5 border-t border-[#3A322C] pt-6">
             <div>
-              <dt className="cartouche text-[#171512]/55">Période couverte</dt>
-              <dd className="font-display text-2xl text-[#0A3559] mt-1">
+              <dt className="cartouche text-[#EDE6DA]/78">Période couverte</dt>
+              <dd className="font-display text-2xl text-[#EDE6DA] mt-1">
                 {annees[0]} — {annees[annees.length - 1]}
               </dd>
             </div>
             <div>
-              <dt className="cartouche text-[#171512]/55">Séquences complètes</dt>
-              <dd className="font-display text-2xl text-[#0A3559] mt-1">{OUVRAGES.length}</dd>
+              <dt className="cartouche text-[#EDE6DA]/78">Séquences complètes</dt>
+              <dd className="font-display text-2xl text-[#EDE6DA] mt-1">{OUVRAGES.length}</dd>
             </div>
             <div>
-              <dt className="cartouche text-[#171512]/55">Planches publiées</dt>
-              <dd className="font-display text-2xl text-[#0A3559] mt-1">{totalVues}</dd>
+              <dt className="cartouche text-[#EDE6DA]/78">Planches publiées</dt>
+              <dd className="font-display text-2xl text-[#EDE6DA] mt-1">{totalVues}</dd>
             </div>
           </dl>
         </Container>
       </section>
 
       {/* Sommaire de l'archive — maillage interne et repérage */}
-      <section className="bg-[#E7E2D8] py-12 md:py-14">
+      <section className="bg-[#1C1714] py-12 md:py-14">
         <Container size="wide">
           <SectionTitre
             index="01"
@@ -176,19 +176,19 @@ export default function PhotosPage() {
           />
           <ol className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-4 list-none p-0 m-0">
             {OUVRAGES.map((o, i) => (
-              <li key={o.slug} className="m-0 border-t border-[#C9C1B2] pt-3">
+              <li key={o.slug} className="m-0 border-t border-[#3A322C] pt-3">
                 <a
                   href={`#${o.slug}`}
-                  className="group flex items-baseline gap-3 hover:text-[#8F4703] transition-colors"
+                  className="group flex items-baseline gap-3 hover:text-[#EDE6DA] transition-colors"
                 >
-                  <span className="cartouche text-[#8F4703]">
+                  <span className="cartouche text-[#7E96A8]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span>
-                    <span className="block font-display text-lg text-[#0A3559] group-hover:text-[#8F4703] transition-colors leading-snug">
+                    <span className="block font-display text-lg text-[#EDE6DA] group-hover:text-[#EDE6DA] transition-colors leading-snug">
                       {o.ouvrage}
                     </span>
-                    <span className="block cartouche text-[#171512]/60 mt-1">
+                    <span className="block cartouche text-[#EDE6DA]/78 mt-1">
                       {cartouche(o)}
                     </span>
                   </span>
@@ -200,7 +200,7 @@ export default function PhotosPage() {
       </section>
 
       {/* Les planches */}
-      <section className="bg-[#F6F4EF] py-14 md:py-20">
+      <section className="bg-[#241E1A] bois py-14 md:py-20">
         <Container size="wide">
           <SectionTitre
             index="02"
@@ -217,7 +217,7 @@ export default function PhotosPage() {
       </section>
 
       {/* Pièces isolées */}
-      <section className="bg-[#E7E2D8] py-14 md:py-20 border-t border-[#C9C1B2]">
+      <section className="bg-[#1C1714] py-14 md:py-20 border-t border-[#3A322C]">
         <Container size="wide">
           <SectionTitre
             index="03"
@@ -230,7 +230,7 @@ export default function PhotosPage() {
       </section>
 
       {/* Le vocabulaire du métier — GEO : entités nommées */}
-      <section className="bg-[#171512] text-[#E7E2D8] py-14 md:py-20">
+      <section className="bg-[#15100E] bois text-[#EDE6DA] py-14 md:py-20">
         <Container size="wide">
           <SectionTitre
             index="04"
@@ -290,30 +290,30 @@ export default function PhotosPage() {
                 "Tôle d'acier revêtue d'une peinture poudre cuite au four, employée pour les capotages techniques exposés à la rue.",
               ],
             ].map(([terme, def]) => (
-              <div key={terme} className="border-t border-[#3A3630] pt-3">
-                <dt className="font-display text-lg text-[#F6F4EF]">{terme}</dt>
-                <dd className="mt-1.5 text-sm leading-relaxed text-[#E7E2D8]/80">{def}</dd>
+              <div key={terme} className="border-t border-[#3A322C] pt-3">
+                <dt className="font-display text-lg text-[#EDE6DA]">{terme}</dt>
+                <dd className="mt-1.5 text-sm leading-relaxed text-[#EDE6DA]/80">{def}</dd>
               </div>
             ))}
           </dl>
-          <p className="mt-10 text-sm text-[#E7E2D8]/75 border-t border-[#3A3630] pt-5 max-w-3xl">
+          <p className="mt-10 text-sm text-[#EDE6DA]/75 border-t border-[#3A322C] pt-5 max-w-3xl">
             Les ouvrages présentés ici relèvent pour l&apos;essentiel de la{" "}
             <Link
               href="/restauration-patrimoniale"
-              className="text-[#E29A43] underline underline-offset-4"
+              className="text-[#9DB2C2] underline underline-offset-4"
             >
               restauration patrimoniale
             </Link>{" "}
             et de la{" "}
-            <Link href="/menuiserie" className="text-[#E29A43] underline underline-offset-4">
+            <Link href="/menuiserie" className="text-[#9DB2C2] underline underline-offset-4">
               menuiserie sur mesure
             </Link>
             . Les grilles, fers de lance et châssis acier sont façonnés par notre{" "}
-            <Link href="/serrurerie" className="text-[#E29A43] underline underline-offset-4">
+            <Link href="/serrurerie" className="text-[#9DB2C2] underline underline-offset-4">
               département serrurerie et ferronnerie
             </Link>
             , les escaliers par l&apos;
-            <Link href="/escaliers" className="text-[#E29A43] underline underline-offset-4">
+            <Link href="/escaliers" className="text-[#9DB2C2] underline underline-offset-4">
               atelier escaliers
             </Link>
             .

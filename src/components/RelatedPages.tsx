@@ -30,7 +30,7 @@ export default function RelatedPages({
   return (
     <section
       aria-label="Pages liées"
-      className="py-16 md:py-20 bg-[#E7E2D8] border-t border-[#C9C1B2]"
+      className="py-16 md:py-20 bg-[#1C1714] border-t border-[#3A322C]"
     >
       <Container size="wide">
         <SectionTitre index={index} rubrique={eyebrow} titre={heading} as="h2" />
@@ -39,15 +39,15 @@ export default function RelatedPages({
             <li key={item.href} className="m-0">
               <Link
                 href={item.href}
-                className="group block h-full border-t-2 border-[#171512] pt-4 hover:border-[#BE5E03] transition-colors"
+                className="group block h-full border-t-2 border-[#574B41] pt-4 hover:border-[#7E96A8] transition-colors"
               >
-                <span className="cartouche text-[#8F4703]">
+                <span className="cartouche text-[#7E96A8]">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="font-display text-lg md:text-xl text-[#0A3559] group-hover:text-[#8F4703] transition-colors mt-1.5 mb-2.5 leading-snug">
+                <h3 className="font-display text-lg md:text-xl text-[#EDE6DA] group-hover:text-[#EDE6DA] transition-colors mt-1.5 mb-2.5 leading-snug">
                   {item.title}
                 </h3>
-                <p className="text-sm text-[#171512]/80 leading-relaxed">{item.blurb}</p>
+                <p className="text-sm text-[#EDE6DA]/80 leading-relaxed">{item.blurb}</p>
               </Link>
             </li>
           ))}

@@ -13,7 +13,8 @@ import PlancheOuvrage from "@/components/PlancheOuvrage";
 import { faqPageSchema, SCHEMA_IDS, mentionsMetier } from "@/lib/schema";
 import { NAP } from "@/lib/nap";
 import { OUVRAGES, PHOTOS, cartouche } from "@/data/ouvrages";
-import { uploadcareUrl } from "@/lib/uploadcare";
+import Image from "next/image";
+import { uploadcareAtelier, uploadcareThumb, uploadcareUrl } from "@/lib/uploadcare";
 
 const OG_IMAGE = uploadcareUrl(PHOTOS.cardinalMercierApres, 1200);
 
@@ -40,6 +41,46 @@ export const metadata: Metadata = {
     ],
   },
 };
+
+/**
+ * Le geste avant le résultat. Ces cinq vues sont prises à l'établi, sous la
+ * meuleuse ou au moment de la repose : elles passent devant les photographies
+ * d'ouvrages finis, qui restent consultables dans l'archive.
+ * Les quatre premières portent un filigrane sur leur bord droit — d'où le
+ * recadrage `uploadcareAtelier`, qui ne retire jamais de sujet.
+ */
+const ATELIER = {
+  repose: {
+    uuid: "0f4e294e-6a6f-4566-b019-7fb61d617e42",
+    filigrane: true,
+    alt: "Un menuisier de l'atelier, aspirateur en main, au moment de reposer la porte du 2 rue Richer, Paris 9e, après façonnage.",
+    legende: "La repose — 2 rue Richer, Paris 9e — 2022 · après façonnage à Massy",
+  },
+  plongee: {
+    uuid: "7752b0ad-e220-401b-88ce-c40b2d8113f7",
+    filigrane: true,
+    alt: "Vue plongeante de l'atelier de Massy : deux vantaux de chêne posés sur tréteaux, l'épure agrafée sur le panneau, un menuisier au sol.",
+    legende: "L'atelier en plan — 13 rue Las Cases, Paris 7e — 2023 · chêne, épure agrafée sur le panneau",
+  },
+  etabli: {
+    uuid: "40e2cd05-e893-45b2-a4fe-0743c5e2e887",
+    filigrane: false,
+    alt: "Établi de l'atelier : plan de fabrication déplié, mètre à ruban, équerre et boîte de vis devant un agencement en cours de montage.",
+    legende: "L'établi — plan, mètre, équerre, boîte de vis · agencement en médium épais, 2018",
+  },
+  soudure: {
+    uuid: "b8cd362a-18cc-4d44-abd3-e9d8a30f9ca9",
+    filigrane: true,
+    alt: "Ossature d'acier d'une marquise en cours d'assemblage à l'atelier, meuleuse et disques posés au premier plan, racks de fers en fond.",
+    legende: "La forge — marquise de la rue Saint-Honoré, Paris 1er — 2020 · acier assemblé et meulé",
+  },
+  scellement: {
+    uuid: "b5ab320c-3b76-4ffb-ab18-a998e56ea209",
+    filigrane: true,
+    alt: "Volutes de fer forgé d'une marquise posées à plat sur le sol de l'atelier, bouteilles de gaz et rack d'outils en arrière-plan.",
+    legende: "Les volutes — marquise du 14 rue Mouton-Duvernet, Paris 14e — 2021 · fer forgé à chaud",
+  },
+} as const;
 
 const SERVICES = [
   {
@@ -180,20 +221,22 @@ export default function HomePage() {
       <JsonLd data={faqPageSchema(HOME_FAQ)} />
 
       <Hero
-        photoUuid={PHOTOS.cardinalMercierApres}
+        photoUuid={ATELIER.repose.uuid}
+        atelier
+        cadrage="50% 72%"
         eyebrow="Massy · Paris & Île-de-France · depuis 1964"
         title="Bois et acier, façonnés depuis 1964."
         subtitle="L'Atelier Le Boulluec est une entreprise artisanale fondée en 1964, spécialisée en menuiserie, serrurerie, vitrerie, escaliers sur mesure et restauration patrimoniale. 17 menuisiers à Massy, au service des syndics, architectes et grands comptes d'Île-de-France."
         cta={{ label: "Demander un chiffrage", href: "/contact" }}
-        imageAlt="Porte cochère du 12 rue du Cardinal-Mercier, Paris 9e, restaurée et reposée par l'Atelier Le Boulluec."
-        legende={`Porte cochère — ${cartouche(vitrine)} · chêne, fer forgé, vitrail d'imposte`}
+        imageAlt={ATELIER.repose.alt}
+        legende={ATELIER.repose.legende}
       />
 
       {/* Réponse directe — bloc citable placé sous le H1 (Bible SEO §13.2) */}
-      <section className="bg-[#F6F4EF] border-b border-[#C9C1B2]">
+      <section className="bg-[#241E1A] bois border-b border-[#3A322C]">
         <Container size="default" className="py-10 md:py-12">
-          <p className="text-[1.0625rem] md:text-lg leading-relaxed text-[#171512]">
-            <strong className="text-[#0A3559]">En bref —</strong> L&apos;Atelier Le Boulluec est un
+          <p className="text-[1.0625rem] md:text-lg leading-relaxed text-[#EDE6DA]">
+            <strong className="text-[#EDE6DA]">En bref —</strong> L&apos;Atelier Le Boulluec est un
             atelier de menuiserie et de ferronnerie d&apos;art fondé en 1964, installé au{" "}
             {NAP.street}, {NAP.postalCode} {NAP.city}. Dix-sept menuisiers y façonnent et y
             restaurent des portes cochères, portes bâtardes, grilles de sas, escaliers et châssis
@@ -204,19 +247,96 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* Le geste avant le résultat : l'atelier au travail. */}
+      <section
+        id="atelier-au-travail"
+        className="scroll-mt-4 py-16 md:py-24 bg-[#1C1714] border-b border-[#3A322C]"
+      >
+        <Container size="wide">
+          <SectionTitre
+            index="01"
+            rubrique="L'atelier au travail"
+            titre="D'abord le geste, ensuite l'ouvrage."
+            chapo="Une porte finie ne dit rien de la façon dont elle a été faite. Ces cinq vues sont prises à l'établi, sous la meuleuse et au moment de la repose — c'est là que se décide la qualité de la pièce."
+            action={
+              <Link
+                href="/a-propos"
+                className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors"
+              >
+                Visiter l&apos;atelier →
+              </Link>
+            }
+          />
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-5 gap-y-9 list-none p-0 m-0">
+            {[ATELIER.etabli, ATELIER.plongee, ATELIER.soudure, ATELIER.scellement].map(
+              (vue, i) => (
+                <li
+                  key={vue.uuid}
+                  className={`m-0 ${i === 0 ? "lg:col-span-2 sm:col-span-2" : ""}`}
+                >
+                  <figure className="m-0">
+                    <div
+                      className={`relative bg-[#2A2320] border border-[#3A322C] ${
+                        i === 0 ? "aspect-[4/3] lg:aspect-[16/9]" : "aspect-[4/5]"
+                      }`}
+                    >
+                      <Image
+                        src={
+                          vue.filigrane
+                            ? uploadcareAtelier(vue.uuid, 1200)
+                            : uploadcareThumb(vue.uuid, 1200)
+                        }
+                        alt={vue.alt}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={80}
+                        loading="lazy"
+                        className="object-cover object-center"
+                      />
+                    </div>
+                    <figcaption className="mt-2 pt-2 border-t border-[#3A322C]">
+                      <span className="cartouche text-[#7E96A8]">
+                        {String(i + 1).padStart(2, "0")} · Atelier
+                      </span>
+                      <span className="block mt-1 text-sm leading-snug text-[#EDE6DA]/85">
+                        {vue.legende}
+                      </span>
+                    </figcaption>
+                  </figure>
+                </li>
+              )
+            )}
+          </ul>
+          <p className="mt-10 pt-6 border-t border-[#3A322C] text-[#EDE6DA]/85 leading-relaxed max-w-3xl">
+            Dix-sept menuisiers travaillent au 6 rue de l&apos;Aulnaye Dracourt, à Massy. Le bois
+            arrive en plots, l&apos;acier en barres ; les épures sont dessinées, agrafées sur le
+            panneau, puis suivies jusqu&apos;à la pose. Rien ne repart de l&apos;atelier sans avoir
+            été monté à blanc sur place. C&apos;est la raison pour laquelle nous montrons
+            l&apos;établi avant la façade :{" "}
+            <Link
+              href="/photos"
+              className="text-[#9DB2C2] underline underline-offset-4 decoration-[#7E96A8] hover:text-[#EDE6DA]"
+            >
+              l&apos;archive des ouvrages
+            </Link>{" "}
+            donne le résultat, l&apos;atelier donne la méthode.
+          </p>
+        </Container>
+      </section>
+
       {/* L'atelier intégré */}
-      <section className="py-16 md:py-24 bg-[#E7E2D8]">
+      <section className="py-16 md:py-24 bg-[#1C1714]">
         <Container size="default">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-16">
             <div className="lg:col-span-5">
-              <p className="cartouche text-[#8F4703] mb-3 pb-2 border-b border-[#C9C1B2]">
+              <p className="cartouche text-[#7E96A8] mb-3 pb-2 border-b border-[#3A322C]">
                 L&apos;atelier intégré
               </p>
-              <h2 className="font-display text-[1.75rem] md:text-[2.25rem] text-[#0A3559] leading-tight">
+              <h2 className="font-display text-[1.75rem] md:text-[2.25rem] text-[#EDE6DA] leading-tight">
                 Un atelier intégré, quatre métiers réunis.
               </h2>
             </div>
-            <div className="lg:col-span-7 space-y-5 text-[#171512]/85 leading-relaxed text-[1.0625rem]">
+            <div className="lg:col-span-7 space-y-5 text-[#EDE6DA]/85 leading-relaxed text-[1.0625rem]">
               <p>
                 Sous le même toit, dix-sept menuisiers façonnent ce que d&apos;autres ateliers
                 répartissent chez plusieurs sous-traitants : la porte d&apos;entrée d&apos;un
@@ -240,28 +360,28 @@ export default function HomePage() {
       </section>
 
       {/* Pièce maîtresse : une séquence avant / en cours / après */}
-      <section className="py-16 md:py-24 bg-[#F6F4EF] border-t border-[#C9C1B2]">
+      <section className="py-16 md:py-24 bg-[#241E1A] bois border-t border-[#3A322C]">
         <Container size="wide">
           <SectionTitre
-            index="01"
+            index="02"
             rubrique="Avant · en cours · après"
             titre="Une porte cochère du 9e, reprise en 2018."
             chapo="C'est ainsi que se juge un atelier : sur l'état trouvé autant que sur la pièce reposée. Les cinq planches ci-dessous montrent le même ouvrage, dans l'ordre."
             action={
               <Link
                 href="/photos"
-                className="cartouche text-[#0D4A7B] hover:text-[#8F4703] transition-colors"
+                className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors"
               >
                 Toute l&apos;archive →
               </Link>
             }
           />
           <PlancheOuvrage ouvrage={vitrine} headingLevel={3} />
-          <p className="mt-10 pt-6 border-t border-[#C9C1B2] text-[#171512]/80 leading-relaxed max-w-3xl">
+          <p className="mt-10 pt-6 border-t border-[#3A322C] text-[#EDE6DA]/80 leading-relaxed max-w-3xl">
             Six autres chantiers sont documentés de la même façon —{" "}
             <Link
               href="/photos"
-              className="text-[#0D4A7B] underline underline-offset-4 decoration-[#BE5E03]"
+              className="text-[#9DB2C2] underline underline-offset-4 decoration-[#7E96A8]"
             >
               l&apos;archive des ouvrages
             </Link>{" "}
@@ -270,7 +390,7 @@ export default function HomePage() {
             Vaucouleurs et de Paray-Vieille-Poste. Le{" "}
             <Link
               href="/actualite"
-              className="text-[#0D4A7B] underline underline-offset-4 decoration-[#BE5E03]"
+              className="text-[#9DB2C2] underline underline-offset-4 decoration-[#7E96A8]"
             >
               journal des chantiers
             </Link>{" "}
@@ -280,17 +400,17 @@ export default function HomePage() {
       </section>
 
       {/* Métiers */}
-      <section className="py-16 md:py-24 bg-[#E7E2D8] border-t border-[#C9C1B2]">
+      <section className="py-16 md:py-24 bg-[#1C1714] border-t border-[#3A322C]">
         <Container size="wide">
           <SectionTitre
-            index="02"
+            index="03"
             rubrique="Les métiers"
             titre="Six savoir-faire, un seul atelier."
             chapo="Cinq métiers du second œuvre et une archive éditoriale. Aucun n'est confié à un sous-traitant : c'est la même main qui relève, façonne et pose."
             action={
               <Link
                 href="/a-propos"
-                className="cartouche text-[#0D4A7B] hover:text-[#8F4703] transition-colors"
+                className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors"
               >
                 L&apos;atelier →
               </Link>

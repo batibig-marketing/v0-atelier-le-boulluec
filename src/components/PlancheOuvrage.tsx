@@ -3,10 +3,10 @@ import { uploadcareThumb } from "@/lib/uploadcare";
 import { cartouche, type Ouvrage, type Piece } from "@/data/ouvrages";
 
 const ETAT_COULEUR: Record<string, string> = {
-  Avant: "text-[#8A6236]",
-  "En cours": "text-[#8F4703]",
-  Après: "text-[#0D4A7B]",
-  Détail: "text-[#0A3559]",
+  Avant: "text-[#B9AFA1]",
+  "En cours": "text-[#7E96A8]",
+  Après: "text-[#9DB2C2]",
+  Détail: "text-[#EDE6DA]",
 };
 
 /**
@@ -33,26 +33,26 @@ export default function PlancheOuvrage({
   return (
     <article
       id={ouvrage.slug}
-      className="scroll-mt-24 border-t-2 border-[#171512] pt-6 md:pt-8"
+      className="scroll-mt-24 border-t-2 border-[#574B41] pt-6 md:pt-8"
     >
       <div className="grid lg:grid-cols-12 gap-6 lg:gap-10">
         {/* Rail de métadonnées */}
         <div className="lg:col-span-4 xl:col-span-3">
-          <p className="cartouche text-[#8F4703]">{cartouche(ouvrage)}</p>
-          <Titre className="font-display text-[1.6rem] md:text-[1.9rem] leading-tight text-[#0A3559] mt-2">
+          <p className="cartouche text-[#7E96A8]">{cartouche(ouvrage)}</p>
+          <Titre className="font-display text-[1.6rem] md:text-[1.9rem] leading-tight text-[#EDE6DA] mt-2">
             {ouvrage.ouvrage}
           </Titre>
           <dl className="mt-5 text-sm">
-            <dt className="cartouche text-[#171512]/55">Matières</dt>
-            <dd className="mt-1 mb-4 text-[#171512]/85">{ouvrage.matieres.join(" · ")}</dd>
-            <dt className="cartouche text-[#171512]/55">Geste</dt>
-            <dd className="mt-1 mb-4 text-[#171512]/85">{ouvrage.geste}</dd>
-            <dt className="cartouche text-[#171512]/55">Planches</dt>
-            <dd className="mt-1 text-[#171512]/85">
+            <dt className="cartouche text-[#EDE6DA]/78">Matières</dt>
+            <dd className="mt-1 mb-4 text-[#EDE6DA]/85">{ouvrage.matieres.join(" · ")}</dd>
+            <dt className="cartouche text-[#EDE6DA]/78">Geste</dt>
+            <dd className="mt-1 mb-4 text-[#EDE6DA]/85">{ouvrage.geste}</dd>
+            <dt className="cartouche text-[#EDE6DA]/78">Planches</dt>
+            <dd className="mt-1 text-[#EDE6DA]/85">
               {ouvrage.plaques.length} vues — {ouvrage.plaques.map((p) => p.etat).join(", ")}
             </dd>
           </dl>
-          <p className="mt-5 text-[#171512]/80 leading-relaxed border-l-2 border-[#BE5E03] pl-4">
+          <p className="mt-5 text-[#EDE6DA]/80 leading-relaxed border-l-2 border-[#7E96A8] pl-4">
             {ouvrage.resume}
           </p>
         </div>
@@ -63,7 +63,7 @@ export default function PlancheOuvrage({
             {ouvrage.plaques.map((p, i) => (
               <li key={p.uuid} className="m-0">
                 <figure className="m-0">
-                  <div className="relative aspect-[4/5] sm:aspect-[3/4] bg-[#0A3559]/10 border border-[#C9C1B2]">
+                  <div className="relative aspect-[4/5] sm:aspect-[3/4] bg-[#2A2320] border border-[#3A322C]">
                     <Image
                       src={uploadcareThumb(p.uuid, 900)}
                       alt={`${ouvrage.ouvrage} — ${cartouche(ouvrage)} — ${p.etat.toLowerCase()} : ${p.note}`}
@@ -75,13 +75,13 @@ export default function PlancheOuvrage({
                       className="object-cover"
                     />
                   </div>
-                  <figcaption className="mt-2 pt-2 border-t border-[#C9C1B2]">
+                  <figcaption className="mt-2 pt-2 border-t border-[#3A322C]">
                     <span
-                      className={`cartouche ${ETAT_COULEUR[p.etat] ?? "text-[#171512]"}`}
+                      className={`cartouche ${ETAT_COULEUR[p.etat] ?? "text-[#EDE6DA]"}`}
                     >
                       {String(i + 1).padStart(2, "0")} · {p.etat}
                     </span>
-                    <span className="block mt-1 text-sm leading-snug text-[#171512]/75">
+                    <span className="block mt-1 text-sm leading-snug text-[#EDE6DA]/75">
                       {p.note}
                     </span>
                   </figcaption>
@@ -114,7 +114,7 @@ export function PlanchePieces({
       {pieces.map((p) => (
         <li key={p.uuid + p.ouvrage} className="m-0">
           <figure className="m-0">
-            <div className="relative aspect-[4/5] bg-[#0A3559]/10 border border-[#C9C1B2]">
+            <div className="relative aspect-[4/5] bg-[#2A2320] border border-[#3A322C]">
               <Image
                 src={uploadcareThumb(p.uuid, 800)}
                 alt={`${p.ouvrage}, ${cartouche(p)} — ${p.note}`}
@@ -125,13 +125,13 @@ export function PlanchePieces({
                 className="object-cover"
               />
             </div>
-            <figcaption className="mt-2 pt-2 border-t border-[#C9C1B2]">
-              <span className="cartouche text-[#8F4703]">{cartouche(p)}</span>
-              <span className="block mt-1 font-display text-lg leading-snug text-[#0A3559]">
+            <figcaption className="mt-2 pt-2 border-t border-[#3A322C]">
+              <span className="cartouche text-[#7E96A8]">{cartouche(p)}</span>
+              <span className="block mt-1 font-display text-lg leading-snug text-[#EDE6DA]">
                 {p.ouvrage}
               </span>
-              <span className="block mt-1 text-sm leading-snug text-[#171512]/75">{p.note}</span>
-              <span className="block mt-2 cartouche text-[#171512]/55">
+              <span className="block mt-1 text-sm leading-snug text-[#EDE6DA]/75">{p.note}</span>
+              <span className="block mt-2 cartouche text-[#EDE6DA]/78">
                 {p.matieres.join(" · ")}
               </span>
             </figcaption>

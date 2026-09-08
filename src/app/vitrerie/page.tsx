@@ -63,10 +63,10 @@ export default function VitreriePage() {
         imageAlt="Vitrerie sur mesure de l'Atelier Le Boulluec — double vitrage, verres feuilletés et miroirs en Île-de-France."
       />
 
-      <article className="py-20 md:py-24 bg-[#E7E2D8]">
+      <article className="py-20 md:py-24 bg-[#1C1714]">
         <Container size="narrow" className="prose-atelier">
-          <p className="text-lg leading-relaxed text-[#171512]/85">
-            <strong className="text-[#0A3559]">En bref —</strong> <strong>La vitrerie désigne la fabrication, la pose et la réparation des ouvrages en verre : vitrages isolants, verres feuilletés ou trempés, miroirs, vitrages de protection.</strong> L&apos;Atelier Le Boulluec pratique la vitrerie depuis plusieurs décennies en Île-de-France, en intégration directe avec ses ateliers menuiserie et serrurerie. Cette intégration limite les interfaces et garantit l&apos;ajustement parfait entre le bois, l&apos;acier et le verre.
+          <p className="text-lg leading-relaxed text-[#EDE6DA]/85">
+            <strong className="text-[#EDE6DA]">En bref —</strong> <strong>La vitrerie désigne la fabrication, la pose et la réparation des ouvrages en verre : vitrages isolants, verres feuilletés ou trempés, miroirs, vitrages de protection.</strong> L&apos;Atelier Le Boulluec pratique la vitrerie depuis plusieurs décennies en Île-de-France, en intégration directe avec ses ateliers menuiserie et serrurerie. Cette intégration limite les interfaces et garantit l&apos;ajustement parfait entre le bois, l&apos;acier et le verre.
           </p>
 
           <h2>Quels sont nos ouvrages de vitrerie phares ?</h2>
@@ -93,7 +93,7 @@ export default function VitreriePage() {
 
           <h2>Verre feuilleté et trempé</h2>
           <p>
-            Pour les garde-corps, cloisons, marches d&apos;escalier et vitrines de prestige, nous travaillons les verres feuilletés (assemblage de plusieurs plaques séparées par un film PVB) et trempés (traitement thermique qui multiplie par cinq la résistance mécanique). Le verre feuilleté trempé constitue le standard des garde-corps en immeuble collectif — souvent associé à un garde-corps acier dessiné par notre <Link href="/serrurerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">département serrurerie</Link>, ou intégré à un <Link href="/escaliers" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">escalier sur mesure</Link>.
+            Pour les garde-corps, cloisons, marches d&apos;escalier et vitrines de prestige, nous travaillons les verres feuilletés (assemblage de plusieurs plaques séparées par un film PVB) et trempés (traitement thermique qui multiplie par cinq la résistance mécanique). Le verre feuilleté trempé constitue le standard des garde-corps en immeuble collectif — souvent associé à un garde-corps acier dessiné par notre <Link href="/serrurerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">département serrurerie</Link>, ou intégré à un <Link href="/escaliers" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">escalier sur mesure</Link>.
           </p>
 
           <h2>Vitrage de protection</h2>
@@ -108,7 +108,7 @@ export default function VitreriePage() {
 
           <h2>Vitrages décoratifs et anciens</h2>
           <p>
-            Pour les bâtiments patrimoniaux, nous savons restituer les vitrages d&apos;époque — verres biseautés, vitraux, verres soufflés Saint-Just — en faisant appel à nos partenaires verriers traditionnels. Ces interventions s&apos;inscrivent généralement dans un programme de <Link href="/restauration-patrimoniale" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">restauration patrimoniale</Link> coordonné avec les Architectes des Bâtiments de France.
+            Pour les bâtiments patrimoniaux, nous savons restituer les vitrages d&apos;époque — verres biseautés, vitraux, verres soufflés Saint-Just — en faisant appel à nos partenaires verriers traditionnels. Ces interventions s&apos;inscrivent généralement dans un programme de <Link href="/restauration-patrimoniale" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">restauration patrimoniale</Link> coordonné avec les Architectes des Bâtiments de France.
           </p>
 
           <h2>Dépannage vitrerie</h2>
@@ -118,9 +118,9 @@ export default function VitreriePage() {
         </Container>
       </article>
 
-      <section className="py-16 md:py-20 bg-[#F6F4EF]">
+      <section className="py-16 md:py-20 bg-[#241E1A] bois">
         <Container size="wide">
-          <SectionTitre index="01" rubrique="Réalisations" titre="Vitrages et verrières" action={<Link href="/photos" className="cartouche text-[#0D4A7B] hover:text-[#8F4703] transition-colors">Archive des ouvrages →</Link>} />
+          <SectionTitre index="01" rubrique="Réalisations" titre="Vitrages et verrières" action={<Link href="/photos" className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors">Archive des ouvrages →</Link>} />
           <PhotoGrid photos={photos} columns={3} />
         </Container>
       </section>

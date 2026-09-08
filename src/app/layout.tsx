@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Crimson_Pro, Inter, DM_Mono } from "next/font/google";
+import { Archivo, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -11,30 +11,32 @@ import {
 } from "@/lib/schema";
 import { NAP } from "@/lib/nap";
 
-// Serif display — only the weights actually used (regular + italic for body emphasis, semibold for headings).
-const display = Crimson_Pro({
+// Titres — grotesque a axe de chasse. On charge l'axe wdth pour obtenir la
+// grasse large demandee (wdth 112-116) sans etirement artificiel.
+const display = Archivo({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "600"],
+  axes: ["wdth"],
+  display: "swap",
+  preload: true,
+});
+
+// Corps de texte — grotesque mecanique dessinee pour la documentation
+// technique : elle tient le texte long et n'a rien de la neutralite d'Inter.
+const sans = IBM_Plex_Sans({
+  variable: "--font-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
   style: ["normal", "italic"],
   display: "swap",
   preload: true,
 });
 
-// UI sans — limited to weights used on screen.
-const sans = Inter({
-  variable: "--font-sans",
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-  preload: true,
-});
-
-// Mono — small captions only, do not preload.
-const mono = DM_Mono({
+// Mono — cartouches uniquement, pas de preload.
+const mono = IBM_Plex_Mono({
   variable: "--font-mono",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500"],
   display: "swap",
   preload: false,
 });
@@ -94,10 +96,10 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0D4A7B",
+  themeColor: "#1C1714",
   width: "device-width",
   initialScale: 1,
-  colorScheme: "light",
+  colorScheme: "dark",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -108,10 +110,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://ucarecdn.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://ucarecdn.com" />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#E7E2D8] text-[#171512] antialiased">
+      <body className="min-h-screen flex flex-col bg-[#1C1714] text-[#EDE6DA] antialiased">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-[#0D4A7B] focus:text-[#E7E2D8] focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:outline-2 focus:outline-[#BE5E03]"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-[#7E96A8] focus:text-[#161210] focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:outline-2 focus:outline-[#EDE6DA]"
         >
           Aller au contenu principal
         </a>

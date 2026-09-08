@@ -35,62 +35,62 @@ export default function ContactPage() {
         imageAlt="Atelier Le Boulluec à Massy (91300) — visites sur rendez-vous, devis menuiserie et serrurerie en Île-de-France."
       />
 
-      <section className="py-20 md:py-24 bg-[#E7E2D8]">
+      <section className="py-20 md:py-24 bg-[#1C1714]">
         <Container size="wide">
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
             {/* Left: details */}
             <div className="lg:col-span-2 space-y-10">
               <div>
-                <p className="cartouche text-[#8F4703] mb-3 pb-2 border-b border-[#C9C1B2]">Atelier &amp; siège</p>
-                <h2 className="font-display text-2xl text-[#0A3559] mb-4">Atelier Le Boulluec</h2>
-                <address className="not-italic text-[#171512]/85 leading-relaxed">
+                <p className="cartouche text-[#7E96A8] mb-3 pb-2 border-b border-[#3A322C]">Atelier &amp; siège</p>
+                <h2 className="font-display text-2xl text-[#EDE6DA] mb-4">Atelier Le Boulluec</h2>
+                <address className="not-italic text-[#EDE6DA]/85 leading-relaxed">
                   {NAP.street}<br />
                   {NAP.postalCode} {NAP.city}<br />
                   <br />
-                  <strong className="text-[#0A3559]">Téléphone</strong> :{" "}
-                  <a href={`tel:${NAP.phoneE164}`} className="text-[#8F4703] hover:underline">{NAP.phone}</a>
+                  <strong className="text-[#EDE6DA]">Téléphone</strong> :{" "}
+                  <a href={`tel:${NAP.phoneE164}`} className="text-[#7E96A8] hover:underline">{NAP.phone}</a>
                 </address>
-                <p className="mt-5 text-sm text-[#171512]/70">{NAP.hoursReadable}</p>
+                <p className="mt-5 text-sm text-[#EDE6DA]/78">{NAP.hoursReadable}</p>
               </div>
 
               <div>
-                <p className="cartouche text-[#8F4703] mb-3 pb-2 border-b border-[#C9C1B2]">Visite d&apos;atelier</p>
-                <p className="text-[#171512]/85 leading-relaxed">
+                <p className="cartouche text-[#7E96A8] mb-3 pb-2 border-b border-[#3A322C]">Visite d&apos;atelier</p>
+                <p className="text-[#EDE6DA]/85 leading-relaxed">
                   Les syndics, architectes et directions immobilières qui nous découvrent passent presque tous par notre atelier de Massy avant un premier ouvrage. La visite dure une vingtaine de minutes et se prend par téléphone ou via le formulaire ci-contre.
                 </p>
               </div>
 
               <div>
-                <p className="cartouche text-[#8F4703] mb-3 pb-2 border-b border-[#C9C1B2]">Itinéraire</p>
-                <p className="text-[#171512]/85 leading-relaxed mb-3">
+                <p className="cartouche text-[#7E96A8] mb-3 pb-2 border-b border-[#3A322C]">Itinéraire</p>
+                <p className="text-[#EDE6DA]/85 leading-relaxed mb-3">
                   Proximité immédiate de la gare RER B et C de Massy-Palaiseau, à dix minutes de l&apos;A10. Parking devant l&apos;atelier.
                 </p>
                 <a
                   href={mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-[#8F4703] hover:underline font-medium"
+                  className="text-sm text-[#7E96A8] hover:underline font-medium"
                 >
                   Ouvrir dans Google Maps →
                 </a>
               </div>
 
-              <div className="pt-6 border-t border-[#171512]/10 text-xs text-[#171512]/60 space-y-1">
-                <p><strong className="text-[#0A3559]">Raison sociale</strong> : {NAP.legalName}</p>
-                <p><strong className="text-[#0A3559]">Forme juridique</strong> : {NAP.legalForm} au capital de {NAP.capital}</p>
-                <p><strong className="text-[#0A3559]">SIRET</strong> : {NAP.siret}</p>
-                <p><strong className="text-[#0A3559]">RCS</strong> : {NAP.rcs}</p>
-                <p><strong className="text-[#0A3559]">TVA</strong> : {NAP.tva}</p>
-                <p>Membre du <strong className="text-[#0A3559]">{NAP.group}</strong></p>
+              <div className="pt-6 border-t border-[#3A322C] text-xs text-[#EDE6DA]/78 space-y-1">
+                <p><strong className="text-[#EDE6DA]">Raison sociale</strong> : {NAP.legalName}</p>
+                <p><strong className="text-[#EDE6DA]">Forme juridique</strong> : {NAP.legalForm} au capital de {NAP.capital}</p>
+                <p><strong className="text-[#EDE6DA]">SIRET</strong> : {NAP.siret}</p>
+                <p><strong className="text-[#EDE6DA]">RCS</strong> : {NAP.rcs}</p>
+                <p><strong className="text-[#EDE6DA]">TVA</strong> : {NAP.tva}</p>
+                <p>Membre du <strong className="text-[#EDE6DA]">{NAP.group}</strong></p>
               </div>
             </div>
 
             {/* Right: form */}
             <div className="lg:col-span-3">
-              <div className="bg-[#F6F4EF] border-l-4 border-[#BE5E03] p-7 md:p-10">
-                <p className="cartouche text-[#8F4703] mb-3 pb-2 border-b border-[#C9C1B2]">Demander un chiffrage</p>
-                <h2 className="font-display text-2xl text-[#0A3559] mb-2">Formulaire de contact</h2>
-                <p className="text-sm text-[#171512]/70 mb-8">
+              <div className="bg-[#241E1A] bois border-l-4 border-[#7E96A8] p-7 md:p-10">
+                <p className="cartouche text-[#7E96A8] mb-3 pb-2 border-b border-[#3A322C]">Demander un chiffrage</p>
+                <h2 className="font-display text-2xl text-[#EDE6DA] mb-2">Formulaire de contact</h2>
+                <p className="text-sm text-[#EDE6DA]/78 mb-8">
                   Décrivez votre projet en quelques lignes — nous reviendrons vers vous sous 48 heures ouvrées.
                 </p>
                 <ContactForm />
@@ -101,8 +101,8 @@ export default function ContactPage() {
       </section>
 
       {/* OpenStreetMap embed */}
-      <section className="bg-[#0D4A7B] py-1">
-        <div className="aspect-[16/6] w-full bg-[#0A3559] relative overflow-hidden">
+      <section className="bg-[#2E4250] py-1">
+        <div className="aspect-[16/6] w-full bg-[#241E1A] bois relative overflow-hidden">
           <iframe
             title="Plan de l'atelier — 6 Rue de l'Aulnaye Dracourt, 91300 Massy"
             src="https://www.openstreetmap.org/export/embed.html?bbox=2.2724%2C48.7203%2C2.2904%2C48.7303&amp;layer=mapnik&amp;marker=48.7253%2C2.2814"

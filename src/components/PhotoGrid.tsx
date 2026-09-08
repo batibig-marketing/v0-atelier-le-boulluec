@@ -67,7 +67,7 @@ export default function PhotoGrid({ photos, columns = 3, altContext }: Props) {
         return (
           <li key={p.uploadcare_uuid} className="m-0">
             <figure className="m-0">
-              <div className="relative aspect-[4/5] bg-[#0A3559]/10 border border-[#C9C1B2]">
+              <div className="relative aspect-[4/5] bg-[#2A2320] border border-[#3A322C]">
                 <Image
                   src={uploadcareThumb(p.uploadcare_uuid, 800)}
                   alt={alt(p.local_filename, altContext)}
@@ -78,9 +78,9 @@ export default function PhotoGrid({ photos, columns = 3, altContext }: Props) {
                   quality={78}
                 />
               </div>
-              <figcaption className="mt-2 pt-2 border-t border-[#C9C1B2]">
-                {date && <span className="cartouche text-[#8F4703]">{date}</span>}
-                <span className="block mt-1 text-sm leading-snug text-[#171512]/80 first-letter:uppercase">
+              <figcaption className="mt-2 pt-2 border-t border-[#3A322C]">
+                {date && <span className="cartouche text-[#7E96A8]">{date}</span>}
+                <span className="block mt-1 text-sm leading-snug text-[#EDE6DA]/80 first-letter:uppercase">
                   {sujet}
                 </span>
               </figcaption>

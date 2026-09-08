@@ -25,9 +25,9 @@ export const metadata: Metadata = {
 
 export default function MentionsLegalesPage() {
   return (
-    <article className="py-16 md:py-24 bg-[#E7E2D8]">
+    <article className="py-16 md:py-24 bg-[#1C1714]">
       <Container size="narrow" className="prose-atelier">
-        <p className="cartouche text-[#8F4703] mb-3 pb-2 border-b border-[#C9C1B2]">Informations légales</p>
+        <p className="cartouche text-[#7E96A8] mb-3 pb-2 border-b border-[#3A322C]">Informations légales</p>
         <h1>Mentions légales</h1>
 
         <h2>Éditeur du site</h2>

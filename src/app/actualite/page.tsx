@@ -133,10 +133,10 @@ export default function ActualitePage() {
         legende="Repose d'un vantail monumental au palan — 68 rue de la Chaussée-d'Antin, Paris"
       />
 
-      <section className="bg-[#F6F4EF] border-b border-[#C9C1B2]">
+      <section className="bg-[#241E1A] bois border-b border-[#3A322C]">
         <Container size="default" className="py-10 md:py-12">
-          <p className="text-[1.0625rem] md:text-lg leading-relaxed text-[#171512]">
-            <strong className="text-[#0A3559]">En bref —</strong> L&apos;Atelier Le Boulluec
+          <p className="text-[1.0625rem] md:text-lg leading-relaxed text-[#EDE6DA]">
+            <strong className="text-[#EDE6DA]">En bref —</strong> L&apos;Atelier Le Boulluec
             intervient sur des portes cochères, portes bâtardes, grilles de sas, escaliers
             d&apos;immeuble et châssis acier, à Paris et dans l&apos;ouest parisien. Le journal
             ci-dessous recense {JOURNAL.length} ouvrages datés entre {premiere} et {derniere},
@@ -144,7 +144,7 @@ export default function ActualitePage() {
             séquences photographiques complètes se trouvent dans{" "}
             <Link
               href="/photos"
-              className="text-[#0D4A7B] underline underline-offset-4 decoration-[#BE5E03]"
+              className="text-[#9DB2C2] underline underline-offset-4 decoration-[#7E96A8]"
             >
               l&apos;archive des ouvrages
             </Link>
@@ -153,7 +153,7 @@ export default function ActualitePage() {
         </Container>
       </section>
 
-      <section className="bg-[#E7E2D8] py-14 md:py-20">
+      <section className="bg-[#1C1714] py-14 md:py-20">
         <Container size="wide">
           <SectionTitre
             index="01"
@@ -169,47 +169,47 @@ export default function ActualitePage() {
                 plus ancien
               </caption>
               <thead>
-                <tr className="border-b-2 border-[#171512]">
-                  <th scope="col" className="cartouche text-[#171512]/60 py-3 pr-4 w-20">
+                <tr className="border-b-2 border-[#574B41]">
+                  <th scope="col" className="cartouche text-[#EDE6DA]/78 py-3 pr-4 w-20">
                     Année
                   </th>
-                  <th scope="col" className="cartouche text-[#171512]/60 py-3 pr-4 w-56">
+                  <th scope="col" className="cartouche text-[#EDE6DA]/78 py-3 pr-4 w-56">
                     Ouvrage
                   </th>
-                  <th scope="col" className="cartouche text-[#171512]/60 py-3 pr-4 w-64">
+                  <th scope="col" className="cartouche text-[#EDE6DA]/78 py-3 pr-4 w-64">
                     Adresse
                   </th>
-                  <th scope="col" className="cartouche text-[#171512]/60 py-3 pr-4 w-44">
+                  <th scope="col" className="cartouche text-[#EDE6DA]/78 py-3 pr-4 w-44">
                     Matières
                   </th>
-                  <th scope="col" className="cartouche text-[#171512]/60 py-3">
+                  <th scope="col" className="cartouche text-[#EDE6DA]/78 py-3">
                     Travail réalisé
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {JOURNAL.map((e, i) => (
-                  <tr key={`${e.annee}-${e.ouvrage}-${i}`} className="border-b border-[#C9C1B2] align-top">
+                  <tr key={`${e.annee}-${e.ouvrage}-${i}`} className="border-b border-[#3A322C] align-top">
                     <td className="py-4 pr-4">
-                      <span className="cartouche text-[#8F4703]">{e.annee}</span>
+                      <span className="cartouche text-[#7E96A8]">{e.annee}</span>
                     </td>
                     <td className="py-4 pr-4">
                       {e.ancre ? (
                         <Link
                           href={`/photos#${e.ancre}`}
-                          className="font-display text-lg text-[#0A3559] hover:text-[#8F4703] underline underline-offset-4 decoration-[#BE5E03] transition-colors"
+                          className="font-display text-lg text-[#EDE6DA] hover:text-[#EDE6DA] underline underline-offset-4 decoration-[#7E96A8] transition-colors"
                         >
                           {e.ouvrage}
                         </Link>
                       ) : (
-                        <span className="font-display text-lg text-[#0A3559]">{e.ouvrage}</span>
+                        <span className="font-display text-lg text-[#EDE6DA]">{e.ouvrage}</span>
                       )}
                     </td>
-                    <td className="py-4 pr-4 text-sm text-[#171512]/85">{e.ou}</td>
-                    <td className="py-4 pr-4 cartouche text-[#171512]/60">
+                    <td className="py-4 pr-4 text-sm text-[#EDE6DA]/85">{e.ou}</td>
+                    <td className="py-4 pr-4 cartouche text-[#EDE6DA]/78">
                       {e.matieres.join(" · ")}
                     </td>
-                    <td className="py-4 text-sm text-[#171512]/80 leading-relaxed">{e.quoi}</td>
+                    <td className="py-4 text-sm text-[#EDE6DA]/80 leading-relaxed">{e.quoi}</td>
                   </tr>
                 ))}
               </tbody>
@@ -218,7 +218,7 @@ export default function ActualitePage() {
         </Container>
       </section>
 
-      <section className="bg-[#F6F4EF] py-14 md:py-20 border-t border-[#C9C1B2]">
+      <section className="bg-[#241E1A] bois py-14 md:py-20 border-t border-[#3A322C]">
         <Container size="wide">
           <SectionTitre
             index="02"
@@ -230,7 +230,7 @@ export default function ActualitePage() {
         </Container>
       </section>
 
-      <section className="bg-[#171512] text-[#E7E2D8] py-14 md:py-18">
+      <section className="bg-[#15100E] bois text-[#EDE6DA] py-14 md:py-18">
         <Container size="wide">
           <SectionTitre
             index="03"
@@ -250,15 +250,15 @@ export default function ActualitePage() {
               "Massy, Paray-Vieille-Poste, Saclay",
               "Dannemois, Essonne",
             ].map((z) => (
-              <li key={z} className="border-t border-[#3A3630] pt-2.5 text-[#E7E2D8]/85">
+              <li key={z} className="border-t border-[#3A322C] pt-2.5 text-[#EDE6DA]/85">
                 {z}
               </li>
             ))}
           </ul>
-          <p className="mt-8 text-sm text-[#E7E2D8]/70 border-t border-[#3A3630] pt-5 max-w-3xl">
+          <p className="mt-8 text-sm text-[#EDE6DA]/78 border-t border-[#3A322C] pt-5 max-w-3xl">
             L&apos;atelier se trouve à {NAP.city} ({NAP.postalCode}), dans l&apos;Essonne, et
             intervient dans toute l&apos;{NAP.areaServed}. Voir{" "}
-            <Link href="/contact" className="text-[#E29A43] underline underline-offset-4">
+            <Link href="/contact" className="text-[#9DB2C2] underline underline-offset-4">
               les coordonnées et l&apos;itinéraire
             </Link>
             .

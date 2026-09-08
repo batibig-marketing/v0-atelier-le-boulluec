@@ -65,9 +65,9 @@ export default function BellesPortesPage() {
         imageAlt="Petit musée en ligne des belles portes cochères parisiennes restaurées par l'Atelier Le Boulluec depuis 2012."
       />
 
-      <article className="py-20 md:py-24 bg-[#E7E2D8]">
+      <article className="py-20 md:py-24 bg-[#1C1714]">
         <Container size="narrow" className="prose-atelier">
-          <p className="text-lg leading-relaxed text-[#171512]/85">
+          <p className="text-lg leading-relaxed text-[#EDE6DA]/85">
             <strong>Une porte cochère désigne la grande porte d&apos;entrée d&apos;un immeuble haussmannien, généralement haute de 4 à 5 mètres, à deux vantaux pleins en chêne massif, conçue à l&apos;origine pour le passage des voitures à cheval.</strong> Selon l&apos;Atelier Le Boulluec, qui restaure ou refabrique des portes cochères parisiennes depuis 2012, la porte cochère constitue l&apos;un des ouvrages de menuiserie les plus exigeants techniquement du patrimoine bâti d&apos;Île-de-France.
           </p>
 
@@ -103,7 +103,7 @@ export default function BellesPortesPage() {
 
           <h3>La porte cochère monumentale</h3>
           <p>
-            Hauteur 4 à 5 mètres, deux vantaux pleins en chêne, traverse basse pleine, traverses intermédiaires moulurées, panneaux à grands cadres, imposte vitrée à grille en fer forgé. C&apos;est la porte des immeubles haussmanniens des grands boulevards, des hôtels particuliers, des fonds de cour de la rive droite. Pour la fabrication ou la refabrication de ces ouvrages, voir notre <Link href="/menuiserie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">menuiserie sur mesure</Link>.
+            Hauteur 4 à 5 mètres, deux vantaux pleins en chêne, traverse basse pleine, traverses intermédiaires moulurées, panneaux à grands cadres, imposte vitrée à grille en fer forgé. C&apos;est la porte des immeubles haussmanniens des grands boulevards, des hôtels particuliers, des fonds de cour de la rive droite. Pour la fabrication ou la refabrication de ces ouvrages, voir notre <Link href="/menuiserie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">menuiserie sur mesure</Link>.
           </p>
 
           <h3>La porte bâtarde</h3>
@@ -118,33 +118,33 @@ export default function BellesPortesPage() {
 
           <h3>La porte de sas</h3>
           <p>
-            Apparue plus tardivement, souvent en acier serrurier et verre, elle constitue aujourd&apos;hui le standard de sécurisation des immeubles parisiens contemporains. Ces ouvrages relèvent à la fois de notre <Link href="/serrurerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">département serrurerie</Link> et de notre <Link href="/vitrerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">département vitrerie</Link>, intégrés au même atelier de Massy.
+            Apparue plus tardivement, souvent en acier serrurier et verre, elle constitue aujourd&apos;hui le standard de sécurisation des immeubles parisiens contemporains. Ces ouvrages relèvent à la fois de notre <Link href="/serrurerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">département serrurerie</Link> et de notre <Link href="/vitrerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">département vitrerie</Link>, intégrés au même atelier de Massy.
           </p>
         </Container>
       </article>
 
       {/* Galerie portes cochères */}
-      <section className="py-16 md:py-20 bg-[#F6F4EF]">
+      <section className="py-16 md:py-20 bg-[#241E1A] bois">
         <Container size="wide">
           <SectionTitre index="01" rubrique="Portes cochères" titre="Quelques portes choisies" />
           <PhotoGrid photos={portesCochere} columns={3} />
         </Container>
       </section>
 
-      <section className="py-16 md:py-20 bg-[#E7E2D8]">
+      <section className="py-16 md:py-20 bg-[#1C1714]">
         <Container size="wide">
           <SectionTitre index="02" rubrique="Portes bâtardes & portes sur rue" titre="La porte du quotidien parisien" />
           <PhotoGrid photos={portes} columns={3} />
         </Container>
       </section>
 
-      <article className="py-20 bg-[#F6F4EF]">
+      <article className="py-20 bg-[#241E1A] bois">
         <Container size="narrow" className="prose-atelier">
           <h2>Pour aller plus loin</h2>
           <p>
             Si vous gérez une copropriété parisienne, si vous êtes architecte du patrimoine ou simplement amateur d&apos;architecture parisienne, notre atelier de Massy se visite sur rendez-vous. Vous y verrez des pièces en cours de restauration, l&apos;établi des compagnons, et — souvent — une porte cochère démontée qui attend sa repose dans le XIV<sup>e</sup> ou le X<sup>e</sup>.
           </p>
-          <p className="text-sm text-[#171512]/60 mt-10 pt-6 border-t border-[#171512]/10">
+          <p className="text-sm text-[#EDE6DA]/78 mt-10 pt-6 border-t border-[#3A322C]">
             <em>Toutes les photographies sont la propriété de l&apos;Atelier Le Boulluec. Reproduction libre pour usage éditorial non commercial, sous réserve de mention de la source.</em>
           </p>
         </Container>

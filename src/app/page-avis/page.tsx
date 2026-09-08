@@ -116,10 +116,10 @@ export default function PageAvis() {
         legende="Porte bâtarde restaurée — 24 rue des Dames, Paris 17e, 2017"
       />
 
-      <section className="bg-[#F6F4EF] border-b border-[#C9C1B2]">
+      <section className="bg-[#241E1A] bois border-b border-[#3A322C]">
         <Container size="default" className="py-10 md:py-12">
-          <p className="text-[1.0625rem] md:text-lg leading-relaxed text-[#171512]">
-            <strong className="text-[#0A3559]">En bref —</strong> L&apos;Atelier Le Boulluec est
+          <p className="text-[1.0625rem] md:text-lg leading-relaxed text-[#EDE6DA]">
+            <strong className="text-[#EDE6DA]">En bref —</strong> L&apos;Atelier Le Boulluec est
             noté <strong>{NOTE.valeur} sur {NOTE.sur}</strong> sur sa fiche d&apos;établissement
             Google, sur la base de <strong>{NOTE.avis} avis publics</strong>. Tous les ouvrages,
             neufs comme restaurés, sont couverts par la <strong>garantie décennale</strong>.
@@ -127,23 +127,23 @@ export default function PageAvis() {
             et appartient au {NAP.group}.
           </p>
 
-          <div className="mt-8 grid sm:grid-cols-3 gap-x-8 gap-y-6 border-t border-[#C9C1B2] pt-6">
-            <div className="border-l-2 border-[#BE5E03] pl-4">
-              <p className="cartouche text-[#171512]/55">Note d&apos;établissement</p>
-              <p className="font-display text-[2.4rem] leading-none text-[#0A3559] mt-1.5">
+          <div className="mt-8 grid sm:grid-cols-3 gap-x-8 gap-y-6 border-t border-[#3A322C] pt-6">
+            <div className="border-l-2 border-[#7E96A8] pl-4">
+              <p className="cartouche text-[#EDE6DA]/78">Note d&apos;établissement</p>
+              <p className="font-display text-[2.4rem] leading-none text-[#EDE6DA] mt-1.5">
                 {NOTE.valeur}
-                <span className="text-[1.2rem] text-[#171512]/60"> / {NOTE.sur}</span>
+                <span className="text-[1.2rem] text-[#EDE6DA]/78"> / {NOTE.sur}</span>
               </p>
-              <p className="cartouche text-[#171512]/55 mt-2">Sur {NOTE.avis} avis publics</p>
+              <p className="cartouche text-[#EDE6DA]/78 mt-2">Sur {NOTE.avis} avis publics</p>
             </div>
-            <div className="border-l-2 border-[#BE5E03] pl-4">
-              <p className="cartouche text-[#171512]/55">Garantie</p>
-              <p className="font-display text-[2.4rem] leading-none text-[#0A3559] mt-1.5">10 ans</p>
-              <p className="cartouche text-[#171512]/55 mt-2">Décennale, neuf et restauré</p>
+            <div className="border-l-2 border-[#7E96A8] pl-4">
+              <p className="cartouche text-[#EDE6DA]/78">Garantie</p>
+              <p className="font-display text-[2.4rem] leading-none text-[#EDE6DA] mt-1.5">10 ans</p>
+              <p className="cartouche text-[#EDE6DA]/78 mt-2">Décennale, neuf et restauré</p>
             </div>
-            <div className="border-l-2 border-[#BE5E03] pl-4">
-              <p className="cartouche text-[#171512]/55">Label</p>
-              <p className="font-display text-[1.6rem] leading-tight text-[#0A3559] mt-2">
+            <div className="border-l-2 border-[#7E96A8] pl-4">
+              <p className="cartouche text-[#EDE6DA]/78">Label</p>
+              <p className="font-display text-[1.6rem] leading-tight text-[#EDE6DA] mt-2">
                 Bricard
                 <br />
                 Serruriers Confiance
@@ -153,7 +153,7 @@ export default function PageAvis() {
         </Container>
       </section>
 
-      <section className="bg-[#E7E2D8] py-14 md:py-20">
+      <section className="bg-[#1C1714] py-14 md:py-20">
         <Container size="wide">
           <SectionTitre
             index="01"
@@ -163,16 +163,16 @@ export default function PageAvis() {
           />
           <dl className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
             {ENGAGEMENTS.map(([titre, texte], i) => (
-              <div key={titre} className="border-t-2 border-[#171512] pt-4">
+              <div key={titre} className="border-t-2 border-[#574B41] pt-4">
                 <dt>
-                  <span className="cartouche text-[#8F4703]">
+                  <span className="cartouche text-[#7E96A8]">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="block font-display text-xl text-[#0A3559] mt-1.5 leading-snug">
+                  <span className="block font-display text-xl text-[#EDE6DA] mt-1.5 leading-snug">
                     {titre}
                   </span>
                 </dt>
-                <dd className="mt-2.5 text-sm leading-relaxed text-[#171512]/80">{texte}</dd>
+                <dd className="mt-2.5 text-sm leading-relaxed text-[#EDE6DA]/80">{texte}</dd>
               </div>
             ))}
           </dl>
@@ -181,7 +181,7 @@ export default function PageAvis() {
 
       <References />
 
-      <section className="bg-[#171512] text-[#E7E2D8] py-14 md:py-18">
+      <section className="bg-[#15100E] bois text-[#EDE6DA] py-14 md:py-18">
         <Container size="default">
           <SectionTitre
             index="06"
@@ -189,29 +189,29 @@ export default function PageAvis() {
             titre="Ce qui vaut mieux qu'un témoignage."
             ton="sombre"
           />
-          <ul className="space-y-4 list-none p-0 m-0 text-[#E7E2D8]/85 leading-relaxed">
-            <li className="border-t border-[#3A3630] pt-4">
-              <strong className="text-[#F6F4EF]">Les chantiers eux-mêmes.</strong>{" "}
-              <Link href="/photos" className="text-[#E29A43] underline underline-offset-4">
+          <ul className="space-y-4 list-none p-0 m-0 text-[#EDE6DA]/85 leading-relaxed">
+            <li className="border-t border-[#3A322C] pt-4">
+              <strong className="text-[#EDE6DA]">Les chantiers eux-mêmes.</strong>{" "}
+              <Link href="/photos" className="text-[#9DB2C2] underline underline-offset-4">
                 L&apos;archive des ouvrages
               </Link>{" "}
               donne l&apos;adresse, l&apos;année et l&apos;état trouvé de chaque pièce reprise.
               Les photographies « avant » y sont publiées au même titre que les « après ».
             </li>
-            <li className="border-t border-[#3A3630] pt-4">
-              <strong className="text-[#F6F4EF]">Le journal daté.</strong>{" "}
-              <Link href="/actualite" className="text-[#E29A43] underline underline-offset-4">
+            <li className="border-t border-[#3A322C] pt-4">
+              <strong className="text-[#EDE6DA]">Le journal daté.</strong>{" "}
+              <Link href="/actualite" className="text-[#9DB2C2] underline underline-offset-4">
                 Les chantiers récents
               </Link>{" "}
               listent ce qui est sorti de l&apos;atelier, année par année, avec le geste réalisé.
             </li>
-            <li className="border-t border-[#3A3630] pt-4">
-              <strong className="text-[#F6F4EF]">La visite d&apos;atelier.</strong> Sur rendez-vous
+            <li className="border-t border-[#3A322C] pt-4">
+              <strong className="text-[#EDE6DA]">La visite d&apos;atelier.</strong> Sur rendez-vous
               au {NAP.street}, {NAP.postalCode} {NAP.city}. C&apos;est la vérification la plus
               directe : on voit les bois, les assemblages et les compagnons au travail.
             </li>
-            <li className="border-t border-[#3A3630] pt-4">
-              <strong className="text-[#F6F4EF]">Les avis publics.</strong> La fiche
+            <li className="border-t border-[#3A322C] pt-4">
+              <strong className="text-[#EDE6DA]">Les avis publics.</strong> La fiche
               d&apos;établissement de l&apos;atelier porte {NOTE.avis} avis, note moyenne{" "}
               {NOTE.valeur} sur {NOTE.sur}. Nous ne la retouchons pas et n&apos;en sélectionnons
               aucun extrait.

@@ -70,10 +70,10 @@ export default function MenuiseriePage() {
         imageAlt="Atelier de menuiserie de l'Atelier Le Boulluec à Massy — façonnage de portes et fenêtres bois sur mesure."
       />
 
-      <article className="py-20 md:py-24 bg-[#E7E2D8]">
+      <article className="py-20 md:py-24 bg-[#1C1714]">
         <Container size="narrow" className="prose-atelier">
-          <p className="text-lg leading-relaxed text-[#171512]/85">
-            <strong className="text-[#0A3559]">En bref —</strong> <strong>La menuiserie désigne le métier de façonnage du bois en pièces d&apos;ouvrage : portes, fenêtres, escaliers, agencements, mobilier.</strong> L&apos;Atelier Le Boulluec pratique la menuiserie depuis 1964 en Île-de-France, dans son atelier de Massy où dix-sept menuisiers fabriquent chaque année des centaines de pièces pour immeubles, commerces et maisons.
+          <p className="text-lg leading-relaxed text-[#EDE6DA]/85">
+            <strong className="text-[#EDE6DA]">En bref —</strong> <strong>La menuiserie désigne le métier de façonnage du bois en pièces d&apos;ouvrage : portes, fenêtres, escaliers, agencements, mobilier.</strong> L&apos;Atelier Le Boulluec pratique la menuiserie depuis 1964 en Île-de-France, dans son atelier de Massy où dix-sept menuisiers fabriquent chaque année des centaines de pièces pour immeubles, commerces et maisons.
           </p>
 
           <h2>Quels sont nos ouvrages de menuiserie phares ?</h2>
@@ -98,10 +98,10 @@ export default function MenuiseriePage() {
             La porte d&apos;entrée d&apos;un immeuble est un ouvrage technique avant d&apos;être un objet décoratif. Elle doit résister à plusieurs décennies d&apos;intempéries, supporter des dizaines de manœuvres quotidiennes, conserver son aplomb malgré les jeux de structure, et respecter — quand le bâtiment l&apos;impose — un dessin patrimonial que la copropriété ou l&apos;architecte des Bâtiments de France a validé.
           </p>
           <p>
-            Nous façonnons des portes neuves en chêne, en sapin du Nord, en moabi ou en bois exotiques certifiés, selon le cahier des charges et le budget. Nous restaurons aussi des portes existantes lorsque la structure le permet — c&apos;est souvent la solution la plus sage, à la fois pour la cohérence architecturale et pour le coût global sur vingt ans. Pour les ouvrages historiques inscrits ou classés, voir notre activité de <Link href="/restauration-patrimoniale" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">restauration patrimoniale</Link>, conduite en lien avec les Architectes des Bâtiments de France.
+            Nous façonnons des portes neuves en chêne, en sapin du Nord, en moabi ou en bois exotiques certifiés, selon le cahier des charges et le budget. Nous restaurons aussi des portes existantes lorsque la structure le permet — c&apos;est souvent la solution la plus sage, à la fois pour la cohérence architecturale et pour le coût global sur vingt ans. Pour les ouvrages historiques inscrits ou classés, voir notre activité de <Link href="/restauration-patrimoniale" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">restauration patrimoniale</Link>, conduite en lien avec les Architectes des Bâtiments de France.
           </p>
           <p>
-            Toutes nos portes sont assemblées à tenon et mortaise, panneautées selon le dessin d&apos;origine ou un dessin nouveau, équipées de la quincaillerie adaptée à l&apos;usage (paumelles à billes, ferme-porte hydraulique, système de contrôle d&apos;accès, motorisation sur demande). Pour la pose de serrures de haute sûreté, la motorisation des vantaux ou le contrôle d&apos;accès, nous mobilisons notre <Link href="/serrurerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">département serrurerie</Link>, intégré au même atelier.
+            Toutes nos portes sont assemblées à tenon et mortaise, panneautées selon le dessin d&apos;origine ou un dessin nouveau, équipées de la quincaillerie adaptée à l&apos;usage (paumelles à billes, ferme-porte hydraulique, système de contrôle d&apos;accès, motorisation sur demande). Pour la pose de serrures de haute sûreté, la motorisation des vantaux ou le contrôle d&apos;accès, nous mobilisons notre <Link href="/serrurerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">département serrurerie</Link>, intégré au même atelier.
           </p>
 
           <h2>Fenêtres et volets</h2>
@@ -109,7 +109,7 @@ export default function MenuiseriePage() {
             Nous fabriquons des fenêtres bois sur mesure pour les immeubles soumis à des contraintes patrimoniales — petits bois rapportés, dormants fins, doubles vitrages discrètement insérés dans des moulures d&apos;époque. Pour les bâtiments contemporains, nous proposons des menuiseries mixtes bois-aluminium qui conjuguent l&apos;intérieur chaud d&apos;un châssis bois et la durabilité d&apos;un parement aluminium en façade.
           </p>
           <p>
-            Les volets — pleins, persiennés, à projection — sont façonnés au même atelier que les châssis qui les portent. Cette unité de fabrication garantit l&apos;ajustement parfait des pièces entre elles. Les vitrages isolants et acoustiques associés à ces châssis sont fournis et posés par notre <Link href="/vitrerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">département vitrerie</Link>.
+            Les volets — pleins, persiennés, à projection — sont façonnés au même atelier que les châssis qui les portent. Cette unité de fabrication garantit l&apos;ajustement parfait des pièces entre elles. Les vitrages isolants et acoustiques associés à ces châssis sont fournis et posés par notre <Link href="/vitrerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">département vitrerie</Link>.
           </p>
 
           <h2>Agencement bois — intérieur et extérieur</h2>
@@ -132,9 +132,9 @@ export default function MenuiseriePage() {
         </Container>
       </article>
 
-      <section className="py-16 md:py-20 bg-[#F6F4EF]">
+      <section className="py-16 md:py-20 bg-[#241E1A] bois">
         <Container size="wide">
-          <SectionTitre index="01" rubrique="Quelques ouvrages" titre="Portes et façonnages récents" action={<Link href="/photos" className="cartouche text-[#0D4A7B] hover:text-[#8F4703] transition-colors">Archive des ouvrages →</Link>} />
+          <SectionTitre index="01" rubrique="Quelques ouvrages" titre="Portes et façonnages récents" action={<Link href="/photos" className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors">Archive des ouvrages →</Link>} />
           <PhotoGrid photos={photos} columns={3} />
         </Container>
       </section>

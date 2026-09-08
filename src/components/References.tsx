@@ -13,7 +13,7 @@ const SYNDICS = ["Cogesco", "Lamennais", "Gallard", "CIME", "Immo de France", "G
 
 export default function References() {
   return (
-    <section className="py-16 md:py-20 bg-[#E7E2D8]">
+    <section className="py-16 md:py-20 bg-[#1C1714]">
       <div className="max-w-[1320px] mx-auto px-5 lg:px-8">
         <SectionTitre
           index="05"
@@ -24,14 +24,14 @@ export default function References() {
 
         <div className="grid md:grid-cols-2 gap-10 md:gap-16">
           <div>
-            <h3 className="cartouche text-[#171512]/60 pb-2 border-b border-[#C9C1B2]">
+            <h3 className="cartouche text-[#EDE6DA]/78 pb-2 border-b border-[#3A322C]">
               Maisons &amp; grands comptes
             </h3>
             <ul className="mt-5 space-y-2.5">
               {PRESTIGE.map((name) => (
                 <li
                   key={name}
-                  className="font-display text-lg md:text-xl text-[#0A3559] border-b border-[#C9C1B2] pb-2"
+                  className="font-display text-lg md:text-xl text-[#EDE6DA] border-b border-[#3A322C] pb-2"
                 >
                   {name}
                 </li>
@@ -39,14 +39,14 @@ export default function References() {
             </ul>
           </div>
           <div>
-            <h3 className="cartouche text-[#171512]/60 pb-2 border-b border-[#C9C1B2]">
+            <h3 className="cartouche text-[#EDE6DA]/78 pb-2 border-b border-[#3A322C]">
               Syndics d&apos;Île-de-France
             </h3>
             <ul className="mt-5 space-y-2.5">
               {SYNDICS.map((name) => (
                 <li
                   key={name}
-                  className="font-display text-lg md:text-xl text-[#0A3559] border-b border-[#C9C1B2] pb-2"
+                  className="font-display text-lg md:text-xl text-[#EDE6DA] border-b border-[#3A322C] pb-2"
                 >
                   {name}
                 </li>

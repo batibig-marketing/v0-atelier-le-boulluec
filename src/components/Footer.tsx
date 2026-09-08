@@ -22,24 +22,24 @@ const ARCHIVE = [
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-[#171512] text-[#E7E2D8]">
+    <footer className="bg-[#15100E] bois text-[#EDE6DA]">
       <div className="max-w-[1320px] mx-auto px-5 lg:px-8 py-14 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
           {/* NAP */}
           <div className="lg:col-span-4">
             <Logo variant="clair" tagline className="h-16 w-auto mb-6" title="Atelier Le Boulluec" />
-            <address className="not-italic text-sm leading-relaxed text-[#E7E2D8]/85">
+            <address className="not-italic text-sm leading-relaxed text-[#EDE6DA]/85">
               <span className="block">{NAP.street}</span>
               <span className="block">
                 {NAP.postalCode} {NAP.city}
               </span>
               <a
                 href={`tel:${NAP.phoneE164}`}
-                className="mt-3 inline-block text-[#E29A43] hover:text-[#F6F4EF] transition-colors"
+                className="mt-3 inline-block text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors"
               >
                 {NAP.phone}
               </a>
-              <span className="block mt-3 cartouche text-[#E7E2D8]/60">
+              <span className="block mt-3 cartouche text-[#EDE6DA]/78">
                 {NAP.hoursReadable}
               </span>
               <a
@@ -48,7 +48,7 @@ export default function Footer() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-block cartouche text-[#E7E2D8]/70 hover:text-[#E29A43] transition-colors"
+                className="mt-3 inline-block cartouche text-[#EDE6DA]/78 hover:text-[#9DB2C2] transition-colors"
               >
                 Itinéraire →
               </a>
@@ -57,13 +57,13 @@ export default function Footer() {
 
           {/* Métiers */}
           <nav className="lg:col-span-3" aria-label="Nos métiers">
-            <h2 className="cartouche text-[#E7E2D8]/60 pb-2 border-b border-[#3A3630]">
+            <h2 className="cartouche text-[#EDE6DA]/78 pb-2 border-b border-[#3A322C]">
               Les cinq métiers
             </h2>
-            <ul className="mt-4 space-y-2 text-sm text-[#E7E2D8]/85">
+            <ul className="mt-4 space-y-2 text-sm text-[#EDE6DA]/85">
               {METIERS.map((m) => (
                 <li key={m.href}>
-                  <Link href={m.href} className="hover:text-[#E29A43] transition-colors">
+                  <Link href={m.href} className="hover:text-[#9DB2C2] transition-colors">
                     {m.label}
                   </Link>
                 </li>
@@ -73,13 +73,13 @@ export default function Footer() {
 
           {/* Archive */}
           <nav className="lg:col-span-3" aria-label="L'atelier">
-            <h2 className="cartouche text-[#E7E2D8]/60 pb-2 border-b border-[#3A3630]">
+            <h2 className="cartouche text-[#EDE6DA]/78 pb-2 border-b border-[#3A322C]">
               L&apos;atelier
             </h2>
-            <ul className="mt-4 space-y-2 text-sm text-[#E7E2D8]/85">
+            <ul className="mt-4 space-y-2 text-sm text-[#EDE6DA]/85">
               {ARCHIVE.map((m) => (
                 <li key={m.href}>
-                  <Link href={m.href} className="hover:text-[#E29A43] transition-colors">
+                  <Link href={m.href} className="hover:text-[#9DB2C2] transition-colors">
                     {m.label}
                   </Link>
                 </li>
@@ -89,30 +89,30 @@ export default function Footer() {
 
           {/* Mentions */}
           <div className="lg:col-span-2">
-            <h2 className="cartouche text-[#E7E2D8]/60 pb-2 border-b border-[#3A3630]">
+            <h2 className="cartouche text-[#EDE6DA]/78 pb-2 border-b border-[#3A322C]">
               Mentions
             </h2>
-            <ul className="mt-4 space-y-2 text-sm text-[#E7E2D8]/85">
+            <ul className="mt-4 space-y-2 text-sm text-[#EDE6DA]/85">
               <li>
-                <Link href="/mentions-legales" className="hover:text-[#E29A43] transition-colors">
+                <Link href="/mentions-legales" className="hover:text-[#9DB2C2] transition-colors">
                   Mentions légales
                 </Link>
               </li>
               <li>
                 <Link
                   href="/politique-confidentialite"
-                  className="hover:text-[#E29A43] transition-colors"
+                  className="hover:text-[#9DB2C2] transition-colors"
                 >
                   Confidentialité
                 </Link>
               </li>
             </ul>
-            <p className="mt-6 cartouche text-[#E7E2D8]/60 border-t border-[#3A3630] pt-3">
+            <p className="mt-6 cartouche text-[#EDE6DA]/78 border-t border-[#3A322C] pt-3">
               Réseau Bricard
               <br />
               Serruriers Confiance
             </p>
-            <p className="mt-3 cartouche text-[#E7E2D8]/60">
+            <p className="mt-3 cartouche text-[#EDE6DA]/78">
               Membre du
               <br />
               {NAP.group}
@@ -120,7 +120,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-5 border-t border-[#3A3630] cartouche text-[#E7E2D8]/55 flex flex-col md:flex-row gap-2 md:gap-6 justify-between">
+        <div className="mt-12 pt-5 border-t border-[#3A322C] cartouche text-[#EDE6DA]/78 flex flex-col md:flex-row gap-2 md:gap-6 justify-between">
           <span>
             © {year} {NAP.legalName} — {NAP.legalForm} au capital de {NAP.capital}
           </span>

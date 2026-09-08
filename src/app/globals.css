@@ -1,58 +1,86 @@
 @import "tailwindcss";
 
 /*
-  ATELIER LE BOULLUEC — direction artistique « Le relevé d'atelier ».
+  ATELIER LE BOULLUEC — direction artistique « Bois et forge ».
 
-  Palette : 6 valeurs, toutes relevées sur des sources réelles.
-  - bleu / rouille : couleurs exactes du logo vectoriel (#0D4A7B, #BE5E03)
-  - encre          : le noir-brun de la porte du 12 rue du Cardinal-Mercier reposée
-  - pierre         : la pierre de taille parisienne des façades photographiées
-  - craie          : le fond des plaques d'archive
-  - chene          : le chêne mis à nu pendant le décapage
-  Aucun crème, aucun dégradé, aucun arrondi, aucune ombre portée.
+  Registre : l'atelier en activité, pas la galerie. Fond de chene fume,
+  texte chaud, un seul accent — l'acier bleui — pose froid sur le fond chaud.
+  Les six valeurs arretees par la direction :
+
+    FOND    #1C1714   brun-noir de chene fume
+    TEXTE   #EDE6DA
+    ACCENT  #7E96A8   acier bleui
+    TITRES  grasse et large, bas-de-casse
+    MATIERE grain de bois discret en fond
+
+  Les nuances intermediaires ci-dessous n'introduisent aucune couleur
+  supplementaire : ce sont des degres du meme brun et du meme acier.
+  Aucun creme, aucun beige, aucun serif, aucune rouille, aucun arrondi,
+  aucune ombre portee, aucun degrade.
 */
 
 :root {
-  --bleu: #0d4a7b;
-  --bleu-nuit: #0a3559;
-  --rouille: #be5e03;
-  /* variante lisible du meme orange, pour le texte : 5,30:1 sur pierre, 6,22:1 sur craie */
-  --rouille-texte: #8f4703;
-  --encre: #171512;
-  --pierre: #e7e2d8;
-  --craie: #f6f4ef;
-  --chene: #8a6236;
+  /* --- bruns : le bois --- */
+  --fond: #1c1714; /* fond de page */
+  --fond-creux: #15100e; /* panneaux enfonces : bandeau, hero, pied de page */
+  --fond-relief: #241e1a; /* surfaces posees : planches, encarts */
+  --fond-fort: #2e2620; /* survol des surfaces */
 
-  /* filets */
-  --filet: #c9c1b2;
-  --filet-sombre: #3a3630;
+  /* --- textes --- */
+  --texte: #ede6da;
+  --texte-doux: #b9afa1; /* 7,6:1 sur --fond-relief */
+  --encre: #161210; /* seul usage : texte pose sur un aplat d'acier */
+
+  /* --- acier bleui : l'accent, et lui seul --- */
+  --acier: #7e96a8; /* 5,77:1 sur --fond */
+  --acier-clair: #9db2c2; /* 8,10:1 sur --fond — liens et survols */
+  --acier-fonce: #2e4250; /* aplat d'acier eteint, porte du texte clair */
+
+  /* --- filets --- */
+  --filet: #3a322c;
+  --filet-fort: #574b41;
 }
 
 @theme inline {
-  --color-bleu: var(--bleu);
-  --color-bleu-nuit: var(--bleu-nuit);
-  --color-rouille: var(--rouille);
-  --color-rouille-texte: var(--rouille-texte);
+  --color-fond: var(--fond);
+  --color-fond-creux: var(--fond-creux);
+  --color-fond-relief: var(--fond-relief);
+  --color-fond-fort: var(--fond-fort);
+  --color-texte: var(--texte);
+  --color-texte-doux: var(--texte-doux);
   --color-encre: var(--encre);
-  --color-pierre: var(--pierre);
-  --color-craie: var(--craie);
-  --color-chene: var(--chene);
+  --color-acier: var(--acier);
+  --color-acier-clair: var(--acier-clair);
+  --color-acier-fonce: var(--acier-fonce);
   --color-filet: var(--filet);
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
 }
 
+/*
+  Le grain. Une turbulence fractale etiree dans le sens de la fibre, en SVG
+  data: URI (moins de 500 octets, aucune requete reseau). Elle est bornee a
+  4,5 % d'alpha : elle se sent, elle ne se voit pas, et elle ne touche jamais
+  au contraste calcule des textes.
+*/
+:root {
+  --bois: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260'%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.014 0.72' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.93 0 0 0 0 0.87 0 0 0 0 0.78 0 0 0 0.42 0'/%3E%3C/filter%3E%3Crect width='260' height='260' filter='url(%23b)' opacity='0.11'/%3E%3C/svg%3E");
+}
+
 html {
   scroll-behavior: smooth;
-  /* Bible SEO §4.2 / §10.1 — aucun débordement horizontal sur mobile. */
+  /* Bible SEO §4.2 / §10.1 — aucun debordement horizontal sur mobile. */
   overflow-x: hidden;
   max-width: 100%;
+  background-color: var(--fond);
 }
 
 body {
-  background: var(--pierre);
-  color: var(--encre);
+  background-color: var(--fond);
+  background-image: var(--bois);
+  background-repeat: repeat;
+  color: var(--texte);
   font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-feature-settings: "kern", "liga", "calt";
   -webkit-font-smoothing: antialiased;
@@ -61,27 +89,57 @@ body {
   max-width: 100%;
 }
 
-/* Aucun arrondi nulle part : le vocabulaire est celui de la pièce d'atelier. */
+/* Le grain reprend sur les panneaux enfonces et sur les surfaces posees. */
+.bois {
+  background-image: var(--bois);
+  background-repeat: repeat;
+}
+
+/* Aucun arrondi nulle part : le vocabulaire est celui de la piece d'atelier. */
 *,
 *::before,
 *::after {
   border-radius: 0;
 }
 
+/*
+  Titres : grasse et large, bas-de-casse. Archivo est une grotesque a axe de
+  chasse ; on l'ouvre a wdth 112 pour obtenir la largeur demandee sans etirer
+  artificiellement les tracés.
+*/
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-display), Georgia, "Times New Roman", serif;
-  font-weight: 600;
-  letter-spacing: -0.015em;
+  font-family: var(--font-display), "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-variation-settings: "wdth" 112;
+  letter-spacing: -0.012em;
+  text-transform: none;
+}
+
+h1 {
+  font-weight: 800;
+  font-variation-settings: "wdth" 116;
+  letter-spacing: -0.022em;
+}
+
+/*
+  Specificite nulle : un h1 garde sa graisse 800 meme quand il porte aussi la
+  classe .font-display, et les elements non titres heritent du 700.
+*/
+:where(.font-display) {
+  font-family: var(--font-display), "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-variation-settings: "wdth" 112;
+  letter-spacing: -0.012em;
 }
 
 /* ---------------------------------------------------------------------------
-   Le cartouche : ligne de métadonnées en mono. C'est la signature du site.
-   Date · ouvrage · adresse · matière. Toujours au-dessus ou au-dessous
+   Le cartouche : ligne de metadonnees en mono. C'est la signature du site.
+   Date · ouvrage · adresse · matiere. Toujours au-dessus ou au-dessous
    de l'image, jamais dessus.
 --------------------------------------------------------------------------- */
 .cartouche {
@@ -102,47 +160,48 @@ h6 {
   border-top: 1px solid var(--filet);
 }
 
-.filet-rouille {
-  border-top: 2px solid var(--rouille);
+.filet-acier {
+  border-top: 2px solid var(--acier);
 }
 
 /* ---------------------------------------------------------------------------
-   Corps de texte long des pages métier.
+   Corps de texte long des pages metier.
 --------------------------------------------------------------------------- */
 .prose-atelier h2 {
   font-size: clamp(1.5rem, 3vw, 2.125rem);
-  line-height: 1.15;
+  line-height: 1.12;
   margin-top: 3rem;
   margin-bottom: 1rem;
-  color: var(--bleu-nuit);
+  color: var(--texte);
 }
 
 .prose-atelier h3 {
   font-size: clamp(1.15rem, 2vw, 1.4rem);
-  line-height: 1.25;
+  line-height: 1.22;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: var(--bleu);
+  color: var(--acier-clair);
 }
 
 .prose-atelier p {
   font-size: 1.0625rem;
   line-height: 1.75;
   margin-bottom: 1.25rem;
-  color: var(--encre);
+  color: var(--texte);
 }
 
 .prose-atelier a {
-  color: var(--bleu);
+  color: var(--acier-clair);
   text-decoration: underline;
-  text-decoration-color: var(--rouille);
+  text-decoration-color: var(--acier);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   transition: color 0.15s ease;
 }
 
 .prose-atelier a:hover {
-  color: var(--rouille-texte);
+  color: var(--texte);
+  text-decoration-color: var(--texte);
 }
 
 .prose-atelier ul {
@@ -165,7 +224,7 @@ h6 {
   top: 0.72em;
   width: 0.75rem;
   height: 1px;
-  background: var(--rouille);
+  background: var(--acier);
 }
 
 .prose-atelier ol {
@@ -183,21 +242,23 @@ h6 {
 .prose-atelier ol > li::marker {
   font-family: var(--font-mono), monospace;
   font-size: 0.8em;
-  color: var(--rouille);
+  color: var(--acier);
 }
 
 .prose-atelier blockquote {
-  border-left: 2px solid var(--rouille);
+  border-left: 2px solid var(--acier);
   padding-left: 1.25rem;
   margin: 2rem 0;
-  font-family: var(--font-display), Georgia, serif;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  color: var(--bleu-nuit);
+  font-family: var(--font-display), "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  font-variation-settings: "wdth" 108;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  color: var(--texte);
 }
 
 .prose-atelier strong {
-  color: var(--bleu-nuit);
+  color: var(--texte);
   font-weight: 600;
 }
 
@@ -228,32 +289,32 @@ h6 {
 
 .prose-atelier th {
   font-weight: 600;
-  color: var(--bleu-nuit);
+  color: var(--acier-clair);
   font-family: var(--font-mono), monospace;
   font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-/* Tableaux larges : ils défilent dans leur propre boîte, jamais la page. */
+/* Tableaux larges : ils defilent dans leur propre boite, jamais la page. */
 .table-scroll {
   overflow-x: auto;
   max-width: 100%;
 }
 
 ::selection {
-  background: var(--rouille);
-  color: var(--craie);
+  background: var(--acier);
+  color: var(--encre);
 }
 
 *:focus-visible {
-  outline: 2px solid var(--rouille);
+  outline: 2px solid var(--acier-clair);
   outline-offset: 3px;
 }
 
 /*
-  Aucune animation d'entrée : rien n'est jamais rendu à opacity 0 au chargement.
-  Les seules transitions du site portent sur :hover, à partir d'un état visible.
+  Aucune animation d'entree : rien n'est jamais rendu a opacity 0 au chargement.
+  Les seules transitions du site portent sur :hover, a partir d'un etat visible.
 */
 @media (prefers-reduced-motion: reduce) {
   html {

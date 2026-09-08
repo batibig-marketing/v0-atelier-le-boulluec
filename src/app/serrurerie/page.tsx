@@ -63,10 +63,10 @@ export default function SerruleriePage() {
         imageAlt="Serrurerie et ferronnerie d'art — Atelier Le Boulluec, membre Bricard Serruriers Confiance à Massy."
       />
 
-      <article className="py-20 md:py-24 bg-[#E7E2D8]">
+      <article className="py-20 md:py-24 bg-[#1C1714]">
         <Container size="narrow" className="prose-atelier">
-          <p className="text-lg leading-relaxed text-[#171512]/85">
-            <strong className="text-[#0A3559]">En bref —</strong> <strong>La serrurerie désigne la pose, la réparation et la fabrication de tout ouvrage métallique de fermeture et de sécurisation : serrures, blindages, contrôle d&apos;accès, grilles, ferronnerie.</strong> L&apos;Atelier Le Boulluec pratique la serrurerie depuis les années 1980 en Île-de-France, et est membre du réseau Bricard Serruriers Confiance.
+          <p className="text-lg leading-relaxed text-[#EDE6DA]/85">
+            <strong className="text-[#EDE6DA]">En bref —</strong> <strong>La serrurerie désigne la pose, la réparation et la fabrication de tout ouvrage métallique de fermeture et de sécurisation : serrures, blindages, contrôle d&apos;accès, grilles, ferronnerie.</strong> L&apos;Atelier Le Boulluec pratique la serrurerie depuis les années 1980 en Île-de-France, et est membre du réseau Bricard Serruriers Confiance.
           </p>
 
           <h2>Quels sont nos ouvrages de serrurerie phares ?</h2>
@@ -123,19 +123,19 @@ export default function SerruleriePage() {
 
           <h2>Contrôle d&apos;accès et motorisation</h2>
           <p>
-            Vidéophonie, contrôle d&apos;accès par badge, motorisation de porte cochère. Nous installons les solutions <strong>Intratone</strong>, <strong>Comelit</strong>, <strong>Geze</strong>, <strong>Faac</strong> et <strong>Came</strong>, et savons les intégrer sur des ouvrages anciens sans dégrader leur cohérence visuelle. Quand la motorisation accompagne une porte cochère neuve ou restaurée, l&apos;ouvrage bois est produit par notre <Link href="/menuiserie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">département menuiserie</Link>, dans le même atelier de Massy.
+            Vidéophonie, contrôle d&apos;accès par badge, motorisation de porte cochère. Nous installons les solutions <strong>Intratone</strong>, <strong>Comelit</strong>, <strong>Geze</strong>, <strong>Faac</strong> et <strong>Came</strong>, et savons les intégrer sur des ouvrages anciens sans dégrader leur cohérence visuelle. Quand la motorisation accompagne une porte cochère neuve ou restaurée, l&apos;ouvrage bois est produit par notre <Link href="/menuiserie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">département menuiserie</Link>, dans le même atelier de Massy.
           </p>
 
           <h2>Ferronnerie sur mesure</h2>
           <p>
-            Le département produit également des <strong>grilles de défense de fenêtres, garde-corps, grilles de sas et marquises</strong> — autant d&apos;ouvrages d&apos;acier dessinés, façonnés, soudés et posés à l&apos;atelier. Les garde-corps intègrent souvent un remplissage en <Link href="/vitrerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">verre feuilleté trempé</Link>, ou accompagnent un <Link href="/escaliers" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">escalier sur mesure</Link> façonné au même atelier.
+            Le département produit également des <strong>grilles de défense de fenêtres, garde-corps, grilles de sas et marquises</strong> — autant d&apos;ouvrages d&apos;acier dessinés, façonnés, soudés et posés à l&apos;atelier. Les garde-corps intègrent souvent un remplissage en <Link href="/vitrerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">verre feuilleté trempé</Link>, ou accompagnent un <Link href="/escaliers" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">escalier sur mesure</Link> façonné au même atelier.
           </p>
         </Container>
       </article>
 
-      <section className="py-16 md:py-20 bg-[#F6F4EF]">
+      <section className="py-16 md:py-20 bg-[#241E1A] bois">
         <Container size="wide">
-          <SectionTitre index="01" rubrique="Réalisations" titre="Grilles, sas et motorisations" action={<Link href="/photos" className="cartouche text-[#0D4A7B] hover:text-[#8F4703] transition-colors">Archive des ouvrages →</Link>} />
+          <SectionTitre index="01" rubrique="Réalisations" titre="Grilles, sas et motorisations" action={<Link href="/photos" className="cartouche text-[#9DB2C2] hover:text-[#EDE6DA] transition-colors">Archive des ouvrages →</Link>} />
           <PhotoGrid photos={photos} columns={3} />
         </Container>
       </section>

@@ -53,14 +53,14 @@ export default function Breadcrumb({ items, noSchema = false }: BreadcrumbProps)
       {!noSchema && <JsonLd data={breadcrumbSchema(schemaItems)} />}
       <nav
         aria-label="Fil d'Ariane"
-        className="bg-[#0A3559] text-[#E7E2D8]"
+        className="bg-[#241E1A] bois text-[#EDE6DA]"
       >
         <Container size="wide" className="py-2.5">
-          <ol className="cartouche flex flex-wrap items-center gap-x-1 gap-y-1 text-[#E7E2D8]/80">
+          <ol className="cartouche flex flex-wrap items-center gap-x-1 gap-y-1 text-[#EDE6DA]/80">
             <li className="flex items-center">
               <Link
                 href="/"
-                className="hover:text-[#E29A43] transition-colors"
+                className="hover:text-[#9DB2C2] transition-colors"
               >
                 Accueil
               </Link>
@@ -69,18 +69,18 @@ export default function Breadcrumb({ items, noSchema = false }: BreadcrumbProps)
               const isLast = index === items.length - 1;
               return (
                 <li key={`${item.label}-${index}`} className="flex items-center">
-                  <span aria-hidden="true" className="text-[#E29A43] mx-2">·</span>
+                  <span aria-hidden="true" className="text-[#9DB2C2] mx-2">·</span>
                   {item.href && !isLast ? (
                     <Link
                       href={item.href}
-                      className="hover:text-[#E29A43] transition-colors"
+                      className="hover:text-[#9DB2C2] transition-colors"
                     >
                       {item.label}
                     </Link>
                   ) : (
                     <span
                       aria-current={isLast ? "page" : undefined}
-                      className="text-[#F6F4EF]"
+                      className="text-[#EDE6DA]"
                     >
                       {item.label}
                     </span>

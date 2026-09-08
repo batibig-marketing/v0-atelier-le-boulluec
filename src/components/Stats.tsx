@@ -13,21 +13,21 @@ const DEFAULT_STATS: Stat[] = [
  */
 export default function Stats({ items = DEFAULT_STATS }: { items?: Stat[] }) {
   return (
-    <section className="bg-[#171512] text-[#E7E2D8] py-14 md:py-16">
+    <section className="bg-[#15100E] bois text-[#EDE6DA] py-14 md:py-16">
       <div className="max-w-[1320px] mx-auto px-5 lg:px-8">
-        <p className="cartouche text-[#E29A43] pb-3 border-b border-[#3A3630]">
+        <p className="cartouche text-[#9DB2C2] pb-3 border-b border-[#3A322C]">
           Repères
         </p>
         <dl className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-9 mt-8">
           {items.map((s) => (
-            <div key={s.label} className="border-l-2 border-[#BE5E03] pl-4">
-              <dt className="font-display text-[2.1rem] md:text-[2.6rem] leading-none text-[#F6F4EF]">
+            <div key={s.label} className="border-l-2 border-[#7E96A8] pl-4">
+              <dt className="font-display text-[2.1rem] md:text-[2.6rem] leading-none text-[#EDE6DA]">
                 {s.value}
               </dt>
-              <dd className="mt-2 text-sm text-[#E7E2D8]/85 leading-snug">
+              <dd className="mt-2 text-sm text-[#EDE6DA]/85 leading-snug">
                 {s.label}
                 {s.source && (
-                  <span className="block cartouche text-[#E7E2D8]/55 mt-1.5">{s.source}</span>
+                  <span className="block cartouche text-[#EDE6DA]/78 mt-1.5">{s.source}</span>
                 )}
               </dd>
             </div>

@@ -24,22 +24,22 @@ export default function FaqSection({
   items,
 }: Props) {
   return (
-    <section className="py-16 md:py-20 bg-[#F6F4EF] border-t border-[#C9C1B2]">
+    <section className="py-16 md:py-20 bg-[#241E1A] bois border-t border-[#3A322C]">
       <Container size="default">
-        <div className="flex items-baseline gap-4 pb-3 border-b border-[#C9C1B2]">
-          <span className="cartouche text-[#8F4703]">{index}</span>
-          <span className="cartouche text-[#171512]/60">{eyebrow}</span>
+        <div className="flex items-baseline gap-4 pb-3 border-b border-[#3A322C]">
+          <span className="cartouche text-[#7E96A8]">{index}</span>
+          <span className="cartouche text-[#EDE6DA]/78">{eyebrow}</span>
         </div>
-        <h2 className="font-display text-[1.75rem] md:text-[2.25rem] leading-tight text-[#0A3559] mt-5 mb-10 max-w-2xl">
+        <h2 className="font-display text-[1.75rem] md:text-[2.25rem] leading-tight text-[#EDE6DA] mt-5 mb-10 max-w-2xl">
           {title}
         </h2>
         <dl className="grid md:grid-cols-2 gap-x-10 gap-y-8">
           {items.map((item) => (
-            <div key={item.q} className="border-t border-[#C9C1B2] pt-4">
-              <dt className="font-display text-lg md:text-xl text-[#0A3559] leading-snug">
+            <div key={item.q} className="border-t border-[#3A322C] pt-4">
+              <dt className="font-display text-lg md:text-xl text-[#EDE6DA] leading-snug">
                 {item.q}
               </dt>
-              <dd className="mt-2.5 text-[#171512]/85 leading-relaxed text-[0.98rem]">
+              <dd className="mt-2.5 text-[#EDE6DA]/85 leading-relaxed text-[0.98rem]">
                 {item.a}
               </dd>
             </div>

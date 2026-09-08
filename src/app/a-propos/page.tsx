@@ -65,10 +65,10 @@ export default function AProposPage() {
         imageAlt="Atelier de menuiserie Le Boulluec à Massy — 17 menuisiers, soixante ans de pratique en Île-de-France."
       />
 
-      <article className="py-20 md:py-24 bg-[#E7E2D8]">
+      <article className="py-20 md:py-24 bg-[#1C1714]">
         <Container size="narrow" className="prose-atelier">
-          <p className="text-lg leading-relaxed text-[#171512]/85">
-            <strong className="text-[#0A3559]">En bref —</strong> <strong>L&apos;Atelier Le Boulluec est une entreprise familiale artisanale fondée en 1964, spécialisée en menuiserie, serrurerie, vitrerie, escaliers sur mesure et restauration patrimoniale.</strong> 17 menuisiers travaillent aujourd&apos;hui à l&apos;atelier de Massy (91300). L&apos;entreprise est membre du réseau Bricard Serruriers Confiance et du Groupe BATIBIG.
+          <p className="text-lg leading-relaxed text-[#EDE6DA]/85">
+            <strong className="text-[#EDE6DA]">En bref —</strong> <strong>L&apos;Atelier Le Boulluec est une entreprise familiale artisanale fondée en 1964, spécialisée en menuiserie, serrurerie, vitrerie, escaliers sur mesure et restauration patrimoniale.</strong> 17 menuisiers travaillent aujourd&apos;hui à l&apos;atelier de Massy (91300). L&apos;entreprise est membre du réseau Bricard Serruriers Confiance et du Groupe BATIBIG.
           </p>
 
           <h2>Notre histoire en dates clés</h2>
@@ -117,11 +117,11 @@ export default function AProposPage() {
           <h2>Notre éthique de travail</h2>
           <h3>1. Un seul atelier, plusieurs métiers</h3>
           <p>
-            Nous ne sous-traitons pas la <Link href="/menuiserie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">menuiserie</Link>. Nous ne sous-traitons pas la <Link href="/serrurerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">serrurerie</Link>. Nous ne sous-traitons pas la <Link href="/vitrerie" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">vitrerie</Link>. Tout passe par Massy, sous le même toit, sous la responsabilité du même chef d&apos;atelier.
+            Nous ne sous-traitons pas la <Link href="/menuiserie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">menuiserie</Link>. Nous ne sous-traitons pas la <Link href="/serrurerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">serrurerie</Link>. Nous ne sous-traitons pas la <Link href="/vitrerie" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">vitrerie</Link>. Tout passe par Massy, sous le même toit, sous la responsabilité du même chef d&apos;atelier.
           </p>
           <h3>2. Restaurer plutôt que remplacer</h3>
           <p>
-            Quand l&apos;ouvrage le permet. Nous orientons systématiquement vers la solution la plus respectueuse de l&apos;existant, même quand elle est moins rentable pour nous à court terme. Sur dix ans, c&apos;est la seule façon de garder des clients. C&apos;est l&apos;esprit de notre activité de <Link href="/restauration-patrimoniale" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">restauration patrimoniale</Link>, et c&apos;est ce que documentent les archives des <Link href="/belle-portes-rue-sur-paris-et-ailleurs" className="text-[#8F4703] hover:text-[#0D4A7B] underline underline-offset-4 decoration-1">belles portes de Paris</Link>.
+            Quand l&apos;ouvrage le permet. Nous orientons systématiquement vers la solution la plus respectueuse de l&apos;existant, même quand elle est moins rentable pour nous à court terme. Sur dix ans, c&apos;est la seule façon de garder des clients. C&apos;est l&apos;esprit de notre activité de <Link href="/restauration-patrimoniale" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">restauration patrimoniale</Link>, et c&apos;est ce que documentent les archives des <Link href="/belle-portes-rue-sur-paris-et-ailleurs" className="text-[#7E96A8] hover:text-[#9DB2C2] underline underline-offset-4 decoration-1">belles portes de Paris</Link>.
           </p>
           <h3>3. Une garantie réelle</h3>
           <p>
