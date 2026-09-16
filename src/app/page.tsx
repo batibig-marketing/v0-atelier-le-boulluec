@@ -11,6 +11,8 @@ import { galerie, photo } from "@/lib/photos";
 import { uploadcareUrl } from "@/lib/uploadcare";
 
 import { CARTE_PARTAGE } from "@/lib/partage";
+/** Photographie du hero, déclinée par scripts/build-hero.mjs. */
+const HERO = "/photos/hero-porte-cochere-86-boulevard-malesherbes";
 const OG_IMAGE = uploadcareUrl(PHOTOS.cardinalMercierApres, 1200);
 
 export const metadata: Metadata = {
@@ -158,7 +160,6 @@ const webPageSchema = {
 };
 
 export default function HomePage() {
-  const vedette = photo("longchamp");
   const vitrine = OUVRAGES[0];
   const cartes = galerie("accueil-metiers");
 
@@ -168,18 +169,43 @@ export default function HomePage() {
       <JsonLd data={servicesItemListSchema} />
       <JsonLd data={faqPageSchema(HOME_FAQ)} />
 
-      {/* L’ouvrage de tête : une porte cochère reposée et remise en peinture,
-          le dessin ancien conservé, les grilles forgées en place. */}
+      {/* L’ouvrage de tête : la porte cochère du 86 boulevard Malesherbes après
+          restauration. Photographie 3024 px de la médiathèque, deux cadrages
+          (scripts/build-hero.mjs) : la porte à droite sur écran large, la
+          façade de pierre sous le texte ; la porte au centre sur mobile. */}
       <section className="hero">
-        <img
-          src={`/photos/${vedette.slug}-bandeau.webp`}
-          srcSet={`/photos/${vedette.slug}-bandeau-900.webp 900w, /photos/${vedette.slug}-bandeau.webp 1800w`}
-          sizes="100vw"
-          width={vedette.w}
-          height={vedette.h}
-          alt={vedette.alt}
-          fetchPriority="high"
-        />
+        <picture>
+          <source
+            media="(max-width: 700px)"
+            type="image/avif"
+            srcSet={`${HERO}-mobile-600.avif 600w, ${HERO}-mobile-1000.avif 1000w`}
+            sizes="100vw"
+            width={1000}
+            height={1778}
+          />
+          <source
+            media="(max-width: 700px)"
+            type="image/webp"
+            srcSet={`${HERO}-mobile-600.webp 600w, ${HERO}-mobile-1000.webp 1000w`}
+            sizes="100vw"
+            width={1000}
+            height={1778}
+          />
+          <source
+            type="image/avif"
+            srcSet={`${HERO}-1200.avif 1200w, ${HERO}-2400.avif 2400w`}
+            sizes="100vw"
+          />
+          <img
+            src={`${HERO}-2400.webp`}
+            srcSet={`${HERO}-1200.webp 1200w, ${HERO}-2400.webp 2400w`}
+            sizes="100vw"
+            width={2400}
+            height={1350}
+            alt="Porte cochère en chêne à deux vantaux, panneaux moulurés et consoles sculptées, sous une imposte vitrée à balcon en fer forgé et le numéro 86, dans une façade en pierre de taille"
+            fetchPriority="high"
+          />
+        </picture>
         <div className="hero__voile" />
         <div className="hero__texte">
           <div className="contenu contenu--large">
@@ -202,9 +228,9 @@ export default function HomePage() {
           </div>
         </div>
         <p className="hero__cartel">
-          Porte cochère du 111 rue de Longchamp
+          Porte cochère du 86 boulevard Malesherbes
           <br />
-          reposée et remise en peinture
+          après restauration
         </p>
       </section>
 

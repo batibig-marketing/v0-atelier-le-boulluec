@@ -389,7 +389,9 @@ strong { font-weight: 600; }
 .hero__voile {
   position: absolute;
   inset: 0;
-  background: rgba(23, 24, 26, 0.5);
+  /* 0,6 : la photographie du 86 boulevard Malesherbes a une pierre claire ;
+     le chapeau garde ainsi un contraste d'au moins 4,5:1. */
+  background: rgba(23, 24, 26, 0.6);
 }
 .hero__texte {
   position: relative;
@@ -415,7 +417,7 @@ strong { font-weight: 600; }
   font-size: 0.66rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(252, 252, 251, 0.62);
+  color: rgba(252, 252, 251, 0.8);
   line-height: 1.7;
 }
 @media (max-width: 900px) { .hero__cartel { display: none; } }
@@ -736,9 +738,11 @@ strong { font-weight: 600; }
    pas : sommaires d'ancres, planches d'archive, registre, questions, contact.
    ========================================================================== */
 
-/* Le hero porte une photographie en portrait : on la cadre sur le haut de la
-   porte plutôt que sur son milieu. */
-.hero img { object-position: center 30%; }
+/* Hero : sur écran large, la porte est à droite du cadrage ; quand l'écran
+   rogne les côtés (tablette), on garde la porte plutôt que la façade. Sous
+   700 px, le cadrage portrait est déjà centré sur la porte. */
+.hero img { object-position: 64% center; }
+@media (max-width: 700px) { .hero img { object-position: center; } }
 
 /* Sommaire des sous-rubriques : les ancres du menu historique. */
 .sommaire {
