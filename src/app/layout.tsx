@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Libre_Caslon_Display, Libre_Caslon_Text, Mulish } from "next/font/google";
+import { Spectral, Archivo } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { Entete } from "@/components/Entete";
+import { Pied } from "@/components/Pied";
+import { Reveler } from "@/components/Reveler";
 import JsonLd from "@/components/JsonLd";
 import {
   localBusinessSchema,
@@ -11,36 +12,28 @@ import {
 } from "@/lib/schema";
 import { NAP } from "@/lib/nap";
 
-// Titres d'affiche (h1) — le cut « Display » du Libre Caslon : contraste fort,
-// deliees fines, empattements nets. Caslon est le romain anglais du XVIIIe
-// siecle, contemporain des menuiseries que l'atelier restaure. Une seule
-// graisse : la grasse est proscrite.
-const affiche = Libre_Caslon_Display({
-  variable: "--font-affiche",
+/**
+ * Titres — Spectral, comme sur le site frère atelierdemenuiserie.fr : romain
+ * de labeur dessiné pour l’écran, empattements nets, aucun maniérisme. Il
+ * remplace le serif ancien de la direction « chêne et laiton », refusée.
+ */
+const titre = Spectral({
+  variable: "--police-titre",
   subsets: ["latin"],
-  weight: ["400"],
-  display: "swap",
-  preload: true,
-});
-
-// Titres courants (h2 a h6, cartels d'ouvrages) — le cut « Text » de la meme
-// famille : meme dessin, fut plus robuste, lisible a 1 rem sur fond sombre.
-const display = Libre_Caslon_Text({
-  variable: "--font-display",
-  subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "500"],
   style: ["normal", "italic"],
   display: "swap",
   preload: true,
 });
 
-// Corps de texte et micro-labels — sans-serif discrete, contraste faible,
-// dessinee pour la lecture longue. Elle ne concurrence jamais les titres.
-const sans = Mulish({
-  variable: "--font-sans",
+/**
+ * Texte courant et labels — Archivo. Grotesque neutre, très lisible en
+ * capitales espacées, qui ne dispute jamais la vedette aux titres.
+ */
+const texte = Archivo({
+  variable: "--police-texte",
   subsets: ["latin"],
   weight: ["400", "500", "600"],
-  style: ["normal", "italic"],
   display: "swap",
   preload: true,
 });
@@ -100,33 +93,29 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1C1714",
+  themeColor: "#17181a",
   width: "device-width",
   initialScale: 1,
-  colorScheme: "dark",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={`${affiche.variable} ${display.variable} ${sans.variable}`}>
-      <head>
-        {/* Speed up Uploadcare image fetches (hero LCP). */}
-        <link rel="preconnect" href="https://ucarecdn.com" crossOrigin="" />
-        <link rel="dns-prefetch" href="https://ucarecdn.com" />
-      </head>
-      <body className="min-h-screen flex flex-col bg-[#1C1714] text-[#EDE6DA] antialiased">
-        <a
-          href="#main"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-[#B08D57] focus:text-[#161210] focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:outline-2 focus:outline-[#EDE6DA]"
-        >
-          Aller au contenu principal
+    <html lang="fr" className={`${titre.variable} ${texte.variable}`}>
+      <body>
+        <a className="saut-contenu" href="#contenu">
+          Aller au contenu
         </a>
         <JsonLd data={organizationSchema()} />
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={websiteSchema()} />
-        <Header />
-        <main id="main" className="flex-1">{children}</main>
-        <Footer />
+        <Entete />
+        {/* L’en-tête est fixe et se pose sur la photographie du bandeau :
+            chaque page gère son propre retrait (voir .page-texte). */}
+        <main id="contenu" className="sans-retrait">
+          {children}
+        </main>
+        <Pied />
+        <Reveler />
       </body>
     </html>
   );

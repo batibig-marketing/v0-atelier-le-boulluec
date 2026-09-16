@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import SectionTitre from "@/components/SectionTitre";
 import Link from "next/link";
-import PageHeader from "@/components/PageHeader";
-import Container from "@/components/Container";
-import PhotoGrid from "@/components/PhotoGrid";
-import CTASection from "@/components/CTASection";
 import JsonLd from "@/components/JsonLd";
-import FaqSection from "@/components/FaqSection";
-import Breadcrumb from "@/components/Breadcrumb";
-import RelatedPages from "@/components/RelatedPages";
-import { photosByCategories } from "@/lib/photos";
+import {
+  AppelContact,
+  Bandeau,
+  Bande,
+  Fil,
+  Galerie,
+  Ouverture,
+  Questions,
+  Rangee,
+  Suite,
+  Voisines,
+} from "@/components/Blocs";
+import { galerie, photo } from "@/lib/photos";
 import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
 const SERRURERIE_FAQ = [
@@ -48,129 +52,184 @@ export const metadata: Metadata = {
   },
 };
 
-export default function SerruleriePage() {
-  const photos = photosByCategories(["grille", "porte-sas", "motorisation"], 6);
+export default function SerrureriePage() {
   return (
     <>
       <JsonLd data={serviceSchema("Serrurerie & ferronnerie", metadata.description as string, "Serrurerie")} />
       <JsonLd data={faqPageSchema(SERRURERIE_FAQ)} />
-      <Breadcrumb items={[{ label: "Serrurerie", href: "/serrurerie" }]} />
-      <PageHeader
-        photoUuid="2ea887a0-7113-4e97-973c-7478c48e6ebe"
-        eyebrow="Serrurerie · Ferronnerie"
-        title="Serrurerie & ferronnerie — sécurité et ouvrages d'acier."
-        subtitle="La serrurerie est entrée à l'atelier dans les années 1980. Aujourd'hui c'est un département à part entière, qui couvre la sécurisation des accès comme la ferronnerie d'art."
-        imageAlt="Serrurerie et ferronnerie d'art — Atelier Le Boulluec, membre Bricard Serruriers Confiance à Massy."
+
+      <Bandeau
+        photo={photo("verneuil")}
+        surtitre="Serrurerie · Ferronnerie"
+        titre="Serrurerie & ferronnerie — sécurité et ouvrages d'acier."
+        chapeau="La serrurerie est entrée à l'atelier dans les années 1980. Aujourd'hui c'est un département à part entière, qui couvre la sécurisation des accès comme la ferronnerie d'art."
+      />
+      <Fil items={[{ label: "Serrurerie", href: "/serrurerie" }]} />
+
+      <Ouverture photo={photo("washington-ensemble")}>
+        <p className="en-bref">
+          <strong>En bref —</strong>{" "}
+          <strong>
+            La serrurerie désigne la pose, la réparation et la fabrication de tout ouvrage métallique
+            de fermeture et de sécurisation : serrures, blindages, contrôle d&apos;accès, grilles,
+            ferronnerie.
+          </strong>{" "}
+          L&apos;Atelier Le Boulluec pratique la serrurerie depuis les années 1980 en Île-de-France,
+          et est membre du réseau Bricard Serruriers Confiance.
+        </p>
+      </Ouverture>
+
+      <Rangee photos={galerie("serrurerie-rangee")} />
+
+      <Suite
+        blocs={[
+          {
+            titre: "Quels sont nos ouvrages de serrurerie phares ?",
+            niveau: 2,
+            photo: photo("pontoise"),
+            corps: (
+              <ul>
+                <li><strong>Serrures de porte palière</strong>{" "}Bricard, Picard, Fichet — remplacement, mise à niveau A2P, organigramme d&apos;immeuble.</li>
+                <li><strong>Blindage de portes palières</strong>{" "}aux trois niveaux : léger, renforcé, bloc-porte blindé certifié A2P BP1, BP2, BP3.</li>
+                <li><strong>Motorisation de portes cochères</strong>{" "}et systèmes de contrôle d&apos;accès Intratone, Comelit, Geze, Faac, Came.</li>
+                <li><strong>Vidéophonie d&apos;immeuble</strong>{" "}et boîtes aux lettres normalisées La Poste.</li>
+                <li><strong>Ferronnerie sur mesure</strong>{" "}: grilles de défense, garde-corps, grilles de sas, marquises en acier forgé.</li>
+              </ul>
+            ),
+          },
+          {
+            titre: "Pourquoi nous choisir pour vos travaux de serrurerie ?",
+            niveau: 2,
+            photo: photo("garniture-laiton"),
+            corps: (
+              <ol>
+                <li><strong>Label Bricard Serruriers Confiance</strong>{" "}: intervention sous garantie constructeur sur les serrures Bricard installées par nos soins.</li>
+                <li><strong>Audit serrurier gratuit pour les copropriétés</strong>{" "}qui nous consultent pour un premier ouvrage.</li>
+                <li><strong>Blindage posé par un seul compagnon spécialisé</strong>, formé aux produits Picard, Fichet et Bricard.</li>
+              </ol>
+            ),
+          },
+          {
+            titre: "Membre du réseau Bricard Serruriers Confiance",
+            niveau: 2,
+            corps: (
+              <>
+                <p>
+                  Nous sommes l&apos;un des serruriers d&apos;Île-de-France membres du réseau <strong>Bricard Serruriers Confiance</strong>{" "}— un label que le fabricant historique réserve à un cercle restreint d&apos;artisans capables d&apos;installer, d&apos;entretenir et de garantir l&apos;ensemble de sa gamme.
+                </p>
+                <ul>
+                  <li>un accès aux serrures de haute sûreté Bricard à clé brevetée non reproductible,</li>
+                  <li>la maîtrise des cylindres anti-bumping, anti-perçage, anti-cassage,</li>
+                  <li>la formation continue aux nouvelles générations de produits,</li>
+                  <li>une intervention sous garantie constructeur sur les serrures Bricard installées par nos soins.</li>
+                </ul>
+                <p>
+                  Pour un syndic ou une direction immobilière, le label est une assurance objective : les serrures posées seront entretenues dans la durée par un professionnel reconnu par le fabricant.
+                </p>
+              </>
+            ),
+          },
+          {
+            titre: "Sécurisation des accès d'immeuble",
+            niveau: 2,
+            photo: photo("interphone"),
+            corps: (
+              <>
+                <ul>
+                  <li><strong>Serrures de porte palière</strong>{" "}— remplacement, mise à niveau A2P*, ré-organigramme,</li>
+                  <li><strong>Porte cochère</strong>{" "}— serrure carénée, gâche électrique, ventouse électromagnétique,</li>
+                  <li><strong>Sas d&apos;entrée et grilles</strong>{" "}— pose et entretien des grilles, gâches, ferme-portes,</li>
+                  <li><strong>Boîtes aux lettres</strong>{" "}— pose de batteries normalisées La Poste, ré-affectation, remplacement complet.</li>
+                </ul>
+                <p>
+                  Pour les copropriétés en cours de mise en sécurité, nous produisons un audit serrurier préalable — gratuit pour les bâtiments dont le syndic nous consulte pour un premier ouvrage.
+                </p>
+              </>
+            ),
+          },
+          {
+            titre: "Blindage de portes palières",
+            niveau: 2,
+            corps: (
+              <>
+                <p>Trois niveaux selon le risque et le budget :</p>
+                <ul>
+                  <li><strong>Blindage léger</strong>{" "}— tôle d&apos;acier sur la face intérieure, serrure trois points, cornière anti-pince,</li>
+                  <li><strong>Blindage renforcé</strong>{" "}— porte d&apos;origine doublée d&apos;un caisson acier, serrure cinq points A2P**, cylindre haute sûreté,</li>
+                  <li><strong>Bloc-porte blindé</strong>{" "}— dépose de la porte d&apos;origine, pose d&apos;un bloc-porte certifié A2P BP1, BP2 ou BP3.</li>
+                </ul>
+                <p>
+                  Tous nos blindages sont posés par un seul compagnon spécialisé, formé aux produits Picard, Fichet et Bricard.
+                </p>
+              </>
+            ),
+          },
+          {
+            titre: "Contrôle d'accès et motorisation",
+            niveau: 2,
+            photo: photo("verin"),
+            corps: (
+              <p>
+                Vidéophonie, contrôle d&apos;accès par badge, motorisation de porte cochère. Nous installons les solutions <strong>Intratone</strong>, <strong>Comelit</strong>, <strong>Geze</strong>, <strong>Faac</strong>{" "}et <strong>Came</strong>, et savons les intégrer sur des ouvrages anciens sans dégrader leur cohérence visuelle. Quand la motorisation accompagne une porte cochère neuve ou restaurée, l&apos;ouvrage bois est produit par notre <Link href="/menuiserie">département menuiserie</Link>, dans le même atelier de Massy.
+              </p>
+            ),
+          },
+          {
+            titre: "Ferronnerie sur mesure",
+            niveau: 2,
+            photo: photo("saint-paul"),
+            corps: (
+              <p>
+                Le département produit également des <strong>grilles de défense de fenêtres, garde-corps, grilles de sas et marquises</strong>{" "}— autant d&apos;ouvrages d&apos;acier dessinés, façonnés, soudés et posés à l&apos;atelier. Les garde-corps intègrent souvent un remplissage en <Link href="/vitrerie">verre feuilleté trempé</Link>, ou accompagnent un <Link href="/escaliers">escalier sur mesure</Link>{" "}façonné au même atelier.
+              </p>
+            ),
+          },
+        ]}
       />
 
-      <article className="py-20 md:py-24 bg-[#1C1714]">
-        <Container size="narrow" className="prose-atelier">
-          <p className="text-lg leading-relaxed text-[#EDE6DA]/85">
-            <strong className="text-[#EDE6DA]">En bref —</strong> <strong>La serrurerie désigne la pose, la réparation et la fabrication de tout ouvrage métallique de fermeture et de sécurisation : serrures, blindages, contrôle d&apos;accès, grilles, ferronnerie.</strong> L&apos;Atelier Le Boulluec pratique la serrurerie depuis les années 1980 en Île-de-France, et est membre du réseau Bricard Serruriers Confiance.
-          </p>
+      <Bande
+        surtitre="Réalisations"
+        titre="Grilles, sas et motorisations"
+        chapeau={
+          <>
+            Ouvrages d’acier façonnés et posés par l’atelier. La suite est dans{" "}
+            <Link href="/photos">l’archive des ouvrages</Link>.
+          </>
+        }
+      >
+        <Galerie photos={galerie("serrurerie-fin")} />
+      </Bande>
 
-          <h2>Quels sont nos ouvrages de serrurerie phares ?</h2>
-          <ul>
-            <li><strong>Serrures de porte palière</strong> Bricard, Picard, Fichet — remplacement, mise à niveau A2P, organigramme d&apos;immeuble.</li>
-            <li><strong>Blindage de portes palières</strong> aux trois niveaux : léger, renforcé, bloc-porte blindé certifié A2P BP1, BP2, BP3.</li>
-            <li><strong>Motorisation de portes cochères</strong> et systèmes de contrôle d&apos;accès Intratone, Comelit, Geze, Faac, Came.</li>
-            <li><strong>Vidéophonie d&apos;immeuble</strong> et boîtes aux lettres normalisées La Poste.</li>
-            <li><strong>Ferronnerie sur mesure</strong> : grilles de défense, garde-corps, grilles de sas, marquises en acier forgé.</li>
-          </ul>
+      <Questions items={SERRURERIE_FAQ} fond="pierre" />
 
-          <h2>Pourquoi nous choisir pour vos travaux de serrurerie ?</h2>
-          <ol>
-            <li><strong>Label Bricard Serruriers Confiance</strong> : intervention sous garantie constructeur sur les serrures Bricard installées par nos soins.</li>
-            <li><strong>Audit serrurier gratuit pour les copropriétés</strong> qui nous consultent pour un premier ouvrage.</li>
-            <li><strong>Blindage posé par un seul compagnon spécialisé</strong>, formé aux produits Picard, Fichet et Bricard.</li>
-          </ol>
-
-          <h2>Membre du réseau Bricard Serruriers Confiance</h2>
-          <p>
-            Nous sommes l&apos;un des serruriers d&apos;Île-de-France membres du réseau <strong>Bricard Serruriers Confiance</strong> — un label que le fabricant historique réserve à un cercle restreint d&apos;artisans capables d&apos;installer, d&apos;entretenir et de garantir l&apos;ensemble de sa gamme.
-          </p>
-          <ul>
-            <li>un accès aux serrures de haute sûreté Bricard à clé brevetée non reproductible,</li>
-            <li>la maîtrise des cylindres anti-bumping, anti-perçage, anti-cassage,</li>
-            <li>la formation continue aux nouvelles générations de produits,</li>
-            <li>une intervention sous garantie constructeur sur les serrures Bricard installées par nos soins.</li>
-          </ul>
-          <p>
-            Pour un syndic ou une direction immobilière, le label est une assurance objective : les serrures posées seront entretenues dans la durée par un professionnel reconnu par le fabricant.
-          </p>
-
-          <h2>Sécurisation des accès d&apos;immeuble</h2>
-          <ul>
-            <li><strong>Serrures de porte palière</strong> — remplacement, mise à niveau A2P*, ré-organigramme,</li>
-            <li><strong>Porte cochère</strong> — serrure carénée, gâche électrique, ventouse électromagnétique,</li>
-            <li><strong>Sas d&apos;entrée et grilles</strong> — pose et entretien des grilles, gâches, ferme-portes,</li>
-            <li><strong>Boîtes aux lettres</strong> — pose de batteries normalisées La Poste, ré-affectation, remplacement complet.</li>
-          </ul>
-          <p>
-            Pour les copropriétés en cours de mise en sécurité, nous produisons un audit serrurier préalable — gratuit pour les bâtiments dont le syndic nous consulte pour un premier ouvrage.
-          </p>
-
-          <h2>Blindage de portes palières</h2>
-          <p>Trois niveaux selon le risque et le budget :</p>
-          <ul>
-            <li><strong>Blindage léger</strong> — tôle d&apos;acier sur la face intérieure, serrure trois points, cornière anti-pince,</li>
-            <li><strong>Blindage renforcé</strong> — porte d&apos;origine doublée d&apos;un caisson acier, serrure cinq points A2P**, cylindre haute sûreté,</li>
-            <li><strong>Bloc-porte blindé</strong> — dépose de la porte d&apos;origine, pose d&apos;un bloc-porte certifié A2P BP1, BP2 ou BP3.</li>
-          </ul>
-          <p>
-            Tous nos blindages sont posés par un seul compagnon spécialisé, formé aux produits Picard, Fichet et Bricard.
-          </p>
-
-          <h2>Contrôle d&apos;accès et motorisation</h2>
-          <p>
-            Vidéophonie, contrôle d&apos;accès par badge, motorisation de porte cochère. Nous installons les solutions <strong>Intratone</strong>, <strong>Comelit</strong>, <strong>Geze</strong>, <strong>Faac</strong> et <strong>Came</strong>, et savons les intégrer sur des ouvrages anciens sans dégrader leur cohérence visuelle. Quand la motorisation accompagne une porte cochère neuve ou restaurée, l&apos;ouvrage bois est produit par notre <Link href="/menuiserie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">département menuiserie</Link>, dans le même atelier de Massy.
-          </p>
-
-          <h2>Ferronnerie sur mesure</h2>
-          <p>
-            Le département produit également des <strong>grilles de défense de fenêtres, garde-corps, grilles de sas et marquises</strong> — autant d&apos;ouvrages d&apos;acier dessinés, façonnés, soudés et posés à l&apos;atelier. Les garde-corps intègrent souvent un remplissage en <Link href="/vitrerie" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">verre feuilleté trempé</Link>, ou accompagnent un <Link href="/escaliers" className="text-[#B08D57] hover:text-[#C9AB78] underline underline-offset-4 decoration-1">escalier sur mesure</Link> façonné au même atelier.
-          </p>
-        </Container>
-      </article>
-
-      <section className="py-16 md:py-20 bg-[#241E1A] bois">
-        <Container size="wide">
-          <SectionTitre index="01" rubrique="Réalisations" titre="Grilles, sas et motorisations" action={<Link href="/photos" className="cartouche text-[#C9AB78] hover:text-[#EDE6DA] transition-colors">Archive des ouvrages →</Link>} />
-          <PhotoGrid photos={photos} columns={3} />
-        </Container>
-      </section>
-
-      <FaqSection items={SERRURERIE_FAQ} />
-
-      <RelatedPages
-        eyebrow="Métiers liés"
-        heading="L'atelier intégré"
-        items={[
+      <Voisines
+        titre="L'atelier intégré"
+        liens={[
           {
-            title: "Menuiserie sur mesure",
+            libelle: "Menuiserie sur mesure",
             href: "/menuiserie",
-            blurb:
+            resume:
               "Portes cochères, portes d'immeuble, fenêtres et agencements bois façonnés sous le même toit que la serrurerie qui les équipe.",
           },
           {
-            title: "Vitrerie sur mesure",
+            libelle: "Vitrerie sur mesure",
             href: "/vitrerie",
-            blurb:
+            resume:
               "Vitrages retardateurs d'effraction, garde-corps en verre feuilleté trempé, remplissages de sas — fournis et posés par le même atelier.",
           },
           {
-            title: "L'atelier — depuis 1964",
+            libelle: "L'atelier — depuis 1964",
             href: "/a-propos",
-            blurb:
+            resume:
               "Histoire, équipe et méthode de l'atelier — un seul toit pour la menuiserie, la serrurerie et la vitrerie.",
           },
         ]}
       />
 
-      <CTASection
-        eyebrow="Intervention serrurerie"
-        title="Audit, blindage, motorisation, ferronnerie."
-        text="Un appel ou un courriel suffit pour planifier la visite technique."
+      <AppelContact
+        surtitre="Intervention serrurerie"
+        titre="Audit, blindage, motorisation, ferronnerie."
+        texte="Un appel ou un courriel suffit pour planifier la visite technique."
         cta={{ label: "Demander un rendez-vous", href: "/contact" }}
       />
     </>

@@ -1,24 +1,24 @@
 import Link from "next/link";
-import Container from "@/components/Container";
 
+/** Page introuvable : pas de bandeau photo, l’en-tête reste opaque. */
 export default function NotFound() {
   return (
-    <section className="py-32 bg-[#1C1714]">
-      <Container size="narrow">
-        <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">Erreur 404</p>
-        <h1 className="font-display text-4xl md:text-5xl text-[#EDE6DA] mb-5">Cette page n&apos;existe pas.</h1>
-        <p className="text-lg text-[#EDE6DA]/75 leading-relaxed mb-10 max-w-xl">
+    <section className="page-texte bande">
+      <div className="contenu contenu--large">
+        <p className="surtitre">Erreur 404</p>
+        <h1>Cette page n&apos;existe pas.</h1>
+        <p className="chapeau">
           La page demandée a peut-être été déplacée ou n&apos;a jamais existé. Revenez à l&apos;accueil ou consultez directement nos métiers.
         </p>
-        <div className="flex flex-wrap gap-3">
-          <Link href="/" className="bg-[#B08D57] hover:bg-[#C9AB78] text-[#161210] px-7 py-3 text-sm font-medium transition-colors">
+        <div className="boutons">
+          <Link href="/" className="bouton bouton--plein">
             Retour à l&apos;accueil
           </Link>
-          <Link href="/contact" className="border border-[#B08D57] text-[#C9AB78] hover:bg-[#B08D57] hover:text-[#161210] px-7 py-3 text-sm font-medium transition-colors">
+          <Link href="/contact" className="bouton">
             Nous contacter
           </Link>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

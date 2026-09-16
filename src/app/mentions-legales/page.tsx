@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Container from "@/components/Container";
 import { NAP } from "@/lib/nap";
 
 export const metadata: Metadata = {
@@ -25,29 +24,30 @@ export const metadata: Metadata = {
 
 export default function MentionsLegalesPage() {
   return (
-    <article className="py-16 md:py-24 bg-[#1C1714]">
-      <Container size="narrow" className="prose-atelier">
-        <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">Informations légales</p>
+    <article className="page-texte bande">
+      <div className="contenu contenu--large">
+        <div className="texte">
+        <p className="surtitre">Informations légales</p>
         <h1>Mentions légales</h1>
 
         <h2>Éditeur du site</h2>
         <p>
-          <strong>Raison sociale</strong> : {NAP.legalName}<br />
-          <strong>Forme juridique</strong> : Société par Actions Simplifiée (SAS)<br />
-          <strong>Capital social</strong> : {NAP.capital}<br />
-          <strong>Siège social</strong> : {NAP.street}, {NAP.postalCode} {NAP.city}<br />
-          <strong>SIREN</strong> : {NAP.siren}<br />
-          <strong>SIRET (siège)</strong> : {NAP.siret}<br />
-          <strong>RCS</strong> : {NAP.rcs}<br />
-          <strong>N° TVA intracommunautaire</strong> : {NAP.tva}<br />
-          <strong>Date d&apos;inscription au RCS</strong> : 26 août 2011
+          <strong>Raison sociale</strong>{" "}: {NAP.legalName}<br />
+          <strong>Forme juridique</strong>{" "}: Société par Actions Simplifiée (SAS)<br />
+          <strong>Capital social</strong>{" "}: {NAP.capital}<br />
+          <strong>Siège social</strong>{" "}: {NAP.street}, {NAP.postalCode} {NAP.city}<br />
+          <strong>SIREN</strong>{" "}: {NAP.siren}<br />
+          <strong>SIRET (siège)</strong>{" "}: {NAP.siret}<br />
+          <strong>RCS</strong>{" "}: {NAP.rcs}<br />
+          <strong>N° TVA intracommunautaire</strong>{" "}: {NAP.tva}<br />
+          <strong>Date d&apos;inscription au RCS</strong>{" "}: 26 août 2011
         </p>
         <p>
-          <strong>Téléphone</strong> : <a href={`tel:${NAP.phoneE164}`}>{NAP.phone}</a><br />
-          <strong>Contact</strong> : <Link href="/contact/">formulaire de contact</Link>
+          <strong>Téléphone</strong>{" "}: <a href={`tel:${NAP.phoneE164}`}>{NAP.phone}</a><br />
+          <strong>Contact</strong>{" "}: <Link href="/contact/">formulaire de contact</Link>
         </p>
         <p>
-          <strong>Directeur de la publication</strong> : à fournir par la direction.
+          <strong>Directeur de la publication</strong>{" "}: à fournir par la direction.
         </p>
 
         <h2>Hébergeur</h2>
@@ -88,7 +88,8 @@ export default function MentionsLegalesPage() {
 
         <h2>Crédits</h2>
         <p>Site conçu et développé par les équipes du {NAP.group}.</p>
-      </Container>
+        </div>
+      </div>
     </article>
   );
 }

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Container from "@/components/Container";
 import { NAP } from "@/lib/nap";
 
 export const metadata: Metadata = {
@@ -25,11 +24,12 @@ export const metadata: Metadata = {
 
 export default function PolitiqueConfidentialitePage() {
   return (
-    <article className="py-16 md:py-24 bg-[#1C1714]">
-      <Container size="narrow" className="prose-atelier">
-        <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">RGPD</p>
+    <article className="page-texte bande">
+      <div className="contenu contenu--large">
+        <div className="texte">
+        <p className="surtitre">RGPD</p>
         <h1>Politique de confidentialité</h1>
-        <blockquote>Version en vigueur au 1<sup>er</sup> juillet 2026.</blockquote>
+        <blockquote>Version en vigueur au 1<sup>er</sup>{" "}juillet 2026.</blockquote>
 
         <p>
           L&apos;Atelier Le Boulluec accorde une attention particulière à la protection des données personnelles de ses interlocuteurs. La présente politique détaille les traitements opérés via le site leboulluec.com et les droits des personnes concernées au titre du Règlement Général sur la Protection des Données (RGPD) et de la loi «&nbsp;Informatique et Libertés&nbsp;» modifiée.
@@ -39,22 +39,22 @@ export default function PolitiqueConfidentialitePage() {
         <p>
           <strong>{NAP.legalName}</strong><br />
           {NAP.street}, {NAP.postalCode} {NAP.city}<br />
-          <a href={`tel:${NAP.phoneE164}`}>{NAP.phone}</a> — <Link href="/contact/">formulaire de contact</Link>
+          <a href={`tel:${NAP.phoneE164}`}>{NAP.phone}</a>{" "}— <Link href="/contact/">formulaire de contact</Link>
         </p>
 
         <h2>Données collectées</h2>
         <ul>
-          <li><strong>Données de formulaire de contact</strong> : nom, prénom, société, fonction, courriel, téléphone, contenu du message, pièces jointes éventuelles.</li>
-          <li><strong>Données de navigation</strong> : adresse IP, type et version de navigateur, pages consultées, durée des sessions, source de trafic — collectées de manière anonymisée à des fins d&apos;analyse statistique.</li>
-          <li><strong>Données issues des cookies fonctionnels</strong> : préférences d&apos;affichage, consentement cookies, état de session.</li>
+          <li><strong>Données de formulaire de contact</strong>{" "}: nom, prénom, société, fonction, courriel, téléphone, contenu du message, pièces jointes éventuelles.</li>
+          <li><strong>Données de navigation</strong>{" "}: adresse IP, type et version de navigateur, pages consultées, durée des sessions, source de trafic — collectées de manière anonymisée à des fins d&apos;analyse statistique.</li>
+          <li><strong>Données issues des cookies fonctionnels</strong>{" "}: préférences d&apos;affichage, consentement cookies, état de session.</li>
         </ul>
 
         <h2>Finalités du traitement</h2>
         <ol>
-          <li><strong>Réponse aux demandes de devis et de contact</strong> — fondement : exécution de mesures pré-contractuelles à la demande de la personne concernée.</li>
-          <li><strong>Suivi commercial des projets</strong> — fondement : intérêt légitime de l&apos;atelier à conduire son activité.</li>
-          <li><strong>Mesure d&apos;audience et amélioration du site</strong> — fondement : intérêt légitime, recueil de consentement pour les cookies non strictement nécessaires.</li>
-          <li><strong>Respect des obligations légales et comptables</strong> — fondement : obligation légale.</li>
+          <li><strong>Réponse aux demandes de devis et de contact</strong>{" "}— fondement : exécution de mesures pré-contractuelles à la demande de la personne concernée.</li>
+          <li><strong>Suivi commercial des projets</strong>{" "}— fondement : intérêt légitime de l&apos;atelier à conduire son activité.</li>
+          <li><strong>Mesure d&apos;audience et amélioration du site</strong>{" "}— fondement : intérêt légitime, recueil de consentement pour les cookies non strictement nécessaires.</li>
+          <li><strong>Respect des obligations légales et comptables</strong>{" "}— fondement : obligation légale.</li>
         </ol>
         <p>Aucune donnée n&apos;est utilisée à des fins de prospection commerciale ciblée sans consentement préalable.</p>
 
@@ -75,10 +75,10 @@ export default function PolitiqueConfidentialitePage() {
 
         <h2>Durées de conservation</h2>
         <ul>
-          <li><strong>Demandes de contact non suivies de relation contractuelle</strong> : 24 mois à compter du dernier échange.</li>
-          <li><strong>Données liées à un dossier client</strong> : durée de la relation contractuelle + 10 ans (durée de la garantie décennale).</li>
-          <li><strong>Données comptables</strong> : 10 ans, conformément aux obligations légales.</li>
-          <li><strong>Données de mesure d&apos;audience</strong> : 13 mois maximum.</li>
+          <li><strong>Demandes de contact non suivies de relation contractuelle</strong>{" "}: 24 mois à compter du dernier échange.</li>
+          <li><strong>Données liées à un dossier client</strong>{" "}: durée de la relation contractuelle + 10 ans (durée de la garantie décennale).</li>
+          <li><strong>Données comptables</strong>{" "}: 10 ans, conformément aux obligations légales.</li>
+          <li><strong>Données de mesure d&apos;audience</strong>{" "}: 13 mois maximum.</li>
         </ul>
 
         <h2>Droits des personnes concernées</h2>
@@ -93,13 +93,13 @@ export default function PolitiqueConfidentialitePage() {
           <li>Droit d&apos;introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">cnil.fr</a>).</li>
         </ul>
         <p>
-          Ces droits s&apos;exercent via notre <Link href="/contact/">formulaire de contact</Link> ou par voie postale à l&apos;adresse du siège social. Une réponse est apportée dans un délai d&apos;un mois.
+          Ces droits s&apos;exercent via notre <Link href="/contact/">formulaire de contact</Link>{" "}ou par voie postale à l&apos;adresse du siège social. Une réponse est apportée dans un délai d&apos;un mois.
         </p>
 
         <h2>Cookies</h2>
         <ul>
-          <li><strong>Cookies strictement nécessaires</strong> : maintien de session, mémorisation du consentement. Ces cookies ne nécessitent pas de consentement préalable.</li>
-          <li><strong>Cookies de mesure d&apos;audience</strong> : si activés, ils sont déposés uniquement après consentement explicite de l&apos;utilisateur via le bandeau de gestion des cookies.</li>
+          <li><strong>Cookies strictement nécessaires</strong>{" "}: maintien de session, mémorisation du consentement. Ces cookies ne nécessitent pas de consentement préalable.</li>
+          <li><strong>Cookies de mesure d&apos;audience</strong>{" "}: si activés, ils sont déposés uniquement après consentement explicite de l&apos;utilisateur via le bandeau de gestion des cookies.</li>
         </ul>
         <p>Aucun cookie publicitaire tiers n&apos;est utilisé.</p>
 
@@ -115,9 +115,10 @@ export default function PolitiqueConfidentialitePage() {
 
         <h2>Contact</h2>
         <p>
-          Pour toute question relative au traitement de vos données personnelles, vous pouvez nous contacter via notre <Link href="/contact/">formulaire de contact</Link> ou par courrier postal à l&apos;adresse du siège social.
+          Pour toute question relative au traitement de vos données personnelles, vous pouvez nous contacter via notre <Link href="/contact/">formulaire de contact</Link>{" "}ou par courrier postal à l&apos;adresse du siège social.
         </p>
-      </Container>
+        </div>
+      </div>
     </article>
   );
 }

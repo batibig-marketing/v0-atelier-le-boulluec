@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { NAP } from "@/lib/nap";
 
 const PROJECT_TYPES = [
   "Menuiserie",
@@ -11,6 +12,11 @@ const PROJECT_TYPES = [
   "Autre",
 ];
 
+/**
+ * Formulaire de demande, dans la grammaire du site : des filets d’un pixel,
+ * aucun arrondi, aucune couleur d’accent. Le comportement (envoi vers
+ * /api/contact) est inchangé.
+ */
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -39,85 +45,81 @@ export default function ContactForm() {
 
   if (status === "ok") {
     return (
-      <div className="bg-[#2B2219] text-[#EDE6DA] p-8 md:p-10 border-l-4 border-[#B08D57]">
-        <h3 className="font-display text-2xl mb-3">Message bien reçu</h3>
-        <p className="text-[#EDE6DA]/85 leading-relaxed">
-          Nous revenons vers vous sous 48 heures ouvrées. Pour les demandes urgentes,
-          appelez-nous directement au 01 60 12 06 49.
+      <div className="formulaire__message" role="status">
+        <h3>Message bien reçu</h3>
+        <p>
+          Nous revenons vers vous sous 48 heures ouvrées. Pour les demandes urgentes, appelez-nous
+          directement au {NAP.phone}.
         </p>
       </div>
     );
   }
 
-  const inputBase = "w-full bg-[#241E1A] bois border border-[#B08D57]/70 px-4 py-2.5 text-[#EDE6DA] focus:border-[#C9AB78] focus:outline-none transition-colors text-sm";
-  const labelBase = "block text-xs font-medium text-[#EDE6DA] mb-1.5 uppercase tracking-wider";
-
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
-      <div className="grid md:grid-cols-2 gap-5">
+    <form onSubmit={handleSubmit} className="formulaire">
+      <div className="formulaire__ligne">
         <div>
-          <label htmlFor="nom" className={labelBase}>Nom <span className="text-[#B08D57]">*</span></label>
-          <input required type="text" id="nom" name="nom" className={inputBase} autoComplete="name" />
+          <label htmlFor="nom">Nom *</label>
+          <input required type="text" id="nom" name="nom" autoComplete="name" />
         </div>
         <div>
-          <label htmlFor="societe" className={labelBase}>Société</label>
-          <input type="text" id="societe" name="societe" className={inputBase} autoComplete="organization" />
-        </div>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-5">
-        <div>
-          <label htmlFor="email" className={labelBase}>Email <span className="text-[#B08D57]">*</span></label>
-          <input required type="email" id="email" name="email" className={inputBase} autoComplete="email" />
-        </div>
-        <div>
-          <label htmlFor="telephone" className={labelBase}>Téléphone</label>
-          <input type="tel" id="telephone" name="telephone" className={inputBase} autoComplete="tel" />
+          <label htmlFor="societe">Société</label>
+          <input type="text" id="societe" name="societe" autoComplete="organization" />
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-5">
+      <div className="formulaire__ligne">
         <div>
-          <label htmlFor="typeProjet" className={labelBase}>Type de projet</label>
-          <select id="typeProjet" name="typeProjet" className={inputBase} defaultValue="">
-            <option value="" disabled>Sélectionner…</option>
+          <label htmlFor="email">Courriel *</label>
+          <input required type="email" id="email" name="email" autoComplete="email" />
+        </div>
+        <div>
+          <label htmlFor="telephone">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone" autoComplete="tel" />
+        </div>
+      </div>
+
+      <div className="formulaire__ligne">
+        <div>
+          <label htmlFor="typeProjet">Type de projet</label>
+          <select id="typeProjet" name="typeProjet" defaultValue="">
+            <option value="" disabled>
+              Sélectionner…
+            </option>
             {PROJECT_TYPES.map((t) => (
-              <option key={t} value={t}>{t}</option>
+              <option key={t} value={t}>
+                {t}
+              </option>
             ))}
           </select>
         </div>
         <div>
-          <label htmlFor="adresseChantier" className={labelBase}>Adresse du chantier</label>
-          <input type="text" id="adresseChantier" name="adresseChantier" className={inputBase} />
+          <label htmlFor="adresseChantier">Adresse du chantier</label>
+          <input type="text" id="adresseChantier" name="adresseChantier" />
         </div>
       </div>
 
       <div>
-        <label htmlFor="message" className={labelBase}>Description du projet <span className="text-[#B08D57]">*</span></label>
-        <textarea required id="message" name="message" rows={6} className={inputBase} />
+        <label htmlFor="message">Description du projet *</label>
+        <textarea required id="message" name="message" rows={6} />
       </div>
 
-      <div className="flex items-start gap-3">
-        <input required type="checkbox" id="rgpd" name="rgpd" className="mt-1 accent-[#B08D57]" />
-        <label htmlFor="rgpd" className="text-xs text-[#EDE6DA]/75 leading-relaxed">
-          J&apos;accepte que mes données soient traitées pour répondre à ma demande, conformément à la{" "}
-          <a href="/politique-confidentialite" className="text-[#B08D57] underline">politique de confidentialité</a>.
+      <div className="formulaire__accord">
+        <input required type="checkbox" id="rgpd" name="rgpd" />
+        <label htmlFor="rgpd">
+          J&apos;accepte que mes données soient traitées pour répondre à ma demande, conformément à
+          la <a href="/politique-confidentialite">politique de confidentialité</a>.
         </label>
       </div>
 
       {status === "error" && (
-        <p className="text-sm text-[#EDE6DA] bg-[#2E2620] bois border-l-4 border-[#C9AB78] px-4 py-3">
+        <p className="formulaire__message" role="alert">
           {errorMsg || "Une erreur est survenue. Merci de réessayer ou de nous appeler."}
         </p>
       )}
 
-      <button
-        type="submit"
-        disabled={status === "loading"}
-        className="inline-flex items-center gap-2 bg-[#B08D57] hover:bg-[#C9AB78] disabled:opacity-60 text-[#161210] px-8 py-3.5 text-sm font-medium transition-colors"
-      >
+      <button type="submit" disabled={status === "loading"} className="bouton bouton--plein">
         {status === "loading" ? "Envoi en cours…" : "Envoyer ma demande"}
-        <span aria-hidden="true">→</span>
       </button>
     </form>
   );

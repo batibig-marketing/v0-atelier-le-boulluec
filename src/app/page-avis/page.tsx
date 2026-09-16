@@ -1,30 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Breadcrumb from "@/components/Breadcrumb";
-import Container from "@/components/Container";
-import PageHeader from "@/components/PageHeader";
 import JsonLd from "@/components/JsonLd";
-import SectionTitre from "@/components/SectionTitre";
-import FaqSection from "@/components/FaqSection";
-import RelatedPages from "@/components/RelatedPages";
-import CTASection from "@/components/CTASection";
-import References from "@/components/References";
+import { AppelContact, Bandeau, Bande, Fil, Ouverture, Questions, Rangee, Suite, Voisines } from "@/components/Blocs";
+import { References } from "@/components/Maison";
 import { PHOTOS } from "@/data/ouvrages";
 import { faqPageSchema, SCHEMA_IDS } from "@/lib/schema";
 import { uploadcareUrl } from "@/lib/uploadcare";
+import { galerie, photo } from "@/lib/photos";
 import { NAP } from "@/lib/nap";
 
 const URL_PAGE = "https://www.leboulluec.com/page-avis";
 
-/* Note publique de l'établissement — source : fiche Google Business Profile.
-   Elle est affichée ici en clair pour rester strictement identique à la valeur
-   déclarée dans le JSON-LD LocalBusiness (Bible SEO §2.1 et §3.5). */
-const NOTE = { valeur: "4,2", sur: "5", avis: 40 };
+/*
+ * La note « 4,2 / 5 sur 40 avis » affichée jusqu’ici a été retirée de la page
+ * comme des données structurées : personne n’a pu en retrouver la source, et
+ * le site historique n’affiche qu’un widget Pages Jaunes sans note. Une note
+ * non vérifiable expose le site à une action manuelle de Google. La page garde
+ * ce qui se vérifie : garanties, label, donneurs d’ordre, chantiers publiés.
+ */
 
 const FAQ = [
   {
-    q: "Quelle est la note de l'Atelier Le Boulluec ?",
-    a: `L'atelier est noté ${NOTE.valeur} sur ${NOTE.sur} sur sa fiche d'établissement Google, sur la base de ${NOTE.avis} avis publics. Cette note est la seule que nous affichons : nous ne publions pas de témoignages rédigés par nos soins.`,
+    q: "Où lire les avis sur l'Atelier Le Boulluec ?",
+    a: "Sur la fiche d'établissement Google de l'atelier, que nous ne retouchons pas. Nous ne publions pas de témoignages rédigés par nos soins.",
   },
   {
     q: "Pourquoi ne publiez-vous pas de témoignages clients sur le site ?",
@@ -46,14 +44,15 @@ const FAQ = [
 
 export const metadata: Metadata = {
   title: "Avis, garanties et références",
-  description: `Note publique ${NOTE.valeur}/${NOTE.sur} sur ${NOTE.avis} avis, garantie décennale, réseau Bricard Serruriers Confiance : ce sur quoi s'engage l'Atelier Le Boulluec.`,
+  description:
+    "Garantie décennale, réseau Bricard Serruriers Confiance, donneurs d'ordre et chantiers publiés : ce sur quoi s'engage l'Atelier Le Boulluec.",
   alternates: { canonical: URL_PAGE },
   openGraph: {
     type: "article",
     locale: "fr_FR",
     siteName: NAP.brand,
     title: "Avis, garanties et références — Atelier Le Boulluec",
-    description: `Note publique ${NOTE.valeur}/${NOTE.sur} sur ${NOTE.avis} avis, garantie décennale, réseau Bricard Serruriers Confiance.`,
+    description: "Garantie décennale, réseau Bricard Serruriers Confiance, donneurs d'ordre et chantiers publiés.",
     url: URL_PAGE,
     images: [uploadcareUrl(PHOTOS.desDames, 1200)],
   },
@@ -94,7 +93,7 @@ export default function PageAvis() {
     url: URL_PAGE,
     name: "Avis, garanties et références — Atelier Le Boulluec",
     description:
-      "Note publique de l'établissement, garantie décennale, réseau Bricard Serruriers Confiance et donneurs d'ordre de l'Atelier Le Boulluec.",
+      "Garantie décennale, réseau Bricard Serruriers Confiance et donneurs d'ordre de l'Atelier Le Boulluec.",
     inLanguage: "fr-FR",
     isPartOf: { "@id": SCHEMA_IDS.WEBSITE_ID },
     about: { "@id": SCHEMA_IDS.BUSINESS_ID },
@@ -105,159 +104,133 @@ export default function PageAvis() {
     <>
       <JsonLd data={webPage} />
       <JsonLd data={faqPageSchema(FAQ)} />
-      <Breadcrumb items={[{ label: "Avis & garanties", href: "/page-avis" }]} />
 
-      <PageHeader
-        photoUuid={PHOTOS.desDames}
-        eyebrow={`Note publique · ${NOTE.valeur} / ${NOTE.sur} · ${NOTE.avis} avis`}
-        title="Ce sur quoi l'atelier s'engage."
-        subtitle="Nous ne publions pas de témoignages rédigés par nos soins. Voici la note publique de l'établissement, les garanties qui couvrent nos ouvrages, et la liste de ceux qui nous ont confié un chantier."
-        imageAlt="Porte bâtarde restaurée par l'Atelier Le Boulluec, 24 rue des Dames, Paris 17e."
-        legende="Porte bâtarde restaurée — 24 rue des Dames, Paris 17e, 2017"
+      <Bandeau
+        photo={photo("des-dames")}
+        surtitre="Avis · garanties · références"
+        titre="Ce sur quoi l'atelier s'engage."
+        chapeau="Nous ne publions pas de témoignages rédigés par nos soins. Voici les garanties qui couvrent nos ouvrages, nos règles de maison et la liste de ceux qui nous ont confié un chantier."
       />
+      <Fil items={[{ label: "Avis & garanties", href: "/page-avis" }]} />
 
-      <section className="bg-[#241E1A] bois border-b border-[#3A322C]">
-        <Container size="default" className="py-10 md:py-12">
-          <p className="text-[1.0625rem] md:text-lg leading-relaxed text-[#EDE6DA]">
-            <strong className="text-[#EDE6DA]">En bref —</strong> L&apos;Atelier Le Boulluec est
-            noté <strong>{NOTE.valeur} sur {NOTE.sur}</strong> sur sa fiche d&apos;établissement
-            Google, sur la base de <strong>{NOTE.avis} avis publics</strong>. Tous les ouvrages,
-            neufs comme restaurés, sont couverts par la <strong>garantie décennale</strong>.
-            L&apos;atelier est membre du réseau <strong>Bricard « Serruriers Confiance »</strong>{" "}
-            et appartient au {NAP.group}.
-          </p>
-
-          <div className="mt-8 grid sm:grid-cols-3 gap-x-8 gap-y-6 border-t border-[#3A322C] pt-6">
-            <div className="border-l border-[#B08D57] pl-4">
-              <p className="cartouche text-[#EDE6DA]/78">Note d&apos;établissement</p>
-              <p className="font-display text-[2.4rem] leading-none text-[#EDE6DA] mt-1.5">
-                {NOTE.valeur}
-                <span className="text-[1.2rem] text-[#EDE6DA]/78"> / {NOTE.sur}</span>
-              </p>
-              <p className="cartouche text-[#EDE6DA]/78 mt-2">Sur {NOTE.avis} avis publics</p>
-            </div>
-            <div className="border-l border-[#B08D57] pl-4">
-              <p className="cartouche text-[#EDE6DA]/78">Garantie</p>
-              <p className="font-display text-[2.4rem] leading-none text-[#EDE6DA] mt-1.5">10 ans</p>
-              <p className="cartouche text-[#EDE6DA]/78 mt-2">Décennale, neuf et restauré</p>
-            </div>
-            <div className="border-l border-[#B08D57] pl-4">
-              <p className="cartouche text-[#EDE6DA]/78">Label</p>
-              <p className="font-display text-[1.6rem] leading-tight text-[#EDE6DA] mt-2">
-                Bricard
-                <br />
-                Serruriers Confiance
-              </p>
-            </div>
+      <Ouverture photo={photo("montparnasse")}>
+        <p className="en-bref">
+          <strong>En bref —</strong>{" "}Tous les ouvrages de l&apos;Atelier Le Boulluec, neufs comme
+          restaurés, sont couverts par la <strong>garantie décennale</strong>. L&apos;atelier est
+          membre du réseau <strong>Bricard « Serruriers Confiance »</strong>{" "}et appartient au{" "}
+          {NAP.group}.
+        </p>
+        <dl className="chiffres" style={{ gridTemplateColumns: "repeat(2, minmax(0, 1fr))" }}>
+          <div>
+            <dt>Garantie</dt>
+            <dd>10 ans</dd>
+            <dd style={{ fontFamily: "inherit", fontSize: "0.8rem", color: "var(--gris)" }}>
+              Décennale, neuf et restauré
+            </dd>
           </div>
-        </Container>
-      </section>
+          <div>
+            <dt>Label</dt>
+            <dd>Bricard Serruriers Confiance</dd>
+          </div>
+        </dl>
+      </Ouverture>
 
-      <section className="bg-[#1C1714] py-14 md:py-20">
-        <Container size="wide">
-          <SectionTitre
-            index="01"
-            rubrique="Engagements"
-            titre="Six règles de maison, tenues depuis 1964."
-            chapo="Elles ne sont pas décoratives : chacune a un coût, et c'est ce coût qui fait la différence entre un ouvrage repris et un ouvrage remplacé à la va-vite."
-          />
-          <dl className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8">
-            {ENGAGEMENTS.map(([titre, texte], i) => (
-              <div key={titre} className="border-t border-[#B08D57] pt-4">
-                <dt>
-                  <span className="cartouche text-[#B08D57]">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="block font-display text-xl text-[#EDE6DA] mt-1.5 leading-snug">
-                    {titre}
-                  </span>
-                </dt>
-                <dd className="mt-2.5 text-sm leading-relaxed text-[#EDE6DA]/80">{texte}</dd>
-              </div>
-            ))}
-          </dl>
-        </Container>
-      </section>
+      <Rangee photos={galerie("avis-rangee")} />
+
+      <Bande
+        fond="pierre"
+        surtitre="Engagements"
+        titre="Six règles de maison, tenues depuis 1964."
+        chapeau="Elles ne sont pas décoratives : chacune a un coût, et c'est ce coût qui fait la différence entre un ouvrage repris et un ouvrage remplacé à la va-vite."
+      >
+        <dl className="definitions">
+          {ENGAGEMENTS.map(([titre, texte], i) => (
+            <div key={titre}>
+              <dt>
+                <small>{String(i + 1).padStart(2, "0")}</small>
+                {titre}
+              </dt>
+              <dd>{texte}</dd>
+            </div>
+          ))}
+        </dl>
+      </Bande>
 
       <References />
 
-      <section className="bg-[#15100E] bois text-[#EDE6DA] py-14 md:py-18">
-        <Container size="default">
-          <SectionTitre
-            index="06"
-            rubrique="Vérifier par vous-même"
-            titre="Ce qui vaut mieux qu'un témoignage."
-            ton="sombre"
-          />
-          <ul className="space-y-4 list-none p-0 m-0 text-[#EDE6DA]/85 leading-relaxed">
-            <li className="border-t border-[#3A322C] pt-4">
-              <strong className="text-[#EDE6DA]">Les chantiers eux-mêmes.</strong>{" "}
-              <Link href="/photos" className="text-[#C9AB78] underline underline-offset-4">
-                L&apos;archive des ouvrages
-              </Link>{" "}
-              donne l&apos;adresse, l&apos;année et l&apos;état trouvé de chaque pièce reprise.
-              Les photographies « avant » y sont publiées au même titre que les « après ».
-            </li>
-            <li className="border-t border-[#3A322C] pt-4">
-              <strong className="text-[#EDE6DA]">Le journal daté.</strong>{" "}
-              <Link href="/actualite" className="text-[#C9AB78] underline underline-offset-4">
-                Les chantiers récents
-              </Link>{" "}
-              listent ce qui est sorti de l&apos;atelier, année par année, avec le geste réalisé.
-            </li>
-            <li className="border-t border-[#3A322C] pt-4">
-              <strong className="text-[#EDE6DA]">La visite d&apos;atelier.</strong> Sur rendez-vous
-              au {NAP.street}, {NAP.postalCode} {NAP.city}. C&apos;est la vérification la plus
-              directe : on voit les bois, les assemblages et les compagnons au travail.
-            </li>
-            <li className="border-t border-[#3A322C] pt-4">
-              <strong className="text-[#EDE6DA]">Les avis publics.</strong> La fiche
-              d&apos;établissement de l&apos;atelier porte {NOTE.avis} avis, note moyenne{" "}
-              {NOTE.valeur} sur {NOTE.sur}. Nous ne la retouchons pas et n&apos;en sélectionnons
-              aucun extrait.
-            </li>
-          </ul>
-        </Container>
-      </section>
-
-      <FaqSection index="07" items={FAQ} />
-
-      <RelatedPages
-        index="08"
-        eyebrow="Pages liées"
-        heading="Regarder le travail"
-        items={[
+      <Suite
+        depart={1}
+        blocs={[
           {
-            title: "Archive des ouvrages",
+            surtitre: "Vérifier par vous-même",
+            titre: "Ce qui vaut mieux qu'un témoignage.",
+            niveau: 2,
+            photo: photo("richer"),
+            corps: (
+              <ul>
+                <li>
+                  <strong>Les chantiers eux-mêmes.</strong>{" "}
+                  <Link href="/photos">L&apos;archive des ouvrages</Link>{" "}donne l&apos;adresse,
+                  l&apos;année et l&apos;état trouvé de chaque pièce reprise. Les photographies
+                  « avant » y sont publiées au même titre que les « après ».
+                </li>
+                <li>
+                  <strong>Le journal daté.</strong>{" "}
+                  <Link href="/actualite">Les chantiers récents</Link>{" "}listent ce qui est sorti de
+                  l&apos;atelier, année par année, avec le geste réalisé.
+                </li>
+                <li>
+                  <strong>La visite d&apos;atelier.</strong>{" "}Sur rendez-vous au {NAP.street},{" "}
+                  {NAP.postalCode} {NAP.city}. C&apos;est la vérification la plus directe : on voit
+                  les bois, les assemblages et les compagnons au travail.
+                </li>
+                <li>
+                  <strong>Les avis publics.</strong>{" "}Ils se lisent sur la fiche d&apos;établissement
+                  Google de l&apos;atelier. Nous ne la retouchons pas et n&apos;en sélectionnons
+                  aucun extrait.
+                </li>
+              </ul>
+            ),
+          },
+        ]}
+      />
+
+      <Questions items={FAQ} />
+
+      <Voisines
+        titre="Regarder le travail"
+        liens={[
+          {
+            libelle: "Archive des ouvrages",
             href: "/photos",
-            blurb:
+            resume:
               "Sept chantiers suivis avant, pendant et après, avec l'adresse, l'année, les matières et le geste réalisé.",
           },
           {
-            title: "L'atelier depuis 1964",
+            libelle: "L'atelier depuis 1964",
             href: "/a-propos",
-            blurb:
+            resume:
               "Trois adresses, soixante ans, dix-sept menuisiers : l'histoire de la maison et sa méthode de travail.",
           },
           {
-            title: "Serrurerie & ferronnerie",
+            libelle: "Serrurerie & ferronnerie",
             href: "/serrurerie",
-            blurb:
+            resume:
               "Le département qui porte le label Bricard Serruriers Confiance : serrures de haute sûreté, blindage, contrôle d'accès.",
           },
           {
-            title: "Contact & chiffrage",
+            libelle: "Contact & chiffrage",
             href: "/contact",
-            blurb:
+            resume:
               "Coordonnées, horaires, itinéraire vers l'atelier de Massy et formulaire de demande de chiffrage.",
           },
         ]}
       />
 
-      <CTASection
-        eyebrow="Vérification"
-        title="Venez voir l'atelier avant de nous confier un ouvrage."
-        text="C'est ce que font la plupart des syndics et des architectes qui travaillent avec nous. Vingt minutes sur place valent tous les arguments écrits."
+      <AppelContact
+        surtitre="Vérification"
+        titre="Venez voir l'atelier avant de nous confier un ouvrage."
+        texte="C'est ce que font la plupart des syndics et des architectes qui travaillent avec nous. Vingt minutes sur place valent tous les arguments écrits."
         cta={{ label: "Prendre rendez-vous", href: "/contact" }}
       />
     </>

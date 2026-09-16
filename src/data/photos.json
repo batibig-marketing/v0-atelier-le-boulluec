@@ -1,0 +1,1378 @@
+{
+ "photos": {
+  "longchamp": {
+   "w": 516,
+   "h": 780,
+   "alt": "Porte cochère cintrée à deux vantaux en bois, vitrée de grilles forgées en partie haute, sous le numéro 111",
+   "leg": "111 rue de Longchamp, Paris 16e · reposée et remise en peinture",
+   "grand": true
+  },
+  "quatre-vantaux": {
+   "w": 700,
+   "h": 934,
+   "alt": "Porte intérieure vitrée à quatre vantaux blancs, petits bois et moulures, dans un appartement haussmannien",
+   "leg": "Porte intérieure à quatre vantaux",
+   "grand": true
+  },
+  "vaucouleurs-apres": {
+   "w": 1100,
+   "h": 1662,
+   "alt": "Cage d’escalier ancienne vue en plongée, marches de bois neuves épousant le tournant",
+   "leg": "Rue de Vaucouleurs, Paris · 2021 · après travaux",
+   "grand": true
+  },
+  "verneuil": {
+   "w": 622,
+   "h": 942,
+   "alt": "Grille de sas noire à barreaux et imposte à losanges fermant un porche, cour pavée au fond",
+   "leg": "54 rue de Verneuil, Paris 7e · 2019",
+   "grand": true
+  },
+  "puits-lumiere": {
+   "w": 1100,
+   "h": 686,
+   "alt": "Dalle de verre encastrée dans un parquet, laissant voir la fenêtre de l’étage inférieur",
+   "leg": "Vitrage de sol",
+   "grand": true
+  },
+  "mercier-apres": {
+   "w": 700,
+   "h": 934,
+   "alt": "Porte cochère sombre à deux vantaux sculptés sous une imposte vitrée, encadrée de deux lanternes, après restauration",
+   "leg": "12 rue du Cardinal-Mercier, Paris 9e · 2018 · après",
+   "grand": true
+  },
+  "porte-rouge": {
+   "w": 309,
+   "h": 626,
+   "alt": "Porte cochère rouge cintrée à deux vantaux, portillon et boutons de laiton, sur une façade ocre",
+   "leg": "Porte cochère refaite, vue extérieure",
+   "grand": true
+  },
+  "medium-atelier": {
+   "w": 574,
+   "h": 868,
+   "alt": "Agencement en médium épais monté à blanc dans l’atelier, étagères et caissons, outillage sur l’établi",
+   "leg": "À l’atelier · agencement en médium épais, 2018",
+   "grand": true
+  },
+  "verriere": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Verrière d’atelier en acier noir et verre fermant une cuisine, sol à damier",
+   "leg": "Verrière d’atelier · 2021",
+   "grand": true
+  },
+  "chaussee-dantin": {
+   "w": 1000,
+   "h": 1450,
+   "alt": "Vantail de porte cochère monumentale soulevé au palan sous une imposte en éventail, compagnon au pied",
+   "leg": "68 rue de la Chaussée-d’Antin, Paris · repose d’un vantail",
+   "grand": true
+  },
+  "des-dames": {
+   "w": 676,
+   "h": 900,
+   "alt": "Porte bâtarde en chêne clair à deux vantaux, grilles de fonte dans les panneaux hauts",
+   "leg": "24 rue des Dames, Paris 17e · 2017 · après restauration",
+   "grand": true
+  },
+  "bonvin": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte à deux vantaux en chêne nu, vitrée en partie haute, debout dans l’atelier de Massy avant finition",
+   "leg": "34 rue François-Bonvin, Paris · 2022 · à l’atelier",
+   "grand": false
+  },
+  "richer": {
+   "w": 984,
+   "h": 1488,
+   "alt": "Compagnon penché, aspirateur en main, au pied d’une porte d’immeuble en cours de repose",
+   "leg": "2 rue Richer, Paris 9e · 2022 · repose après façonnage",
+   "grand": false
+  },
+  "las-cases": {
+   "w": 1100,
+   "h": 1662,
+   "alt": "Vue plongeante de l’atelier : vantaux de chêne sur tréteaux, épure agrafée sur le panneau, compagnon au sol",
+   "leg": "13 rue Las Cases, Paris 7e · 2023 · à l’atelier",
+   "grand": false
+  },
+  "marquise-st-honore": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Ossature d’acier d’une marquise en cours d’assemblage, posée sur les tréteaux de l’atelier",
+   "leg": "Marquise, rue Saint-Honoré · 2020 · à l’atelier",
+   "grand": false
+  },
+  "marquise-duvernet": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Marquise en fer forgé à volutes posée sur le sol de l’atelier, son ombre portée au sol",
+   "leg": "14 rue Mouton-Duvernet, Paris 14e · 2021 · à l’atelier",
+   "grand": false
+  },
+  "saint-paul": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Cadre de grille de sas en acier brut soudé, à plat sur les tréteaux de l’atelier",
+   "leg": "10 rue Saint-Paul, Paris 4e · 2020 · à l’atelier",
+   "grand": false
+  },
+  "meulage": {
+   "w": 1100,
+   "h": 1466,
+   "alt": "Compagnon meulant un profilé d’acier sur un établi de l’atelier, gerbe d’étincelles",
+   "leg": "Le travail du métal, à l’atelier",
+   "grand": false
+  },
+  "lappe-atelier": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Vantail posé à plat sur les établis, oculus et moulures déposés pour restauration",
+   "leg": "14 rue de Lappe, Paris 11e · 2025 · à l’atelier",
+   "grand": false
+  },
+  "garde-corps-atelier": {
+   "w": 500,
+   "h": 670,
+   "alt": "Sections de garde-corps en bois assemblées et serrées sur les établis de l’atelier",
+   "leg": "Garde-corps en bois, au façonnage",
+   "grand": false
+  },
+  "chassis-atelier": {
+   "w": 1100,
+   "h": 1466,
+   "alt": "Châssis de chêne en cours de façonnage, paumelles posées, vitrage encore sous film protecteur",
+   "leg": "Châssis vitré, à l’atelier",
+   "grand": false
+  },
+  "grille-faconnage": {
+   "w": 1100,
+   "h": 910,
+   "alt": "Grille à volutes serrée sur un établi, perceuse en main, pendant son façonnage",
+   "leg": "Façonnage d’une grille sur mesure",
+   "grand": false
+  },
+  "mercier-avant": {
+   "w": 700,
+   "h": 934,
+   "alt": "Porte cochère à deux vantaux sculptés, teinte grisée et ferrures encrassées, avant travaux",
+   "leg": "12 rue du Cardinal-Mercier · 2018 · avant",
+   "grand": false
+  },
+  "mercier-cours-1": {
+   "w": 700,
+   "h": 934,
+   "alt": "La même porte décapée : chêne nu, mascarons et grilles dégagés",
+   "leg": "12 rue du Cardinal-Mercier · décapage",
+   "grand": false
+  },
+  "mercier-detail": {
+   "w": 700,
+   "h": 934,
+   "alt": "Penture forgée en fleuron clouée sur un panneau de chêne",
+   "leg": "12 rue du Cardinal-Mercier · penture forgée",
+   "grand": false
+  },
+  "conde-avant": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte cochère bleue dont le pied des vantaux est entaillé, chantier ouvert sur bâche",
+   "leg": "16 rue de Condé · 2025 · restauration sur place",
+   "grand": false
+  },
+  "conde-greffe": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Bas de vantail bleu recevant une pièce de chêne neuve, outillage électroportatif au sol",
+   "leg": "16 rue de Condé · la greffe posée",
+   "grand": false
+  },
+  "conde-apres": {
+   "w": 1100,
+   "h": 936,
+   "alt": "Pied de porte cochère bleue avec traverse basse neuve en sous-couche, sur le pavé",
+   "leg": "16 rue de Condé · traverse basse neuve, avant peinture",
+   "grand": false
+  },
+  "ija-avant": {
+   "w": 1058,
+   "h": 1562,
+   "alt": "Porte d’acier cintrée dans un mur d’enduit, peinture bleue écaillée et rouille",
+   "leg": "Institut des Jeunes Aveugles, Paris 7e · 2023 · avant",
+   "grand": false
+  },
+  "ija-apres": {
+   "w": 588,
+   "h": 1488,
+   "alt": "La même porte d’acier cintrée, relaquée en bleu",
+   "leg": "Institut des Jeunes Aveugles · après remise en peinture",
+   "grand": false
+  },
+  "abbesses-avant": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte cochère vue du porche avant travaux, vantail doublé d’un panneau brut, imposte en fer forgé",
+   "leg": "40 rue des Abbesses · 2021 · avant, vue intérieure",
+   "grand": false
+  },
+  "abbesses-apres": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "La même porte vue du porche après restauration, vantaux vernis couleur miel",
+   "leg": "40 rue des Abbesses · après, vue intérieure",
+   "grand": false
+  },
+  "perle-avant": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Pied de vantail ancien, bois gris fendu et délavé, au ras du seuil de pierre",
+   "leg": "3 rue de la Perle · 2022 · avant remplacement",
+   "grand": false
+  },
+  "perle-apres": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte cochère neuve peinte en vert, deux vantaux à panneaux et heurtoirs, sous un mascaron",
+   "leg": "3 rue de la Perle · porte neuve posée",
+   "grand": false
+  },
+  "lemoine": {
+   "w": 622,
+   "h": 942,
+   "alt": "Porte cochère en chêne vernis à deux vantaux, numéro 42, encadrée de chasse-roues en fonte",
+   "leg": "42 rue du Cardinal-Lemoine, Paris 5e · 2019",
+   "grand": false
+  },
+  "washington": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Fenêtre à petits carreaux protégée par une grille de défense à barreaux, façade en pierre de taille",
+   "leg": "32 rue de Washington, Paris · 2024",
+   "grand": false
+  },
+  "boulard": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Châssis en acier noir à arcs surbaissés, vitrés, dans une cour ancienne",
+   "leg": "41 rue Boulard, Paris 14e · 2020",
+   "grand": false
+  },
+  "motte-modele": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte de sas en acier à barreaux et verre imprimé, relevée comme modèle avant façonnage",
+   "leg": "9 avenue de La Motte-Picquet · 2025 · l’ouvrage modèle",
+   "grand": false
+  },
+  "corbeillier": {
+   "w": 1100,
+   "h": 1670,
+   "alt": "Porte tiercée en chêne clair à deux grilles ouvragées, sur une façade rose",
+   "leg": "Porte tiercée en chêne à grilles · 2013",
+   "grand": false
+  },
+  "paul-lelong-avant": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte cochère vert sombre sous un arc plein cintre à imposte en éventail, avant travaux",
+   "leg": "7 rue Paul-Lelong, Paris 2e · 2024 · avant",
+   "grand": false
+  },
+  "paul-lelong-apres": {
+   "w": 984,
+   "h": 1488,
+   "alt": "La même porte cochère restaurée et repeinte en bleu pétrole",
+   "leg": "7 rue Paul-Lelong · après restauration",
+   "grand": false
+  },
+  "vieille-du-temple": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte cochère bleue sous un arc à mascaron, après restauration",
+   "leg": "44 rue Vieille-du-Temple, Paris 4e · 2021",
+   "grand": false
+  },
+  "chauveau-lagarde": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte cochère gris-vert à grilles ouvragées, entre deux pilastres de pierre",
+   "leg": "4 rue Chauveau-Lagarde, Paris 8e · 2020",
+   "grand": false
+  },
+  "dechargeurs": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte cochère vert-de-gris à heurtoir, sous un encadrement de pierre sculpté",
+   "leg": "9 rue des Déchargeurs, Paris 1er · 2020",
+   "grand": false
+  },
+  "grevin": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte rouge à grilles du Cabinet fantastique du musée Grévin, sous une enseigne peinte",
+   "leg": "Musée Grévin, Paris 9e · 2017 · après restauration",
+   "grand": false
+  },
+  "lappe-apres": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte cochère bleu nuit dans un encadrement de pierre sculpté, fleurs en façade",
+   "leg": "14 rue de Lappe · après repose",
+   "grand": false
+  },
+  "saint-sulpice": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte cochère bleue à médaillon sculpté, portillon ouvert sur le porche",
+   "leg": "6 place Saint-Sulpice, Paris 6e · 2024",
+   "grand": false
+  },
+  "arcade": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte cochère bleue à grilles sous une imposte ajourée, entre deux devantures",
+   "leg": "4 rue de l’Arcade, Paris 8e · 2023",
+   "grand": false
+  },
+  "montparnasse": {
+   "w": 600,
+   "h": 850,
+   "alt": "Porte d’immeuble à deux vantaux en chêne foncé, panneaux sculptés et grilles en fonte",
+   "leg": "Boulevard du Montparnasse, Paris · 2016 · restaurée",
+   "grand": false
+  },
+  "remploi-grille": {
+   "w": 1100,
+   "h": 1468,
+   "alt": "Vantail en chêne clair posé sur l’établi, autour d’une grille ancienne en fer forgé remployée",
+   "leg": "Rue du Dessous-des-Berges · 2015 · remploi d’une grille ancienne",
+   "grand": false
+  },
+  "porte-grille-neuve": {
+   "w": 1100,
+   "h": 1472,
+   "alt": "Porte de pavillon en chêne vitrée d’une grille neuve, sous une marquise, façade de brique",
+   "leg": "Porte en chêne et grille neuve · 2015",
+   "grand": false
+  },
+  "sas-huissiers": {
+   "w": 800,
+   "h": 1066,
+   "alt": "Porte de sas vitrée à petits bois en chêne, dans le hall d’un immeuble",
+   "leg": "2 rue des Huissiers, Neuilly · 2016",
+   "grand": false
+  },
+  "porte-rome": {
+   "w": 800,
+   "h": 1466,
+   "alt": "Porte pleine en chêne vernis à panneaux, surmontée d’une imposte vitrée",
+   "leg": "129 rue de Rome, Paris · 2016",
+   "grand": false
+  },
+  "placard-moulures": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Placard à trois portes ornées de moulures en applique, dans une chambre à parquet point de Hongrie",
+   "leg": "Placard à moulures en applique",
+   "grand": false
+  },
+  "bibliotheque-cheminee": {
+   "w": 1100,
+   "h": 826,
+   "alt": "Bibliothèque en chêne montée de part et d’autre d’une cheminée, avec logement pour téléviseur",
+   "leg": "Bibliothèque en chêne autour d’une cheminée",
+   "grand": false
+  },
+  "lamelle-chene": {
+   "w": 900,
+   "h": 506,
+   "alt": "Bibliothèque en lamellé de chêne encadrant une cheminée, pièce encore vide",
+   "leg": "Agencement en lamellé de chêne · 2017",
+   "grand": false
+  },
+  "dressing": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Intérieur d’un dressing : étagères, penderie et paniers coulissants",
+   "leg": "Aménagement intérieur de dressing",
+   "grand": false
+  },
+  "sous-pente": {
+   "w": 1100,
+   "h": 822,
+   "alt": "Rangements blancs épousant une sous-pente, avec plan de bureau en retour",
+   "leg": "Rangements sous pente",
+   "grand": false
+  },
+  "banque-hotel": {
+   "w": 1100,
+   "h": 800,
+   "alt": "Banque d’accueil laquée noire à bandeau doré, dans le hall d’un hôtel",
+   "leg": "Banque d’accueil d’hôtel · 2018",
+   "grand": false
+  },
+  "bibliotheque-plaquee": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Bibliothèque en panneaux plaqués chêne clair, casiers ouverts et portes basses",
+   "leg": "Bibliothèque plaquée chêne",
+   "grand": false
+  },
+  "bureau-chene": {
+   "w": 1100,
+   "h": 606,
+   "alt": "Long bureau en lames de chêne posé sur quatre caissons ouverts, sous une fenêtre",
+   "leg": "Ensemble bureau en chêne massif",
+   "grand": false
+  },
+  "rayonnages-boutique": {
+   "w": 900,
+   "h": 676,
+   "alt": "Rayonnages en médium épais garnis de produits dans une boutique d’épicerie",
+   "leg": "Rayonnages de boutique",
+   "grand": false
+  },
+  "rampe-pmr": {
+   "w": 900,
+   "h": 932,
+   "alt": "Rampe d’accès en lames de bois bordée d’une main courante en acier laqué blanc",
+   "leg": "Rampe d’accès, lames de bois",
+   "grand": false
+  },
+  "abri-poubelles": {
+   "w": 1100,
+   "h": 1218,
+   "alt": "Coffre à conteneurs en lames d’iroko posé sous un porche d’immeuble",
+   "leg": "Abri à conteneurs en iroko · 2020",
+   "grand": false
+  },
+  "abri-fumeurs": {
+   "w": 574,
+   "h": 650,
+   "alt": "Abri en bois couvert d’une toiture translucide, banc vert à l’intérieur, dans un parc",
+   "leg": "Abri extérieur, clinique des Fauvettes",
+   "grand": false
+  },
+  "garde-corps-sceaux": {
+   "w": 1100,
+   "h": 876,
+   "alt": "Garde-corps en bois en cours de pose depuis un échafaudage, devant une lucarne",
+   "leg": "Pose d’un garde-corps, Sceaux · 2015",
+   "grand": false
+  },
+  "pergola": {
+   "w": 600,
+   "h": 590,
+   "alt": "Pergola en acier doublée d’un claustra en mélèze, dans un jardin de ville planté",
+   "leg": "Pergola acier et mélèze, Paris 14e · 2015",
+   "grand": false
+  },
+  "garde-corps-verre": {
+   "w": 640,
+   "h": 480,
+   "alt": "Garde-corps en bois et verre sur le balcon d’une maison à bardage de bois",
+   "leg": "Garde-corps bois et verre",
+   "grand": false
+  },
+  "palaiseau": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Escalier droit à marches de bois clair sur limon acier noir, garde-corps en verre",
+   "leg": "Palaiseau · 2023 · escalier à limon acier",
+   "grand": false
+  },
+  "palaiseau-pose": {
+   "w": 1100,
+   "h": 936,
+   "alt": "Limon acier en crémaillère posé contre le mur, premières marches de bois en place",
+   "leg": "Palaiseau · 2023 · la pose du limon",
+   "grand": false
+  },
+  "saclay": {
+   "w": 1100,
+   "h": 1662,
+   "alt": "Escalier tournant à marches de bois clair et limon acier noir, garde-corps à câbles",
+   "leg": "Saclay · 2023 · escalier remplacé",
+   "grand": false
+  },
+  "paray-apres": {
+   "w": 984,
+   "h": 1488,
+   "alt": "Escalier à marches de bois ouvertes montant le long d’un mur, garde-corps à câbles tendus",
+   "leg": "Paray-Vieille-Poste · 2023 · après travaux",
+   "grand": false
+  },
+  "paray-pendant": {
+   "w": 1100,
+   "h": 936,
+   "alt": "Escalier en cours de pose, escabeau et cartons de marches au pied",
+   "leg": "Paray-Vieille-Poste · 2023 · pendant les travaux",
+   "grand": false
+  },
+  "main-courante": {
+   "w": 984,
+   "h": 1488,
+   "alt": "Main courante en bois débillardée suivant la courbe d’un escalier à balustres",
+   "leg": "Main courante débillardée · 2023",
+   "grand": false
+  },
+  "vaucouleurs-avant": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Escalier ancien aux marches peintes en vert, usées et écaillées, avant travaux",
+   "leg": "Rue de Vaucouleurs · 2021 · avant",
+   "grand": false
+  },
+  "vaucouleurs-cours": {
+   "w": 930,
+   "h": 1874,
+   "alt": "Le même escalier en cours de reprise : marches déposées une à une, volée restant praticable",
+   "leg": "Rue de Vaucouleurs · 2021 · en cours",
+   "grand": false
+  },
+  "escalier-chene-2017": {
+   "w": 1100,
+   "h": 826,
+   "alt": "Escalier ancien en chêne dans une maison, marches et contremarches reprises",
+   "leg": "Escalier en chêne restauré · 2017",
+   "grand": false
+  },
+  "tm-suspendu-1": {
+   "w": 1100,
+   "h": 734,
+   "alt": "Marches de bois clair en porte-à-faux le long d’un mur, garde-corps en verre, séjour ouvert",
+   "leg": "Modèle du groupement Treppenmeister",
+   "grand": false
+  },
+  "tm-suspendu-2": {
+   "w": 1100,
+   "h": 824,
+   "alt": "Marches claires en porte-à-faux devant un parement de pierre, sans limon apparent",
+   "leg": "Modèle du groupement Treppenmeister",
+   "grand": false
+  },
+  "tm-suspendu-3": {
+   "w": 1100,
+   "h": 1950,
+   "alt": "Marches en bois suspendues montant vers une mezzanine, garde-corps en verre",
+   "leg": "Modèle du groupement Treppenmeister",
+   "grand": false
+  },
+  "tm-colimacon-1": {
+   "w": 576,
+   "h": 768,
+   "alt": "Escalier hélicoïdal en bois à balustres inox, devant une fenêtre à petits carreaux",
+   "leg": "Modèle du groupement Treppenmeister",
+   "grand": false
+  },
+  "tm-colimacon-2": {
+   "w": 1100,
+   "h": 756,
+   "alt": "Vue plongeante sur un escalier hélicoïdal en bois à garde-corps courbe",
+   "leg": "Modèle du groupement Treppenmeister",
+   "grand": false
+  },
+  "tm-colimacon-3": {
+   "w": 1100,
+   "h": 1078,
+   "alt": "Escalier hélicoïdal en acier gris à barreaudage, vu depuis l’étage",
+   "leg": "Modèle du groupement Treppenmeister",
+   "grand": false
+  },
+  "tm-limon-1": {
+   "w": 1100,
+   "h": 740,
+   "alt": "Escalier à limon acier gris, marches et main courante en bois, dans un séjour",
+   "leg": "Gamme Ferro, groupement Treppenmeister",
+   "grand": false
+  },
+  "tm-limon-2": {
+   "w": 1100,
+   "h": 1388,
+   "alt": "Escalier à double limon acier noir, marches en bois, garde-corps à câbles et verre",
+   "leg": "Gamme Loft, groupement Treppenmeister",
+   "grand": false
+  },
+  "tm-garde-corps": {
+   "w": 1100,
+   "h": 1474,
+   "alt": "Escalier à marches blanches et garde-corps en verre à potelets inox, intérieur clair",
+   "leg": "Gamme Loft, groupement Treppenmeister",
+   "grand": false
+  },
+  "tm-autoporteur": {
+   "w": 1100,
+   "h": 1506,
+   "alt": "Escalier en bois quart tournant à balustres inox desservant une mezzanine",
+   "leg": "Modèle du groupement Treppenmeister",
+   "grand": false
+  },
+  "washington-ensemble": {
+   "w": 1100,
+   "h": 936,
+   "alt": "Deux fenêtres équipées de grilles de défense sur une façade en pierre de taille, lanterne murale",
+   "leg": "32 rue de Washington, Paris 8e · 2024 · grilles de défense",
+   "grand": false
+  },
+  "grille-atelier": {
+   "w": 500,
+   "h": 670,
+   "alt": "Grille en fer forgé à volutes posée à plat sur une porte vitrée, à l’atelier",
+   "leg": "Grille en fer forgé, à l’atelier",
+   "grand": false
+  },
+  "verneuil-lances": {
+   "w": 622,
+   "h": 628,
+   "alt": "Fers de lance et imposte à losanges d’une grille de sas, vus en contre-plongée sous une rosace",
+   "leg": "54 rue de Verneuil · fers de lance",
+   "grand": false
+  },
+  "interphone": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Platine d’interphone à clavier montée à côté du montant d’une grille de sas en acier",
+   "leg": "10 rue Saint-Paul, Paris 4e · 2020 · contrôle d’accès",
+   "grand": false
+  },
+  "pontoise": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Porte en acier forgé à volutes sous un porche, bras de motorisation en imposte",
+   "leg": "1 rue de Pontoise, Paris · 2021 · motorisation",
+   "grand": false
+  },
+  "verin": {
+   "w": 1100,
+   "h": 1466,
+   "alt": "Vantail en acier laqué noir commandé par un vérin, bandes jaunes et noires au sol",
+   "leg": "Motorisation par vérin",
+   "grand": false
+  },
+  "bras-compas": {
+   "w": 1100,
+   "h": 826,
+   "alt": "Bras à compas de motorisation fixé en imposte sur une porte cochère en chêne",
+   "leg": "Motorisation par bras à compas",
+   "grand": false
+  },
+  "grille-motorisee": {
+   "w": 1100,
+   "h": 1472,
+   "alt": "Grille barreaudée à deux vantaux fermant un porche pavé",
+   "leg": "Grille motorisée · 2013",
+   "grand": false
+  },
+  "garniture-laiton": {
+   "w": 1100,
+   "h": 562,
+   "alt": "Poignée et plaque de propreté en laiton montées sur une porte en acajou",
+   "leg": "Garniture en laiton sur porte ancienne",
+   "grand": false
+  },
+  "bequille-laiton": {
+   "w": 1100,
+   "h": 1010,
+   "alt": "Béquille en laiton montée sur un montant métallique gris, vue rapprochée",
+   "leg": "Béquille en laiton",
+   "grand": false
+  },
+  "porte-vitree": {
+   "w": 825,
+   "h": 1100,
+   "alt": "Porte intérieure vitrée blanche à petits bois, ouverte sur un parquet à bâtons rompus",
+   "leg": "Porte intérieure vitrée",
+   "grand": false
+  },
+  "verres-biseautes": {
+   "w": 700,
+   "h": 938,
+   "alt": "Porte à verres biseautés, béquille et entrée de clé en laiton",
+   "leg": "Verres biseautés",
+   "grand": false
+  },
+  "cloison-acier": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Cloison en acier et verre montée en angle au-dessus d’un plan de travail en bois",
+   "leg": "Cloison acier et verre",
+   "grand": false
+  },
+  "pare-douche": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Paroi de douche en acier noir et verre dans une salle d’eau à carreaux de ciment",
+   "leg": "Pare-douche en acier · 2021",
+   "grand": false
+  },
+  "cloison-depolie": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Cloison séparative en verre dépoli montée sur une terrasse",
+   "leg": "Cloison séparative en verre · 2020",
+   "grand": false
+  },
+  "vitrage-protection": {
+   "w": 675,
+   "h": 900,
+   "alt": "Vitrage de protection posé devant une fenêtre de rez-de-chaussée, façade en pierre",
+   "leg": "Vitrage de protection sur mesure",
+   "grand": false
+  },
+  "facade-miroir": {
+   "w": 1100,
+   "h": 1504,
+   "alt": "Façade de placard toute hauteur habillée de miroir, reflétant l’entrée",
+   "leg": "Façade de placard en miroir",
+   "grand": false
+  },
+  "salle-de-bain": {
+   "w": 654,
+   "h": 852,
+   "alt": "Salle de bain à cloison vitrée et miroirs muraux, sèche-serviettes au premier plan",
+   "leg": "Vitrerie et miroiterie",
+   "grand": false
+  },
+  "porte-pavillon": {
+   "w": 1041,
+   "h": 1474,
+   "alt": "Porte d’entrée de pavillon en chêne à grille ouvragée et vitrage, entre deux rampes",
+   "leg": "Porte d’entrée vitrée à grille",
+   "grand": false
+  },
+  "marquise-cour": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "Marquise en acier et verre déployée en éventail au-dessus d’une porte de cour",
+   "leg": "Marquise sur porte de cour · 2025",
+   "grand": false
+  },
+  "marquise-lanternes": {
+   "w": 1100,
+   "h": 1132,
+   "alt": "Marquise en acier et verre au-dessus d’une porte d’immeuble, encadrée de deux lanternes",
+   "leg": "Marquise et lanternes, Paris 8e · 2014",
+   "grand": false
+  },
+  "bp-vintimille": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte bâtarde verte cintrée à deux vantaux, dans un encadrement de pierre",
+   "leg": "Porte bâtarde · 17 rue de Vintimille, Paris 9e",
+   "grand": false
+  },
+  "bp-bourse": {
+   "w": 1100,
+   "h": 1868,
+   "alt": "Porte bâtarde bleue cintrée à imposte grillagée, façade de pierre",
+   "leg": "Porte bâtarde · 2 place de la Bourse, Paris 2e",
+   "grand": false
+  },
+  "bp-sainte-anne": {
+   "w": 1100,
+   "h": 1948,
+   "alt": "Porte bâtarde en bois sombre à panneaux moulurés, sous une imposte",
+   "leg": "Porte bâtarde · 46 rue Sainte-Anne, Paris 2e",
+   "grand": false
+  },
+  "bp-tournelles": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte charretière vert sombre cintrée au pied d’une façade de pierre",
+   "leg": "Porte charretière · 33 rue des Tournelles, Paris 4e",
+   "grand": false
+  },
+  "bp-sourdiere": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte piétonne rouge à panneaux moulurés, dans un encadrement de pierre",
+   "leg": "Porte piétonne · 18 rue de la Sourdière, Paris 2e",
+   "grand": false
+  },
+  "bp-chateau-eau": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cintrée en grille d’acier laissant voir le porche, façade claire",
+   "leg": "Porte grille en acier · 25 rue du Château-d’Eau, Paris 10e",
+   "grand": false
+  },
+  "bp-seguier": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère cintrée en chêne à grands panneaux, fin du XVIIe siècle",
+   "leg": "Porte cochère fin XVIIe · 46 rue Séguier, Paris 6e",
+   "grand": false
+  },
+  "bp-amsterdam": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère bleu sombre de style Empire à panneaux ajourés, dans un encadrement de pierre sculpté",
+   "leg": "Porte cochère Empire · 80 rue d’Amsterdam, Paris 9e",
+   "grand": false
+  },
+  "bp-faubourg": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère monumentale verte au fond d’un portail de pierre à fronton",
+   "leg": "Porte cochère monumentale · 41 rue du Faubourg-Saint-Honoré, Paris 8e",
+   "grand": false
+  },
+  "bp-la-fontaine": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte de sas Art nouveau en fer et verre, vue depuis le porche d’un immeuble",
+   "leg": "Porte de sas Art nouveau · 14 rue La Fontaine, Paris 16e",
+   "grand": false
+  },
+  "bp-amiral": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère vert sombre à panneaux carrés, sous une baie cintrée vitrée",
+   "leg": "Porte cochère verre, bois et acier · 19 rue de l’Amiral-d’Estaing, Paris 16e",
+   "grand": false
+  },
+  "bp-vrilliere": {
+   "w": 1100,
+   "h": 1606,
+   "alt": "Porte cochère bleu nuit cintrée sous un grand arc de pierre sculpté",
+   "leg": "1 rue de la Vrillière, Paris 1er",
+   "grand": false
+  },
+  "bp-richelieu": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère bleue cintrée à imposte grillagée en éventail",
+   "leg": "106 rue de Richelieu, Paris 2e",
+   "grand": false
+  },
+  "bp-messine": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère en bois ciré à panneaux sculptés, encadrement de pierre",
+   "leg": "14 avenue de Messine, Paris 8e",
+   "grand": false
+  },
+  "bp-bingen": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère cintrée en bois naturel à panneaux moulurés",
+   "leg": "15 rue Jacques-Bingen, Paris 17e",
+   "grand": false
+  },
+  "bp-messine-16": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère cintrée en bois vernis sous une façade ornée",
+   "leg": "16 avenue de Messine, Paris 8e",
+   "grand": false
+  },
+  "bp-quai-bourbon": {
+   "w": 1100,
+   "h": 1892,
+   "alt": "Porte cochère gris-vert à panneaux sculptés, sous un cartouche de pierre",
+   "leg": "29 quai de Bourbon, Paris 4e",
+   "grand": false
+  },
+  "bp-fbg-montmartre": {
+   "w": 1100,
+   "h": 1740,
+   "alt": "Grande porte cochère cintrée en bois sculpté, deux vantaux ornés",
+   "leg": "21 rue du Faubourg-Montmartre, Paris",
+   "grand": false
+  },
+  "bp-galilee": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère en bois naturel à panneaux sculptés, encadrée de pierre",
+   "leg": "27 rue Galilée, Paris 8e",
+   "grand": false
+  },
+  "bp-bonaparte-28": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère vert sombre cintrée, dans une façade de pierre",
+   "leg": "28 rue Bonaparte, Paris 6e",
+   "grand": false
+  },
+  "bp-saint-lazare": {
+   "w": 1100,
+   "h": 1646,
+   "alt": "Porte cochère cintrée en bois richement sculpté, deux vantaux ornés de médaillons",
+   "leg": "67 rue Saint-Lazare, Paris 9e",
+   "grand": false
+  },
+  "bp-lancry": {
+   "w": 1100,
+   "h": 1862,
+   "alt": "Porte cochère cintrée en bois sculpté sous un décor de pierre",
+   "leg": "63 rue de Lancry, Paris 10e",
+   "grand": false
+  },
+  "bp-bonaparte-74": {
+   "w": 1100,
+   "h": 1596,
+   "alt": "Porte cochère cintrée en chêne sombre à panneaux ornés, sous une grande arcade",
+   "leg": "74 rue Bonaparte, Paris 6e",
+   "grand": false
+  },
+  "bp-chateau-eau-36": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère bleue de style Empire, à panneaux cloutés",
+   "leg": "Empire · 36 rue du Château-d’Eau, Paris 10e",
+   "grand": false
+  },
+  "bp-saint-antoine": {
+   "w": 1100,
+   "h": 1822,
+   "alt": "Porte cochère rouge Louis XIII cintrée, sous une façade de pierre",
+   "leg": "Louis XIII · 21 rue Saint-Antoine, Paris 4e",
+   "grand": false
+  },
+  "bp-lions": {
+   "w": 1100,
+   "h": 1930,
+   "alt": "Porte cochère rouge Louis XIII sous un arc de pierre, façade du Marais",
+   "leg": "Louis XIII · 5 rue des Lions-Saint-Paul, Paris 4e",
+   "grand": false
+  },
+  "bp-phalsbourg": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère Louis XV en bois naturel à panneaux chantournés",
+   "leg": "Louis XV · 13 rue de Phalsbourg, Paris 8e",
+   "grand": false
+  },
+  "bp-vignon": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère Louis XV en chêne à panneaux sculptés et petites grilles",
+   "leg": "Louis XV · 34 rue Vignon, Paris 9e",
+   "grand": false
+  },
+  "bp-thorigny": {
+   "w": 1100,
+   "h": 1748,
+   "alt": "Porte cochère Louis XIII bleu nuit à panneaux sculptés, sous un arc de pierre",
+   "leg": "Louis XIII · 8 rue de Thorigny, Paris 3e",
+   "grand": false
+  },
+  "archive-2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-avant": {
+   "w": 574,
+   "h": 868,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-travaux-cours-1": {
+   "w": 574,
+   "h": 868,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-travaux-cours-2": {
+   "w": 574,
+   "h": 868,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-apres": {
+   "w": 574,
+   "h": 868,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-detail-1": {
+   "w": 574,
+   "h": 868,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2025-05-16-rue-de-conde-avant-restauration-sur-place-1": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2025-05-16-rue-de-conde-avant-restauration-sur-place-3": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2025-05-16-rue-de-conde-avant-restauration-sur-place-2": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2025-05-16-rue-de-conde-apres-restauration-avant-peinture-1": {
+   "w": 1100,
+   "h": 936,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2025-05-16-rue-de-conde-apres-restauration-avant-peinture-2": {
+   "w": 1100,
+   "h": 702,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2023-07-porte-acier-institut-des-jeunes-aveugles-paris-7-avant-restauration": {
+   "w": 1058,
+   "h": 1562,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2023-07-porte-acier-institut-des-jeunes-aveugles-paris-7-apres-restauration-ext": {
+   "w": 588,
+   "h": 1488,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2023-07-porte-acier-institut-des-jeunes-aveugles-paris-7-apres-restauration-int": {
+   "w": 588,
+   "h": 1488,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2021-12-restauration-escalier-rue-vaucouleur-avant-travaux": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2021-12-restauration-escalier-rue-vaucouleur-en-cours": {
+   "w": 930,
+   "h": 1874,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2021-12-restauration-escalier-rue-vaucouleur-terminee": {
+   "w": 1100,
+   "h": 1662,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2023-10-escalier-paray-vieille-poste-avant-travaux": {
+   "w": 1100,
+   "h": 936,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2023-10-escalier-paray-vieille-poste-pendant-travaux": {
+   "w": 1100,
+   "h": 936,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2023-10-escalier-paray-vieille-poste-apres-travaux-2": {
+   "w": 984,
+   "h": 1488,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2023-10-escalier-paray-vieille-poste-apres-travaux-3": {
+   "w": 1100,
+   "h": 936,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2021-01-porte-cochere-40-rue-des-abbesses-avant-restauration-int": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2021-01-porte-cochere-40-rue-des-abbesses-apres-restauration-int": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2022-09-porte-cochere-3-rue-de-la-perle-avant-remplacement-int-detail": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2022-09-porte-cochere-3-rue-de-la-perle-apres-faconnage-vue-ext": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2022-09-porte-cochere-3-rue-de-la-perle-apres-faconnage-vue-ext-detail": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2017-10-porte-batarde-24-rue-des-dames-paris-17-apres-restauration": {
+   "w": 554,
+   "h": 836,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2019-09-grille-sas-54-rue-de-verneuil-paris-7-vue-ensemble": {
+   "w": 622,
+   "h": 942,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2019-09-grille-sas-54-rue-de-verneuil-paris-7-detail-fers-de-lances": {
+   "w": 622,
+   "h": 628,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2019-12-porte-cochere-42-rue-du-cardinal-lemoine-paris-5-vue-ensemble": {
+   "w": 684,
+   "h": 942,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2019-12-porte-cochere-42-rue-du-cardinal-lemoine-paris-5-detail-seuil": {
+   "w": 622,
+   "h": 942,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-porte-cochere-monumentale-68-rue-de-la-chaussee-d-antin-en-cours-de-repose": {
+   "w": 820,
+   "h": 1348,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2024-01-grille-de-defense-32-rue-de-washington-detail": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2020-03-facade-acier-arc-surbaisse-41-rue-boulard-paris-14": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2025-01-porte-sas-9-avenue-de-la-motte-piquet-dessin-modele": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2020-05-grille-sas-10-rue-saint-paul-paris-4-atelier": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2013-02-porte-sur-rue-corbeillier-3-tiercee-chene-avec-grilles": {
+   "w": 1100,
+   "h": 1670,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  },
+  "archive-2022-08-porte-34-rue-francois-bonvin-faconnage-atelier": {
+   "w": 1100,
+   "h": 1664,
+   "alt": "",
+   "leg": "",
+   "grand": false
+  }
+ },
+ "galeries": {
+  "accueil-atelier": [
+   "las-cases",
+   "medium-atelier",
+   "marquise-st-honore"
+  ],
+  "accueil-metiers": [
+   "perle-apres",
+   "palaiseau",
+   "washington-ensemble",
+   "cloison-acier",
+   "mercier-avant",
+   "bp-vrilliere"
+  ],
+  "menuiserie-rangee": [
+   "paul-lelong-apres",
+   "vieille-du-temple",
+   "bibliotheque-cheminee"
+  ],
+  "menuiserie-fin": [
+   "garde-corps-sceaux",
+   "pergola",
+   "bureau-chene",
+   "sous-pente",
+   "grevin",
+   "sas-huissiers"
+  ],
+  "escaliers-rangee": [
+   "vaucouleurs-avant",
+   "main-courante",
+   "escalier-chene-2017"
+  ],
+  "escaliers-fin": [
+   "tm-suspendu-2",
+   "tm-suspendu-3",
+   "tm-colimacon-2",
+   "tm-colimacon-3",
+   "tm-limon-1",
+   "tm-autoporteur"
+  ],
+  "serrurerie-rangee": [
+   "grille-faconnage",
+   "verneuil-lances",
+   "bras-compas"
+  ],
+  "serrurerie-fin": [
+   "grille-atelier",
+   "grille-motorisee",
+   "boulard",
+   "marquise-st-honore",
+   "motte-modele",
+   "bequille-laiton"
+  ],
+  "vitrerie-rangee": [
+   "porte-vitree",
+   "pare-douche",
+   "salle-de-bain"
+  ],
+  "vitrerie-fin": [
+   "marquise-cour",
+   "marquise-lanternes",
+   "palaiseau"
+  ],
+  "restauration-rangee": [
+   "mercier-cours-1",
+   "conde-greffe",
+   "mercier-detail"
+  ],
+  "restauration-fin": [
+   "paul-lelong-avant",
+   "paul-lelong-apres",
+   "chauveau-lagarde",
+   "dechargeurs",
+   "abbesses-avant",
+   "abbesses-apres"
+  ],
+  "belles-rangee": [
+   "bp-messine",
+   "bp-saint-lazare",
+   "bp-lions"
+  ],
+  "belles-cocheres": [
+   "bp-vrilliere",
+   "bp-richelieu",
+   "bp-bingen",
+   "bp-messine-16",
+   "bp-quai-bourbon",
+   "bp-fbg-montmartre",
+   "bp-galilee",
+   "bp-bonaparte-28",
+   "bp-lancry",
+   "bp-bonaparte-74",
+   "bp-chateau-eau-36",
+   "bp-saint-antoine",
+   "bp-phalsbourg",
+   "bp-vignon",
+   "bp-thorigny"
+  ],
+  "belles-autres": [
+   "bp-bourse",
+   "bp-sainte-anne",
+   "bp-tournelles",
+   "bp-sourdiere",
+   "bp-chateau-eau",
+   "bp-amiral"
+  ],
+  "apropos-rangee": [
+   "las-cases",
+   "bonvin",
+   "saint-paul"
+  ],
+  "avis-rangee": [
+   "lemoine",
+   "conde-apres",
+   "lappe-apres"
+  ]
+ },
+ "fichiers": {
+  "2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-avant.jpg": "archive-2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-avant",
+  "2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-travaux-cours-1.jpg": "archive-2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-travaux-cours-1",
+  "2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-travaux-cours-2.jpg": "archive-2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-travaux-cours-2",
+  "2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-apres.jpg": "archive-2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-apres",
+  "2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-detail-1.jpg": "archive-2018-09-porte-cochere-12-rue-du-cardinal-mercier-paris-9-detail-1",
+  "2025-05-16-rue-de-conde-avant-restauration-sur-place-1.jpg": "archive-2025-05-16-rue-de-conde-avant-restauration-sur-place-1",
+  "2025-05-16-rue-de-conde-avant-restauration-sur-place-3.jpg": "archive-2025-05-16-rue-de-conde-avant-restauration-sur-place-3",
+  "2025-05-16-rue-de-conde-avant-restauration-sur-place-2.jpg": "archive-2025-05-16-rue-de-conde-avant-restauration-sur-place-2",
+  "2025-05-16-rue-de-conde-apres-restauration-avant-peinture-1.jpg": "archive-2025-05-16-rue-de-conde-apres-restauration-avant-peinture-1",
+  "2025-05-16-rue-de-conde-apres-restauration-avant-peinture-2.jpg": "archive-2025-05-16-rue-de-conde-apres-restauration-avant-peinture-2",
+  "2023-07-porte-acier-institut-des-jeunes-aveugles-paris-7-avant-restauration.jpg": "archive-2023-07-porte-acier-institut-des-jeunes-aveugles-paris-7-avant-restauration",
+  "2023-07-porte-acier-institut-des-jeunes-aveugles-paris-7-apres-restauration-ext.jpg": "archive-2023-07-porte-acier-institut-des-jeunes-aveugles-paris-7-apres-restauration-ext",
+  "2023-07-porte-acier-institut-des-jeunes-aveugles-paris-7-apres-restauration-int.jpg": "archive-2023-07-porte-acier-institut-des-jeunes-aveugles-paris-7-apres-restauration-int",
+  "2021-12-restauration-escalier-rue-vaucouleur-avant-travaux.jpg": "archive-2021-12-restauration-escalier-rue-vaucouleur-avant-travaux",
+  "2021-12-restauration-escalier-rue-vaucouleur-en-cours.jpg": "archive-2021-12-restauration-escalier-rue-vaucouleur-en-cours",
+  "2021-12-restauration-escalier-rue-vaucouleur-terminee.jpg": "archive-2021-12-restauration-escalier-rue-vaucouleur-terminee",
+  "2023-10-escalier-paray-vieille-poste-avant-travaux.jpg": "archive-2023-10-escalier-paray-vieille-poste-avant-travaux",
+  "2023-10-escalier-paray-vieille-poste-pendant-travaux.jpg": "archive-2023-10-escalier-paray-vieille-poste-pendant-travaux",
+  "2023-10-escalier-paray-vieille-poste-apres-travaux-2.jpg": "archive-2023-10-escalier-paray-vieille-poste-apres-travaux-2",
+  "2023-10-escalier-paray-vieille-poste-apres-travaux-3.jpg": "archive-2023-10-escalier-paray-vieille-poste-apres-travaux-3",
+  "2021-01-porte-cochere-40-rue-des-abbesses-avant-restauration-int.jpg": "archive-2021-01-porte-cochere-40-rue-des-abbesses-avant-restauration-int",
+  "2021-01-porte-cochere-40-rue-des-abbesses-apres-restauration-int.jpg": "archive-2021-01-porte-cochere-40-rue-des-abbesses-apres-restauration-int",
+  "2022-09-porte-cochere-3-rue-de-la-perle-avant-remplacement-int-detail.jpg": "archive-2022-09-porte-cochere-3-rue-de-la-perle-avant-remplacement-int-detail",
+  "2022-09-porte-cochere-3-rue-de-la-perle-apres-faconnage-vue-ext.jpg": "archive-2022-09-porte-cochere-3-rue-de-la-perle-apres-faconnage-vue-ext",
+  "2022-09-porte-cochere-3-rue-de-la-perle-apres-faconnage-vue-ext-detail.jpg": "archive-2022-09-porte-cochere-3-rue-de-la-perle-apres-faconnage-vue-ext-detail",
+  "2017-10-porte-batarde-24-rue-des-dames-paris-17-apres-restauration.jpg": "archive-2017-10-porte-batarde-24-rue-des-dames-paris-17-apres-restauration",
+  "2019-09-grille-sas-54-rue-de-verneuil-paris-7-vue-ensemble.jpg": "archive-2019-09-grille-sas-54-rue-de-verneuil-paris-7-vue-ensemble",
+  "2019-09-grille-sas-54-rue-de-verneuil-paris-7-detail-fers-de-lances.jpg": "archive-2019-09-grille-sas-54-rue-de-verneuil-paris-7-detail-fers-de-lances",
+  "2019-12-porte-cochere-42-rue-du-cardinal-lemoine-paris-5-vue-ensemble.jpg": "archive-2019-12-porte-cochere-42-rue-du-cardinal-lemoine-paris-5-vue-ensemble",
+  "2019-12-porte-cochere-42-rue-du-cardinal-lemoine-paris-5-detail-seuil.jpg": "archive-2019-12-porte-cochere-42-rue-du-cardinal-lemoine-paris-5-detail-seuil",
+  "porte-cochere-monumentale-68-rue-de-la-chaussee-d-antin-en-cours-de-repose.jpg": "archive-porte-cochere-monumentale-68-rue-de-la-chaussee-d-antin-en-cours-de-repose",
+  "2024-01-grille-de-defense-32-rue-de-washington-detail.jpg": "archive-2024-01-grille-de-defense-32-rue-de-washington-detail",
+  "2020-03-facade-acier-arc-surbaisse-41-rue-boulard-paris-14.jpg": "archive-2020-03-facade-acier-arc-surbaisse-41-rue-boulard-paris-14",
+  "2025-01-porte-sas-9-avenue-de-la-motte-piquet-dessin-modele.jpg": "archive-2025-01-porte-sas-9-avenue-de-la-motte-piquet-dessin-modele",
+  "2020-05-grille-sas-10-rue-saint-paul-paris-4-atelier.jpg": "archive-2020-05-grille-sas-10-rue-saint-paul-paris-4-atelier",
+  "2013-02-porte-sur-rue-corbeillier-3-tiercee-chene-avec-grilles.jpg": "archive-2013-02-porte-sur-rue-corbeillier-3-tiercee-chene-avec-grilles",
+  "2022-08-porte-34-rue-francois-bonvin-faconnage-atelier.jpg": "archive-2022-08-porte-34-rue-francois-bonvin-faconnage-atelier"
+ }
+}

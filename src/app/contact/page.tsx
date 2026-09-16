@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import PageHeader from "@/components/PageHeader";
-import Container from "@/components/Container";
 import ContactForm from "@/components/ContactForm";
 import JsonLd from "@/components/JsonLd";
-import Breadcrumb from "@/components/Breadcrumb";
+import { Bandeau, Fil, Ouverture } from "@/components/Blocs";
 import { contactPageSchema } from "@/lib/schema";
+import { photo } from "@/lib/photos";
 import { NAP } from "@/lib/nap";
 
 export const metadata: Metadata = {
@@ -20,98 +19,93 @@ export const metadata: Metadata = {
   },
 };
 
+/**
+ * Contact. Aucune adresse électronique n’est affichée : les demandes passent
+ * par le formulaire ou le téléphone (règle commune au parc BATIBIG).
+ */
 export default function ContactPage() {
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${NAP.street}, ${NAP.postalCode} ${NAP.city}`)}`;
 
   return (
     <>
       <JsonLd data={contactPageSchema()} />
-      <Breadcrumb items={[{ label: "Contact", href: "/contact" }]} />
-      <PageHeader
-        photoUuid="869f3df8-834f-4132-a008-c3e2c7ca8a37"
-        eyebrow="Nous écrire"
-        title="Nous contacter."
-        subtitle="Atelier ouvert du lundi au vendredi, 8h–12h · 13h30–17h30. Visite d'atelier sur rendez-vous."
-        imageAlt="Atelier Le Boulluec à Massy (91300) — visites sur rendez-vous, devis menuiserie et serrurerie en Île-de-France."
+
+      <Bandeau
+        photo={photo("verriere")}
+        surtitre="Nous écrire"
+        titre="Nous contacter."
+        chapeau="Atelier ouvert du lundi au vendredi, 8h–12h · 13h30–17h30. Visite d'atelier sur rendez-vous."
       />
+      <Fil items={[{ label: "Contact", href: "/contact" }]} />
 
-      <section className="py-20 md:py-24 bg-[#1C1714]">
-        <Container size="wide">
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16">
-            {/* Left: details */}
-            <div className="lg:col-span-2 space-y-10">
-              <div>
-                <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">Atelier &amp; siège</p>
-                <h2 className="font-display text-2xl text-[#EDE6DA] mb-4">Atelier Le Boulluec</h2>
-                <address className="not-italic text-[#EDE6DA]/85 leading-relaxed">
-                  {NAP.street}<br />
-                  {NAP.postalCode} {NAP.city}<br />
-                  <br />
-                  <strong className="text-[#EDE6DA]">Téléphone</strong> :{" "}
-                  <a href={`tel:${NAP.phoneE164}`} className="text-[#B08D57] hover:underline">{NAP.phone}</a>
-                </address>
-                <p className="mt-5 text-sm text-[#EDE6DA]/78">{NAP.hoursReadable}</p>
-              </div>
+      <Ouverture photo={photo("las-cases")}>
+        <p className="surtitre">Atelier &amp; siège</p>
+        <h2>Atelier Le Boulluec</h2>
+        <address style={{ fontStyle: "normal" }}>
+          {NAP.street}
+          <br />
+          {NAP.postalCode} {NAP.city}
+          <br />
+          <br />
+          <strong>Téléphone</strong>{" "}: <a href={`tel:${NAP.phoneE164}`}>{NAP.phone}</a>
+        </address>
+        <p style={{ marginTop: "0.6rem", color: "var(--gris)" }}>{NAP.hoursReadable}</p>
 
-              <div>
-                <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">Visite d&apos;atelier</p>
-                <p className="text-[#EDE6DA]/85 leading-relaxed">
-                  Les syndics, architectes et directions immobilières qui nous découvrent passent presque tous par notre atelier de Massy avant un premier ouvrage. La visite dure une vingtaine de minutes et se prend par téléphone ou via le formulaire ci-contre.
-                </p>
-              </div>
+        <h3 style={{ marginTop: "2rem" }}>Visite d&apos;atelier</h3>
+        <p>
+          Les syndics, architectes et directions immobilières qui nous découvrent passent presque tous par notre atelier de Massy avant un premier ouvrage. La visite dure une vingtaine de minutes et se prend par téléphone ou via le formulaire ci-dessous.
+        </p>
 
-              <div>
-                <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">Itinéraire</p>
-                <p className="text-[#EDE6DA]/85 leading-relaxed mb-3">
-                  Proximité immédiate de la gare RER B et C de Massy-Palaiseau, à dix minutes de l&apos;A10. Parking devant l&apos;atelier.
-                </p>
-                <a
-                  href={mapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-[#B08D57] hover:underline font-medium"
-                >
-                  Ouvrir dans Google Maps →
-                </a>
-              </div>
+        <h3 style={{ marginTop: "2rem" }}>Itinéraire</h3>
+        <p>
+          Proximité immédiate de la gare RER B et C de Massy-Palaiseau, à dix minutes de l&apos;A10. Parking devant l&apos;atelier.{" "}
+          <a href={mapsUrl} target="_blank" rel="noopener noreferrer">
+            Ouvrir dans Google Maps
+          </a>
+        </p>
+      </Ouverture>
 
-              <div className="pt-6 border-t border-[#3A322C] text-xs text-[#EDE6DA]/78 space-y-1">
-                <p><strong className="text-[#EDE6DA]">Raison sociale</strong> : {NAP.legalName}</p>
-                <p><strong className="text-[#EDE6DA]">Forme juridique</strong> : {NAP.legalForm} au capital de {NAP.capital}</p>
-                <p><strong className="text-[#EDE6DA]">SIRET</strong> : {NAP.siret}</p>
-                <p><strong className="text-[#EDE6DA]">RCS</strong> : {NAP.rcs}</p>
-                <p><strong className="text-[#EDE6DA]">TVA</strong> : {NAP.tva}</p>
-                <p>Membre du <strong className="text-[#EDE6DA]">{NAP.group}</strong></p>
-              </div>
+      <section className="bande bande--serree bande--pierre" id="formulaire">
+        <div className="contenu contenu--large">
+          <div className="duo duo--tiers" style={{ alignItems: "start" }}>
+            <div>
+              <p className="surtitre">Demander un chiffrage</p>
+              <h2>Formulaire de contact</h2>
+              <p className="chapeau">
+                Décrivez votre projet en quelques lignes — nous reviendrons vers vous sous 48 heures ouvrées.
+              </p>
+              <dl className="planche" style={{ display: "block", padding: 0, border: 0 }}>
+                <dt>Raison sociale</dt>
+                <dd>{NAP.legalName}</dd>
+                <dt>Forme juridique</dt>
+                <dd>
+                  {NAP.legalForm} au capital de {NAP.capital}
+                </dd>
+                <dt>SIRET</dt>
+                <dd>{NAP.siret}</dd>
+                <dt>RCS</dt>
+                <dd>{NAP.rcs}</dd>
+                <dt>TVA</dt>
+                <dd>{NAP.tva}</dd>
+                <dt>Groupe</dt>
+                <dd>Membre du {NAP.group}</dd>
+              </dl>
             </div>
-
-            {/* Right: form */}
-            <div className="lg:col-span-3">
-              <div className="bg-[#241E1A] bois border-l-4 border-[#B08D57] p-7 md:p-10">
-                <p className="cartouche text-[#B08D57] mb-3 pb-2 border-b border-[#3A322C]">Demander un chiffrage</p>
-                <h2 className="font-display text-2xl text-[#EDE6DA] mb-2">Formulaire de contact</h2>
-                <p className="text-sm text-[#EDE6DA]/78 mb-8">
-                  Décrivez votre projet en quelques lignes — nous reviendrons vers vous sous 48 heures ouvrées.
-                </p>
-                <ContactForm />
-              </div>
+            <div>
+              <ContactForm />
             </div>
           </div>
-        </Container>
-      </section>
-
-      {/* OpenStreetMap embed */}
-      <section className="bg-[#2B2219] py-1">
-        <div className="aspect-[16/6] w-full bg-[#241E1A] bois relative overflow-hidden">
-          <iframe
-            title="Plan de l'atelier — 6 Rue de l'Aulnaye Dracourt, 91300 Massy"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=2.2724%2C48.7203%2C2.2904%2C48.7303&amp;layer=mapnik&amp;marker=48.7253%2C2.2814"
-            className="w-full h-full"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
         </div>
       </section>
+
+      {/* Carte OpenStreetMap, en niveaux de gris : aucune couleur hors photographie. */}
+      <iframe
+        className="carte"
+        title="Plan de l'atelier — 6 Rue de l'Aulnaye Dracourt, 91300 Massy"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=2.2724%2C48.7203%2C2.2904%2C48.7303&amp;layer=mapnik&amp;marker=48.7253%2C2.2814"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      />
     </>
   );
 }

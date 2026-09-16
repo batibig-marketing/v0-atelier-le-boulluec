@@ -146,13 +146,10 @@ export function localBusinessSchema() {
       "Membre du réseau Bricard Serruriers Confiance",
       "Membre du Groupe BATIBIG",
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.2",
-      reviewCount: "40",
-      bestRating: "5",
-      worstRating: "1",
-    },
+    // Pas de note agregee : la note 4,2 sur 40 avis declaree jusqu'ici
+    // n'avait aucune source verifiable (le site historique n'affiche qu'un
+    // widget Pages Jaunes vide). Une notation inverifiable expose le site a
+    // une action manuelle de Google ; elle ne sera remise qu'avec sa source.
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Métiers de l'Atelier Le Boulluec",
