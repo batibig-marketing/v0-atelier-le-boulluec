@@ -16,6 +16,7 @@ import {
 import { galerie, photo } from "@/lib/photos";
 import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 const ESCALIERS_FAQ = [
   {
     q: "Quel est le délai pour un escalier sur mesure ?",
@@ -45,6 +46,7 @@ export const metadata: Metadata = {
     "Escaliers suspendus, en colimaçon, autoportants ou à limon acier. Conception, fabrication atelier et pose. Atelier Le Boulluec — Massy, Île-de-France.",
   alternates: { canonical: "https://www.leboulluec.com/escaliers" },
   openGraph: {
+    images: CARTE_PARTAGE,
     title: "Escaliers sur mesure bois & acier — Atelier Le Boulluec",
     description: "Escaliers suspendus, colimaçon, autoportants ou à limon acier — fabrication atelier.",
     url: "https://www.leboulluec.com/escaliers",

@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { NAP } from "@/lib/nap";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
   description:
     "Politique de confidentialité du site leboulluec.com — traitement des données personnelles, finalités, durées de conservation, droits RGPD.",
   alternates: { canonical: "https://www.leboulluec.com/politique-confidentialite" },
   openGraph: {
+    images: CARTE_PARTAGE,
     type: "website",
     locale: "fr_FR",
     siteName: "Atelier Le Boulluec",

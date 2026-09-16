@@ -16,6 +16,7 @@ import {
 import { galerie, photo } from "@/lib/photos";
 import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 const VITRERIE_FAQ = [
   {
     q: "Intervenez-vous en urgence pour un bris de vitrage ?",
@@ -45,6 +46,7 @@ export const metadata: Metadata = {
     "Vitrages isolants, verre feuilleté et trempé, vitrage de protection, miroirs sur mesure et dépannage. Atelier de vitrerie à Massy, intervention en Île-de-France.",
   alternates: { canonical: "https://www.leboulluec.com/vitrerie" },
   openGraph: {
+    images: CARTE_PARTAGE,
     title: "Vitrerie sur mesure — double vitrage, verres techniques, miroirs",
     description: "Vitrages isolants, verre feuilleté & trempé, miroirs sur mesure, dépannage 24-48h.",
     url: "https://www.leboulluec.com/vitrerie",

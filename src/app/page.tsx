@@ -10,6 +10,7 @@ import { OUVRAGES, PHOTOS } from "@/data/ouvrages";
 import { galerie, photo } from "@/lib/photos";
 import { uploadcareUrl } from "@/lib/uploadcare";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 const OG_IMAGE = uploadcareUrl(PHOTOS.cardinalMercierApres, 1200);
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
     "Atelier de menuiserie, serrurerie, vitrerie et escaliers sur mesure à Massy. 60 ans de façonnage bois et acier pour syndics, architectes et grands comptes en Île-de-France.",
   alternates: { canonical: "https://www.leboulluec.com/" },
   openGraph: {
+    images: CARTE_PARTAGE,
     url: "https://www.leboulluec.com/",
     type: "website",
     locale: "fr_FR",

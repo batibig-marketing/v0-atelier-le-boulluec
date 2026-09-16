@@ -9,6 +9,7 @@ import { uploadcareUrl } from "@/lib/uploadcare";
 import { photo } from "@/lib/photos";
 import { NAP } from "@/lib/nap";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 const URL_PAGE = "https://www.leboulluec.com/actualite";
 
 /**
@@ -76,6 +77,7 @@ export const metadata: Metadata = {
     "Journal daté des ouvrages livrés par l'Atelier Le Boulluec : portes cochères, grilles, escaliers et châssis acier restaurés à Paris et en Île-de-France depuis 2012.",
   alternates: { canonical: URL_PAGE },
   openGraph: {
+    images: CARTE_PARTAGE,
     type: "article",
     locale: "fr_FR",
     siteName: NAP.brand,

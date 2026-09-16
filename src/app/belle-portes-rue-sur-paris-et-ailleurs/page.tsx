@@ -16,12 +16,14 @@ import { galerie, photo } from "@/lib/photos";
 import { NAP } from "@/lib/nap";
 import { articleSchema, SCHEMA_IDS } from "@/lib/schema";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 export const metadata: Metadata = {
   title: "Belles portes de Paris — portes cochères & bâtardes",
   description:
     "Archives illustrées des portes cochères, portes bâtardes et portes d'immeuble parisiennes restaurées ou refabriquées par l'Atelier Le Boulluec depuis 2012.",
   alternates: { canonical: "https://www.leboulluec.com/belle-portes-rue-sur-paris-et-ailleurs" },
   openGraph: {
+    images: CARTE_PARTAGE,
     title: "Belles portes de Paris — un petit musée par l'Atelier Le Boulluec",
     description: "Archives photographiques des portes cochères parisiennes traitées à l'atelier de Massy depuis 2012.",
     url: "https://www.leboulluec.com/belle-portes-rue-sur-paris-et-ailleurs",

@@ -6,12 +6,14 @@ import { contactPageSchema } from "@/lib/schema";
 import { photo } from "@/lib/photos";
 import { NAP } from "@/lib/nap";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 export const metadata: Metadata = {
   title: "Contact — Massy, Île-de-France",
   description:
     "Atelier de menuiserie et serrurerie à Massy. 01 60 12 06 49. Visite d'atelier sur rendez-vous, devis sur étude.",
   alternates: { canonical: "https://www.leboulluec.com/contact" },
   openGraph: {
+    images: CARTE_PARTAGE,
     title: "Contact — Atelier Le Boulluec, Massy",
     description: "01 60 12 06 49. Visite d'atelier sur rendez-vous.",
     url: "https://www.leboulluec.com/contact",

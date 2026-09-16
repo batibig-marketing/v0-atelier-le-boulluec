@@ -6,6 +6,7 @@ import { References, Reperes } from "@/components/Maison";
 import { galerie, photo } from "@/lib/photos";
 import { aboutPageSchema, faqPageSchema } from "@/lib/schema";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 const ABOUT_FAQ = [
   {
     q: "Depuis quand l'Atelier Le Boulluec existe-t-il ?",
@@ -39,6 +40,7 @@ export const metadata: Metadata = {
     "Soixante ans de menuiserie, serrurerie et restauration patrimoniale à Paris et en Île-de-France. Histoire, équipe et références de l'Atelier Le Boulluec.",
   alternates: { canonical: "https://www.leboulluec.com/a-propos" },
   openGraph: {
+    images: CARTE_PARTAGE,
     title: "L'atelier — histoire & équipe de l'Atelier Le Boulluec depuis 1964",
     description: "Trois adresses, une méthode : un atelier intégré, plusieurs métiers réunis.",
     url: "https://www.leboulluec.com/a-propos",

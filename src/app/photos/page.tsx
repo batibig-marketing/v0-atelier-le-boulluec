@@ -9,6 +9,7 @@ import { uploadcareUrl } from "@/lib/uploadcare";
 import { photo } from "@/lib/photos";
 import { NAP } from "@/lib/nap";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 const URL_PAGE = "https://www.leboulluec.com/photos";
 
 /**
@@ -73,6 +74,7 @@ export const metadata: Metadata = {
     "Portes cochères, grilles et escaliers restaurés à Paris : chaque ouvrage daté, situé et photographié avant, pendant et après travaux par l'Atelier Le Boulluec.",
   alternates: { canonical: URL_PAGE },
   openGraph: {
+    images: CARTE_PARTAGE,
     type: "article",
     locale: "fr_FR",
     siteName: NAP.brand,

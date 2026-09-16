@@ -16,6 +16,7 @@ import {
 import { galerie, photo } from "@/lib/photos";
 import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 const MENUISERIE_FAQ = [
   {
     q: "Quel est le délai pour fabriquer une porte d'immeuble sur mesure ?",
@@ -45,6 +46,7 @@ export const metadata: Metadata = {
     "Portes d'entrée, portes cochères, fenêtres, agencement bois et mobilier sur mesure. Atelier de menuiserie traditionnelle à Massy, intervention en Île-de-France.",
   alternates: { canonical: "https://www.leboulluec.com/menuiserie" },
   openGraph: {
+    images: CARTE_PARTAGE,
     title: "Menuiserie sur mesure à Paris & Île-de-France — Atelier Le Boulluec",
     description:
       "Portes d'entrée, portes cochères, fenêtres, agencement bois et mobilier sur mesure depuis 1964.",

@@ -16,6 +16,7 @@ import {
 import { galerie, photo } from "@/lib/photos";
 import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 const SERRURERIE_FAQ = [
   {
     q: "Êtes-vous certifiés Bricard ?",
@@ -45,6 +46,7 @@ export const metadata: Metadata = {
     "Pose et remplacement de serrures, blindage, contrôle d'accès, motorisation, ferronnerie sur mesure. Membre du réseau Bricard Serruriers Confiance — Atelier Le Boulluec.",
   alternates: { canonical: "https://www.leboulluec.com/serrurerie" },
   openGraph: {
+    images: CARTE_PARTAGE,
     title: "Serrurerie professionnelle — Réseau Bricard Serruriers Confiance",
     description: "Sécurisation des accès d'immeuble, blindage, contrôle d'accès, motorisation, ferronnerie sur mesure.",
     url: "https://www.leboulluec.com/serrurerie",

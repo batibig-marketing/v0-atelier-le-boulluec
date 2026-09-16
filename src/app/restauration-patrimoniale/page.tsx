@@ -16,6 +16,7 @@ import {
 import { galerie, photo } from "@/lib/photos";
 import { serviceSchema, faqPageSchema } from "@/lib/schema";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 const RESTAURATION_FAQ = [
   {
     q: "Intervenez-vous sur les immeubles classés Monuments Historiques ou inscrits à l'inventaire ?",
@@ -45,6 +46,7 @@ export const metadata: Metadata = {
     "Restauration de portes cochères, fenêtres et menuiseries d'immeubles classés ou haussmanniens. Bois, fer forgé, ferrures laiton. Atelier Le Boulluec, Île-de-France.",
   alternates: { canonical: "https://www.leboulluec.com/restauration-patrimoniale" },
   openGraph: {
+    images: CARTE_PARTAGE,
     title: "Restauration patrimoniale — Atelier Le Boulluec",
     description: "Portes cochères, ferronneries, menuiseries d'époque restaurées dans le respect des techniques d'origine.",
     url: "https://www.leboulluec.com/restauration-patrimoniale",

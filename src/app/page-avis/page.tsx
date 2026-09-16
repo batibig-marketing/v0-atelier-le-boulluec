@@ -9,6 +9,7 @@ import { uploadcareUrl } from "@/lib/uploadcare";
 import { galerie, photo } from "@/lib/photos";
 import { NAP } from "@/lib/nap";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 const URL_PAGE = "https://www.leboulluec.com/page-avis";
 
 /*
@@ -48,6 +49,7 @@ export const metadata: Metadata = {
     "Garantie décennale, réseau Bricard Serruriers Confiance, donneurs d'ordre et chantiers publiés : ce sur quoi s'engage l'Atelier Le Boulluec.",
   alternates: { canonical: URL_PAGE },
   openGraph: {
+    images: CARTE_PARTAGE,
     type: "article",
     locale: "fr_FR",
     siteName: NAP.brand,

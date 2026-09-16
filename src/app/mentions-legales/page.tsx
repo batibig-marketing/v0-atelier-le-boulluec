@@ -2,12 +2,14 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { NAP } from "@/lib/nap";
 
+import { CARTE_PARTAGE } from "@/lib/partage";
 export const metadata: Metadata = {
   title: "Mentions légales",
   description:
     "Mentions légales du site leboulluec.com : éditeur, hébergeur, propriété intellectuelle, coordonnées et informations légales de l'Atelier Le Boulluec (SAS, Massy).",
   alternates: { canonical: "https://www.leboulluec.com/mentions-legales" },
   openGraph: {
+    images: CARTE_PARTAGE,
     type: "website",
     locale: "fr_FR",
     siteName: "Atelier Le Boulluec",
