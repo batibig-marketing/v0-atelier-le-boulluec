@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { NAP } from "@/lib/nap";
 import { MENUISERIE_SOUS, ESCALIERS_SOUS } from "@/lib/navigation";
@@ -37,7 +38,14 @@ export function Pied() {
       <div className="contenu contenu--large">
         <div className="pied__grille">
           <div>
-            <p className="pied__marque">Atelier Le Boulluec</p>
+            <p className="pied__marque">
+              <Image
+                src="/logo-atelier-le-boulluec-blanc.svg"
+                alt="Atelier Le Boulluec, artisan menuisier serrurier"
+                width={519}
+                height={221}
+              />
+            </p>
             <p>
               Menuiserie, serrurerie, vitrerie et escaliers sur mesure depuis 1964. L’atelier est à
               Massy ; les chantiers, à Paris et en Île-de-France.

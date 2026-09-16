@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -61,9 +62,26 @@ export function Entete() {
     <>
       <header className={`entete${transparent ? " entete--transparent" : ""}`}>
         <div className="entete__interieur">
-          <Link href="/" className="marque" aria-label="Atelier Le Boulluec, accueil">
-            <span className="marque__nom">Atelier Le Boulluec</span>
-            <span className="marque__mention">Bois et acier depuis 1964</span>
+          {/* Logo officiel de l entreprise : version couleur sur fond clair,
+              version blanche (derivee du SVG officiel) sur la photo du hero. */}
+          <Link href="/" className="marque">
+            <Image
+              className="marque__logo marque__logo--couleur"
+              src="/logo-atelier-le-boulluec.svg"
+              alt="Atelier Le Boulluec, artisan menuisier serrurier"
+              width={519}
+              height={221}
+              preload
+            />
+            <Image
+              className="marque__logo marque__logo--blanc"
+              src="/logo-atelier-le-boulluec-blanc.svg"
+              alt=""
+              aria-hidden="true"
+              width={519}
+              height={221}
+              preload
+            />
           </Link>
 
           <nav aria-label="Navigation principale">

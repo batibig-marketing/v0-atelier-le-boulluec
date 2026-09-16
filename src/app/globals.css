@@ -251,21 +251,17 @@ strong { font-weight: 600; }
   line-height: 1.1;
   margin-right: auto;
 }
-.marque__nom {
-  font-family: var(--police-titre), Georgia, serif;
-  font-size: 1.16rem;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
+.marque__logo {
+  display: block;
+  width: auto;
+  height: 52px;
 }
-.marque__mention {
-  font-size: 0.58rem;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: var(--gris);
-  margin-top: 3px;
-  white-space: nowrap;
+.marque__logo--blanc,
+.entete--transparent .marque__logo--couleur { display: none; }
+.entete--transparent .marque__logo--blanc { display: block; }
+@media (max-width: 900px) {
+  .marque__logo { height: 42px; }
 }
-.entete--transparent .marque__mention { color: rgba(252, 252, 251, 0.72); }
 
 .menu { display: flex; align-items: center; gap: 22px; margin: 0; padding: 0; }
 .menu > li { position: relative; list-style: none; }
@@ -679,7 +675,8 @@ strong { font-weight: 600; }
 .pied h3 { font-size: 0.66rem; font-family: var(--police-texte), sans-serif; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(252, 252, 251, 0.6); margin-bottom: 16px; }
 .pied ul { list-style: none; margin: 0; padding: 0; }
 .pied li { padding: 4px 0; }
-.pied__marque { font-family: var(--police-titre), Georgia, serif; font-size: 1.4rem; color: var(--papier); margin: 0 0 12px; }
+.pied__marque { margin: 0 0 18px; }
+.pied__marque img { display: block; width: auto; height: 64px; }
 .pied__bas { display: flex; flex-wrap: wrap; gap: 8px 26px; margin-top: clamp(38px, 4vw, 60px); padding-top: 22px; border-top: 1px solid var(--filet-inverse); font-size: 0.72rem; color: rgba(252, 252, 251, 0.5); }
 @media (max-width: 900px) { .pied__grille { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 560px) { .pied__grille { grid-template-columns: 1fr; } }
