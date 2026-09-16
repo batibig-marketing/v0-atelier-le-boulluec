@@ -48,7 +48,6 @@ export const metadata: Metadata = {
     title: "Vitrerie sur mesure — double vitrage, verres techniques, miroirs",
     description: "Vitrages isolants, verre feuilleté & trempé, miroirs sur mesure, dépannage 24-48h.",
     url: "https://www.leboulluec.com/vitrerie",
-    images: ["https://ucarecdn.com/f428b023-f076-4e97-8df8-9a56954eb8af/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
 

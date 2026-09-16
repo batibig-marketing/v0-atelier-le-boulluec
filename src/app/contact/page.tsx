@@ -15,7 +15,6 @@ export const metadata: Metadata = {
     title: "Contact — Atelier Le Boulluec, Massy",
     description: "01 60 12 06 49. Visite d'atelier sur rendez-vous.",
     url: "https://www.leboulluec.com/contact",
-    images: ["https://ucarecdn.com/869f3df8-834f-4132-a008-c3e2c7ca8a37/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
 

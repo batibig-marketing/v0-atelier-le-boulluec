@@ -48,7 +48,6 @@ export const metadata: Metadata = {
     title: "Serrurerie professionnelle — Réseau Bricard Serruriers Confiance",
     description: "Sécurisation des accès d'immeuble, blindage, contrôle d'accès, motorisation, ferronnerie sur mesure.",
     url: "https://www.leboulluec.com/serrurerie",
-    images: ["https://ucarecdn.com/2ea887a0-7113-4e97-973c-7478c48e6ebe/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
 

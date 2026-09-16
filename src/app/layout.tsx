@@ -69,24 +69,13 @@ export const metadata: Metadata = {
     siteName: NAP.brand,
     title: "Atelier Le Boulluec — Menuiserie & serrurerie d'art depuis 1964",
     description:
-      "Soixante ans de menuiserie, serrurerie, vitrerie et escaliers sur mesure à Massy, pour Paris et l'Île-de-France.",
-    images: [
-      {
-        url: "https://ucarecdn.com/ac23114b-a402-4794-898e-02def630f916/-/format/auto/-/quality/smart/-/resize/1200x630/",
-        width: 1200,
-        height: 630,
-        alt: "Porte cochère restaurée par l'Atelier Le Boulluec",
-      },
-    ],
+      "Soixante ans de menuiserie, serrurerie, vitrerie et escaliers sur mesure à Massy. Interventions dans Paris et en Île-de-France.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Atelier Le Boulluec — Menuiserie & serrurerie d'art depuis 1964",
     description:
       "Soixante ans de menuiserie, serrurerie, vitrerie et escaliers sur mesure à Massy.",
-    images: [
-      "https://ucarecdn.com/ac23114b-a402-4794-898e-02def630f916/-/format/auto/-/quality/smart/-/resize/1200x630/",
-    ],
   },
   robots: { index: true, follow: true },
   category: "construction",

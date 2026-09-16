@@ -48,7 +48,6 @@ export const metadata: Metadata = {
     title: "Escaliers sur mesure bois & acier — Atelier Le Boulluec",
     description: "Escaliers suspendus, colimaçon, autoportants ou à limon acier — fabrication atelier.",
     url: "https://www.leboulluec.com/escaliers",
-    images: ["https://ucarecdn.com/029f59c0-f79a-44d7-9773-de7a099813f4/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
 

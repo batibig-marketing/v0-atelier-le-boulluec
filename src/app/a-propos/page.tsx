@@ -42,7 +42,6 @@ export const metadata: Metadata = {
     title: "L'atelier — histoire & équipe de l'Atelier Le Boulluec depuis 1964",
     description: "Trois adresses, une méthode : un atelier intégré, plusieurs métiers réunis.",
     url: "https://www.leboulluec.com/a-propos",
-    images: ["https://ucarecdn.com/40e2cd05-e893-45b2-a4fe-0743c5e2e887/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
 

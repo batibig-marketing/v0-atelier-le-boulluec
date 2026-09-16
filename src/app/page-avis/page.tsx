@@ -54,7 +54,6 @@ export const metadata: Metadata = {
     title: "Avis, garanties et références — Atelier Le Boulluec",
     description: "Garantie décennale, réseau Bricard Serruriers Confiance, donneurs d'ordre et chantiers publiés.",
     url: URL_PAGE,
-    images: [uploadcareUrl(PHOTOS.desDames, 1200)],
   },
 };
 

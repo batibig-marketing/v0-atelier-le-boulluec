@@ -80,7 +80,6 @@ export const metadata: Metadata = {
     description:
       "Portes cochères, grilles et escaliers restaurés à Paris, datés et situés, photographiés avant / pendant / après.",
     url: URL_PAGE,
-    images: [uploadcareUrl(PHOTOS.cardinalMercierApres, 1200)],
   },
 };
 

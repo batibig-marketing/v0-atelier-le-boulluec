@@ -15,9 +15,6 @@ export const metadata: Metadata = {
     description:
       "Traitement des données personnelles collectées par le site de l'Atelier Le Boulluec : finalités, durée de conservation et exercice de vos droits.",
     url: "https://www.leboulluec.com/politique-confidentialite",
-    images: [
-      "https://ucarecdn.com/9318537e-7772-488c-a6dd-b77390278ff5/-/format/auto/-/quality/smart/-/resize/1200x630/",
-    ],
   },
   robots: { index: true, follow: true },
 };

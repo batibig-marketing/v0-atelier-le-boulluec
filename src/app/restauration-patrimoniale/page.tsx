@@ -48,7 +48,6 @@ export const metadata: Metadata = {
     title: "Restauration patrimoniale — Atelier Le Boulluec",
     description: "Portes cochères, ferronneries, menuiseries d'époque restaurées dans le respect des techniques d'origine.",
     url: "https://www.leboulluec.com/restauration-patrimoniale",
-    images: ["https://ucarecdn.com/26525e22-2374-4191-b30c-b805af59fc7e/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
 

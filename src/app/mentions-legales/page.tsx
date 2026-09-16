@@ -15,9 +15,6 @@ export const metadata: Metadata = {
     description:
       "Éditeur, hébergeur, propriété intellectuelle et coordonnées de l'Atelier Le Boulluec, atelier de menuiserie et de ferronnerie à Massy.",
     url: "https://www.leboulluec.com/mentions-legales",
-    images: [
-      "https://ucarecdn.com/9318537e-7772-488c-a6dd-b77390278ff5/-/format/auto/-/quality/smart/-/resize/1200x630/",
-    ],
   },
   robots: { index: true, follow: true },
 };

@@ -83,7 +83,6 @@ export const metadata: Metadata = {
     description:
       "Journal daté des ouvrages livrés par l'atelier depuis 2012 : portes cochères, grilles, escaliers.",
     url: URL_PAGE,
-    images: [uploadcareUrl(PHOTOS.chausseeDantin, 1200)],
   },
 };
 

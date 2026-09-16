@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     title: "Belles portes de Paris — un petit musée par l'Atelier Le Boulluec",
     description: "Archives photographiques des portes cochères parisiennes traitées à l'atelier de Massy depuis 2012.",
     url: "https://www.leboulluec.com/belle-portes-rue-sur-paris-et-ailleurs",
-    images: ["https://ucarecdn.com/f5dfb801-e487-4e9e-90e1-caf0d743f8ce/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
 

@@ -49,7 +49,6 @@ export const metadata: Metadata = {
     description:
       "Portes d'entrée, portes cochères, fenêtres, agencement bois et mobilier sur mesure depuis 1964.",
     url: "https://www.leboulluec.com/menuiserie",
-    images: ["https://ucarecdn.com/8ee1618b-2bb1-4d73-8fad-61df8074ae06/-/format/auto/-/quality/smart/-/resize/1600x/"],
   },
 };
 
