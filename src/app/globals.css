@@ -956,3 +956,15 @@ h1, h2, h3, .cartel, .registre li { overflow-wrap: break-word; }
 .registre-ouvrages .vues { font-size: 0.62rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gris-pale); white-space: nowrap; }
 @media (max-width: 800px) { .registre-ouvrages { columns: 1; } }
 @media (max-width: 480px) { .registre-ouvrages a { grid-template-columns: 3.4rem 1fr; } .registre-ouvrages .vues { grid-column: 2; } }
+
+/* En-tête : les neuf libellés historiques de leboulluec.com (« Belles portes
+   vues sur Paris », « Nos réalisations »…) sont plus longs que ceux du site
+   frère. Au réglage d’origine, le téléphone sortait de l’écran à 1440 px :
+   on resserre écarts et interlettrage, et le menu se replie dès 1400 px. */
+.entete__interieur { gap: 20px; }
+.menu { gap: 14px; }
+.menu > li > a { letter-spacing: 0.06em; }
+@media (max-width: 1399px) {
+  .menu, .entete__tel { display: none; }
+  .bascule { display: block; margin-left: auto; }
+}
