@@ -42,6 +42,15 @@ const styleReseaux = `
 .entete__reseaux a:hover { opacity: 1; }
 .entete__reseaux svg { width: 15px; height: 15px; display: block; }
 @media (max-width: 1399px) { .entete__reseaux { display: none; } }
+
+.volet__reseaux { display: flex; align-items: center; gap: 6px; margin: 6px 0 0 -13px; padding: 0; list-style: none; }
+.volet .volet__reseaux li { border-bottom: 0; }
+.volet .volet__reseaux a {
+  width: 44px; height: 44px; padding: 0; display: inline-flex; align-items: center; justify-content: center;
+  color: inherit; opacity: 0.55; transition: opacity 0.25s var(--glisse);
+}
+.volet .volet__reseaux a:hover { opacity: 1; }
+.volet__reseaux svg { width: 18px; height: 18px; display: block; }
 `;
 
 /**
@@ -172,6 +181,22 @@ export function Entete() {
             ))}
             <li>
               <a href={`tel:${NAP.phoneE164}`}>{NAP.phone}</a>
+            </li>
+          </ul>
+
+          {/* Réseaux sociaux — menu mobile */}
+          <ul className="volet__reseaux">
+            <li>
+              <a
+                href="https://www.linkedin.com/company/atelierleboulluec/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn ATELIER LE BOULLUEC"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
