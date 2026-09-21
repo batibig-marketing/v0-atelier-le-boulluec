@@ -27,7 +27,7 @@ const PAGES_SUR_PHOTO = new Set([
   "/contact",
 ]);
 
-/* Reseaux sociaux en tete, format compact, juste avant le telephone.
+/* Reseaux sociaux en tete, format compact, juste apres le telephone.
    La feuille du site ne connait aucune couleur d accent : les pastilles
    heritent donc de la couleur courante de l en-tete — encre sur fond clair,
    papier quand l en-tete se pose en transparence sur une photographie — et
@@ -121,7 +121,10 @@ export function Entete() {
             </ul>
           </nav>
 
-          {/* Réseaux sociaux — format compact, avant le téléphone */}
+          <a className="entete__tel" href={`tel:${NAP.phoneE164}`}>
+            {NAP.phone}
+          </a>
+          {/* Réseaux sociaux — format compact, après le téléphone */}
           <ul className="entete__reseaux">
             <li>
               <a
@@ -136,10 +139,6 @@ export function Entete() {
               </a>
             </li>
           </ul>
-
-          <a className="entete__tel" href={`tel:${NAP.phoneE164}`}>
-            {NAP.phone}
-          </a>
 
           <button
             type="button"
