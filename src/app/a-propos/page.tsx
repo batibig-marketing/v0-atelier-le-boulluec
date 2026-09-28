@@ -13,8 +13,8 @@ const ABOUT_FAQ = [
     a: "L'Atelier Le Boulluec a été fondé en 1964 à Fontenay-aux-Roses, soit plus de 60 ans d'activité ininterrompue. Trois adresses se sont succédé : Fontenay-aux-Roses de 1964 à 2015, Châtenay-Malabry de 2015 à 2020, puis Massy (91300) depuis septembre 2020.",
   },
   {
-    q: "Combien de menuisiers travaillent à l'atelier ?",
-    a: "Dix-sept menuisiers travaillent à l'atelier de Massy, complétés par deux compagnons spécialisés au département serrurerie et une équipe administrative et commerciale. Plusieurs compagnons sont avec nous depuis plus de quinze ans ; d'autres sont arrivés plus récemment, formés au CAP ou au Brevet Professionnel.",
+    q: "Qui travaille à l'atelier ?",
+    a: "Nos compagnons menuisiers travaillent à l'atelier de Massy, complétés par des compagnons spécialisés au département serrurerie et une équipe administrative et commerciale. Plusieurs compagnons sont avec nous depuis plus de quinze ans ; d'autres sont arrivés plus récemment, formés au CAP ou au Brevet Professionnel.",
   },
   {
     q: "Quelles sont vos principales références clients ?",
@@ -69,7 +69,7 @@ export default function AProposPage() {
             spécialisée en menuiserie, serrurerie, vitrerie, escaliers sur mesure et restauration
             patrimoniale.
           </strong>{" "}
-          17 menuisiers travaillent aujourd&apos;hui à l&apos;atelier de Massy (91300).
+          Nos compagnons travaillent aujourd&apos;hui à l&apos;atelier de Massy (91300).
           L&apos;entreprise est membre du réseau Bricard Serruriers Confiance et du Groupe BATIBIG.
         </p>
       </Ouverture>
@@ -94,14 +94,14 @@ export default function AProposPage() {
             ),
           },
           {
-            titre: "Notre équipe en chiffres",
+            titre: "Notre équipe",
             niveau: 2,
             photo: photo("garde-corps-atelier"),
             corps: (
               <ul>
-                <li><strong>17 menuisiers</strong>{" "}à plein temps à l&apos;atelier de Massy.</li>
-                <li><strong>2 compagnons spécialisés serrurerie</strong>{" "}+ 1 poste d&apos;apprentissage permanent.</li>
-                <li><strong>1 département vitrerie</strong>{" "}en lien avec un partenaire verrier historique de la couronne parisienne.</li>
+                <li><strong>Nos compagnons menuisiers</strong>{" "}à plein temps à l&apos;atelier de Massy.</li>
+                <li><strong>Un département serrurerie</strong>{" "}avec un poste d&apos;apprentissage permanent.</li>
+                <li><strong>Un département vitrerie</strong>{" "}en lien avec un partenaire verrier historique de la couronne parisienne.</li>
                 <li><strong>Plusieurs compagnons</strong>{" "}avec plus de 15 ans d&apos;ancienneté dans l&apos;atelier.</li>
               </ul>
             ),
@@ -140,10 +140,10 @@ export default function AProposPage() {
             corps: (
               <>
                 <p>
-                  Dix-sept menuisiers travaillent à l&apos;atelier de Massy. À leurs côtés, une équipe administrative et commerciale assure le lien avec les syndics, les architectes et les directions immobilières. Plusieurs compagnons sont avec nous depuis plus de quinze ans ; d&apos;autres sont arrivés plus récemment, formés au CAP ou au Brevet Professionnel de menuisier, parfois en alternance dans notre atelier.
+                  Nos compagnons menuisiers travaillent à l&apos;atelier de Massy. À leurs côtés, une équipe administrative et commerciale assure le lien avec les syndics, les architectes et les directions immobilières. Plusieurs compagnons sont avec nous depuis plus de quinze ans ; d&apos;autres sont arrivés plus récemment, formés au CAP ou au Brevet Professionnel de menuisier, parfois en alternance dans notre atelier.
                 </p>
                 <p>
-                  Le métier de serrurier est entré progressivement dans l&apos;atelier dans les années 1980, comme un prolongement naturel de la menuiserie. Le département compte aujourd&apos;hui deux compagnons spécialisés et un poste d&apos;apprentissage permanent. Le département vitrerie fonctionne en lien direct avec un partenaire verrier historique de la couronne parisienne.
+                  Le métier de serrurier est entré progressivement dans l&apos;atelier dans les années 1980, comme un prolongement naturel de la menuiserie. Le département compte aujourd&apos;hui des compagnons spécialisés et un poste d&apos;apprentissage permanent. Le département vitrerie fonctionne en lien direct avec un partenaire verrier historique de la couronne parisienne.
                 </p>
               </>
             ),

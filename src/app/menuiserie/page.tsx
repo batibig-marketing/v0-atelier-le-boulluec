@@ -70,7 +70,7 @@ export default function MenuiseriePage() {
         photo={photo("quatre-vantaux")}
         surtitre="Menuiserie"
         titre="Menuiserie sur mesure — portes, fenêtres, agencements."
-        chapeau="À l'atelier de Massy, dix-sept menuisiers façonnent chaque année des centaines de pièces de bois pour les immeubles, commerces et maisons d'Île-de-France."
+        chapeau="À l'atelier de Massy, nos compagnons façonnent chaque année des centaines de pièces de bois pour les immeubles, commerces et maisons d'Île-de-France."
       />
       <Fil items={[{ label: "Menuiserie", href: "/menuiserie" }]} />
 
@@ -82,7 +82,7 @@ export default function MenuiseriePage() {
             fenêtres, escaliers, agencements, mobilier.
           </strong>{" "}
           L&apos;Atelier Le Boulluec pratique la menuiserie depuis 1964 en Île-de-France, dans son
-          atelier de Massy où dix-sept menuisiers fabriquent chaque année des centaines de pièces
+          atelier de Massy où nos compagnons fabriquent chaque année des centaines de pièces
           pour immeubles, commerces et maisons.
         </p>
         {/* Sommaire — les cinq rubriques du menu « Menuiserie » du site
@@ -124,7 +124,7 @@ export default function MenuiseriePage() {
             corps: (
               <ol>
                 <li><strong>60 ans de pratique continue depuis 1964</strong>{" "}— l&apos;un des plus anciens ateliers de menuiserie d&apos;Île-de-France.</li>
-                <li><strong>17 menuisiers sous un seul toit à Massy</strong>, sans sous-traitance : la même main façonne la pièce, la pose et assure le service après-vente.</li>
+                <li><strong>Nos compagnons sous un seul toit à Massy</strong>, sans sous-traitance : la même main façonne la pièce, la pose et assure le service après-vente.</li>
                 <li><strong>Garantie décennale sur tous les ouvrages</strong>, qu&apos;ils soient neufs ou restaurés.</li>
               </ol>
             ),

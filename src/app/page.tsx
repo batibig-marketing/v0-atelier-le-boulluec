@@ -84,7 +84,7 @@ const SERVICES = [
 const HOME_FAQ = [
   {
     q: "Qu'est-ce que l'Atelier Le Boulluec ?",
-    a: "L'Atelier Le Boulluec est une entreprise artisanale de menuiserie, serrurerie, vitrerie, escaliers sur mesure et restauration patrimoniale, fondée en 1964 et installée à Massy (91300) depuis 2020. L'atelier emploie 17 menuisiers et intervient en Île-de-France pour les syndics, architectes et grands comptes.",
+    a: "L'Atelier Le Boulluec est une entreprise artisanale de menuiserie, serrurerie, vitrerie, escaliers sur mesure et restauration patrimoniale, fondée en 1964 et installée à Massy (91300) depuis 2020. L'atelier intervient en Île-de-France pour les syndics, architectes et grands comptes.",
   },
   {
     q: "Où se trouve l'atelier et quelle est sa zone d'intervention ?",
@@ -214,7 +214,7 @@ export default function HomePage() {
             <p className="hero__chapeau">
               L&apos;Atelier Le Boulluec est une entreprise artisanale fondée en 1964, spécialisée en
               menuiserie, serrurerie, vitrerie, escaliers sur mesure et restauration patrimoniale.
-              17 menuisiers à Massy, au service des syndics, architectes et grands comptes
+              Notre atelier basé à Massy est au service des syndics, architectes et grands comptes
               d&apos;Île-de-France.
             </p>
             <div className="boutons">
@@ -241,10 +241,10 @@ export default function HomePage() {
         <p className="en-bref">
           <strong>En bref —</strong>{" "}L&apos;Atelier Le Boulluec est un atelier de menuiserie et de
           ferronnerie d&apos;art fondé en 1964, installé au {NAP.street}, {NAP.postalCode}{" "}
-          {NAP.city}. Dix-sept menuisiers y façonnent et y restaurent des portes cochères, portes
-          bâtardes, grilles de sas, escaliers et châssis acier pour Paris et l&apos;{NAP.areaServed}.
-          Les cinq métiers — menuiserie, serrurerie, ferronnerie, vitrerie, escaliers — sont exécutés
-          dans le même atelier, sans sous-traitance, sous garantie décennale.
+          {NAP.city}. Nos compagnons y façonnent et restaurent portes cochères, portes bâtardes,
+          grilles de sas, escaliers et projets d&apos;agencement sur mesure, pour Paris et
+          l&apos;{NAP.areaServed}. Les cinq métiers — menuiserie, serrurerie, ferronnerie, vitrerie,
+          escaliers — sont exécutés dans le même atelier.
         </p>
       </Ouverture>
 
@@ -253,52 +253,35 @@ export default function HomePage() {
       <Suite
         blocs={[
           {
-            surtitre: "L’atelier au travail",
-            titre: "D'abord le geste, ensuite l'ouvrage.",
+            surtitre: "Le savoir-faire",
+            titre: "Notre savoir-faire",
             niveau: 2,
             photo: photo("richer"),
             corps: (
               <>
                 <p>
-                  Une porte finie ne dit rien de la façon dont elle a été faite. Ces vues sont prises
-                  à l&apos;établi, sous la meuleuse et au moment de la repose — c&apos;est là que se
-                  décide la qualité de la pièce.
+                  La spécialité de notre atelier est le façonnage et la restauration de grands
+                  ouvrages de menuiserie comme les portes cochères.
                 </p>
                 <p>
-                  Dix-sept menuisiers travaillent au 6 rue de l&apos;Aulnaye Dracourt, à Massy. Le
-                  bois arrive en plots, l&apos;acier en barres ; les épures sont dessinées, agrafées
-                  sur le panneau, puis suivies jusqu&apos;à la pose. Rien ne repart de l&apos;atelier
-                  sans avoir été monté à blanc sur place. C&apos;est la raison pour laquelle nous
-                  montrons l&apos;établi avant la façade :{" "}
-                  <Link href="/photos">l&apos;archive des ouvrages</Link>{" "}donne le résultat,
-                  l&apos;atelier donne la méthode. <Link href="/a-propos">Visiter l&apos;atelier</Link>.
+                  Pour vous accompagner au mieux, nous intervenons également en serrurerie et
+                  contrôle d&apos;accès, ainsi qu&apos;en métallerie (façonnage de grilles, de
+                  pergolas, de marquises en acier…).
                 </p>
-              </>
-            ),
-          },
-          {
-            surtitre: "L’atelier intégré",
-            titre: "Un atelier intégré, quatre métiers réunis.",
-            niveau: 2,
-            photo: photo("marquise-duvernet"),
-            corps: (
-              <>
                 <p>
-                  Sous le même toit, dix-sept menuisiers façonnent ce que d&apos;autres ateliers
-                  répartissent chez plusieurs sous-traitants : la porte d&apos;entrée d&apos;un
-                  immeuble haussmannien, l&apos;escalier d&apos;un hôtel particulier, la grille de
-                  défense d&apos;un porche du Marais, le vitrage de protection d&apos;une vitrine de
-                  prestige.
+                  Nos équipes prennent aussi en charge vos projets d&apos;agencement haut de gamme
+                  et de boiserie.
+                </p>
+                <p>
+                  Une équipe dédiée assure par ailleurs la restauration et la création
+                  d&apos;escaliers, anciens ou modernes. L&apos;atelier fait également partie du
+                  réseau Treppenmeister, spécialiste de l&apos;escalier haut de gamme et leader
+                  européen de l&apos;escalier suspendu.
                 </p>
                 <p>
                   Cette concentration des savoir-faire — bois, acier, verre, serrurerie — n&apos;est
                   pas une posture commerciale. C&apos;est la condition pour que chaque pièce sorte
                   juste, sans rupture de chaîne, sans interface tendue entre métiers.
-                </p>
-                <p>
-                  Nous travaillons à Massy depuis 2020. La méthode est demeurée : un relevé soigné,
-                  une épure dessinée à la planche, un façonnage exécuté à l&apos;atelier, une pose
-                  accompagnée par celles et ceux qui ont fabriqué la pièce.
                 </p>
               </>
             ),

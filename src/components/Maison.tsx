@@ -12,7 +12,7 @@ import { Bande } from "./Blocs";
 const REPERES = [
   { valeur: "1964", libelle: "Fondation de l’atelier", precision: "Fontenay-aux-Roses" },
   { valeur: "60 ans", libelle: "D’activité continue", precision: "Trois adresses successives" },
-  { valeur: "17", libelle: "Menuisiers à l’atelier", precision: "Massy (91300)" },
+  { valeur: "5", libelle: "Métiers dans le même atelier", precision: "Massy (91300)" },
 ];
 
 export function Reperes() {

@@ -211,7 +211,7 @@ export default function PageAvis() {
             libelle: "L'atelier depuis 1964",
             href: "/a-propos",
             resume:
-              "Trois adresses, soixante ans, dix-sept menuisiers : l'histoire de la maison et sa méthode de travail.",
+              "Trois adresses, soixante ans, nos compagnons : l'histoire de la maison et sa méthode de travail.",
           },
           {
             libelle: "Serrurerie & ferronnerie",

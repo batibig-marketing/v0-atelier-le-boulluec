@@ -288,7 +288,7 @@ export default function PhotosPage() {
             libelle: "L'atelier depuis 1964",
             href: "/a-propos",
             resume:
-              "Trois adresses, soixante ans, dix-sept menuisiers : l'histoire de la maison et la façon dont elle travaille aujourd'hui.",
+              "Trois adresses, soixante ans, nos compagnons : l'histoire de la maison et la façon dont elle travaille aujourd'hui.",
           },
         ]}
       />
