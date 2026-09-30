@@ -140,7 +140,7 @@ export default function SerrureriePage() {
                   <li><strong>Serrures de porte palière</strong>{" "}— remplacement, mise à niveau A2P*, ré-organigramme,</li>
                   <li><strong>Porte cochère</strong>{" "}— serrure carénée, gâche électrique, ventouse électromagnétique,</li>
                   <li><strong>Sas d&apos;entrée et grilles</strong>{" "}— pose et entretien des grilles, gâches, ferme-portes,</li>
-                  <li><strong>Boîtes aux lettres</strong>{" "}— pose de batteries normalisées La Poste, ré-affectation, remplacement complet.</li>
+                  <li><strong>Boîtes aux lettres</strong>{" "}— pose de batteries normalisées La Poste, réaffectation, remplacement complet.</li>
                 </ul>
                 <p>
                   Pour les copropriétés en cours de mise en sécurité, nous produisons un audit serrurier préalable — gratuit pour les bâtiments dont le syndic nous consulte pour un premier ouvrage.

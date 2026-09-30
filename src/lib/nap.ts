@@ -2,7 +2,7 @@
 export const NAP = {
   legalName: "ATELIER LE BOULLUEC",
   brand: "Atelier Le Boulluec",
-  street: "6 Rue de l'Aulnaye Dracourt",
+  street: "6 rue de l’Aulnaye Dracourt",
   postalCode: "91300",
   city: "Massy",
   country: "FR",
@@ -15,7 +15,7 @@ export const NAP = {
   capital: "40 000 €",
   siren: "534 274 352",
   siret: "534 274 352 00036",
-  rcs: "Evry 534 274 352",
+  rcs: "Évry 534 274 352",
   tva: "FR15 534274352",
   foundingDate: "1964",
   group: "Groupe BATIBIG",

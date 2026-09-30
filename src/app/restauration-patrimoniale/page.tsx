@@ -154,7 +154,7 @@ export default function RestaurationPage() {
             photo: photo("lappe-atelier"),
             corps: (
               <p>
-                Les pièces dégradées sont reprises par enture de chêne sec — c&apos;est-à-dire en greffant du bois neuf de même essence et même fil sur les zones attaquées, sans remplacer la pièce entière. Les panneaux altérés sont refaits à l&apos;identique. Les ferrures sont décapées, remises en état, repolies ou re-laquées. Le tout est ensuite mis en peinture ou en lasure selon la finition d&apos;origine.
+                Les pièces dégradées sont reprises par enture de chêne sec — c&apos;est-à-dire en greffant du bois neuf de même essence et même fil sur les zones attaquées, sans remplacer la pièce entière. Les panneaux altérés sont refaits à l&apos;identique. Les ferrures sont décapées, remises en état, repolies ou relaquées. Le tout est ensuite mis en peinture ou en lasure selon la finition d&apos;origine.
               </p>
             ),
           },

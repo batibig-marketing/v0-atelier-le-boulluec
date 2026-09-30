@@ -102,7 +102,7 @@ export default function ContactPage() {
       {/* Carte OpenStreetMap, en niveaux de gris : aucune couleur hors photographie. */}
       <iframe
         className="carte"
-        title="Plan de l'atelier — 6 Rue de l'Aulnaye Dracourt, 91300 Massy"
+        title="Plan de l'atelier — 6 rue de l’Aulnaye Dracourt, 91300 Massy"
         src="https://www.openstreetmap.org/export/embed.html?bbox=2.2724%2C48.7203%2C2.2904%2C48.7303&amp;layer=mapnik&amp;marker=48.7253%2C2.2814"
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"

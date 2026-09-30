@@ -161,7 +161,7 @@ export const OUVRAGES: Ouvrage[] = [
   {
     "slug": "escalier-vaucouleurs",
     "ouvrage": "Escalier d'immeuble",
-    "adresse": "Rue de Vaucouleurs",
+    "adresse": "rue de Vaucouleurs",
     "lieu": "Paris",
     "annee": "2021",
     "matieres": [

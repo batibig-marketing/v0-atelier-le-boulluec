@@ -31,7 +31,7 @@ export default function PolitiqueConfidentialitePage() {
         <blockquote>Version en vigueur au 1<sup>er</sup>{" "}juillet 2026.</blockquote>
 
         <p>
-          L&apos;Atelier Le Boulluec accorde une attention particulière à la protection des données personnelles de ses interlocuteurs. La présente politique détaille les traitements opérés via le site leboulluec.com et les droits des personnes concernées au titre du Règlement Général sur la Protection des Données (RGPD) et de la loi «&nbsp;Informatique et Libertés&nbsp;» modifiée.
+          L&apos;Atelier Le Boulluec accorde une attention particulière à la protection des données personnelles de ses interlocuteurs. La présente politique détaille les traitements opérés via le site leboulluec.com et les droits des personnes concernées au titre du Règlement général sur la protection des données (RGPD) et de la loi «&nbsp;Informatique et Libertés&nbsp;» modifiée.
         </p>
 
         <h2>Responsable du traitement</h2>
@@ -50,7 +50,7 @@ export default function PolitiqueConfidentialitePage() {
 
         <h2>Finalités du traitement</h2>
         <ol>
-          <li><strong>Réponse aux demandes de devis et de contact</strong>{" "}— fondement : exécution de mesures pré-contractuelles à la demande de la personne concernée.</li>
+          <li><strong>Réponse aux demandes de devis et de contact</strong>{" "}— fondement : exécution de mesures précontractuelles à la demande de la personne concernée.</li>
           <li><strong>Suivi commercial des projets</strong>{" "}— fondement : intérêt légitime de l&apos;atelier à conduire son activité.</li>
           <li><strong>Mesure d&apos;audience et amélioration du site</strong>{" "}— fondement : intérêt légitime, recueil de consentement pour les cookies non strictement nécessaires.</li>
           <li><strong>Respect des obligations légales et comptables</strong>{" "}— fondement : obligation légale.</li>

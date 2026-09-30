@@ -112,7 +112,7 @@ export default function MenuiseriePage() {
                 <li><strong>Fenêtres bois et bois-alu sur mesure</strong>, conformes aux exigences ABF pour les immeubles patrimoniaux.</li>
                 <li><strong>Volets pleins, persiennés ou à projection</strong>{" "}façonnés au même atelier que les châssis qui les portent.</li>
                 <li><strong>Agencement bois intérieur</strong>{" "}: bibliothèques, dressings, panneaux muraux, marches d&apos;estrade.</li>
-                <li><strong>Agencement bois extérieur</strong>{" "}: claustras, bardages, capotages techniques (caches-poubelles, locaux vélos).</li>
+                <li><strong>Agencement bois extérieur</strong>{" "}: claustras, bardages, capotages techniques (cache-poubelles, locaux vélos).</li>
                 <li><strong>Mobilier sur mesure</strong>{" "}pour hôtels, boutiques de prestige et particuliers exigeants.</li>
               </ul>
             ),
@@ -267,7 +267,7 @@ export default function MenuiseriePage() {
             photo: photo("abri-poubelles"),
             corps: (
               <p>
-                À l&apos;extérieur, nous intervenons aussi sur les claustras, les bardages, les capotages techniques (caches-poubelles, caches-compteurs, locaux à vélos) qui réclament une menuiserie résistant à l&apos;eau et au vandalisme tout en restant cohérente avec la façade.
+                À l&apos;extérieur, nous intervenons aussi sur les claustras, les bardages, les capotages techniques (cache-poubelles, cache-compteurs, locaux à vélos) qui réclament une menuiserie résistant à l&apos;eau et au vandalisme tout en restant cohérente avec la façade.
               </p>
             ),
           },

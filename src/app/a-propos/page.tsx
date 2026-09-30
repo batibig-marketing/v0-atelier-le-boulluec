@@ -18,7 +18,7 @@ const ABOUT_FAQ = [
   },
   {
     q: "Quelles sont vos principales références clients ?",
-    a: "Nous travaillons pour les Maisons Cartier et Van Cleef & Arpels, le groupe Dassault, Yves Rocher, les Bateaux Parisiens et Schlumberger, ainsi que pour de nombreux syndics de copropriété d'Île-de-France et architectes du patrimoine en lien avec les Bâtiments de France.",
+    a: "Nous travaillons pour les Maisons Cartier et Van Cleef & Arpels, le groupe Dassault, Yves Rocher, les Bateaux Parisiens et Schlumberger, ainsi que pour de nombreux syndics de copropriété d'Île-de-France et architectes du patrimoine en lien avec les Architectes des Bâtiments de France.",
   },
   {
     q: "Êtes-vous certifiés ou labellisés ?",
@@ -88,7 +88,7 @@ export default function AProposPage() {
                 <li><strong>Années 1980</strong>{" "}— Intégration progressive du métier de serrurier en complément de la menuiserie.</li>
                 <li><strong>2012</strong>{" "}— Lancement des archives photographiques des portes cochères parisiennes restaurées.</li>
                 <li><strong>2015</strong>{" "}— Déménagement de l&apos;atelier à Châtenay-Malabry.</li>
-                <li><strong>Septembre 2020</strong>{" "}— Installation dans les locaux actuels du 6 Rue de l&apos;Aulnaye Dracourt, à Massy (Essonne).</li>
+                <li><strong>Septembre 2020</strong>{" "}— Installation dans les locaux actuels du 6 rue de l’Aulnaye Dracourt, à Massy (Essonne).</li>
                 <li><strong>2024-2026</strong>{" "}— Plus de 60 ans d&apos;activité ininterrompue ; rattachement au Groupe BATIBIG.</li>
               </ul>
             ),

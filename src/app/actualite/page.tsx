@@ -233,7 +233,7 @@ export default function ActualitePage() {
       <AppelContact
         surtitre="Prochain chantier"
         titre="Un ouvrage à reprendre dans votre immeuble ?"
-        texte="Décrivez-le nous — l'adresse, l'année approximative de la porte, l'état du bas des vantaux. Nous disons en retour si l'ouvrage se restaure, et sous quel délai."
+        texte="Décrivez-le-nous — l'adresse, l'année approximative de la porte, l'état du bas des vantaux. Nous disons en retour si l'ouvrage se restaure, et sous quel délai."
         cta={{ label: "Décrire un ouvrage", href: "/contact" }}
       />
     </>

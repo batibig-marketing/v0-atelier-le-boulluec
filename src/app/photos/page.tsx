@@ -64,7 +64,7 @@ const VOCABULAIRE: [string, string][] = [
   ["Seuil", "Pièce basse de la baie, souvent doublée d'une plinthe de laiton qui protège le bois du ruissellement et du frottement."],
   ["Imposte", "Partie vitrée ou ajourée située au-dessus de la porte, dans le même dormant. Elle éclaire le porche."],
   ["Tierçage", "Division d'une porte en trois panneaux ou vantaux inégaux, plutôt qu'en deux parties symétriques."],
-  ["Débillardé", "Se dit d'un limon d'escalier ou d'une main-courante dont la pièce est taillée en double courbure pour suivre le tournant."],
+  ["Débillardé", "Se dit d'un limon d'escalier ou d'une main courante dont la pièce est taillée en double courbure pour suivre le tournant."],
   ["Tôle laquée époxy", "Tôle d'acier revêtue d'une peinture poudre cuite au four, employée pour les capotages techniques exposés à la rue."],
 ];
 

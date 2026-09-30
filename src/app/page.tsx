@@ -88,7 +88,7 @@ const HOME_FAQ = [
   },
   {
     q: "Où se trouve l'atelier et quelle est sa zone d'intervention ?",
-    a: "L'atelier est situé au 6 Rue de l'Aulnaye Dracourt, 91300 Massy, dans l'Essonne. Nous intervenons dans tout Paris et l'Île-de-France : Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne, Yvelines, Val-d'Oise et Seine-et-Marne.",
+    a: "L'atelier est situé au 6 rue de l’Aulnaye Dracourt, 91300 Massy, dans l'Essonne. Nous intervenons dans tout Paris et l'Île-de-France : Hauts-de-Seine, Seine-Saint-Denis, Val-de-Marne, Yvelines, Val-d'Oise et Seine-et-Marne.",
   },
   {
     q: "Depuis quand l'Atelier Le Boulluec existe-t-il ?",
@@ -104,7 +104,7 @@ const HOME_FAQ = [
   },
   {
     q: "Quelles sont vos principales références ?",
-    a: "Nous travaillons pour les Maisons Cartier et Van Cleef & Arpels, le groupe Dassault, Yves Rocher, les Bateaux Parisiens et Schlumberger, ainsi que pour de nombreux syndics de copropriété d'Île-de-France et architectes du patrimoine en lien avec les Bâtiments de France.",
+    a: "Nous travaillons pour les Maisons Cartier et Van Cleef & Arpels, le groupe Dassault, Yves Rocher, les Bateaux Parisiens et Schlumberger, ainsi que pour de nombreux syndics de copropriété d'Île-de-France et architectes du patrimoine en lien avec les Architectes des Bâtiments de France.",
   },
   {
     q: "Restaurer une porte cochère ou la remplacer ?",

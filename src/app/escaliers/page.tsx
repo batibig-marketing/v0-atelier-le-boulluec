@@ -107,7 +107,7 @@ export default function EscaliersPage() {
             photo: photo("palaiseau-pose"),
             corps: (
               <ul>
-                <li><strong>Escaliers à limon acier</strong>{" "}: limon central ou latéraux, marches bois massif ou métal, signature des lofts contemporains.</li>
+                <li><strong>Escaliers à limon acier</strong>{" "}: limon central ou limons latéraux, marches bois massif ou métal, signature des lofts contemporains.</li>
                 <li><strong>Escaliers suspendus</strong>{" "}: marches retenues par fixation murale dissimulée ou câble inox tendu.</li>
                 <li><strong>Escaliers en colimaçon</strong>{" "}: solution hélicoïdale pour combles, mezzanines et duplex à surface réduite.</li>
                 <li><strong>Escaliers autoportants</strong>{" "}: sans appui mural intermédiaire, pour espaces ouverts contemporains.</li>
@@ -268,7 +268,7 @@ export default function EscaliersPage() {
             libelle: "Menuiserie sur mesure",
             href: "/menuiserie",
             resume:
-              "Marches bois massif (chêne, hêtre, frêne), main-courantes et habillages bois façonnés en parallèle de l'ossature acier.",
+              "Marches bois massif (chêne, hêtre, frêne), mains courantes et habillages bois façonnés en parallèle de l'ossature acier.",
           },
           {
             libelle: "Vitrerie sur mesure",

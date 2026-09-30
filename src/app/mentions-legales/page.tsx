@@ -32,7 +32,7 @@ export default function MentionsLegalesPage() {
         <h2>Éditeur du site</h2>
         <p>
           <strong>Raison sociale</strong>{" "}: {NAP.legalName}<br />
-          <strong>Forme juridique</strong>{" "}: Société par Actions Simplifiée (SAS)<br />
+          <strong>Forme juridique</strong>{" "}: Société par actions simplifiée (SAS)<br />
           <strong>Capital social</strong>{" "}: {NAP.capital}<br />
           <strong>Siège social</strong>{" "}: {NAP.street}, {NAP.postalCode} {NAP.city}<br />
           <strong>SIREN</strong>{" "}: {NAP.siren}<br />
