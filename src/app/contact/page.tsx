@@ -88,8 +88,6 @@ export default function ContactPage() {
                 <dd>{NAP.rcs}</dd>
                 <dt>TVA</dt>
                 <dd>{NAP.tva}</dd>
-                <dt>Groupe</dt>
-                <dd>Membre du {NAP.group}</dd>
               </dl>
             </div>
             <div>

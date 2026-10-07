@@ -35,7 +35,7 @@ const FAQ = [
   },
   {
     q: "L'atelier est-il labellisé ?",
-    a: "L'Atelier Le Boulluec est membre du réseau Bricard « Serruriers Confiance », que le fabricant réserve à un cercle restreint d'artisans formés sur l'ensemble de sa gamme de haute sûreté. L'atelier appartient par ailleurs au Groupe BATIBIG.",
+    a: "L'Atelier Le Boulluec est membre du réseau Bricard « Serruriers Confiance », que le fabricant réserve à un cercle restreint d'artisans formés sur l'ensemble de sa gamme de haute sûreté.",
   },
   {
     q: "Comment laisser un avis après un chantier ?",
@@ -118,8 +118,7 @@ export default function PageAvis() {
         <p className="en-bref">
           <strong>En bref —</strong>{" "}Tous les ouvrages de l&apos;Atelier Le Boulluec, neufs comme
           restaurés, sont couverts par la <strong>garantie décennale</strong>. L&apos;atelier est
-          membre du réseau <strong>Bricard « Serruriers Confiance »</strong>{" "}et appartient au{" "}
-          {NAP.group}.
+          membre du réseau <strong>Bricard « Serruriers Confiance »</strong>.
         </p>
         <dl className="chiffres" style={{ gridTemplateColumns: "repeat(2, minmax(0, 1fr))" }}>
           <div>

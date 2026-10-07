@@ -60,11 +60,9 @@ export function organizationSchema() {
     ],
     award: [
       "Membre du réseau Bricard Serruriers Confiance",
-      "Membre du Groupe BATIBIG",
     ],
     memberOf: [
       { "@type": "Organization", name: "Réseau Bricard Serruriers Confiance" },
-      { "@type": "Organization", name: "Groupe BATIBIG" },
     ],
     sameAs: [
       "https://www.linkedin.com/company/atelier-le-boulluec/",
@@ -144,7 +142,6 @@ export function localBusinessSchema() {
     ],
     award: [
       "Membre du réseau Bricard Serruriers Confiance",
-      "Membre du Groupe BATIBIG",
     ],
     // Pas de note agregee : la note 4,2 sur 40 avis declaree jusqu'ici
     // n'avait aucune source verifiable (le site historique n'affiche qu'un

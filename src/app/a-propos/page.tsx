@@ -22,7 +22,7 @@ const ABOUT_FAQ = [
   },
   {
     q: "Êtes-vous certifiés ou labellisés ?",
-    a: "Oui. Nous sommes membres du réseau Bricard Serruriers Confiance — label que le fabricant historique réserve à un cercle restreint d'artisans formés à toute sa gamme de haute sûreté. Nous sommes également membres du Groupe BATIBIG, fédération d'entreprises artisanales du second œuvre en Île-de-France.",
+    a: "Oui. Nous sommes membres du réseau Bricard Serruriers Confiance — label que le fabricant historique réserve à un cercle restreint d'artisans formés à toute sa gamme de haute sûreté.",
   },
   {
     q: "Sous-traitez-vous certains métiers ?",
@@ -70,7 +70,7 @@ export default function AProposPage() {
             patrimoniale.
           </strong>{" "}
           Nos compagnons travaillent aujourd&apos;hui à l&apos;atelier de Massy (91300).
-          L&apos;entreprise est membre du réseau Bricard Serruriers Confiance et du Groupe BATIBIG.
+          L&apos;entreprise est membre du réseau Bricard Serruriers Confiance.
         </p>
       </Ouverture>
 
@@ -89,7 +89,7 @@ export default function AProposPage() {
                 <li><strong>2012</strong>{" "}— Lancement des archives photographiques des portes cochères parisiennes restaurées.</li>
                 <li><strong>2015</strong>{" "}— Déménagement de l&apos;atelier à Châtenay-Malabry.</li>
                 <li><strong>Septembre 2020</strong>{" "}— Installation dans les locaux actuels du 6 rue de l’Aulnaye Dracourt, à Massy (Essonne).</li>
-                <li><strong>2024-2026</strong>{" "}— Plus de 60 ans d&apos;activité ininterrompue ; rattachement au Groupe BATIBIG.</li>
+                <li><strong>2024-2026</strong>{" "}— Plus de 60 ans d&apos;activité ininterrompue.</li>
               </ul>
             ),
           },
@@ -176,15 +176,6 @@ export default function AProposPage() {
                 <h3>4. Pas de discours superflu</h3>
                 <p>Nous laissons l&apos;ouvrage parler. Cette page elle-même se veut courte par principe.</p>
               </>
-            ),
-          },
-          {
-            titre: "L'atelier dans le Groupe BATIBIG",
-            niveau: 2,
-            corps: (
-              <p>
-                Depuis quelques années, l&apos;Atelier Le Boulluec a rejoint le Groupe BATIBIG, qui réunit plusieurs entreprises artisanales du second œuvre du bâtiment en Île-de-France. Cette appartenance nous a apporté un accès à des moyens administratifs et commerciaux mutualisés, sans rien changer à l&apos;organisation de l&apos;atelier ni à la signature des chantiers.
-              </p>
             ),
           },
           {

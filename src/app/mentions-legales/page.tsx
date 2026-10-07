@@ -86,7 +86,7 @@ export default function MentionsLegalesPage() {
         </p>
 
         <h2>Crédits</h2>
-        <p>Site conçu et développé par les équipes du {NAP.group}.</p>
+        <p>Site conçu et développé par nos équipes.</p>
         </div>
       </div>
     </article>

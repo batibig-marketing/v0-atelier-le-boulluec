@@ -18,7 +18,6 @@ export const NAP = {
   rcs: "Évry 534 274 352",
   tva: "FR15 534274352",
   foundingDate: "1964",
-  group: "Groupe BATIBIG",
   hours: "Mo-Fr 08:00-12:00,13:30-17:30",
   hoursReadable: "Lundi au vendredi · 8h–12h · 13h30–17h30",
   latitude: 48.7253,

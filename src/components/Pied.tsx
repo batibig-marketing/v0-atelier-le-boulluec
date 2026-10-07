@@ -143,8 +143,6 @@ export function Pied() {
             </ul>
             <p style={{ marginTop: "1.4rem" }}>
               Réseau Bricard Serruriers Confiance
-              <br />
-              Membre du {NAP.group}
             </p>
           </div>
         </div>
