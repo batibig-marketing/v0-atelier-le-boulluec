@@ -53,7 +53,7 @@ export default function MentionsLegalesPage() {
         <p>
           <strong>Vercel Inc.</strong><br />
           440 N Barranca Avenue #4133<br />
-          Covina, CA 91723 — États-Unis<br />
+          Covina, CA 91723 — États-Unis. Les serveurs qui traitent ce site sont localisés à Paris, France (région « cdg1 »).<br />
           Site : <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">vercel.com</a>
         </p>
 
